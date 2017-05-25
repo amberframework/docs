@@ -6,7 +6,7 @@ Amber aims to deliver developer happiness, productivity and bare metal performan
 
 ## Getting Help
 
-If you’re stuck, there are a number of places you can get help. 
+If you’re stuck, there are a number of places you can get help.
 
 **GITTER** You can head over to our Gitter channel to chat with member of the community for quick questions
 
@@ -24,7 +24,9 @@ Amber is a community effort and we want You to be part of ours [Join Amber Commu
 
 ## First Steps
 
+Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. If you are new, you should start off with the
 
+### Quick Start Guide
 
-
+Everything you need to know to install as it will give you a quick tour of what Amber has to offer, from installing Amber to creating your first application.
 

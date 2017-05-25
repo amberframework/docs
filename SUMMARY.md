@@ -1,14 +1,12 @@
 # Summary
 
-* Preface
-
-  * At A Glance
-  * Quick Start Guide
+* [Introduction](README.md)
+* [Preface](preface.md)
+  * [At A Glance](preface/at-a-glance.md)
+  * [Quick Start Guide](preface/quick-start-guide.md)
   * Tutorials & Examples
-  * Contributing
-
+  * [Contributing](preface/contributing.md)
 * Getting Started
-
   * Installation
   * Configuration
   * Routing
@@ -17,7 +15,6 @@
   * Controllers
   * Views
   * Database Access & ORM
-
 * Using Amber Framework
   * Authentication
   * Amber Console
@@ -38,10 +35,6 @@
   * Sessions
   * Testing
   * Validation
-
 * Shards
-
 * Other
-
-
 

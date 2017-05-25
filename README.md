@@ -16,6 +16,8 @@ If you’re stuck, there are a number of places you can get help.
 
 **ONLINE GUIDES** for getting down and dirty working with Amber
 
+**TWITTER** Follow the Amber Framework on twitter
+
 ## Contributing
 
 Contributing to Amber can be a rewarding way to learn, teach, and build experience in just about any skill you can imagine. You don’t have to become a lifelong contributor to enjoy participating in Amber.

@@ -1,12 +1,14 @@
 # Summary
 
 * Preface
+
   * At A Glance
   * Quick Start Guide
   * Tutorials & Examples
   * Contributing
 
 * Getting Started
+
   * Installation
   * Configuration
   * Routing
@@ -29,9 +31,8 @@
   * Events System
   * Internationalization & Localization
   * Logging
-
   * Pagination
-  * Plugins
+  * Shards
   * REST
   * Security
   * Sessions
@@ -39,9 +40,8 @@
   * Validation
 
 * Shards
+
 * Other
-
-
 
 
 

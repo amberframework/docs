@@ -4,8 +4,9 @@
 * [Preface](preface.md)
   * [At A Glance](preface/at-a-glance.md)
   * [Quick Start Guide](preface/quick-start-guide.md)
-  * Tutorials & Examples
+  * [Tutorials & Examples](preface/tutorials-and-examples.md)
   * [Contributing](preface/contributing.md)
+  * Code of Conduct
 * Getting Started
   * Installation
   * Configuration
@@ -37,4 +38,6 @@
   * Validation
 * Shards
 * Other
+
+
 

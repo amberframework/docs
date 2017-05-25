@@ -21,10 +21,10 @@ Getting Started
 * Views
 * Database Access & ORM
 
-Using Amber
+Using Amber Framework
 
 * Authentication
-* Bake Console
+* Amber Console
 * Caching
 * Shells, Tasks & Console Tools
 * Debugging
@@ -70,5 +70,5 @@ Other
 * Constants & Functions
 * Appendices
 
-
+ Frameword
 

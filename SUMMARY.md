@@ -6,7 +6,7 @@
   * [Quick Start Guide](preface/quick-start-guide.md)
   * [Tutorials & Examples](preface/tutorials-and-examples.md)
   * [Contributing](preface/contributing.md)
-  * Code of Conduct
+  * [Code of Conduct](preface/code-of-conduct.md)
 * Getting Started
   * Installation
   * Configuration
@@ -38,6 +38,4 @@
   * Validation
 * Shards
 * Other
-
-
 

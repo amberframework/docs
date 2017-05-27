@@ -23,14 +23,13 @@ With our `:web` pipeline now define we can use it in our routes.
 
 ### Routes
 
-A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash. 
+A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
 
-The **routes** macro accepts a pipeline name and a scope. Lets say you are defining a static website and you want your URL to be displayed as `http://www.mycoolsite.com/page/about` you will define your routes as: 
+The **routes** macro accepts a pipeline name and a scope. Lets say you are defining a static website and you want your URL to be displayed as `http://www.mycoolsite.com/page/about` you will define your routes as:
 
 ```ruby
 routes :web, '/static' do
-  resources "/hello", HelloController
-  get "/about/world/:planet", HelloController, :world
+  get "/about", StaticController, :world
   get "/hello/template", HelloController, :template
 end
 end

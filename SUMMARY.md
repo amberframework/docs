@@ -8,9 +8,9 @@
 * [Getting Started](getting-started.md)
   * [Installation](getting-started/installation.md)
   * Configuration
+  * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)
-  * Request & Response Objects
-  * Pipelines
+  * [Request & Response Objects](getting-started/request-and-response-objects.md)
   * Controllers
   * Views
   * Database Access & ORM

@@ -29,9 +29,7 @@ The **routes** macro accepts a pipeline name and a scope. Lets say you are defin
 
 ```ruby
 routes :web, '/static' do
-  get "/about", StaticController, :world
-  get "/hello/template", HelloController, :template
-end
+  get "/about", StaticController, :about
 end
 ```
 

@@ -18,7 +18,7 @@ end
 
 Above we define a pipeline called `:web` as you can see the `:web` pipeline transforms the request using a _Logger_, _StaticFileHandler_ and a _CompressHandler_, all of which extends from the Crystal [_HTTP::Handler_](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html) class.
 
-Amber provides us some default pipelines for a number of common tasks. In turn we can customize them as well as create new pipelines to meet our needs.
+Amber provides us some default pipes for a number of common tasks. In turn we can customize them as well as create new pipelines to meet our needs.
 
 * **Pipe::Static** serves static assets
 
@@ -36,7 +36,7 @@ Amber provides us some default pipelines for a number of common tasks. In turn w
 
 * **Pipe::Session** a plug that sets up session management.
 
-With our `:web` pipeline now define we can use it in our routes dinfitions
+With our `:web` pipeline now define we can use it in our routes difinitions.
 
 ### Routes
 

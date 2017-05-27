@@ -5,10 +5,10 @@
   * [At A Glance](preface/at-a-glance.md)
   * [Contributing](preface/contributing.md)
   * [Code of Conduct](preface/code-of-conduct.md)
-* Getting Started
-  * Installation
+* [Getting Started](getting-started.md)
+  * [Installation](getting-started/installation.md)
   * Configuration
-  * Routing
+  * [Routing](getting-started/routing.md)
   * Request & Response Objects
   * Pipelines
   * Controllers
@@ -36,6 +36,4 @@
   * Validation
 * Shards
 * Other
-
-
 

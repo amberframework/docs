@@ -4,7 +4,9 @@ Routing provides you tools that map URLs to controller actions. By defining rout
 
 ### Pipelines
 
-Every Amber application needs to define a pipeline with a set of pipes each pipeline allow a set of middleware transformations to be applied to different sets of route, this give you granular control and explicitness of which transformation to run for each of the app requests.
+A pipeline is a set of of transformations that is performed to a HTTP request.
+
+Every Amber application needs to define a pipeline with a set of pipes each pipeline allow a set of middleware transformations to be applied to different sets of route, this give you granular control and explicitness of which transformation to run for each of the requests.
 
 ```ruby
 # All api scoped routes will run these transformations
@@ -25,7 +27,7 @@ With our `:web` pipeline now define we can use it in our routes dinfitions
 
 A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
 
-The **routes** macro accepts a _pipeline_ name and a _scope, _in which all routes define within this block will make use of the pipeline and the url will be scoped. 
+The **routes** macro accepts a _pipeline_ name and a \_scope, \_in which all routes define within this block will make use of the pipeline and the url will be scoped.
 
 Lets say you are defining a static website and you want all your URL to be displayed as `http://www.mycoolsite.com/page` you will define your routes as:
 
@@ -34,7 +36,7 @@ Lets say you are defining a static website and you want all your URL to be displ
 routes :web, "/page"
 ```
 
-The routes macro takes a last argument, a _block, _within the block is where you define your routes.
+The routes macro takes a last argument, a \_block, \_within the block is where you define your routes.
 
 ```ruby
 routes :web, '/static' do
@@ -42,19 +44,11 @@ routes :web, '/static' do
 end
 ```
 
-Mapping the above route 
+Mapping the above route
 
 | Http Method | Resource | Controller | Action |
 | :--- | :--- | :--- | :--- |
 | get | "/about" | StaticController | :about |
-
-
-
-
-
-
-
-
 
 
 

@@ -19,19 +19,42 @@ end
 
 Above we define a pipeline called `:web` as you can see this `:web` pipeline transforms the request using a _Logger_, _StaticFileHandler_ and a _CompressHandler_, all of which extends from the Crystal [_HTTP::Handler_](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html) class, A handler is a class which includes [`HTTP::Handler`](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html) and implements the [`#call`](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html#call%28context%3AHTTP%3A%3AServer%3A%3AContext%29-instance-method) method. You can use a handler to intercept any incoming request and can modify the response. These can be used for request throttling, ip-based whitelisting, adding custom headers e.g.
 
-With our `:web` pipeline now define we can use it in our routes.
+With our `:web` pipeline now define we can use it in our routes dinfitions
 
 ### Routes
 
 A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
 
-The **routes** macro accepts a pipeline name and a scope. Lets say you are defining a static website and you want your URL to be displayed as `http://www.mycoolsite.com/page/about` you will define your routes as:
+The **routes** macro accepts a _pipeline_ name and a _scope, _in which all routes define within this block will make use of the pipeline and the url will be scoped. 
+
+Lets say you are defining a static website and you want all your URL to be displayed as `http://www.mycoolsite.com/page` you will define your routes as:
+
+```ruby
+# routes(pipeline, scope)
+routes :web, "/page"
+```
+
+The routes macro takes a last argument, a _block, _within the block is where you define your routes.
 
 ```ruby
 routes :web, '/static' do
   get "/about", StaticController, :about
 end
 ```
+
+Mapping the above route 
+
+| Http Method | Resource | Controller | Action |
+| :--- | :--- | :--- | :--- |
+| get | "/about" | StaticController | :about |
+
+
+
+
+
+
+
+
 
 
 

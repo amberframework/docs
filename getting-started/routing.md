@@ -31,7 +31,7 @@ Amber::Server.instance.config do |app|
   end
 
   routes :api, "/api" do
-    get "/", ApiController, :static
+    get "/", ApiController, :index
   end
 
 end

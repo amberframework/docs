@@ -16,10 +16,15 @@
   * [Pipelines](getting-started/pipelines.md)
 
   * [Routing](getting-started/routing.md)
+
   * [Request & Response Objects](getting-started/request-and-response-objects.md)
+
   * [Controllers](getting-started/controllers.md)
+
   * [Views](getting-started/views.md)
+
   * Database Access & ORM
+
   * [Deploying](https://www.gitbook.com/book/amber-crystal/amber/edit#)
 
 * Using Amber Framework

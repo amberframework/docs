@@ -105,13 +105,16 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development`  
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development`
 
 3. Migrate the database`amber migrate up`You should see output like  
    `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 
-4. Run the specs:`crystal spec`
-5. Start your app`amber watch`
+4. Run the specs:  
+   `crystal spec`
+
+5. Start your app
+   `amber watch`
 6. Then visit
    `http://0.0.0.0:3000/`
 

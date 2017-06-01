@@ -105,7 +105,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development      
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development        
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 
@@ -123,7 +123,7 @@ To test the demo app locally:
 If you don't want to use Sentry, you can compile and run manually:
 
 1. Build the app
-   `crystal build --release src/[your_app].cr`
+   `crystal build --release src/[your_app].cr `
 2. Run with
    `./[your_app]`
 3. Visit

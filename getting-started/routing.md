@@ -2,7 +2,7 @@
 
 Routing provides you tools that map URLs to controller actions. By defining routes, you can separate how your application is implemented from how its URL’s are structured, Routes wire up real-time web socket handlers, and define a series of pipeline transformations for scoping middleware to sets of routes.
 
-```
+```ruby
 Amber::Server.instance.config do |app|
   pipeline :web do
     # Plug is the method to use connect a pipe (middleware)

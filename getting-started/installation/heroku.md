@@ -105,7 +105,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development    
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development      
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 
@@ -118,7 +118,7 @@ To test the demo app locally:
 5. Then visit  
    `http://0.0.0.0:3000/`
 
-> Note: The`amber watch`command uses[Sentry](https://github.com/samueleaton/sentry)to watch for any changes in your source files, recompiling automatically.
+> Note: The`amber watch`command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically.
 
 If you don't want to use Sentry, you can compile and run manually:
 

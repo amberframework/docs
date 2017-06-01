@@ -12,6 +12,7 @@
   * [Installing Amber CLI](getting-started/installation/heroku.md)
 
   * [Configuration](getting-started/configuration.md)
+
   * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)
   * [Request & Response Objects](getting-started/request-and-response-objects.md)
@@ -21,6 +22,7 @@
   * [Deploying](https://www.gitbook.com/book/amber-crystal/amber/edit#)
 
 * Using Amber Framework
+
   * Authentication
   * Amber Console
   * Caching
@@ -40,6 +42,7 @@
   * Sessions
   * Testing
   * Validation
+
 * Shards
 * Other
 

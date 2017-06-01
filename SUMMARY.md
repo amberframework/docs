@@ -7,8 +7,7 @@
   * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started.md)
   * [Installation](getting-started/installation.md)
-    * [DigitalOcean](getting-started/installation/digitalocean.md)
-    * [Heroku](getting-started/installation/heroku.md)
+  * [Amber CLI](getting-started/installation/heroku.md)
   * Configuration
   * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)
@@ -38,4 +37,6 @@
   * Validation
 * Shards
 * Other
+
+
 

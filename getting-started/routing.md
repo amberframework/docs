@@ -28,7 +28,7 @@ Amber::Server.instance.config do |app|
 
   routes :web do
     # You can also define all resources at once with the resources macro.
-    # This will define the following routes
+    # This will define the following routes: 
     # resources path, controller, actions
     # resources "/user", UserController, only: [:index, :show]
     # resources "/user", UserController, except: [:index, :show]

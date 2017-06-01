@@ -6,7 +6,9 @@
   * [Contributing](preface/contributing.md)
   * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started.md)
-  * * [Amber CLI](getting-started/installation/heroku.md)
+  * [Installing Crystal Lang](https://crystal-lang.org/docs/installation/)
+
+  * [Amber CLI](getting-started/installation/heroku.md)
   * [Configuration](getting-started/configuration.md)
   * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)

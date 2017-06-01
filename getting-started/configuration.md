@@ -9,6 +9,7 @@ Amber::Server.instance.config do |app|
   app.log = ::Logger.new(STDOUT)
   app.log.level = ::Logger::INFO
   app.host = "0.0.0.0"
+  app.port_reuse = true
 end
 ```
 

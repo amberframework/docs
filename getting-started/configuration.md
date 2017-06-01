@@ -1,3 +1,7 @@
+# Amber App Configuration
+
+
+
 ```ruby
 Amber::Server.instance.config do |app|
   # Server options

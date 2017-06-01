@@ -29,6 +29,11 @@ Amber::Server.instance.config do |app|
   routes :web do
     get "/", HomeController, :static
   end
+  
+  routes :api, "/api" do
+    get "/", HomeController, :static
+  end
+
 end
 ```
 

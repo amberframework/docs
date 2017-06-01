@@ -1,6 +1,6 @@
-# Welcome
-
 ![](/assets/white_logo_color_background.jpg)
+
+# Welcome
 
 Amber is a web development framework written in Crystal which implements the server-side MVC pattern. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Ruby on Rails or Python's Django.
 

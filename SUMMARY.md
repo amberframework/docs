@@ -6,8 +6,7 @@
   * [Contributing](preface/contributing.md)
   * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started.md)
-  * [Installation](getting-started/installation.md)
-  * [Amber CLI](getting-started/installation/heroku.md)
+  * * [Amber CLI](getting-started/installation/heroku.md)
   * [Configuration](getting-started/configuration.md)
   * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)
@@ -15,6 +14,7 @@
   * [Controllers](getting-started/controllers.md)
   * [Views](getting-started/views.md)
   * Database Access & ORM
+  * [Deploying](https://www.gitbook.com/book/amber-crystal/amber/edit#)
 * Using Amber Framework
   * Authentication
   * Amber Console
@@ -37,4 +37,6 @@
   * Validation
 * Shards
 * Other
+
+
 

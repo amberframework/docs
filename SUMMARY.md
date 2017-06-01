@@ -7,6 +7,8 @@
   * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started.md)
   * [Installation](getting-started/installation.md)
+    * DigitalOcean
+    * Heroku
   * Configuration
   * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)
@@ -36,4 +38,6 @@
   * Validation
 * Shards
 * Other
+
+
 

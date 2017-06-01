@@ -14,6 +14,7 @@
   * [Configuration](getting-started/configuration.md)
 
   * [Pipelines](getting-started/pipelines.md)
+
   * [Routing](getting-started/routing.md)
   * [Request & Response Objects](getting-started/request-and-response-objects.md)
   * [Controllers](getting-started/controllers.md)
@@ -26,7 +27,7 @@
   * Authentication
   * Amber Console
   * Caching
-  * Generator
+  * Generators
   * CLI, Tasks & Console Tools
   * Debugging
   * Deployment
@@ -44,6 +45,7 @@
   * Validation
 
 * Shards
+
 * Other
 
 

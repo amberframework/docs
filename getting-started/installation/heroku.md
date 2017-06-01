@@ -1,4 +1,4 @@
-# Deploying Amber CLI
+# Installing Amber CLI
 
 [Crystal](http://crystal-lang.org/) is a typed, LLVM compiled language that reads \(mostly\) as Ruby. It's a modern language that comes bundled with support for WebSockets, OAuth and other niceties.
 
@@ -105,7 +105,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development          
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development              
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 

@@ -33,16 +33,16 @@ Amber Cmd
 Subcommands:
   c         alias for console
   console
-  
+
   g         alias for generate
   generate
-  
+
   n         alias for new
   new
-  
+
   m         alias for migrate
   migrate
-  
+
   w         alias for watch
   watch
 
@@ -97,18 +97,22 @@ This will generate scaffolding for a Post:
 
 To test the demo app locally:
 
-1. Create a new Postgres or Mysql database called`[your_app]_development`
+1. Create a new Postgres or Mysql database called
+   `[your_app]_development`
 2. Configure your database with one of the following ways.
 
-* Add it in`config/database.yml`
-* Run`export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development`
-  which overrides the`config/database.yml`
+   1. Add it in  
+      `config/database.yml`
 
-1. Migrate the database`amber migrate up`You should see output like
+   2. Run \(overrides the`config/database.yml)`  
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development`  
+
+3. Migrate the database`amber migrate up`You should see output like  
    `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
-2. Run the specs:`crystal spec`
-3. Start your app`amber watch`
-4. Then visit
+
+4. Run the specs:`crystal spec`
+5. Start your app`amber watch`
+6. Then visit
    `http://0.0.0.0:3000/`
 
 Note: The`amber watch`command uses[Sentry](https://github.com/samueleaton/sentry)to watch for any changes in your source files, recompiling automatically.

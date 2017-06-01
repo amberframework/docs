@@ -8,12 +8,12 @@
 * [Getting Started](getting-started.md)
   * [Installation](getting-started/installation.md)
   * [Amber CLI](getting-started/installation/heroku.md)
-  * Configuration
+  * [Configuration](getting-started/configuration.md)
   * [Pipelines](getting-started/pipelines.md)
   * [Routing](getting-started/routing.md)
   * [Request & Response Objects](getting-started/request-and-response-objects.md)
-  * Controllers
-  * Views
+  * [Controllers](getting-started/controllers.md)
+  * [Views](getting-started/views.md)
   * Database Access & ORM
 * Using Amber Framework
   * Authentication
@@ -37,6 +37,4 @@
   * Validation
 * Shards
 * Other
-
-
 

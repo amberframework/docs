@@ -44,9 +44,9 @@ Now that you successfully have install amber-cmd, you can query to see a list of
       amber c console                 # Starts a amber console   
       amber g generate [SUBCOMMAND]   # Generate Amber classes
       amber n new                     # Generate a new amber project
-      amber m migrate [SUBCOMMAND]    # Performs database migrations tasks
+      amber m migrate [SUBCOMMAND]    # Performs database migrations tasks
       amber w watch                   # Starts amber server and rebuilds on file changes
-      amber routes                    # Prints the routes (In Development)
+      amber routes                    # Prints the routes (In Development)
       amber r run [OPTION]            # Compiles and runs your project. Options: [-p --port | -e -environment]
 
     Options:
@@ -67,7 +67,7 @@ cd [your_app]
 
 options:`-d`defaults to pg.`-t`defaults to slang.`--deps`will run`crystal deps`for you.
 
-Directory Stryct
+### Directory Structure
 
 This will generate a traditional web application:
 
@@ -106,7 +106,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                    
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                      
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 

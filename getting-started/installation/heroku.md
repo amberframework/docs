@@ -16,8 +16,8 @@ You should now be able to run`amber`in the command line.
 MacOS optionally, you can use **homebrew** to install.
 
 ```
-brew update
-brew install amber-cmd
+brew tap amber-crystal/amber
+brew install amber-crystal/amber/amber
 ```
 
 Now that you successfully have install amber-cmd, you can query to see a list of available commands
@@ -103,7 +103,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                  
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 

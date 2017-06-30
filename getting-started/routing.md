@@ -76,5 +76,20 @@ Mapping the above route
 | :--- | :--- | :--- | :--- |
 | get | "/about" | StaticController | :about |
 
+Your action will need to return a string or render a view or this will cause your routes to throw an error during compilation.
+
+```crystal
+def about
+  "About my cool page!"
+end
+
+# or:
+
+def about
+  render("about.ecr")
+end
+
+```
+
 
 

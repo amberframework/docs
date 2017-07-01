@@ -17,7 +17,7 @@
   * [Deploying](https://www.gitbook.com/book/amber-crystal/amber/edit#)
 * [Using Amber Framework](using-amber-framework.md)
   * [Authentication](using-amber-framework/authentication.md)
-  * Amber Console
+  * [Amber Console](using-amber-framework/amber-console.md)
   * [Caching](using-amber-framework/caching.md)
   * [Generators](using-amber-framework/generators.md)
   * [CLI, Tasks & Console Tools](using-amber-framework/cli-tasks-and-console-tools.md)

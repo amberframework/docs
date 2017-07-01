@@ -13,7 +13,7 @@
   * [Request & Response Objects](getting-started/request-and-response-objects.md)
   * [Controllers](getting-started/controllers.md)
   * [Views](getting-started/views.md)
-  * Database Access & ORM
+  * [Database Access & ORM](getting-started/installation/database-access-and-orm.md)
   * [Deploying](https://www.gitbook.com/book/amber-crystal/amber/edit#)
 * [Using Amber Framework](using-amber-framework.md)
   * [Authentication](using-amber-framework/authentication.md)

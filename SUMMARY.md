@@ -36,6 +36,6 @@
   * [Testing](using-amber-framework/testing.md)
   * [Validation](using-amber-framework/validation.md)
   * [Websockets](using-amber-framework/websockets.md)
-* Shards
-* Other
+* [Shards](shards.md)
+* [Other](other.md)
 

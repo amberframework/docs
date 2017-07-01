@@ -4,6 +4,12 @@ The **Amber CLI** offers you a set of command line tools to **create**, **genera
 
 ### Installing the Amber CLI
 
+#### Method 1 - From Source:
+
+Install crystal by following these instructions. [https://crystal-lang.org/docs/installation/](https://crystal-lang.org/docs/installation/ "Install Crystal")  
+  
+Next download and install `amber_cmd` 
+
 ```bash
 git clone git@github.com:amber-crystal/amber_cmd.git
 cd amber_cmd/
@@ -11,15 +17,20 @@ shards install
 make
 ```
 
-You should now be able to run`amber`in the command line.
-
-MacOS optionally, you can use **homebrew** to install.
+#### Method 2 - Use Homebrew \(OSX Only\)
 
 ```
+brew install amber-crystal/amber/amber
+
+OR
+
 brew tap amber-crystal/amber
 brew install amber-crystal/amber/amber
 ```
 
+### Usage
+
+You should now be able to run`amber`in the command line.  
 Now that you successfully have install amber-cmd, you can query to see a list of available commands
 
     $ amber --help
@@ -106,7 +117,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                      
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                            
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 

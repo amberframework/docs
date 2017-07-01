@@ -6,9 +6,9 @@ The **Amber CLI** offers you a set of command line tools to **create**, **genera
 
 #### Method 1 - From Source:
 
-Install crystal by following these instructions. [https://crystal-lang.org/docs/installation/](https://crystal-lang.org/docs/installation/ "Install Crystal")  
-  
-Next download and install `amber_cmd` 
+Install crystal by following these instructions. [https://crystal-lang.org/docs/installation/](https://crystal-lang.org/docs/installation/ "Install Crystal")
+
+Next download and install `amber_cmd`
 
 ```bash
 git clone git@github.com:amber-crystal/amber_cmd.git
@@ -117,7 +117,7 @@ To test the demo app locally:
       `config/database.yml`
 
    2. Run \(overrides the`config/database.yml)`  
-      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                            
+      `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development                              
       Should output something like:`  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`
 

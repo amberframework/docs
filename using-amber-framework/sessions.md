@@ -16,5 +16,7 @@ flash[:error] = "Not enough brains."
 puts flash[:error] # will display the message and clear on reload
 ```
 
+Make sure the Flash, Session and CSFR pipelines are enabled in your `routes.cr` file and in the order that the scaffolding puts them.
+
 
 

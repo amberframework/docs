@@ -37,7 +37,7 @@ end
 In your Javascript, after getting the JSON object back, refresh your CSRF tag with the one from the server.
 
 ```javascript
-"input[name*=_csrf]").replaceWith(e['csrf']);
+$("input[name*=_csrf]").replaceWith(e['csrf']);
 ```
 
 

@@ -56,3 +56,5 @@ Amber provides us some default pipes for a number of common tasks. In turn we ca
 
 With our `:web` pipeline now define we can use it in our routes difinitions.
 
+Don't get rid of StaticController if you need to serve static assets.
+

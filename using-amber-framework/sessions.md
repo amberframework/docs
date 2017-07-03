@@ -16,7 +16,13 @@ flash[:error] = "Not enough brains."
 puts flash[:error] # will display the message and clear on reload
 ```
 
-Make sure the Flash, Session and CSFR pipelines are enabled in your `routes.cr` file and in the order that the scaffolding puts them.
+Make sure the Flash, Session and CSRF pipelines are enabled in your `routes.cr` file and in the order that the scaffolding puts them.
+
+# CSRF
+
+To use CSRF, enable the pipe in your `routes.cr`
+
+Then, insert the `csrf_tag` helper in your forms.
 
 
 

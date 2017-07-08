@@ -8,6 +8,8 @@ May build on: Raspbian
 
 Swap files can be used on low RAM servers for a longer but one-time compilation.
 
+Crystal itself is low-RAM usage and powerful servers are not typically needed.
+
 ## Deploying as a supervisord process
 
 ## Deploying to Digital Ocean with Docker

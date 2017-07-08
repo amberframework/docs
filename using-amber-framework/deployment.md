@@ -10,3 +10,9 @@ May build on: Raspbian
 
 Please see this video [https://www.youtube.com/watch?v=FB38q-IMK48&feature=youtu.be](https://www.youtube.com/watch?v=FB38q-IMK48&feature=youtu.be)
 
+# Deploying to NanoBox
+
+Coming soon! See: [https://trello.com/c/belEWLqo/60-crystal](https://trello.com/c/belEWLqo/60-crystal)
+
+
+

@@ -6,6 +6,8 @@ May build on: Raspbian
 
 2gb of RAM with 512MB swap is required to compile. 3gb or more is recommended.
 
+Swap files can be used on low RAM servers for a longer but one-time compilation.
+
 ## Deploying as a supervisord process
 
 ## Deploying to Digital Ocean with Docker

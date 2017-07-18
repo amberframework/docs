@@ -6,11 +6,39 @@ The goal of this overview is to introduce the general concepts in Amber, and giv
 
 ## Conventions Over Configuration
 
-Amber provides a basic organizational structure that covers class names, filenames, database table names, and other conventions. While the conventions take some time to learn, by following the conventions Amber provides you can avoid needless configuration and make a uniform application structure that makes working with various projects simple. 
+Amber provides a basic organizational structure that covers class names, filenames, database table names, and other conventions. While the conventions take some time to learn, by following the conventions Amber provides you can avoid needless configuration and make a uniform application structure that makes working with various projects simple.
 
 ### Controller Layer
 
+```crystal
+class UsersController < ApplicationController
+  def index
+    @users = Users.all
+    render("index.slang")
+  end
+end
+```
+
 ### View Layer
+
+```crystal
+# Slang
+
+doctype html
+html
+  head
+    meta name="viewport" content="width=device-width,initial-scale=1.0"
+    title This is a title
+    css:
+      h1 {color: red;} 
+      p {color: green;}
+    style h2 {color: blue;}
+  body
+    ul 
+     - @users.each do |user|
+       li = "#{user.name} - #{user.email}"
+  
+```
 
 ### Model Layer
 
@@ -22,9 +50,8 @@ In the case of a social network, the Model layer would take care of tasks such a
 class User
     getter name : String
     getter email : String
-    
+
     def initialize(@name, @email); end
-    
 end
 ```
 

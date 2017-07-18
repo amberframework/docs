@@ -22,7 +22,7 @@ end
 ### View Layer
 
 ```crystal
-# Slang
+# Slang - /views/users/index.slang
 
 doctype html
 html
@@ -37,7 +37,6 @@ html
     ul 
      - @users.each do |user|
        li = "#{user.name} - #{user.email}"
-  
 ```
 
 ### Model Layer

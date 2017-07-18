@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         redirect_to :index
     end
 
-    # Define parameters per actions
+    # Define parameters within actions
     def update
         update_params = params do
           required(:name, "Your First Name is missing!") { |p| p.name? & !p.name.empty? }
@@ -96,8 +96,6 @@ class UsersController < ApplicationController
     end
 end
 ```
-
-
 
 
 

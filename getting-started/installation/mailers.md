@@ -27,5 +27,3 @@ mailer.deliver(name, email)
 
 
 
-
-

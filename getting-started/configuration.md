@@ -1,7 +1,5 @@
 # Amber App Configuration
 
-
-
 ```ruby
 Amber::Server.instance.config do |app|
   # Server options
@@ -14,6 +12,15 @@ Amber::Server.instance.config do |app|
   app.log.level = ::Logger::INFO
   app.host = "0.0.0.0"
   app.port_reuse = true
+  app.session = {
+    :key     => "name.session",
+    # :redis store available
+    :store   => :cookie,
+    # 0, will make the session last as long as the browser is open, upon closing, session will be terminated
+    :expires => 120,
+    :secret  => "secret"
+  }
+
 end
 ```
 

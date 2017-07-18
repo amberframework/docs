@@ -14,7 +14,6 @@
   * [Controllers](getting-started/controllers.md)
   * [Views](getting-started/views.md)
   * [Database Access & ORM](getting-started/installation/database-access-and-orm.md)
-  * [Deploying](https://www.gitbook.com/book/amber-crystal/amber/edit#)
 * [Using Amber Framework](using-amber-framework.md)
   * [Authentication](using-amber-framework/authentication.md)
   * [Amber Console](using-amber-framework/amber-console.md)
@@ -38,4 +37,6 @@
   * [Websockets](using-amber-framework/websockets.md)
 * [Shards](shards.md)
 * [Other](other.md)
+
+
 

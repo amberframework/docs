@@ -13,11 +13,10 @@
   * [Request & Response Objects](getting-started/request-and-response-objects.md)
   * [Controllers](getting-started/controllers.md)
   * [Params Validation](using-amber-framework/validation.md)
-  * [Views](getting-started/views.md)
   * [Mailers](getting-started/installation/mailers.md)
   * [Database Access & ORM](getting-started/installation/database-access-and-orm.md)
-  * [Params Validation](using-amber-framework/validation.md)
   * [Websockets](using-amber-framework/websockets.md)
+  * [Views](getting-started/views.md)
   * [Shards](using-amber-framework/shards.md)
 * [Shards](shards.md)
 

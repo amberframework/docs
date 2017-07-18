@@ -35,7 +35,5 @@ end
 
 As an example, if a user goes to `api/index` in your application to add a new client, Amber will create an instance of **ApiController **and call it's **index** method
 
-### Parameters {#parameters}
-
 
 

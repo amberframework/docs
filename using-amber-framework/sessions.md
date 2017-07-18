@@ -1,6 +1,4 @@
-# Sessions
-
-## The Session
+# The Session
 
 A session store that uses an Amber:Router::Session::Store to store the sessions. This store is most useful if you don't store critical data in your sessions and you don't need them to live for extended periods of time.
 
@@ -31,8 +29,6 @@ Amber::Server.instance.session = {
 }
 ```
 
-
-
 Configure the Pipeline
 
 ```crystal
@@ -45,8 +41,6 @@ pipeline :web do
   plug Amber::Pipe::CSRF.new
 end
 ```
-
-
 
 Accessing the session
 
@@ -63,8 +57,6 @@ class ApplicationController < Amber::Controller::Base
 end
 ```
 
-
-
 To store something in the session, just assign it to the key like a hash:
 
 ```crystal
@@ -80,8 +72,6 @@ class LoginsController < ApplicationController
   end
 end
 ```
-
-
 
 To remove something from the session, assign that key to be nil or use`session.delete(key)`
 
@@ -117,8 +107,6 @@ class LoginsController < ApplicationController
 end
 ```
 
-
-
 Rendering the flash message
 
 ```html
@@ -128,13 +116,11 @@ Rendering the flash message
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
     <% end -%>
- 
+
     <!-- more content -->
   </body>
 </html>
 ```
-
-
 
 If you want a flash value to be carried over to another request, use the keep method:
 
@@ -148,7 +134,7 @@ class MainController < ApplicationController
   def index
     # Will persist all flash values.
     flash.keep
- 
+
     # You can also use a key to keep only some kind of value.
     # flash.keep(:notice)
     redirect_to users_url

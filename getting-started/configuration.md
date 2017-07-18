@@ -18,9 +18,10 @@ Amber::Server.instance.config do |app|
     :store   => :cookie,
     # 0, will make the session last as long as the browser is open, upon closing, session will be terminated
     :expires => 120,
-    :secret  => "secret"
+    :secret  => "secret",
+    # when store equals to :redis, must specify redis url
+    :redis_url => "redis://localhost:6379",
   }
-
 end
 ```
 

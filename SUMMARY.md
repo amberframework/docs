@@ -14,6 +14,7 @@
   * [Controllers](getting-started/controllers.md)
   * [Views](getting-started/views.md)
   * [Database Access & ORM](getting-started/installation/database-access-and-orm.md)
+  * [Deployment](using-amber-framework/deployment.md)
 * [Using Amber Framework](using-amber-framework.md)
   * [Authentication](using-amber-framework/authentication.md)
   * [Amber Console](using-amber-framework/amber-console.md)
@@ -21,7 +22,6 @@
   * [Generators](using-amber-framework/generators.md)
   * [CLI, Tasks & Console Tools](using-amber-framework/cli-tasks-and-console-tools.md)
   * [Debugging](using-amber-framework/debugging.md)
-  * [Deployment](using-amber-framework/deployment.md)
   * Sending and Receiving Emails
   * Error & Exception Handling
   * [Events System](using-amber-framework/events-system.md)
@@ -37,6 +37,4 @@
   * [Websockets](using-amber-framework/websockets.md)
 * [Shards](shards.md)
 * [Other](other.md)
-
-
 

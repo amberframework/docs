@@ -21,9 +21,11 @@ make
 
 ```bash
 brew install amber-crystal/amber/amber
+```
 
-# OR
+Optionally you can install as  follow:
 
+```bash
 brew tap amber-crystal/amber
 brew install amber-crystal/amber/amber
 ```

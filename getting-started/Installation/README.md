@@ -1,4 +1,4 @@
-# Installing Amber CLI
+# Installing Amber
 
 The **Amber CLI** offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** Amber.
 

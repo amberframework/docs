@@ -19,10 +19,10 @@ make
 
 #### Method 2 - Use Homebrew \(OSX Only\)
 
-```
+```bash
 brew install amber-crystal/amber/amber
 
-OR
+# OR
 
 brew tap amber-crystal/amber
 brew install amber-crystal/amber/amber

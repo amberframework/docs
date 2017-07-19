@@ -66,6 +66,21 @@ To clear all the rows in the database:
 Post.clear #truncate the table
 ```
 
+#### Create
+
+Objects can be created from a hash, a block or have their attributes manually set after creation. The **new **method will return a new object which later can be persisted with **save**
+
+```crystal
+post = Post.new
+post.name = "Kemalyst Rocks!"
+post.body = "Check this out."
+post.save
+```
+
+#### Read
+
+**Granite::ORM** provides a rich API for accessing data within a database. Below are a few examples of different data access methods provided
+
 #### Find All
 
 ```crystal
@@ -95,18 +110,9 @@ if post
 end
 ```
 
-#### Insert
-
-Objects can be created from a hash, a block or have their attributes manually set after creation. The **new **method will return a new object which later can be persisted with **save**
-
-```crystal
-post = Post.new
-post.name = "Kemalyst Rocks!"
-post.body = "Check this out."
-post.save
-```
-
 #### Update
+
+Once an Object has been retrieved, its attributes can be modified and it can be saved to the database.
 
 ```crystal
 post = Post.find 1
@@ -115,6 +121,8 @@ post.save
 ```
 
 #### Delete
+
+Likewise, once retrieved an object can be destroyed which removes it from the database.
 
 ```crystal
 post = Post.find 1
@@ -134,11 +142,7 @@ post.errors[0].to_s.should eq "ERROR: name cannot be null"
 
 ### Queries
 
-The where clause will give you full control over your query.
-
-When using the`all`method, the SQL selected fields will always match the fields specified in the model.
-
-Always pass in parameters to avoid SQL Injection. Use a`?`\(or`$1`,`$2`,.. for pg\) in your query as placeholder. Checkout the[Crystal DB Driver](https://github.com/crystal-lang/crystal-db)for documentation of the drivers.
+The where clause will give you full control over your query. When using the`all`method, the SQL selected fields will always match the fields specified in the model. Always pass in parameters to avoid SQL Injection. Use a`?`\(or`$1`,`$2`,.. for pg\) in your query as placeholder. Checkout the [Crystal DB Driver](https://github.com/crystal-lang/crystal-db) for documentation of the drivers.
 
 Here are some examples:
 
@@ -159,8 +163,6 @@ posts = Post.all("JOIN comments c ON c.post_id = post.id
                   ORDER BY post.created_at DESC",
                   ["Joe"])
 ```
-
-
 
 
 

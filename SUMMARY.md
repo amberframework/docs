@@ -16,10 +16,10 @@
     * [06.1 - Sessions](getting-started/controllers/the-session.md)
     * [06.2 - Request & Response Objects](getting-started/controllers/request-and-response-objects.md)
     * [06.3 - Params Validation](getting-started/controllers/params-validation.md)
+    * [06.4 - Cookies](getting-started/controllers/064-cookies.md)
+    * [06.5 - Filters](getting-started/controllers/065-filters.md)
   * [07 - Models](getting-started/models/README.md)
   * [08 - Views](getting-started/views/README.md)
   * [09 - Mailers](getting-started/mailers/README.md)
 * [Shards](shards.md)
-
-
 

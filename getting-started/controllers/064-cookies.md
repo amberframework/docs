@@ -1,6 +1,6 @@
 # Cookies
 
-Cookies are read and written through**Amber::Base::Controller\#cookies**.
+Cookies are read and written through **Amber::Base::Controller\#cookies**.
 
 The cookies being read are the ones received along with the request, the cookies being written will be sent out with the response. Reading a cookie does not get the cookie object itself back, just the value it holds.
 

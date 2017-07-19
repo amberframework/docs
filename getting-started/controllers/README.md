@@ -20,7 +20,7 @@ In the snipped above the **ApiController** is the name of the controller** **`./
 
 ### Methods and Actions {#methods-and-actions}
 
-A controller is a Crystal class which inherits from `ApplicationController`and has methods just like any other class. When your application receives a request, the routing will determine which controller and action to run, then Rails creates an instance of that controller and runs the method with the same name as the action.
+A controller is a Crystal class which inherits from `ApplicationController`and has methods just like any other class. When your application receives a request, the routing will determine which controller and action to run, then Amber creates an instance of that controller and runs the method with the same name as the action.
 
 Controllers are defined as such:
 

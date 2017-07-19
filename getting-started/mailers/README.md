@@ -1,4 +1,4 @@
-# Mailer
+# Mailers
 
 The mailer has the ability to set the`from`,`to`,`cc`,`bcc`,`subject`and`body`. You may use the`render`helper to create the body of the email.
 

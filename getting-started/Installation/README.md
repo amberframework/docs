@@ -73,9 +73,7 @@ Now that you successfully have install amber-cmd, you can query to see a list of
       amber new ~/Code/Projects/weblog
       This generates a skeletal Amber installation in ~/Code/Projects/weblog.
 
-```
 
-```
 
 
 

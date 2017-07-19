@@ -1,4 +1,4 @@
-# Controllers {#controllers}
+# Amber Controllers {#controllers}
 
 ### What Does a Controller Do? {#what-does-a-controller-do-questionmark}
 

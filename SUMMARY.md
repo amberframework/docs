@@ -13,7 +13,7 @@
   * [04 - Routing](getting-started/routing.md)
     * [Pipelines](getting-started/routing/pipelines.md)
     * [Routes](getting-started/routing/routes.md)
-  * [05 - Controllers](getting-started/controllers.md)
+  * [05 - Controllers](getting-started/controllers/README.md)
     * [Sessions](getting-started/controllers/the-session.md)
     * [Request & Response Objects](getting-started/controllers/request-and-response-objects.md)
     * [Params Validation](getting-started/controllers/params-validation.md)

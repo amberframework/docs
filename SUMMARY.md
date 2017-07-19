@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Preface](preface.md)
-  * [At A Glance](preface/at-a-glance.md)
   * [Contributing](preface/contributing.md)
   * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started.md)

@@ -1,4 +1,4 @@
-# Amber App Configuration
+# Amber Application Configuration
 
 ```ruby
 Amber::Server.instance.config do |app|

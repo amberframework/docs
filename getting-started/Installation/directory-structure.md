@@ -1,4 +1,4 @@
-# Amber Directory Structure
+# Directory Structure
 
 This will generate a traditional web application:
 

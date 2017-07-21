@@ -1,9 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Preface](preface.md)
-  * [Contributing](preface/contributing.md)
-  * [Code of Conduct](preface/code-of-conduct.md)
+* [Contributing](preface/contributing.md)
+* [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started.md)
   * [1 - Installation](getting-started/Installation/README.md)
   * [2 - Create New App](getting-started/Installation/create-new-app.md)

@@ -9,6 +9,8 @@ Debugging an Amber project on VSCode with GDB and [Native Debug](https://github.
 * GNU Debugger \(GDB\) - Mac os install `brew install gdb`
 * VSCode + [Crystal Support](https://marketplace.visualstudio.com/search?term=tag%3Acrystal&target=VSCode&category=All categories&sortBy=Relevance) + [Native Debug](https://github.com/faustinoaq/vscode-crystal-lang#67-debugging)
 
+> Note: Before continuing setting up the debugger make sure you have the above requisites install. These settings have been verified for a MacOS enviroment.
+
 ## Steps
 
 #### 1. `task.json`**to compile the main file with debug support**

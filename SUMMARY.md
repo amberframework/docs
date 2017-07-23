@@ -21,4 +21,9 @@
   * [8 - Views](getting-started/views/README.md)
   * [9 - Mailers](getting-started/mailers/README.md)
 * [Shards](shards.md)
+* Using Amber
+  * [Debugging](debugging.md)
+    * [VS Code Debug](vs-code-debug.md)
+
+
 

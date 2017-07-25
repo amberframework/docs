@@ -1,5 +1,38 @@
 # Models - Granite::ORM
 
+## Installation
+
+Add this library to your projects dependencies along with the driver in your`shard.yml`. This can be used with any framework but was originally designed to work with Amber in mind. This library will work with kemal as well.
+
+```yaml
+dependencies:
+  granite_orm:
+    github: Amber-Crystal/granite-orm
+
+  # Pick your database
+  mysql:
+    github: crystal-lang/crystal-mysql
+
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+  pg:
+    github: will/crystal-pg
+```
+
+Next you will need to create a`config/database.yml`You can leverage environment variables using ${} syntax.
+
+```yaml
+mysql:
+  database: "mysql://user:pass@mysql:3306/test"
+pg:
+  database: "postgres://postgres:@pg:5432/postgres"
+sqlite:
+  database: "sqlite3:./config/test.db"
+```
+
+Or you can set the`DATABASE_URL`environment variable. This will override the config/database.yml
+
 ### CRUD: Reading and Writing Data {#crud-reading-and-writing-data}
 
 CRUD is an acronym for the four verbs we use to operate on data:**C**reate,**R**ead,**U**pdate and**D**elete. **Granite::ORM** automatically creates methods to allow an application to read and manipulate data stored within its tables.

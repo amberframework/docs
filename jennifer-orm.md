@@ -1,4 +1,4 @@
-# Using Amber with Jennifer ORM
+# Using Jennifer ORM with Amber 
 
 ### What is Jennifer?
 
@@ -72,6 +72,8 @@ end
 > Note that we pass the AMBER\_ENV to Jennifer::Config.read this will allow Jennifer to use the correct database settings for the environment.
 
 #### Create a sam.cr in {project/src}
+
+Jennifer uses Sam for running tasks pertinent to ORM operations. Sam is a Make-like utility which allows to specify tasks like Ruby's Rake do using plain Crystal. For how to use [Sam](https://github.com/imdrasil/sam.cr) visit the Github repository [https://github.com/imdrasil/sam.cr](https://github.com/imdrasil/sam.cr)
 
 ```crystal
 # src/sam.cr

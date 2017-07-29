@@ -14,6 +14,8 @@ amber new {project}
 
 #### Update your project shard.yml
 
+Add this to your application's
+
 ```yaml
 # Add the following dependencies
 jennifer:
@@ -22,6 +24,8 @@ jennifer:
 sam:
   github: imdrasil/sam.cr
 ```
+
+> Also** **you need to choose one of existing adapters for your db: [mysql](https://github.com/crystal-lang/crystal-mysql) or [postgres](https://github.com/will/crystal-pg).
 
 Then in the console
 
@@ -80,6 +84,26 @@ require "jennifer/sam"
 load_dependencies "jennifer"
 Sam.help
 ```
+
+#### Edit your src/{project}.cr file
+
+Add the Jennifer adapter and jennifer.
+
+```crystal
+require "jennifer/adapter/postgres" # for postgres
+require "jennifer"
+
+require "amber"
+require "./controllers/**"
+require "./mailers/**"
+require "./models/**"
+require "./views/**"
+require "../config/*"
+
+Amber::Server.instance.run
+```
+
+
 
 
 

@@ -106,5 +106,5 @@ require "../config/*"
 Amber::Server.instance.run
 ```
 
-
+You're all set with the configuration. Next using Jennifer Migrations and Models.
 

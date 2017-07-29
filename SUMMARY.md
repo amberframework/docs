@@ -23,5 +23,6 @@
 * Using Amber
   * Debugging
     * [VS Code Debug](using-amber/debugging/vs-code-debug.md)
+  * [Jennifer ORM](jennifer-orm.md)
 * [Shards](shards.md)
 

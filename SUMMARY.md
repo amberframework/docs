@@ -24,6 +24,7 @@
   * Debugging
     * [VS Code Debug](using-amber/debugging/vs-code-debug.md)
   * [Jennifer ORM](jennifer-orm.md)
+    * [Migrations](jennifer-orm/migrations.md)
     * [Models](jennifer-orm/models.md)
 * [Shards](shards.md)
 

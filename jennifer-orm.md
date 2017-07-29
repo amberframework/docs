@@ -1,4 +1,4 @@
-# Using Jennifer ORM with Amber 
+# Using Jennifer ORM with Amber - Installation
 
 ### What is Jennifer?
 

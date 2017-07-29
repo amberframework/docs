@@ -4,7 +4,7 @@
 
 **Jennifer** is  an ActiveRecord pattern realization for Crystal with grate query DSL and migration mechanism.
 
-To use Jennifer as your ORM 
+To use Jennifer as your ORM
 
 #### Generate a normal amber app
 
@@ -46,14 +46,13 @@ development:
 test:
   db: blog_test
   <<: *defaults
-
 ```
 
 #### Create a **jennifer.c**r under the **/config** directory
 
 ```crystal
 require "colorize"
-# Todo pass env as symbol
+
 Jennifer::Config.read("config/database.yml", AMBER_ENV)
 
 Jennifer::Config.configure do |conf|

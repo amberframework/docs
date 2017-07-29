@@ -4,7 +4,7 @@
 
 **Jennifer** is  an ActiveRecord pattern realization for Crystal with grate query DSL and migration mechanism.
 
-To use Jennifer as your ORM
+## Installing Jennifer for Amber
 
 #### Generate a normal amber app
 
@@ -77,6 +77,7 @@ end
 # src/sam.cr
 require "jennifer/adapter/postgres"
 require "jennifer"
+
 require "../config/jennifer"
 require "../db/migrations/*"
 require "sam"
@@ -87,7 +88,7 @@ Sam.help
 
 #### Edit your src/{project}.cr file
 
-Add the Jennifer adapter and jennifer.
+This should be done before you load your application configurations \(or at least models\). With Amber this is very easy. Also the order is very important the adapter should come before Jennifer.
 
 ```crystal
 require "jennifer/adapter/postgres" # for postgres
@@ -102,8 +103,6 @@ require "../config/*"
 
 Amber::Server.instance.run
 ```
-
-
 
 
 

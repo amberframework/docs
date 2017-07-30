@@ -1,4 +1,4 @@
-### Model
+# Using Jennifer ORM with Amber -  Model
 
 Several model examples
 ```crystal

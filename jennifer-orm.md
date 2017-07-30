@@ -4,6 +4,9 @@
 
 **Jennifer** is  an ActiveRecord pattern realization for Crystal with grate query DSL and migration mechanism.
 
+#### Example App Repo
+https://github.com/eliasjpr/amber-jennnifer-app-example
+
 ## Installing Jennifer for Amber
 
 #### Generate a normal amber app

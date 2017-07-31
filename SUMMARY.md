@@ -20,7 +20,7 @@
   * [7 - Models](getting-started/models/README.md)
   * [8 - Views](getting-started/views/README.md)
   * [9 - Mailers](getting-started/mailers/README.md)
-* Using Amber
+* Recipes
   * Debugging
     * [VS Code Debug](using-amber/debugging/vs-code-debug.md)
   * [Jennifer ORM](jennifer-orm.md)

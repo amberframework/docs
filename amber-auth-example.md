@@ -45,7 +45,7 @@ Now for some code. In the`models/user.cr`, we need to create the`encrypted_passw
 require "kemalyst-model/adapter/mysql"
 require "crypto/bcrypt/password"
 
-class User < Kemalyst::Model
+class User < Granite::Model
   adapter mysql
 
   # id : Int64 primary key is created for you
@@ -67,8 +67,6 @@ class User < Kemalyst::Model
   end
 end
 ```
-
-
 
 We added two methods. A setter for`password=`and an`authenticate`method.
 
@@ -115,8 +113,6 @@ form action="#{ action }" method="post"
   a.btn.btn-default.btn-xs href="/users" back
 ```
 
-
-
 We add the`== csrf_tag`and replace the`encrypted_password`input with the`password`input. We also change the type of input to`password`.
 
 Ok. Now lets move on to the`SessionController`and create the login screen.
@@ -150,8 +146,6 @@ class SessionController < ApplicationController
   end
 end
 ```
-
-
 
 Now we need a login page. Remove the`views/session/create.slang`and`views/session/delete.slang`and update the`views/session/new.slang`:
 
@@ -205,8 +199,6 @@ class Authenticate < Amber::Pipe::Base
   end
 end
 ```
-
-
 
 This change may need some explanation.
 
@@ -267,8 +259,6 @@ user.email = "admin@example.com"
 user.password = "password"
 user.save
 ```
-
-
 
 Seed the database by running:
 

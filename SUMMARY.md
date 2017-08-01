@@ -26,5 +26,6 @@
   * [Jennifer ORM](jennifer-orm.md)
     * [Migrations](jennifer-orm/migrations.md)
     * [Models](jennifer-orm/models.md)
+  * [Amber Auth Example](amber-auth-example.md)
 * [Shards](shards.md)
 

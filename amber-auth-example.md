@@ -2,6 +2,8 @@
 
 This is an example of how to handle authentication with Amber.
 
+Source Code: https://github.com/drujensen/amber-auth-example 
+
 ## Setup
 
 Let's create a new application:

@@ -21,11 +21,11 @@
   * [8 - Views](getting-started/views/README.md)
   * [9 - Mailers](getting-started/mailers/README.md)
 * Recipes
-  * Debugging
+  * [Amber Auth Example](amber-auth-example.md)
+  * [Debugging](debugging.md)
     * [VS Code Debug](using-amber/debugging/vs-code-debug.md)
   * [Jennifer ORM](jennifer-orm.md)
     * [Migrations](jennifer-orm/migrations.md)
     * [Models](jennifer-orm/models.md)
-  * [Amber Auth Example](amber-auth-example.md)
 * [Shards](shards.md)
 

@@ -11,8 +11,8 @@ Install crystal by following these instructions. [https://crystal-lang.org/docs/
 Next download and install `amber_cmd`
 
 ```bash
-git clone git@github.com:amber-crystal/amber_cmd.git
-cd amber_cmd/
+git clone https://github.com/amber-crystal/amber-cmd.git
+cd amber-cmd/
 shards install
 make
 ```

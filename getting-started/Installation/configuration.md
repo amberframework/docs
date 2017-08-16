@@ -14,8 +14,8 @@ Amber::Server.instance.config do |app|
   app.port_reuse = true
   app.session = {
     :key     => "name.session",
-    # :redis store available
-    :store   => :cookie,
+    # store can be [:signed_cookie, :encrypted_cookie, :redis]
+    :store   => :signed_cookie,
     # 0, will make the session last as long as the browser is open, upon closing, session will be terminated
     :expires => 120,
     :secret  => "secret",

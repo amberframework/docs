@@ -4,11 +4,6 @@ You will probably want to access data sent in by the user or other parameters in
 
 ```crystal
 class UsersController < ApplicationController
-    params do
-      required(:name) { |p| p.name? & !p.name.empty? }
-      required(:email) { |p| p.email? & p.size.between? 1..10 }
-    end
-
     def create
         unless params.valid?
             response.puts {errors: params.errors}.to_json
@@ -48,7 +43,7 @@ With Amber parameters validation is easy to keep your code organize
 ```crystal
 # You can define modules to group your params validations
 module UserParams
-    def self.create
+    def create_paramms
         params do
           required(:name, "Your First Name is missing!") { |p| p.name? & !p.name.empty? }
           required(:email, "Your email address is invalid!") { |p| p.email? & p.size.between? 1..10 }

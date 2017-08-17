@@ -11,12 +11,16 @@
   * [5 - Routing](getting-started/routing.md)
     * [5.1 - Pipelines](getting-started/routing/pipelines.md)
     * [5.2 - Routes](getting-started/routing/routes.md)
+    * 5.3 - Forwarding
   * [6 - Controllers](getting-started/controllers/README.md)
     * [6.1 - Sessions](getting-started/controllers/the-session.md)
     * [6.2 - Request & Response Objects](getting-started/controllers/request-and-response-objects.md)
     * [6.3 - Params Validation](getting-started/controllers/params-validation.md)
     * [6.4 - Cookies](getting-started/controllers/064-cookies.md)
     * [6.5 - Filters](getting-started/controllers/065-filters.md)
+    * [6.6 - Redirection](getting-started/controllers/redirecting.md)
+    * 6.7 - Flash
+    * 6.8 - Halting Requests
   * [7 - Models](getting-started/models/README.md)
   * [8 - Views](getting-started/views/README.md)
   * [9 - Mailers](getting-started/mailers/README.md)

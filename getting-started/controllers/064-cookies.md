@@ -6,7 +6,7 @@ The cookies being read are the ones received along with the request, the cookies
 
 It's advisable that you only store simple data \(strings and numbers\) in cookies. If you have to store complex objects, you would need to handle the conversion manually when reading the values on subsequent requests.
 
-Amber also an encrypted cookie jar for storing sensitive data. The encrypted cookie jar encrypts the values in addition to signing them, so that they cannot be read by the end user.
+Amber also has an encrypted cookie jar for storing sensitive data. The encrypted cookie jar encrypts the values in addition to signing them, so that they cannot be read by the end user.
 
 ### Examples of writing:
 

@@ -51,7 +51,7 @@ Please note that if you specify a :domain when setting a cookie, you must also s
 cookies[:name] = {
   value:   'a yummy cookie',
   expires: 1.year.from_now,
-  domain: 'domain.com'
+  domain:  'domain.com'
 }
 cookies.delete(:name, domain: 'domain.com')
 ```
@@ -73,7 +73,7 @@ domain: %w(.example.com .example.org) # Allow the cookie for concrete domain nam
 :tld_length - When using :domain => :all, this option can be used to explicitly set the TLD length 
               when using a short (<= 3 character) domain that is being interpreted as part of a TLD. 
               For example, to share cookies between user1.lvh.me and user2.lvh.me, set :tld_length to 1.
-              
+
 :expires    - The time at which this cookie expires, as a Time object.
 :secure     - Whether this cookie is only transmitted to HTTPS servers. Default is false.
 :httponly   - Whether this cookie is accessible via scripting or only HTTP. Defaults to false.

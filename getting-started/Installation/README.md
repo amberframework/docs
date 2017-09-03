@@ -8,11 +8,11 @@ The **Amber CLI** offers you a set of command line tools to **create**, **genera
 
 Install crystal by following these instructions. [https://crystal-lang.org/docs/installation/](https://crystal-lang.org/docs/installation/ "Install Crystal")
 
-Next download and install `amber_cmd`
+Next download and install `amber`
 
 ```bash
-git clone https://github.com/amber-crystal/amber-cmd.git
-cd amber-cmd/
+git clone https://github.com/amber-crystal/amber.git
+cd amber/
 shards install
 make
 ```

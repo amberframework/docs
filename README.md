@@ -4,7 +4,7 @@
 
 Amber is a web development framework written in Crystal which implements the server-side MVC pattern. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Ruby on Rails or Python's Django.
 
-Amber aims to deliver developer happiness, productivity and bare metal performance, it offers new concepts, tools and libraries like channels,  pre-compiled templates and hot reloading, to keep you up par with technologies used today.
+Amber aims to deliver developer happiness, productivity and bare metal performance. It offers a familiar set of tools like generators, database managment, irb, deployment tools, docker support and production tools like encrypted secrets.  If you come from the rails world, you will feel right at home but be aware, this is not rails; it embraces the best features from many different frameworks so you might notice pipes for routing which is more similar to phoenix.
 
 ## Getting Help
 
@@ -28,7 +28,7 @@ Amber is a community effort and we want You to be part of ours [Join Amber Commu
 
 ## First Steps
 
-Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. If you are new, you should start off with the
+Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. If you are new, you should start off with the [getting started guide](getting-started/README.md).
 
 ### Quick Start Guide
 

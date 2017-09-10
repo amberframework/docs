@@ -4,9 +4,3 @@ How to edit shard.yml: [https://github.com/crystal-lang/shards/blob/master/SPEC.
 
 List of all Crystal Shards: [https://crystalshards.xyz](https://crystalshards.xyz)
 
-
-
-
-
-
-

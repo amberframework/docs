@@ -22,6 +22,7 @@
     * [6.7 - Halting Requests](getting-started/controllers/67-halting-requests.md)
   * [7 - Models](getting-started/models/README.md)
   * [8 - Views](getting-started/views/README.md)
+    * [8.1 - Jasper Helpers](getting-started/views/jasper-helpers.md)
   * [9 - Mailers](getting-started/mailers/README.md)
   * [10 - Websockets](getting-started/websockets/README.md)
 * [Recipes](recipes/README.md)

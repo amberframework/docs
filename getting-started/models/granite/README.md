@@ -215,7 +215,21 @@ class Post < Granite::ORM::Base
   timestamps
 end
 ```
-This will add a `user` and `user=` methods to the post which returns and sets the user. This also adds a field `user_id : Int64` to the field mapping.  
+This will add a `user` and `user=` instance method to the post.
+
+For example:
+```
+user = User.find 1
+user.posts.each do |post|
+  puts post.title
+end
+
+post = Post.find 1
+puts post.user
+
+post.user = user
+post.save
+```
 
 In this example, you will need to add a `user_id` and index to your posts table:
 ```mysql

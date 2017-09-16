@@ -4,7 +4,7 @@
 * [Contributing](preface/contributing.md)
 * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started/README.md)
-  * [1 - Installation](getting-started/installation/README.md)
+  * [1 - Installation](/getting-started/installation/README.md)
   * [2 - Create New App](getting-started/installation/create-new-app.md)
   * [3 - Directory Structure](getting-started/installation/directory-structure.md)
   * [4 - Configuration](getting-started/installation/configuration.md)
@@ -38,4 +38,6 @@
   * [Debugging](recipes/debugging/README.md)
     * [VS Code Debug](recipes/debugging/vs-code-debug.md)
   * [Shards](shards/README.md)
+
+
 

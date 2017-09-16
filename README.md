@@ -11,6 +11,7 @@ Amber aims to deliver developer happiness, productivity and bare metal performan
 If you’re stuck, there are a number of places you can get help.
 
 **GITTER** You can head over to our Gitter channel to chat with member of the community for quick questions
+[![Gitter](https://badges.gitter.im/amberframework/amber.svg)](https://gitter.im/amberframework/amber?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 **STACK OVERFLOW** for questions about the Crystal Language and Amber Framework
 

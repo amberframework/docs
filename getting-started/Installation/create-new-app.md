@@ -32,7 +32,7 @@ To test the demo app locally:
 
 5. Then visit`http://0.0.0.0:3000/`
 
-> Note: The`amber watch` command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically.
+> Note: The `amber watch` command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically.
 
 If you don't want to use Sentry, you can compile and run manually:
 

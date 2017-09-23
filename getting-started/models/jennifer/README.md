@@ -11,7 +11,7 @@ https://github.com/eliasjpr/amber-jennnifer-app-example
 
 #### Generate a normal amber app
 
-```bash
+```crystal
 amber new {project}
 ```
 
@@ -19,7 +19,7 @@ amber new {project}
 
 Add this to your application's
 
-```yaml
+```crystal
 # Add the following dependencies
 jennifer:
   github: imdrasil/jennifer.cr
@@ -32,13 +32,13 @@ sam:
 
 Then in the console
 
-```bash
+```crystal
 shards update
 ```
 
 #### Setup your database information
 
-```yaml
+```crystal
 defaults : &defaults
   host: localhost
   adapter: postgres

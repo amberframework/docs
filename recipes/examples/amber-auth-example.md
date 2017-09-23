@@ -8,32 +8,32 @@ Source Code: https://github.com/drujensen/amber-auth-example
 
 Let's create a new application:
 
-```
+```crystal
 amber new auth -d mysql --deps
 cd auth
 ```
 
 Next, we scaffold a new User model:
 
-```
+```crystal
 amber generate scaffold User email:string encrypted_password:string
 ```
 
 and we will need a sessions controller to handle login and logout:
 
-```
+```crystal
 amber generate controller Session new create delete
 ```
 
 Create the database using mysql console:
 
-```
+```crystal
 create database auth_development;
 ```
 
 Run migrations:
 
-```
+```crystal
 amber migrate up
 ```
 
@@ -101,7 +101,7 @@ We remove setting the`encrypted_password`directly and use the new`password=`sett
 
 In the`views/users/_form.slang`:
 
-```slang
+```crystal
 ...
 form action="#{ action }" method="post"
   == csrf_tag
@@ -151,7 +151,7 @@ end
 
 Now we need a login page. Remove the`views/session/create.slang`and`views/session/delete.slang`and update the`views/session/new.slang`:
 
-```
+```crystal
 form action="/session" method="post"
   == csrf_tag
   div.form-group
@@ -236,7 +236,7 @@ Don't forget to require the`..src/middleware/*`.
 
 Finally, let's update the`views/layouts/_nav.slang`so it hides the`users`navigation and shows a`login`,`logout`:
 
-```
+```crystal
 - active = context.request.path == "/" ? "active" : ""
 a class="nav-item #{active}" href="/" Home
 - if context.current_user
@@ -264,13 +264,13 @@ user.save
 
 Seed the database by running:
 
-```
+```crystal
 crystal db/seeds.cr
 ```
 
 ## Run
 
-```
+```crystal
 amber w
 ```
 

@@ -1,6 +1,6 @@
 # Amber Application Configuration
 
-```ruby
+```crystal
 Amber::Server.instance.config do |app|
   # Server options
   app_path = __FILE__ # Do not change unless you understand what you are doing.

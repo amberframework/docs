@@ -38,7 +38,7 @@ $ make install
 
 You should now be able to run `amber` in the command line.
 
-#### Homebrew \(OSX Only\)
+#### Homebrew (OSX Only)
 
 ```
 brew install amber-crystal/amber/amber

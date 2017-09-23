@@ -28,7 +28,7 @@ sam:
   github: imdrasil/sam.cr
 ```
 
-> Also** **you need to choose one of existing adapters for your db: [mysql](https://github.com/crystal-lang/crystal-mysql) or [postgres](https://github.com/will/crystal-pg).
+> Choose one of existing adapters for your db: [mysql](https://github.com/crystal-lang/crystal-mysql) or [postgres](https://github.com/will/crystal-pg).
 
 Then in the console
 

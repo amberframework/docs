@@ -29,8 +29,8 @@ $ make install
 - `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev`
 
 ##### For RedHat & CentOS
-- `sudo yum groupinstall 'Development Tools' `
-- `sudo yum install readline-devel sqlite-devel openssl-devel libyaml-devel gc-devel libevent-devel` -->
+- `sudo yum groupinstall development tools`
+- `sudo yum install readline-devel sqlite-devel openssl-devel libyaml-devel gc-devel libevent-devel`
 
 ##### For ArchLinux & derivates
 - Install the CLI from [AUR package](https://aur.archlinux.org/packages/amber/). Dependencies are automatically installed.

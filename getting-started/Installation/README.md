@@ -4,7 +4,7 @@ The **Amber CLI** offers you a set of command line tools to **create**, **genera
 
 ### Installing the Amber CLI
 
-#### Method 1 - From Source:
+#### From Source:
 
 Install crystal by following these instructions. [https://crystal-lang.org/docs/installation/](https://crystal-lang.org/docs/installation/ "Install Crystal")
 
@@ -17,7 +17,7 @@ shards install
 make
 ```
 
-#### Method 2 - Use Homebrew \(OSX Only\)
+#### Homebrew \(OSX Only\)
 
 ```bash
 brew install amber-crystal/amber/amber

@@ -43,7 +43,7 @@ With Amber parameters validation is easy to keep your code organize
 ```crystal
 # You can define modules to group your params validations
 module UserParams
-    def create_paramms
+    def self.create
         params do
           required(:name, "Your First Name is missing!") { |p| p.name? & !p.name.empty? }
           required(:email, "Your email address is invalid!") { |p| p.email? & p.size.between? 1..10 }

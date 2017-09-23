@@ -28,17 +28,17 @@ To test the demo app locally:
 
 3. Run the specs: `crystal spec`
 
-4. Start your app`amber watch`
+4. Start your app `amber watch`
 
-5. Then visit`http://0.0.0.0:3000/`
+5. Then visit `http://0.0.0.0:3000/`
 
-> Note: The `amber watch` command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically.
+> Note: The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically.
 
 If you don't want to use Sentry, you can compile and run manually:
 
-1. Build the app`crystal build --release src/[your_app].cr`
-2. Run with`./[your_app]`
-3. Visit`http://0.0.0.0:3000/`
+1. Build the app `crystal build --release src/[your_app].cr`
+2. Run with `./[your_app]`
+3. Visit `http://0.0.0.0:3000/`
 
 
 

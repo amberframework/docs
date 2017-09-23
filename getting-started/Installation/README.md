@@ -11,23 +11,24 @@ Ensure you have the necessary dependencies:
 - `git`: Use your platform specific package manager to install `git`
 - `crystal`: Follow the instructions to get `crystal` on this page: <https://crystal-lang.org/docs/installation/index.html>
 
-##### For Debian & Ubuntu
-- These are necessary to compile the CLI:
-- `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev`
-
-<!-- WIP: ##### For RedHat & CentOS
-- `sudo yum groupinstall 'Development Tools' `
-- `sudo yum install readline-devel sqlite-devel openssl-devel libyaml-devel gc-devel libevent-devel` -->
+##### From Source
 
 Once you have these dependencies, You can build the `amber` tool from source:
 
-
+Download and install `amber`
 ```
 $ git clone git@github.com:amberframework/amber.git
 $ cd amber/
 $ shards install
 $ make install
-```
+
+##### For Debian & Ubuntu
+- These are necessary to compile the CLI:
+- `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev`
+
+##### For RedHat & CentOS
+- `sudo yum groupinstall 'Development Tools' `
+- `sudo yum install readline-devel sqlite-devel openssl-devel libyaml-devel gc-devel libevent-devel` -->
 
 ##### For ArchLinux & derivates
 - Install the CLI from [AUR package](https://aur.archlinux.org/packages/amber/). Dependencies are automatically installed.
@@ -35,17 +36,6 @@ $ make install
 
 You should now be able to run `amber` in the command line.
 
-#### From Source:
-
-Install crystal by following these instructions. [https://crystal-lang.org/docs/installation/](https://crystal-lang.org/docs/installation/ "Install Crystal")
-
-Next download and install `amber`
-
-```
-git clone https://github.com/amber-crystal/amber.git
-cd amber/
-shards install
-make
 ```
 
 #### Homebrew \(OSX Only\)

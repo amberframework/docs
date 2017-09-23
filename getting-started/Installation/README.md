@@ -16,11 +16,13 @@ Ensure you have the necessary dependencies:
 Once you have these dependencies, You can build the `amber` tool from source:
 
 Download and install `amber`
+
 ```
 $ git clone git@github.com:amberframework/amber.git
 $ cd amber/
 $ shards install
 $ make install
+```
 
 ##### For Debian & Ubuntu
 - These are necessary to compile the CLI:

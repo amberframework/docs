@@ -21,7 +21,7 @@ To test the demo app locally:
 
    1. Add it in`config/database.yml`
 
-   2. Run \(overrides the`config/database.yml)`  
+   2. Run (overrides the `config/database.yml`)  
       `export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development`                                      
       Should output:  
       `Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql`

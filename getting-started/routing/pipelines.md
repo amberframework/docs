@@ -1,6 +1,8 @@
 # Pipelines
 
-A _pipeline_ is a set of of transformations that is performed to a HTTP request. These transformations come in the form of a pipe. A _pipe_ is a** **class which includes [`HTTP::Handler`](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html) and implements the [`#call`](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html#call%28context%3AHTTP%3A%3AServer%3A%3AContext%29-instance-method) method. You can use a handler to intercept any incoming request and modify the response. These can be used for request throttling, ip-based whitelisting, adding custom headers.
+A _pipeline_ is a set of of transformations that is performed to a HTTP request. These transformations come in the form of a pipe. A _pipe_ is a class which includes [`HTTP::Handler`](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html) and implements the [`#call`](https://crystal-lang.org/api/0.22.0/HTTP/Handler.html#call%28context%3AHTTP%3A%3AServer%3A%3AContext%29-instance-method) method. 
+
+You can use a handler to intercept any incoming request and modify the response. These can be used for request throttling, ip-based whitelisting, adding custom headers.
 
 Every Amber application needs to define a _pipeline_ with a set of _pipes_ each pipeline allow a set of transformations to be applied to different sets of route, this give you granular control and explicitness of which transformation to run for each of the requests.
 
@@ -56,5 +58,5 @@ Amber provides us some default pipes for a number of common tasks. In turn we ca
 
 With our `:web` pipeline now define we can use it in our routes difinitions.
 
-Don't get rid of StaticController if you need to serve static assets.
+> Note: Don't get rid of StaticController if you need to serve static assets.
 

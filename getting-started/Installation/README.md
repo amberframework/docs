@@ -9,7 +9,7 @@ The **Amber CLI** offers you a set of command line tools to **create**, **genera
 Ensure you have the necessary dependencies:
 
 - `git`: Use your platform specific package manager to install `git`
-- `crystal`: Follow the instructions to get `crystal` on this page: <https://crystal-lang.org/docs/installation/index.html>
+- `crystal`: Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
 
 ##### From Source
 

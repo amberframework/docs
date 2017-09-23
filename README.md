@@ -1,6 +1,4 @@
-![](/assets/white_logo_color_background.jpg)
-
-# Welcome
+# Amber Framework Guides
 
 Amber is a web development framework written in Crystal which implements the server-side MVC pattern. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Ruby on Rails or Python's Django.
 
@@ -10,7 +8,7 @@ Amber aims to deliver developer happiness, productivity and bare metal performan
 
 If you’re stuck, there are a number of places you can get help.
 
-**GITTER** You can head over to our Gitter channel to chat with member of the community for quick questions
+**GITTER** You can head over to our Gitter channel to chat with member of the community for quick questions  
 [![Gitter](https://badges.gitter.im/amberframework/amber.svg)](https://gitter.im/amberframework/amber?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 **STACK OVERFLOW** for questions about the Crystal Language and Amber Framework

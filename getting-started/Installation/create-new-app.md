@@ -28,11 +28,7 @@ To test the demo app locally:
    
       ```
       export DATABASE_URL=postgres://[username]:[password]@localhost:5432/[your_app]_development`
-      ```
-
-      Should output:
-
-      ```
+      # Should output:
       Migrating db, current version: 0, target: [datetimestamp] OK [datetimestamp]_create_shop.sql
       ```
 

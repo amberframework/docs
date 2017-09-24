@@ -1,4 +1,6 @@
-# Amber At A Glance
+# Getting Started
+
+## About Amber
 
 Amber is designed to make common web-development tasks simple, and easy, maintaining developer engagement, productivity without performance penalties. By providing an all-in-one toolbox to get you started the various parts of Amber work well together or separately.
 

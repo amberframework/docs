@@ -8,7 +8,7 @@ It serves both to perform requests by an [`HTTP::Client`](https://crystal-lang.o
 
 The request object contains a lot of useful information about the request coming in from the client. To get a full list of the available methods, refer to the Crystal  API Documentation [https://crystal-lang.org/api/0.23.0/HTTP/Request.html](https://crystal-lang.org/api/0.23.0/HTTP/Request.html)
 
-| Controler Request Helper Methods | Purpose | Implemented? |
+| Helper Methods | Purpose | Implemented? |
 | :--- | :--- | :--- |
 | host | The hostname used for this request. | Yes |
 | domain\(n=2\) | The hostname's first`n`segments, starting from the right \(the TLD\). | No |
@@ -26,7 +26,7 @@ The request object contains a lot of useful information about the request coming
 
 The response object is not usually used directly, but is built up during the execution of the action and rendering of the data that is being sent back to the user, but sometimes - like in an after filter - it can be useful to access the response directly. Some of these accessor methods also have setters, allowing you to change their values. To get a full list of the available methods, refer to the [https://crystal-lang.org/api/0.23.0/HTTP/Server/Response.html](https://crystal-lang.org/api/0.23.0/HTTP/Server/Response.html)
 
-| Property of Response | Purpose |
+| Properties | Purpose |
 | :--- | :--- |
 | body | This is the string of data being sent back to the client. This is most often HTML. |
 | status | The HTTP status code for the response, like 200 for a successful request or 404 for file not found. |

@@ -21,7 +21,6 @@ dependencies:
 
   pg:
     github: will/crystal-pg
-
 ```
 
 Next you will need to create a `config/database.yml`
@@ -196,7 +195,6 @@ posts = Post.all("JOIN comments c ON c.post_id = post.id
                   WHERE c.name = ?
                   ORDER BY post.created_at DESC",
                   ["Joe"])
-
 ```
 
 #### First
@@ -205,12 +203,14 @@ It is common to only want the first result and append a `LIMIT 1` to the query.
 This is what the `first` method does.
 
 For example:
-```
+
+```crystal
 post = Post.first("ORDER BY posts.name DESC")
 ```
 
 This is the same as:
-```
+
+```crystal
 post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 ```
 
@@ -231,9 +231,10 @@ class User < Granite::ORM::Base
   timestamps
 end
 ```
+
 This will add a `posts` instance method to the user which returns an array of posts.
 
-```
+```crystal
 class Post < Granite::ORM::Base
   adapter mysql
 
@@ -243,10 +244,12 @@ class Post < Granite::ORM::Base
   timestamps
 end
 ```
+
 This will add a `user` and `user=` instance method to the post.
 
 For example:
-```
+
+```crystal
 user = User.find 1
 user.posts.each do |post|
   puts post.title
@@ -260,6 +263,7 @@ post.save
 ```
 
 In this example, you will need to add a `user_id` and index to your posts table:
+
 ```mysql
 CREATE TABLE posts (
   id BIGSERIAL PRIMARY KEY,
@@ -277,7 +281,8 @@ CREATE INDEX 'user_id_idx' ON TABLE posts (user_id);
 Instead of using a hidden many-to-many table, Granite recommends always creating a model for your join tables.  For example, let's say you have many `users` that belong to many `rooms`. We recommend adding a new model called `participants` to represent the many-to-many relationship.
 
 Then you can use the `belongs_to` and `has_many` relationships going both ways.
-```
+
+```crystal
 class User < Granite::ORM::Base
   has_many :participants
 
@@ -315,7 +320,8 @@ CREATE INDEX 'room_id_idx' ON TABLE participants (room_id);
 ##### has_many through:
 
 As a convenience, we provide a `through:` clause to simplify accessing the many-to-many relationship:
-```
+
+```crystal
 class User < Granite::ORM::Base
   has_many :participants
   has_many :rooms, through: participants
@@ -337,7 +343,8 @@ end
 ```
 
 This will allow you to find all the rooms that a user is in:
-```
+
+```crystal
 user = User.first
 user.rooms.each do |room|
   puts room.name
@@ -345,7 +352,8 @@ end
 ```
 
 And the reverse, all the users in a room:
-```
+
+```crystal
 room = Room.first
 room.users.each do |user|
   puts user.name
@@ -355,7 +363,8 @@ end
 ### Errors
 
 All database errors are added to the `errors` array used by Granite::ORM::Validators with the symbol ':base'
-```
+
+```crystal
 post = Post.new
 post.save
 post.errors[0].to_s.should eq "ERROR: name cannot be null"
@@ -366,6 +375,7 @@ post.errors[0].to_s.should eq "ERROR: name cannot be null"
 There is support for callbacks on certain events.
 
 Here is an example:
+
 ```crystal
 require "granite_orm/adapter/pg"
 

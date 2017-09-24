@@ -9,7 +9,10 @@ amber new [your_app] -d [pg | mysql | sqlite] -t [slang | ecr] --deps
 cd [your_app]
 ```
 
-options:`-d`defaults to pg.`-t`defaults to slang.`--deps`will run`crystal deps`for you.
+Options:
+- `-d`defaults to pg.
+- `-t`defaults to slang.
+- `--deps`will run`crystal deps`for you.
 
 ### Run Locally
 

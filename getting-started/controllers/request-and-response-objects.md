@@ -22,6 +22,8 @@ The request object contains a lot of useful information about the request coming
 | client\_ip | The IP address of the client via cookie headers. | Yes  |
 | requested\_url | The entire URL used for the request. | No |
 
+
+
 ### The Response Object
 
 The response object is not usually used directly, but is built up during the execution of the action and rendering of the data that is being sent back to the user, but sometimes - like in an after filter - it can be useful to access the response directly. Some of these accessor methods also have setters, allowing you to change their values. To get a full list of the available methods, refer to the [https://crystal-lang.org/api/0.23.0/HTTP/Server/Response.html](https://crystal-lang.org/api/0.23.0/HTTP/Server/Response.html)

@@ -34,7 +34,7 @@ Debugging an Amber project on VSCode with GDB and [Native Debug](https://github.
 }
 ```
 
-** 2.`launch.json` configuration to debug binary**
+**2.`launch.json` configuration to debug binary**
 
 ```json
 {
@@ -52,7 +52,7 @@ Debugging an Amber project on VSCode with GDB and [Native Debug](https://github.
 }
 ```
 
-** 3. Then hit the green play button **
+**3. Then hit the green play button **
 
 ![green button](https://camo.githubusercontent.com/30adba87add4770abf2c3982206748123f8a2c6e/687474703a2f2f692e696d6775722e636f6d2f6d674b41366d782e706e67)
 

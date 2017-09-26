@@ -16,7 +16,7 @@ When defining your routes you specify the controller that the route will match t
 get "/", ApiController, :index
 ```
 
-In the snipped above the **ApiController** is the name of the controller** **`./src/controller/api_controller.cr`
+In the snipped above the **ApiController** is the name of the controller `./src/controller/api_controller.cr`
 
 ### Methods and Actions
 
@@ -33,5 +33,5 @@ class ApiController < ApplicationController
 end
 ```
 
-As an example, if a user goes to `api/index` in your application to add a new client, Amber will create an instance of **ApiController **and call it's **index** method
+As an example, if a user goes to `api/index` in your application to add a new client, Amber will create an instance of **ApiController** and call it's **index** method
 

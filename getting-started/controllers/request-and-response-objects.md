@@ -4,9 +4,9 @@ Request and Response objects are available to the controller as `request and res
 
 ### The Request Object and Controller Helper Methods
 
-It serves both to perform requests by an [`HTTP::Client`](https://crystal-lang.org/api/0.23.0/HTTP/Client.html)and to represent requests received by an[`HTTP::Server`](https://crystal-lang.org/api/0.23.0/HTTP/Server.html). A request always holds an [`IO`](https://crystal-lang.org/api/0.23.0/IO.html) as a body. When creating a request with a [`String`](https://crystal-lang.org/api/0.23.0/String.html) or [`Bytes`](https://crystal-lang.org/api/0.23.0/Bytes.html) its body will be a [`IO::Memory`](https://crystal-lang.org/api/0.23.0/IO/Memory.html) wrapping these, and the `Content-Length`header will be set appropriately.
+It serves both to perform requests by an [`HTTP::Client`](https://crystal-lang.org/api/latest/HTTP/Client.html)and to represent requests received by an[`HTTP::Server`](https://crystal-lang.org/api/latest/HTTP/Server.html). A request always holds an [`IO`](https://crystal-lang.org/api/latest/IO.html) as a body. When creating a request with a [`String`](https://crystal-lang.org/api/latest/String.html) or [`Bytes`](https://crystal-lang.org/api/latest/Bytes.html) its body will be a [`IO::Memory`](https://crystal-lang.org/api/latest/IO/Memory.html) wrapping these, and the `Content-Length`header will be set appropriately.
 
-The request object contains a lot of useful information about the request coming in from the client. To get a full list of the available methods, refer to the Crystal  API Documentation [https://crystal-lang.org/api/0.23.0/HTTP/Request.html](https://crystal-lang.org/api/0.23.0/HTTP/Request.html)
+The request object contains a lot of useful information about the request coming in from the client. To get a full list of the available methods, refer to the Crystal  API Documentation [https://crystal-lang.org/api/latest/HTTP/Request.html](https://crystal-lang.org/api/latest/HTTP/Request.html)
 
 | Helper Methods | Purpose | Implemented? |
 | :--- | :--- | :--- |
@@ -26,7 +26,7 @@ The request object contains a lot of useful information about the request coming
 
 ### The Response Object
 
-The response object is not usually used directly, but is built up during the execution of the action and rendering of the data that is being sent back to the user, but sometimes - like in an after filter - it can be useful to access the response directly. Some of these accessor methods also have setters, allowing you to change their values. To get a full list of the available methods, refer to the [https://crystal-lang.org/api/0.23.0/HTTP/Server/Response.html](https://crystal-lang.org/api/0.23.0/HTTP/Server/Response.html)
+The response object is not usually used directly, but is built up during the execution of the action and rendering of the data that is being sent back to the user, but sometimes - like in an after filter - it can be useful to access the response directly. Some of these accessor methods also have setters, allowing you to change their values. To get a full list of the available methods, refer to the [https://crystal-lang.org/api/latest/HTTP/Server/Response.html](https://crystal-lang.org/api/latest/HTTP/Server/Response.html)
 
 | Properties | Purpose |
 | :--- | :--- |

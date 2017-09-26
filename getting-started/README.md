@@ -1,16 +1,29 @@
 # Getting Started
 
-## About Amber
-
 Amber is designed to make common web-development tasks simple, and easy, maintaining developer engagement, productivity without performance penalties. By providing an all-in-one toolbox to get you started the various parts of Amber work well together or separately.
 
-The goal of this overview is to introduce the general concepts in Amber, and give you a quick overview of how those concepts are implemented in Amber.
+The goal of this overview is to introduce the general concepts in Amber and give you a quick overview of how those concepts are implemented in Amber.
 
 ## Conventions Over Configuration
 
 Amber provides a basic organizational structure that covers class names, filenames, database table names, and other conventions. While the conventions take some time to learn, by following the conventions Amber provides you can avoid needless configuration and make a uniform application structure that makes working with various projects simple.
 
+## Model-View-Controller 
+
+Model–view–controller (MVC) is a software architectural pattern for implementing user interfaces on computers. It divides a given application into three interconnected parts. This is done to separate internal representations of information from the way information is presented to, and accepted from, the user. The MVC design pattern decouples these major components allowing for efficient code reuse and parallel development.
+
+### Advantages
+- Simultaneous development – Multiple developers can work simultaneously on the model, controller, and views.
+- High cohesion – MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together.
+- Low coupling – The very nature of the MVC framework is such that there is low coupling among models, views or controllers
+- Ease of modification – Because of the separation of responsibilities, future development or modification is easier
+Multiple views for a model – Models can have multiple views
+
+
+
 ### Controller Layer
+
+The Controller is responsible for controlling the application logic and acts as the coordinator between the View and the Model. The Controller receives an input from the users via the View, then processes the user's data with the help of Model and passes the results back to the View.
 
 ```crystal
 class UsersController < ApplicationController
@@ -22,6 +35,8 @@ end
 ```
 
 ### View Layer
+
+View is the component involved with the application's User Interface. These Views are generally bind from the model data and have extensions such as html, slang, ecr. 
 
 ```crystal
 # Slang - /views/users/index.slang

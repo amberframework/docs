@@ -1,8 +1,21 @@
-# Amber Framework Guides
+# Introduction
 
-Amber is a web development framework written in Crystal which implements the server-side MVC pattern. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Ruby on Rails or Python's Django.
+Amber is a web development framework written in the Crystal language which implements the server-side MVC pattern using the object-oriented paradigm. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Phoenix, Ruby on Rails or Python's Django.
 
-Amber aims to deliver developer happiness, productivity, and bare metal performance. It offers a familiar set of tools like Generators, Database management, CLI, Deployment tools, Docker support and Encrypted secrets. If you come from the rails world, you will feel right at home but be aware, this is not rails; it embraces the best features from many different frameworks so you might notice pipes for routing which is more similar to Phoenix framework.
+Amber aims to deliver developer happiness, productivity, and bare metal performance. The Crystal language is heavily inspired on Ruby delivering familiarity and productivity making it easy to read and write code with a lower learning curve for experienced Ruby developers.  
+
+Crystal also has some modern features like macros, concurrency model,  union types, c bindings, built in dependency manager. Amber takes advantage of all these features providing you a familiar structure to develop a web application.
+
+Amber offers a familiar set of tools for fast prototyping and developing enterprise-grade web applications, like Generators, Database management, CLI, Deployment tools, Docker support,  Encrypted secrets, WebSockets, and more. If you come from the rails world, you will feel right at home but be aware, Amber is not Rails; it's type-safe, compiled, and embraces the best features from many different frameworks so you might notice pipes for routing which is more similar to Phoenix framework.
+
+The aim of this introductory guide is to present a brief, high-level overview of Amber Framework, the parts that make it up, and the layers underneath that support it.
+
+If you would prefer to read these guides as an 
+
+- [EPUB](https://www.gitbook.com/download/epub/book/amber-crystal/amberframework) 
+- [MOBI](https://www.gitbook.com/download/mobi/book/amber-crystal/amberframework) 
+- [PDF](https://www.gitbook.com/download/pdf/book/amber-crystal/amberframework)
+
 
 ## Getting Help
 

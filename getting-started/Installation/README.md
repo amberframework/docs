@@ -8,8 +8,10 @@ The **Amber CLI** offers you a set of command line tools to **create**, **genera
 
 Ensure you have the necessary dependencies:
 
-- `git`: Use your platform specific package manager to install `git`
-- `crystal`: Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
+- `Git`: Use your platform specific package manager to install `git`
+- `Crystal`: Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
+- `NodeJS` and `Webpack` Node is an optional dependency and is used to compile JS and assets.
+- `PostgreSQL` PostgreSQL is a relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the -database mysql flag when creating a new application.
 
 ##### From Source
 
@@ -44,7 +46,7 @@ You should now be able to run `amber` in the command line.
 brew install amber-crystal/amber/amber
 ```
 
-Optionally you can install as  follow:
+Optionally you can install as follow:
 
 ```
 brew tap amber-crystal/amber

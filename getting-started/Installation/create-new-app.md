@@ -38,7 +38,6 @@ new       config/environments/development.yml
 new       config/environments/production.yml
 new       config/environments/test.yml
 ...
-...
 new       src/assets/fonts/.gitkeep
 new       src/assets/stylesheets/main.scss
 new       src/weblog.cr
@@ -52,7 +51,6 @@ Installing amber (0.2.6)
 Installing radix (master)
 Installing kilt (0.3.3)
 Installing slang (master)
-...
 ...
 Installing sqlite3 (0.8.2)
 Installing granite_orm (0.7.3)

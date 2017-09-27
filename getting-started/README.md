@@ -4,8 +4,6 @@ Amber is designed to make common web-development tasks simple, and easy, maintai
 
 The goal of this overview is to introduce the general concepts in Amber and give you a quick overview of how those concepts are implemented in Amber.
 
-Before we begin, please take a minute to read the [Installation Guide](getting-started/Installation/README.md). By installing any necessary dependencies beforehand, we’ll be able to get our application up and running smoothly.
-
 ## Conventions Over Configuration
 
 Amber provides a basic organizational structure that covers class names, filenames, database table names, and other conventions. While the conventions take some time to learn, by following the conventions Amber provides you can avoid needless configuration and make a uniform application structure that makes working with various projects simple.

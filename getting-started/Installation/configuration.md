@@ -1,29 +1,53 @@
 # Amber Application Configuration
 
+While conventions remove the need to configure all of Amber, you’ll still need to configure a few things like your database credentials. Additionally, there are optional configuration options that allow you to swap out default values & implementations with ones tailored to your application.
+
+## Configuring your Application
+
+Configuration is generally stored in YAML files, and loaded during the application bootstrap. Amber comes with three configuration files by default, one for each environment Production, Test and Development.
+
+## Environments 
+
+#### Development 
+TODO
+#### Test
+TODO
+#### Production
+TODO
+
+
+#### Example config/application.cr
+Additionallly you can overwrite your configuration yamls by setting the 
+
 ```crystal
-Amber::Server.instance.config do |app|
-  # Server options
-  app_path = __FILE__ # Do not change unless you understand what you are doing.
-  app.name = "Ambercr.io web application."
-  port = ENV["PORT"] || 8080
-  app.port = port.to_i
-  app.env = ENV.fetch("AMBER_ENV", "development") .colorize(:green).to_s
-  app.log = ::Logger.new(STDOUT)
-  app.log.level = ::Logger::INFO
-  app.host = "0.0.0.0"
-  app.port_reuse = true
-  app.session = {
+Amber::Server.configure do |server|
+  server.name         = "Ambercr.io web application."
+  server.port         = (ENV["PORT"] || 8080).to_i
+  server.env          = ENV.fetch("AMBER_ENV", "development") .colorize(:green).to_s
+  server.log          = ::Logger.new(STDOUT)
+  server.log.level    = ::Logger::INFO
+  server.host         = "0.0.0.0"
+  server.port_reuse   = true
+  server.ssl_key_file = ""
+  server.ssl_cert_file= ""
+  server.session = {
     :key     => "name.session",
-    # store can be [:signed_cookie, :encrypted_cookie, :redis]
     :store   => :signed_cookie,
-    # 0, will make the session last as long as the browser is open, upon closing, session will be terminated
     :expires => 120,
     :secret  => "secret",
-    # when store equals to :redis, must specify redis url
     :redis_url => "redis://localhost:6379",
+  }
+  server.secrets = {
   }
 end
 ```
 
+## Database Configuration
+TODO
 
+## Session Confiiguration
+TODO
+
+## Websockets Configuration
+TODO
 

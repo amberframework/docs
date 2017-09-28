@@ -7,7 +7,7 @@ You can use a handler to intercept any incoming request and modify the response.
 Every Amber application needs to define a _pipeline_ with a set of _pipes_ each pipeline allow a set of transformations to be applied to different sets of route, this give you granular control and explicitness of which transformation to run for each of the requests.
 
 ```crystal
-Amber::Server.instance.config do |app|
+Amber::Server.configure do |app|
   pipeline :web do
     # Plug is the method to use connect a pipe (middleware)
     # A plug accepts an instance of HTTP::Handler

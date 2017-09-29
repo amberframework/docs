@@ -35,3 +35,15 @@ end
 
 As an example, if a user goes to `api/index` in your application to add a new client, Amber will create an instance of **ApiController** and call it's **index** method
 
+### Actions Conventions
+
+While actions can be named anything we like, there are conventions for action names which you should adhere whenever possible. We went over these in the Routing Guide, but we’ll take another quick look here.
+
+- index - renders a list of all items of the given resource type
+- show - renders an individual item by id
+- new - renders a form for creating a new item
+- create - receives parameters for one new item and saves it in a persistent store
+- edit - retrieves an individual item by id and displays it in a form for editing
+- update - receives parameters for one edited item and saves it to a persistent store
+- delete - receives an id for an item to be deleted and deletes it from a persistent store
+

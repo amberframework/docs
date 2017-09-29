@@ -14,7 +14,7 @@ Here is a list of the commands available:
 - **seed** Adds initial data after a database is created
 - **version** Prints the database current version.
 
-### `amber migrate` or `amber m`
+**`amber migrate` or `amber m`**
 
 ```shell
 amber database [COMMANDS1 COMMANDS2...]
@@ -23,4 +23,67 @@ Arguments:
   COMMANDS (Accepts multiple)  drop create migrate rollback redo status version seed
 ```
 
-## Example Usage
+## Example Usages
+
+**Create**
+
+```shell
+± amber db create
+Created database blog_development
+```
+
+**Drop**
+
+```shell
+± amber db drop
+Dropped database blog_development
+```
+
+**Migrate**
+
+```shell
+± amber db migrate
+Migrating db, current version: 0, target: 20170928204246
+OK   20170928204246_create_post.sql
+```
+
+**Rollback**
+
+```shell
+± amber db rollback
+Migrating db, current version: 20170928204246, target: 0
+OK   20170928204246_create_post.sql
+```
+
+**Redo**
+
+```shell
+± amber db redo
+Migrating db, current version: 20170928204246, target: 0
+OK   20170928204246_create_post.sql
+Migrating db, current version: 0, target: 20170928204246
+OK   20170928204246_create_post.sql
+```
+
+**Status**
+
+```shell
+± amber db status
+Applied At                  Migration
+=======================================
+2017-09-28 20:44:22 UTC  -- 20170928204246_create_post.sql
+```
+
+**Seed**
+
+```shell
+± amber db seed
+Seeded database
+```
+
+**Version**
+
+```shell
+± amber db version
+20170928204246
+```

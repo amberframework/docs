@@ -14,16 +14,16 @@ Amber CMD (amberframework.org) - v0.2.6
 ## Bootstrap an Amber Application
 
 We can run `amber new` from any directory in order to bootstrap our Amber application. Amber will accept either an absolute or relative path to the directory of our new project. Assuming that the name of our application is a weblog, let’s run the following command:
- 
+
 ```bash
 amber new ~/Code/Projects/weblog
 ```
 
 Additionally, you can pass the following options to the above command:
 
-- `-d` This specifies the database driver to use, it defaults to pg.
-- `-t` This specifies the template rendering engine it defaults to slang.
-- `--deps` This will download and install project dependencies for you, saving you an additional step.
+* `-d` This specifies the database driver to use, it defaults to pg.
+* `-t` This specifies the template rendering engine it defaults to slang.
+* `--deps` This will download and install project dependencies for you, saving you an additional step.
 
 Amber generates the directory structure and all the files you will need for your application.
 
@@ -46,7 +46,7 @@ new       src/handlers/.gitkeep
 
 Now Install project dependencies with `shards install`
 
-```bash 
+```bash
 Installing amber (0.2.6)
 Installing radix (master)
 Installing kilt (0.3.3)
@@ -70,17 +70,17 @@ cd ./webog
 
 Now we’ll create the database:
 
-> Amber assumes that your PostgreSQL database will have a `root` user account with the correct permissions and no password set for this user. If that isn’t the case, update the `config/database.yml` with the correct database credentials for your environment. 
+> Amber assumes that your PostgreSQL database will have a `root` user account with the correct permissions and no password set for this user. If that isn’t the case, update the `config/database.yml` with the correct database credentials for your environment.
 
 With your database credentials ready run the following command in your terminal window:
 
 ```bash
 amber db create
-``` 
+```
 
-(This creates your app Postgres database) and should output 
+\(This creates your app Postgres database\) and should output
 
-```bash 
+```bash
 Created database weblog_development
 ```
 
@@ -89,17 +89,17 @@ And finally, we’ll start the Amber server:
 ```bash
 amber watch
 ```
-By default Amber accepts requests on port 3000. If we point our favorite web browser at http://localhost:4000, we should see the Amber Framework welcome page.
 
-[Amber Welcome Page Here]
+By default Amber accepts requests on port 3000. If we point our favorite web browser at [http://localhost:4000](http://localhost:4000), we should see the Amber Framework welcome page
 
-If your screen looks like the image above, congratulations! You now have a working Amber application. In case you can’t see the page above, try accessing it via http://127.0.0.1:3000 and later make sure your OS has defined “localhost” as “127.0.0.1”.
+![](/assets/Screen Shot 2017-09-28 at 9.05.25 PM.png)If your screen looks like the image above, congratulations! You now have a working Amber application. In case you can’t see the page above, try accessing it via [http://127.0.0.1:3000](http://127.0.0.1:3000) and later make sure your OS has defined “localhost” as “127.0.0.1”.
 
 Locally, our application is running in an Crystal process. To stop it, we hit ctrl-c once, just as we would to terminate the pragram normally.
 
-> **Note:** The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically. If you don't want to use Sentry, you can compile and run manually:
-1. Build the app `crystal build --release src/[your_app].cr`
-2. Run with `./[your_app]`
-3. Visit `http://0.0.0.0:3000/`
+> **Note:** The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically. If you don't want to use Sentry, you can compile and run manually:  
+> 1. Build the app `crystal build --release src/[your_app].cr`  
+> 2. Run with `./[your_app]`  
+> 3. Visit `http://0.0.0.0:3000/`
+
 
 

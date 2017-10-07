@@ -10,27 +10,27 @@ It will also add the project to the `/app` folder on the image so you can use th
 
 ## docker-compose.yml
 
-The `docker-compose.yml` file will allow you to easily get up and running.  It includes the database, mailcatcher, migrate, app, and web containers.
+The `docker-compose.yml` file will allow you to easily get up and running.  It includes the `database`, `mailcatcher`, `migrate`, `app`, and `web` containers.
 
-### database
+### The `database` container
 
-The database is using an image based on the `-d` option you chose when you created the project.  Right now, we support `pg, mysql, sqlite`
+This container is using an image based on the `-d` option you chose when you created the project.  Right now, we support pg, mysql, sqlite
 
 A `db` volume is also created so you can start and stop the containers but the data will still be available.
 
-### mailcatcher
+### The `mailcatcher` container
 
 Mail Catcher is a simple smtp server that will allow you to see the email that gets generated.  You can access the user interface by hitting [http://localhost:1080](http://localhost:1080).  If you generate mailers, it will configure the `SMTP_URL` to point to the mail catcher container.
 
-### migrate
+### The `migrate` container
 
-Migrate will run the migrations using `amber db migrate seed`.  It will wait for the database port to be available before running the migrations.  This container will exit after completing the migrations.
+This container will run the migrations using `amber db migrate seed`.  It will wait for the database port to be available before running the migrations.  This container will exit after completing the migrations.
 
-### app
+### The `app` container
 
 This container will run `amber watch` on port 3000.  You can access the application at [http://localhost:3000](http://localhost:3000).  The external project directory is mapped to `/app/local` so as you make changes to your project and amber will watch for changes, recompile and re-launch the application.
 
-### web
+### The `web` container
 
 This container will run `npm install && npm run watch`.  This will compile your front-end assets and will watch for changes.  You can see the webpack configuration in the `config/webpack` directory to see what assets are compiled.
 

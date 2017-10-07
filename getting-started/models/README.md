@@ -2,13 +2,13 @@
 
 Amber is independent of your choice of model architectures.  We (Core members) have built two ORM models: Granite and Crecto.  We also think Jennifer built by Roman Kalnytskyi(@imdrasil) is a good option.
 
-When you generate a new amber project, you can specify with model you prefer.
+When you generate a new amber project, you can specify which model you prefer.
 
 ```bash
 amber new blog -m crecto --deps
 ```
 
-We currently support `granite` and `crecto`.  This option defaults to `granite`.
+We currently support `granite` and `crecto` and default to `granite`.
 
 ## Granite
 

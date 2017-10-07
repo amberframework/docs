@@ -87,7 +87,7 @@ user.save
 
 This example `seeds.cr` file creates an admin user.
 
-You can execute the seeds user:
+You can execute the seeds using:
 ```bash
 amber db seed
 ```

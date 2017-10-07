@@ -8,6 +8,7 @@
   * [Create New App](/getting-started/Installation/create-new-app.md)
   * [Directory Structure](/getting-started/Installation/directory-structure.md)
   * [Configuration](/getting-started/Installation/configuration.md)
+  * [Docker](/getting-started/docker/README.md)
   * [Routing](getting-started/routing/README.md)
     * [Pipelines](getting-started/routing/pipelines.md)
     * [Routes](getting-started/routing/routes.md)

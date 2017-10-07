@@ -1,6 +1,6 @@
 # Docker and Docker Compose
 
-When you generate a new Amber project, we include `Docker` and `docker-compose.yml` files to simplify development. This is alternative way of getting an amber project up and running quickly and doesn't require installing a database.
+When you generate a new Amber project, we include `Docker` and `docker-compose.yml` files to simplify development. This is an alternative way of getting an Amber project up and running quickly and doesn't require installing a database.
 
 ## Dockerfile
 
@@ -16,7 +16,7 @@ The `docker-compose.yml` file will allow you to easily get up and running.  It i
 
 The database is using an image based on the `-d` option you chose when you created the project.  Right now, we support `pg, mysql, sqlite`
 
-A `db` volume is created so you can start and stop the containers but keep the data available.
+A `db` volume is also created so you can start and stop the containers but the data will still be available.
 
 ### mailcatcher
 

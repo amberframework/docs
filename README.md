@@ -12,9 +12,9 @@ The aim of this introductory guide is to present a brief, high-level overview of
 
 If you would prefer to read these guides as an 
 
-- [EPUB](https://www.gitbook.com/download/epub/book/amber-crystal/amberframework) 
-- [MOBI](https://www.gitbook.com/download/mobi/book/amber-crystal/amberframework) 
-- [PDF](https://www.gitbook.com/download/pdf/book/amber-crystal/amberframework)
+- [EPUB](https://www.gitbook.com/download/epub/book/amberframework/amberframework) 
+- [MOBI](https://www.gitbook.com/download/mobi/book/amberframework/amberframework) 
+- [PDF](https://www.gitbook.com/download/pdf/book/amberframework/amberframework)
 
 
 ## Getting Help

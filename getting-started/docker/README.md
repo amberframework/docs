@@ -1,6 +1,6 @@
 # Docker and Docker Compose
 
-When you generate a new Amber project, we include a `Docker` and `docker-compose.yml` files to simplify development. This is alternative way of getting an amber project up and running quickly and doesn't require installing a database.
+When you generate a new Amber project, we include `Docker` and `docker-compose.yml` files to simplify development. This is alternative way of getting an amber project up and running quickly and doesn't require installing a database.
 
 ## Dockerfile
 

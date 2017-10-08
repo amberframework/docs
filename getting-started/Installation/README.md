@@ -20,10 +20,10 @@ Once you have these dependencies, You can build the `amber` tool from source:
 Download and install `amber`
 
 ```
-$ git clone git@github.com:amberframework/amber.git
-$ cd amber/
-$ shards install
-$ make install
+curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
+cd amber-stable/
+shards install
+make install
 ```
 
 ##### For Debian & Ubuntu
@@ -52,7 +52,3 @@ Optionally you can install as follow:
 brew tap amber-crystal/amber
 brew install amber-crystal/amber/amber
 ```
-
-
-
-

@@ -2,7 +2,7 @@
 
 ### What Does a Controller Do?
 
-A controller it the middleman between models and views. It makes the model data available to the view so it can display that data to the user, and it saves or updates user data to the model.
+A controller is the middleman between models and views. It makes the model data available to the view so it can display that data to the user, and it saves or updates user data to the model.
 
 The controller is the C in MVC. After the router has determined which controller to use for a request, the controller is responsible for making sense of the request and producing the appropriate output. Luckily, **Amber::Controller::Base** does most of the groundwork for you and uses smart conventions to make this as straightforward as possible.
 

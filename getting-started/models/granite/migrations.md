@@ -33,7 +33,7 @@ amber generate migration create_posts
 
 This will generate an empty micrate script with the timestamp set in the filename `db/migrations/20171003212124_create_post.sql`.
 
-If you generate a model or scaffold, you will create a migration script that will create and drop the database table.
+If you generate a model or scaffold, it will create a migration script that will create and drop the database table.
 
 ```bash
 amber generate scaffold post name:string body:text pages:int published:bool

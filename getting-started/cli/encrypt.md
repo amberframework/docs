@@ -23,7 +23,7 @@ Options:
 
 When you save and exit it will encrypt again.
 
-![amber encrypt demo](https://github.com/amberframework/online-docs/blob/master/assets/amber_encrypt.gif "Amber Encrypt Demo")
+![amber encrypt demo](https://raw.githubusercontent.com/amberframework/online-docs/master/assets/amber_encrypt.gif "Amber Encrypt Demo")
 
 
 ## Encrypt unencrypted environment settings

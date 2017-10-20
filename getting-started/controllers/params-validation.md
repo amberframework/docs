@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
     # Define parameters within actions
     def update
-        update_params = params do
+        update_params = params.validation do
           required(:name, "Your First Name is missing!") { |p| p.name? & !p.name.empty? }
           required(:email, "Your email address is invalid!") { |p| p.email? & p.size.between? 1..10 }
           required(:last_name) { |p| p.last_name? }
@@ -44,7 +44,7 @@ With Amber parameters validation is easy to keep your code organize
 # You can define modules to group your params validations
 module UserParams
     def self.create
-        params do
+        params.validation do
           required(:name, "Your First Name is missing!") { |p| p.name? & !p.name.empty? }
           required(:email, "Your email address is invalid!") { |p| p.email? & p.size.between? 1..10 }
           required(:last_name) { |p| p.last_name? }
@@ -52,7 +52,7 @@ module UserParams
     end
 
     def self.update
-        params do
+        params.validation do
           required(:name, "Your First Name is missing!") { |p| p.name? & !p.name.empty? }
           required(:email, "Your email address is invalid!") { |p| p.email? & p.size.between? 1..10 }
           required(:last_name) { |p| p.last_name? }

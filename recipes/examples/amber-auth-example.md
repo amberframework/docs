@@ -1,8 +1,12 @@
 # Amber Auth Example
 
-This is an example of how to handle authentication with Amber.
+This is an example of how to add authentication manually.
 
-Source Code: https://github.com/drujensen/amber-auth-example 
+Amber has a generator that will simplify adding authentication:
+```
+amber g auth User
+```
+If you are interested in how to do this yourself, keep reading.
 
 ## Setup
 

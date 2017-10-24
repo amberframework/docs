@@ -41,12 +41,6 @@ render(partial: "_form.slang")
 # renders partial without layout. This is really useful for rendering a template inside of your current template.
 ```
 
-If template has a different path than `src/views/[controller_name]/[template_name]` you will need to provide the full path.
-
-If layout has a different path than `src/views/layouts/[template_name]` you must provide the full path.
-
-`LAYOUT = "src/views/layouts/other/path/application.slang"`
-
 ## Examples
 
 The render method is configured to look in the "src/views" path to keep the

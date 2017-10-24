@@ -95,7 +95,7 @@ By default Amber accepts requests on port 3000. If we point our favorite web bro
 
 If your screen looks like the image above, congratulations! You now have a working Amber application. If you don’t see the page above, try accessing it via [http://127.0.0.1:3000](http://127.0.0.1:3000) and later make sure your OS has defined “localhost” as “127.0.0.1”.
 
-Locally, the application is running in an Crystal process. To stop it, we hit ctrl-c once, just as we would to terminate the pragram normally.
+Locally, the application is running in a Crystal process. To stop it, we hit ctrl-c once, just as we would to terminate the program normally.
 
 > **Note:** The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically. If you don't want to use Sentry, you can compile and run manually:  
 > 1. Build the app `crystal build --release src/[your_app].cr`  

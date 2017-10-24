@@ -24,6 +24,7 @@ For a primer on ECR please see [https://crystal-lang.org/api/latest/ECR.html](ht
 render show.slang
 # renders src/views/[controller_name]/show.slang
 # with default layout "src/views/layouts/application.slang" as defined in ApplicationController or defined in current controller
+
 LAYOUT = "application.slang"
 
 render show.ecr
@@ -39,6 +40,12 @@ render("show.slang", false)
 render(partial: "_form.slang")
 # renders partial without layout. This is really useful for rendering a template inside of your current template.
 ```
+
+If template has a different path than `src/views/[controller_name]/[template_name]` you will need to provide the full path.
+
+If layout has a different path than `src/views/layouts/[template_name]` you must provide the full path.
+
+`LAYOUT = "src/views/layouts/other/path/application.slang"`
 
 ## Examples
 

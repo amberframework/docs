@@ -146,7 +146,7 @@ class SessionController < ApplicationController
   end
 
   def delete
-    context.clear_session
+    session.destroy
     flash["info"] = "Logged out.  See ya later!"
     redirect_to "/"
   end

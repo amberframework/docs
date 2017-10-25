@@ -136,17 +136,17 @@ class SessionController < ApplicationController
     password = params["password"]
     user = User.find_by :email,  email
     if user && user.authenticate(password)
-        session["user_id"] = user.id.to_s
-        flash["info"] = "Successfully logged in"
-        redirect_to "/"
-      else
-        flash["danger"] = "Invalid email or password"
-        render("new.slang")
-      end
+      session["user_id"] = user.id.to_s
+      flash["info"] = "Successfully logged in"
+      redirect_to "/"
+    else
+      flash["danger"] = "Invalid email or password"
+      render("new.slang")
+    end
   end
 
   def delete
-    context.clear_session
+    session.destroy
     flash["info"] = "Logged out.  See ya later!"
     redirect_to "/"
   end
@@ -193,7 +193,7 @@ end
 class Authenticate < Amber::Pipe::Base
   def call(context)
     user_id = context.session["user_id"]?
-    if user = User.find(user_id.to_s)
+    if user_id && (user = User.find(user_id.to_s))
       context.current_user = user
       call_next(context)
     else

@@ -1,10 +1,10 @@
 # Views
 
-Views are rendered using the amber `render` macro, which uses .  Currently amber
+Views are rendered using the amber `render` macro, which uses [Kilt](http://github.com/jeromegn/kilt). Currently amber
 there are 4 different templating languages supported by Kilt: `slang` `ecr`, `mustache`,
-and `temel`.  Behind the scenes [Kilt](http://github.com/jeromegn/kilt) selects the templating engine based on the
+and `temel`. Behind the scenes [Kilt](http://github.com/jeromegn/kilt) selects the templating engine based on the
 extension of the file so `index.ecr` will render the file using the ECR
-engine. Amber is currently supports `slang` and `ecr`. Kilt will work with `mustache`
+engine. Amber currently supports `slang` and `ecr`. Kilt will work with `mustache`
 and `temel` as well, although they haven't been tested in amber.  
 
 The Amber Generators support `slang` and `ecr` templates using the `-t` option when you create a new project.

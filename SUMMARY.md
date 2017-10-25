@@ -30,12 +30,9 @@
       * [Migrations](getting-started/models/jennifer/migrations.md)
       * [Models](getting-started/models/jennifer/models.md)
   * [Views](getting-started/views/README.md)
-    * [Jasper Helpers](getting-started/views/jasper-helpers.md)
+    * [View Helpers](getting-started/views/jasper-helpers.md)
   * [Mailers](getting-started/mailers/README.md)
   * [Websockets](getting-started/websockets/README.md)
 * [Recipes](recipes/README.md)
     * [Amber Auth Example](recipes/examples/amber-auth-example.md)
     * [VS Code Debug](recipes/debugging/vs-code-debug.md)
-
-
-

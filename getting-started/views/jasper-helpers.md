@@ -17,7 +17,6 @@ Produces the following HTML
 ## Buttons
 A `button_to` helper is available:
 
-slang
 ```slim
 == button_to "Logout", "/logout"
 ```
@@ -195,4 +194,4 @@ Produces the following HTML
   <input type="hidden" name="published" id="published" value="0"><input type="checkbox" name="published" id="published" value="1" checked="false">
   <input type="submit" value="Create Post" id="create_post">
 </form>
-``
+```

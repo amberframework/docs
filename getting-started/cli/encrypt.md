@@ -35,3 +35,13 @@ Editor will be opened if file is already encrypted.
 `amber encrypt development --noedit` will encrypt file if unencrypted but do nothing if it's already encrypted. Editor will not be opened.
 
 Production is encrypted by default.
+
+## Note about Amber Secret Key
+
+Keep track of the values of `.amber_secret_key` or `ENV[AMBER_SECRET_KEY]`. If you lose these you will not be able to decrypt an encrypted file. 
+
+When a new project is created the file `.amber_secret_key` is created with a random key. This is added to `gitignore` by default as it should never be added to your repo. 
+
+If you need to encrypt or decrypt on another development box or server you will need to manually move `.amber_secret_key` or set the value of `ENV[AMBER_SECRET_KEY]` on that computer. 
+
+If your server can't read your encrypted settings it will use the default ones.

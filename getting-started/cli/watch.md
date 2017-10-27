@@ -4,6 +4,8 @@ The `amber watch` compiles and runs your project. It also monitors for changes a
 
 Here is a list of the commands available:
 
+`amber watch` or `amber w`
+
 ```sh
 amber watch [OPTIONS]
 

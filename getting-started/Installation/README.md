@@ -28,7 +28,7 @@ make install
 
 ##### For Debian & Ubuntu
 - These are necessary to compile the CLI:
-- `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev`
+- `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev`
 
 ##### For RedHat & CentOS
 - `sudo yum groupinstall development tools`

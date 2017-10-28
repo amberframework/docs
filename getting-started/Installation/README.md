@@ -26,6 +26,20 @@ shards install
 make install
 ```
 
+Compiling issues: 
+____________
+
+If you run into an issue on compiling regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
+
+```sh
+sudo dd if=/dev/zero of=/swapfile bs=2k count=1024k
+sudo mkswap /swapfile
+sudo chmod 600 /swapfile
+sudo swapon /swapfile
+```
+
+
+
 ##### For Debian & Ubuntu
 - These are necessary to compile the CLI:
 - `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev`

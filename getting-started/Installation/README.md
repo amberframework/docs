@@ -26,9 +26,6 @@ shards install
 make install
 ```
 
-Compiling issues: 
-____________
-
 If you run into an issue on compiling regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
 
 ```sh

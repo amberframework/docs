@@ -1,6 +1,6 @@
 # Minimal Configuration
 
-Amber can be run from a single file for mimal configuration setups if the user prefers this for smaller applications.
+Amber can be run from a single file for minimal configuration setups if the user prefers this for smaller applications.
 
 ```crystal
 require "amber"

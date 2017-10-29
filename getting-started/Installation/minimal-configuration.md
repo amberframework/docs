@@ -20,5 +20,5 @@ Amber::Server.configure do |app|
   end
 end
 
-Amber::Server.instance.run
+Amber::Server.start
 ```

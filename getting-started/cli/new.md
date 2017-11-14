@@ -23,49 +23,44 @@ Options:
 ```
 
 ## Example Usage
+Using `amber new microsecond-blog` will generate a skeleton Amber application in `./microsecond-blog`.
+You can have a running web application in a matter of minutes:
+1. `amber new microsecond-blog`
+1. `cd microsecond-blog`
+1. `shards install`
+1. `amber run &` or `amber watch &` (also can execute these in foregound of separate terminal)
+1. `open http://localhost:3000`
 
+Full example in terminal:
 ```shell
-± amber new blog
-Rendering App blog in ./blog
+$ amber new microsecond-blog
+Rendering App microsecond-blog in ./microsecond-blog
 new       .amber.yml
 new       .amber_secret_key
 new       .gitignore
 new       .travis.yml
 new       config/application.cr
 new       config/database.yml
-new       config/deploy/Dockerfile
-new       config/environments/development.yml
-new       config/environments/production.yml
-new       config/environments/test.yml
-new       config/routes.cr
-new       config/webpack/common.js
-new       config/webpack/development.js
-new       config/webpack/production.js
-new       docker-compose.yml
-new       Dockerfile
-new       package.json
-new       public/crossdomain.xml
-new       public/dist/images/logo.png
-new       public/dist/main.bundle.js
-new       public/robots.txt
-new       README.md
-new       shard.yml
-new       spec/spec_helper.cr
-new       src/assets/fonts/.gitkeep
-new       src/assets/images/.gitkeep
-new       src/assets/images/logo.png
-new       src/assets/javascripts/main.js
-new       src/assets/stylesheets/main.scss
-new       src/controllers/application_controller.cr
-new       src/controllers/home_controller.cr
-new       src/controllers/static_controller.cr
-new       src/handlers/.gitkeep
-new       src/mailers/.gitkeep
-new       src/models/.gitkeep
-new       src/views/home/index.slang
+... [clipped]
 new       src/views/layouts/_nav.slang
 new       src/views/layouts/application.slang
-new       src/blog.cr
+new       src/microsecond-blog.cr
+$ cd microsecond-blog/
+$ shards install
+Updating https://github.com/amberframework/amber.git
+Updating https://github.com/luislavena/radix.git
+... [clipped]
+Installing garnet_spec (0.1.1)
+Installing selenium (0.3.0)
+$ amber run &
+[1] 65034
+💎  Crystalizing...
+microsecond-blog
+$ 💎  Crystalization complete!
+I, [2017-11-14 10:05:58 -0800 #65094]  INFO -- : [Amber 0.3.0] serving application "microsecond-blog" at http://0.0.0.0:3000
+I, [2017-11-14 10:05:58 -0800 #65094]  INFO -- : Server started in development.
+I, [2017-11-14 10:05:58 -0800 #65094]  INFO -- : Startup Time 00:00:00.0013140
+$ open http://localhost:3000
+200  | GET  "/"  | 294.0µs
+Params:
 ```
-
-This generates a skeletal Amber installation in ~/Code/blog.

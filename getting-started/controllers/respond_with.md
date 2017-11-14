@@ -59,3 +59,5 @@ end
 ### Demo:
 
 https://www.youtube.com/watch?v=6KNjWDRUo_c
+
+![](/amberframework/site-assets/blob/master/videos/responding-to-multiple-response-types.mp4?raw=true)

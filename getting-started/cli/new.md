@@ -28,7 +28,7 @@ You can have a running web application in a matter of minutes:
 1. `amber new microsecond-blog`
 1. `cd microsecond-blog`
 1. `shards install`
-1. `amber run &` or `amber watch &` (also can execute these in foregound of separate terminal)
+1. `amber run &` or `amber watch &` (also can execute these in foreground of separate terminal)
 1. `open http://localhost:3000`
 
 Full example in terminal:

@@ -3,6 +3,10 @@
 If we need to render a template to html `render("template.slang")` works nicely.
 A lot of times we want to respond with json, xml, text or something else. In those cases we use `respond_with`.
 
+![Respond_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
+
+https://www.youtube.com/watch?v=6KNjWDRUo_c
+
 **Responding with JSON**
 
 ```crystal
@@ -55,9 +59,3 @@ class PetController < ApplicationController
   end
 end
 ```
-
-### Demo:
-
-https://www.youtube.com/watch?v=6KNjWDRUo_c
-
-![](/amberframework/site-assets/blob/master/videos/responding-to-multiple-response-types.mp4?raw=true)

@@ -48,7 +48,7 @@ $ sqlite3 --version
 
 The program should report its version.
 
-To install Amber, use 
+To install Amber, use
 
 ## Model-View-Controller
 

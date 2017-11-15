@@ -5,6 +5,7 @@ Amber has a built in CLI tool, to make your life easier while developing applica
 Here is a list of the available commands:
 
 - **amber [c | console]**             - Starts a amber console
+- **amber ex exec [OPTION] [CODE]**  - Executes the specified code or file in the application scope. Options: [-e --editor | -b --back]
 - **amber g generate [SUBCOMMAND]**   - Generate Amber classes
 - **amber n new**                     - Generate a new amber project
 - **amber m migrate [SUBCOMMAND]**    - Performs database migrations tasks

@@ -5,6 +5,17 @@
 * [Code of Conduct](preface/code-of-conduct.md)
 * [Getting Started](getting-started/README.md)
   * [Installation](/getting-started/Installation/README.md)
+  * [CLI](/getting-started/cli/README.md)
+    * [Console](/getting-started/cli/console.md)
+    * [Database](/getting-started/cli/database.md)
+    * [Deploy](/getting-started/cli/deploy.md)
+    * [Encrypt](/getting-started/cli/encrypt.md)
+    * [Generate](/getting-started/cli/generate.md)
+    * [Migrate](/getting-started/cli/migrate.md)
+    * [New](/getting-started/cli/new.md)
+    * [Routes](/getting-started/cli/routes.md)
+    * [Run](/getting-started/cli/run.md)
+    * [Watch](/getting-started/cli/watch.md)
   * [Create New App](/getting-started/Installation/create-new-app.md)
   * [Directory Structure](/getting-started/Installation/directory-structure.md)
   * [Configuration](/getting-started/Installation/configuration.md)
@@ -34,5 +45,8 @@
   * [Mailers](getting-started/mailers/README.md)
   * [Websockets](getting-started/websockets/README.md)
 * [Recipes](recipes/README.md)
-    * [Amber Auth Example](recipes/examples/amber-auth-example.md)
-    * [VS Code Debug](recipes/debugging/vs-code-debug.md)
+  * [Amber Auth Example](recipes/examples/amber-auth-example.md)
+  * [VS Code Debug](recipes/debugging/vs-code-debug.md)
+
+
+

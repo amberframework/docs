@@ -50,7 +50,7 @@
     * [System](/getting-started/testing/system.md)
     * [Unit](/getting-started/testing/unit.md)
   * [Views](getting-started/views/README.md)
-    * [View Helpers](getting-started/views/jasper-helpers.md)
+    * [View Helpers](/getting-started/views/jasper-helpers.md)
   * [Mailers](getting-started/mailers/README.md)
   * [Websockets](/websockets/README)
     * [Channels](/getting-started/websockets/channels.md)

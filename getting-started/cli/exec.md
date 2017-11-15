@@ -2,9 +2,12 @@
 
 The `exec` command allows you to run short pieces of code within the amber application
 scope. Code can be specified in the following three ways:
-1. *inline mode*: inline code specified in the command line as a string argument e.g.: `amber exec User.first`
-2. *file mode*: code within an existing .cr file specified as a path e.g.: `amber exec scripts/stuff.cr`
-3. *editor mode*: a terminal-based code editor is opened and the resulting code is executed once you save and exit e.g.: `amber exec`... edit code in Vim... code runs.
+1. *inline mode*: inline code specified in the command line as a string argument  
+   - `amber exec User.first`
+1. *editor mode*: a terminal-based code editor is opened and the resulting code is executed once you save and exit
+   - `amber exec`... edit code in Vim... code runs.
+1. *file mode*: code within an existing .cr file specified as a path
+   - `amber exec scripts/stuff.cr`
 
 Here is a list of the commands available:
 
@@ -23,27 +26,54 @@ Options:
 ```
 
 ## Inline Mode
-Inline mode allows you to specify a string as an argument to `amber exec` containing
-valid crystal code to be executed within the application scope. The string must either
-contain no spaces or be enclosed within single or double quotes. Backslashes may be
-used to escape any problematic quotes that need to appear within your code.
+The `exec` command in inline mode allows you to execute a line of code (or several with semicolons) with your application code and environment loaded.
 
-Example:
-```
+Inline mode can be helpful in executing one-liners on a remote production machine, or to quickly execute some code locally.
+
+### Examples:
+```shell
+# Wrapping command in single quotes
+$ amber exec 'User.find_by(:email, "test@example.com")'
+# Escaping quotes
 $ amber exec "User.find_by(:email, \"test@example.com\")"
-#<User:0x168df80 @id=23 @email=test@example.com...>
+# Multiple lines of code (using semi-colons)
+$ amber exec 'u = User.find(1); u.email;'
 ```
 
-## File Mode
-File mode is similar to inline mode except the argument passed to `amber exec` is
-interpreted as a path to a .cr file. For file mode to activate, the argument must
-be a string ending in .cr, and must correspond with a file that exists on the file system,
-within the current project.
+### Full Example:
+In this example, an article was accidentally archived, and you want to recover it via command line:
+1. Find the article and ensure it exists
+   1. `amber exec 'Article.find(1)'`
+1. Set the article's `archived` flag to be `false`
+   1. `$ amber exec 'a = Article.find(1); (a.archived = false) if a; a.save if a;'`
 
-Example:
+```shell
+# Be patient, it takes a few seconds - this is compiling your entire app
+$ amber exec 'Article.find(1)'
+#<Article:0x10c5f6700 @errors=[], @id=1, @title="Groundbreaking Ideas", @body="Just kidding, yet another self-important article.", @archived=true, @created_at=2017-11-14 14:13:39 UTC, @updated_at=2017-11-14 14:34:10 UTC>
+# Those if statements are important, if you have a nilable type (Article | Nil)
+$ amber exec 'a = Article.find(1); (a.archived = false) if a; a.save if a;'
+true
+# Notice the update `@archived=false`
+$ amber exec 'Article.find(1)'
+#<Article:0x10e640700 @errors=[], @id=1, @title="Groundbreaking Ideas", @body="Just kidding, yet another self-important article.", @archived=false, @created_at=2017-11-14 14:13:39 UTC, @updated_at=2017-11-14 14:35:06 UTC>
 ```
-$ amber exec cool_script.cr
-cool stuff happened ^_^
+
+The history of your code, and the resulting output is saved in a `./tmp` directory:
+```shell
+$ ls -l
+1510698868787_console.cr
+1510698868787_console_result.log
+1510698901965_console.cr
+1510698901965_console_result.log
+1510698912435_console.cr
+1510698912435_console_result.log
+
+# Review the output of your actions
+$ cat ./tmp/*result.log
+#<Article:0x10c5f6700 @errors=[], @id=1, @title="Groundbreaking Ideas", @body="Just kidding, yet another self-important article.", @archived=true, @created_at=2017-11-14 14:13:39 UTC, @updated_at=2017-11-14 14:34:10 UTC>
+true
+#<Article:0x10e640700 @errors=[], @id=1, @title="Groundbreaking Ideas", @body="Just kidding, yet another self-important article.", @archived=false, @created_at=2017-11-14 14:13:39 UTC, @updated_at=2017-11-14 14:35:06 UTC>
 ```
 
 ## Editor Mode
@@ -54,9 +84,27 @@ can quit without saving to abort, or you can save and quit, which will cause amb
 to run the code. Specifying a value for the `--back` option allows you to go _n_
 scripts back and edit+run that script.
 
-Example:
+### Example:
 ```
 $ amber exec -e nano -b 1
 (nano opens the previous script that was edited + run in editor mode)
 (output of the script is printed to the terminal once you save + quit)
+```
+
+## File Mode
+File mode is invoked in a similar to inline mode and it is executed in editor mode (opening a terminal editor).
+
+The invocation, just pass a path to a crystal file, rather than a string to execute - `amber exec filename.cr`
+
+The argument must be a string ending in .cr, and must correspond with a file that exists on the file system, within the current project.
+
+The file then opens in edit mode. The changes you make will **not** modify the original source file, but they will be used when `amber exec` runs the code and saved as a `./tmp/{timestamp}_console.cr` file.
+
+### Example:
+```
+$ amber exec cool_script.cr
+# vim or another editor opens
+# make edits if necessary
+# save the contents
+cool stuff happened ^_^
 ```

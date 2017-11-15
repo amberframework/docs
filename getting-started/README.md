@@ -1,4 +1,4 @@
-* [ ] # Getting Started
+# Getting Started
 
 Amber is designed to make common web-development tasks simple, and easy, maintaining developer engagement, productivity without performance penalties. By providing an all-in-one toolbox to get you started the various parts of Amber work well together or separately.
 
@@ -111,7 +111,7 @@ The `blog` directory has a number of auto-generated files and folders that make 
 
 To begin with, let's get some text up on screen quickly. To do this, you need to get your Amber application server running
 
-#### 4.1 Starting up the Web Server {#starting-up-the-web-server}
+### Starting up the Web Server
 
 You actually have a functional Rails application already. To see it, you need to start a web server on your development machine. You can do this by running the following in the`blog`directory:
 

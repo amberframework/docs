@@ -101,7 +101,13 @@ The argument must be a string ending in .cr, and must correspond with a file tha
 The file then opens in edit mode. The changes you make will **not** modify the original source file, but they will be used when `amber exec` runs the code and saved as a `./tmp/{timestamp}_console.cr` file.
 
 ### Example:
+```crystal
+# ./cool_stuff.cr
+statement = "cool stuff happened"
+emoticon = "^_^"
+puts "#{statement} #{emoticon}"
 ```
+```shell
 $ amber exec cool_script.cr
 # vim or another editor opens
 # make edits if necessary

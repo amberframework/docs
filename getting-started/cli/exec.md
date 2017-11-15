@@ -37,7 +37,7 @@ $ amber exec 'User.find_by(:email, "test@example.com")'
 # Escaping quotes
 $ amber exec "User.find_by(:email, \"test@example.com\")"
 # Multiple lines of code (using semi-colons)
-$ amber exec 'u = User.find(1); u.email;'
+$ amber exec 'u = User.find(1); u.email if u;'
 ```
 
 ### Full Example:

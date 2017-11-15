@@ -1,4 +1,4 @@
-# Getting Started
+* [ ] # Getting Started
 
 Amber is designed to make common web-development tasks simple, and easy, maintaining developer engagement, productivity without performance penalties. By providing an all-in-one toolbox to get you started the various parts of Amber work well together or separately.
 
@@ -48,7 +48,87 @@ $ sqlite3 --version
 
 The program should report its version.
 
-To install Amber, use
+### Installing Amber
+
+To install the Amber binary on Mac you can use
+
+```bash
+$ brew install amberframework/amber/amber
+```
+
+To verify that you have everything installed correctly, you should be able to run the following:
+
+```bash
+$ amber -v
+Amber CLI (amberframework.org) - vX.X.X
+```
+
+For other Linux distributions and guides please see Installation
+
+### Creating the Blog Application
+
+Amber comes with a number of scripts called generators that are designed to make your development life easier by creating everything that's necessary to start working on a particular task. One of these is the new application generator, which will provide you with the foundation of a fresh Amber application so that you don't have to write it yourself.
+
+To use this generator, open a terminal, navigate to a directory where you have rights to create files, and type:
+
+```bash
+$ amber new blog -d sqlite
+```
+
+This will create an Amber application called Blog in a `blog` directory using the sqlite database engine. If you don't specify a database the default will be `postgresql`
+
+Tip: You can see all of the command line options that the Rails application builder accepts by running `rails new -h`
+
+After you create the blog application, switch to its folder:
+
+```bash
+$ cd blog
+```
+
+You can then install your dependencies with this command
+
+```bash
+$ shards install
+```
+
+The `blog` directory has a number of auto-generated files and folders that make up the structure of an Amber application. Most of the work in this tutorial will happen in the `src` folder, but here's a basic rundown on the function of each of the files and folders that Rails created by default:
+
+| File Folder | Purpose |
+| :--- | :--- |
+| config/ | Contains configuration code for databases, environments, routing, and deployment |
+| db/ | Contains SQLite database and database migrations |
+| lib/ | Contains local installation of all dependent shards |
+| public/ | Location for html, css, and javscripts. This will be the default handler for static assets. |
+| spec/ | Location for application specification and tests |
+| src/ | Source code that composes your application |
+| .amber\_secret\_key | This file is used to encrypt application secrets so they are not stored in source control |
+| .gitignore | This file tells git which files and patterns it should ignore. |
+| docker-compose.yml | A file which defines services, networking, and drives for docker deployment. |
+| Dockerfile | A file which contains all the commands needed to build a docker image. |
+| README.md | A brief instruction manual about your application |
+
+## Hello, Amber!
+
+To begin with, let's get some text up on screen quickly. To do this, you need to get your Amber application server running
+
+#### 4.1 Starting up the Web Server {#starting-up-the-web-server}
+
+You actually have a functional Rails application already. To see it, you need to start a web server on your development machine. You can do this by running the following in the`blog`directory:
+
+```bash
+$ amber watch
+```
+
+This will compile your source code and start watching for changes to reload. By default Amber accepts requests on port 3000. If we point our favorite web browser at [http://localhost:3000](http://localhost:3000), we should see the Amber Framework welcome page
+
+![](https://github.com/amberframework/online-docs/blob/master/assets/amber-framework-welcome.png?raw=true)If your screen looks like the image above, congratulations! You now have a working Amber application. If you don’t see the page above, try accessing it via [http://127.0.0.1:3000](http://127.0.0.1:3000) and later make sure your OS has defined “localhost” as “127.0.0.1”.
+
+Locally, the application is running in a Crystal process. To stop it, we hit ctrl-c once, just as we would to terminate the program normally.
+
+> **Note:** The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically. If you don't want to use Sentry, you can compile and run manually:  
+> 1. Build the app `crystal build --release src/[your_app].cr`  
+> 2. Run with `./[your_app]`  
+> 3. Visit `http://0.0.0.0:3000/`
 
 ## Model-View-Controller
 

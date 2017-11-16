@@ -28,21 +28,32 @@ Arguments:
 **Create**
 
 ```shell
-± amber db create
+$ amber db create
 Created database blog_development
+```
+*Note: Starting with v0.3.5 - Amber made two changes regarding databases:*
+- Amber will substitute hypens (-) for underscores (\_) in database names (keeps it postgresql friendly)
+- The default user for pg databases is `postgres` rather than `root`
+  - in config/database.yml: `postgres://postgres:@localhost:5432/microsecond_blog_development`
+```shell
+$ amber new microsecond-blog
+... [clipped]
+$ cd microsecond-blog
+$ amber db create
+Created database microsecond_blog_development
 ```
 
 **Drop**
 
 ```shell
-± amber db drop
+$ amber db drop
 Dropped database blog_development
 ```
 
 **Migrate**
 
 ```shell
-± amber db migrate
+$ amber db migrate
 Migrating db, current version: 0, target: 20170928204246
 OK   20170928204246_create_post.sql
 ```
@@ -50,7 +61,7 @@ OK   20170928204246_create_post.sql
 **Rollback**
 
 ```shell
-± amber db rollback
+$ amber db rollback
 Migrating db, current version: 20170928204246, target: 0
 OK   20170928204246_create_post.sql
 ```
@@ -58,7 +69,7 @@ OK   20170928204246_create_post.sql
 **Redo**
 
 ```shell
-± amber db redo
+$ amber db redo
 Migrating db, current version: 20170928204246, target: 0
 OK   20170928204246_create_post.sql
 Migrating db, current version: 0, target: 20170928204246
@@ -68,7 +79,7 @@ OK   20170928204246_create_post.sql
 **Status**
 
 ```shell
-± amber db status
+$ amber db status
 Applied At                  Migration
 =======================================
 2017-09-28 20:44:22 UTC  -- 20170928204246_create_post.sql
@@ -77,13 +88,13 @@ Applied At                  Migration
 **Seed**
 
 ```shell
-± amber db seed
+$ amber db seed
 Seeded database
 ```
 
 **Version**
 
 ```shell
-± amber db version
+$ amber db version
 20170928204246
 ```

@@ -38,6 +38,7 @@ Created database blog_development
 ```shell
 $ amber new microsecond-blog
 ... [clipped]
+$ cd microsecond-blog
 $ amber db create
 Created database microsecond_blog_development
 ```

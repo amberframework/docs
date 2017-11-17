@@ -54,12 +54,12 @@ You should now be able to run `amber` in the command line.
 #### Homebrew MacOS 
 
 ```
-brew install amber-crystal/amber/amber
+brew install amberframework/amber/amber
 ```
 
 Optionally you can install as follow:
 
 ```
-brew tap amber-crystal/amber
-brew install amber-crystal/amber/amber
+brew tap amberframework/amber
+brew install amberframework/amber/amber
 ```

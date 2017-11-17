@@ -36,7 +36,7 @@ If you’re stuck, there are a number of places you can get help.
 
 Contributing to Amber can be a rewarding way to learn, teach, and build experience in just about any skill you can imagine. You don’t have to become a lifelong contributor to enjoy participating in Amber.
 
-Amber is a community effort and we want You to be part of ours [Join Amber Community!](https://github.com/Amber-Crystal/amber/blob/master/.github/CONTRIBUTING.md)
+Amber is a community effort and we want You to be part of ours [Join Amber Community!](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md)
 
 ## First Steps
 

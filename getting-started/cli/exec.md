@@ -6,7 +6,7 @@ scope. Code can be specified in the following three ways:
    - `amber exec User.first`
 1. *editor mode*: a terminal-based code editor is opened and the resulting code is executed once you save and exit
    - `amber exec`... edit code in Vim... code runs.
-1. *file mode*: code within an existing .cr file specified as a path
+1. *file mode*: code within an existing .cr file is copied to a tmp file for editing and run once editor is closed.
    - `amber exec scripts/stuff.cr`
 
 Here is a list of the commands available:

@@ -11,7 +11,6 @@
     * [Deploy](/getting-started/cli/deploy.md)
     * [Encrypt](/getting-started/cli/encrypt.md)
     * [Generate](/getting-started/cli/generate.md)
-    * [Migrate](/getting-started/cli/migrate.md)
     * [New](/getting-started/cli/new.md)
     * [Routes](/getting-started/cli/routes.md)
     * [Run](/getting-started/cli/run.md)

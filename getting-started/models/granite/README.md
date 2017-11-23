@@ -23,19 +23,19 @@ dependencies:
     github: will/crystal-pg
 ```
 
-Next you will need to create a `config/database.yml`
-You can leverage environment variables using `${}` syntax.
+Next you will need to set the `database_url` to point to your database.  
+
+You will set this in the `config/environments/development.yml` and `config/environments/test.yml`
 
 ```yaml
-mysql:
-  database: "mysql://username:password@hostname:3306/database_${AMBER_ENV}"
-pg:
-  database: "postgres://username:password@hostname:5432/database"
-sqlite:
-  database: "sqlite3:./config/${DB_NAME}.db"
+database_url: "mysql://username:password@host:3306/database_environment"
+# or
+database_url: "postgres://username:password@host:5432/database_environment"
+# or
+database_url: "sqlite3:./config/database_environment.db"
 ```
 
-Or you can set the `DATABASE_URL` environment variable.  This will override the config/database.yml
+Or you can set the `DATABASE_URL` environment variable.  This will override the environments setting.
 
 ## Usage
 

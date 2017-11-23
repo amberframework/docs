@@ -48,19 +48,11 @@ You can run the migrations using either:
 ```bash
 amber db migrate
 ```
-or
-```bash
-amber migrate up
-```
 
 You can rollback a migration using either:
 
 ```bash
 amber db rollback
-```
-or
-```bash
-amber migrate down
 ```
 
 ## Drop and Create a database
@@ -76,8 +68,7 @@ Sometimes you need to pre-populate your tables with data.  This is common if you
 
 You can do this by creating a `db/seeds.cr` file
 ```crystal
-require "amber"
-require "../src/models/*"
+require "../config.appliction.cr"
 
 user = User.new
 user.email = "admin@example.com"

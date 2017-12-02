@@ -109,7 +109,7 @@ end
 
 ### 2. Avoid breakpoints inside blocks
 
-Currently crystal lacks of some debugging info, making blocks hard to debug, so if you try to put a breakpoint inside a block, it would be almost ignored.
+Currently crystal lacks of some debugging info, making blocks hard to debug, so if you try to put a breakpoint inside a block, it will be ignored.
 
 Alternatively, you can try `pp` to pretty print objects.
 

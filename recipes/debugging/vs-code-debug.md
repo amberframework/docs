@@ -89,11 +89,121 @@ To install GDB and LLDB according with your OS use one of the following commands
 
 ![debugging](https://i.imgur.com/GsGT1h0.png)
 
-![green button](https://camo.githubusercontent.com/30adba87add4770abf2c3982206748123f8a2c6e/687474703a2f2f692e696d6775722e636f6d2f6d674b41366d782e706e67)
+## Trips and Tricks for debugging Crystal applications
 
-![change variable value](https://camo.githubusercontent.com/c5a551366c3eb2464c920bf3f95e8cdfb97ad827/687474703a2f2f692e696d6775722e636f6d2f6b506b546e75442e706e67)
+> DISCLAIMER: LLDB doesn't show variables data for crystal applications yet, see [issue #4457](https://github.com/crystal-lang/crystal/issues/4457).
 
-[Native Debug](https://github.com/WebFreak001/code-debug) allows to set breakpoints, watch variables and execute GDB commands inside VSCode.
+Actually debugging Crystal application is not fully supported yet. However you can use some techniques to improve your debugging experience.
+
+### 1. Use debugger keyword
+
+Instead of putting breakpoints using commands inside GDB or LLDB you can try to set a breakpoint using `debugger` keyword.
+
+```crystal
+i = 0
+while i < 3
+  debugger # => breakpoint
+  i += 1
+end
+```
+
+### 2. Avoid breakpoints inside blocks
+
+Currently crystal lacks of some debugging info, making blocks hard to debug, so if you try to put a breakpoint inside a block, it would be almost ignored.
+
+Alternatively, you can try `pp` to pretty print objects.
+
+```crystal
+3.times do |i|
+  pp i
+end
+# i => 1
+# i => 2
+# i => 3
+```
+
+### 3. Try `@[NoInline]` to debug arguments data
+
+Sometimes crystal optimize arguments data, so the debugger will shows args like `<optimized output>`. To avoid this behaivior use `@[NoInline]` attribute before your function implementation.
+
+```crystal
+@[NoInline]
+def foo(bar)
+  debugger
+end
+```
+
+### 4. Printing strings objects (GDB)
+
+To print string objects like:
+
+```crystal
+foo = "Hello World!"
+debugger
+```
+
+Use `print` in debugging console:
+
+```sh
+(gdb) print &foo.c
+$1 = (UInt8 *) 0x10008e6c4 "Hello World!"
+```
+
+Or adding `&foo.c` using a new variable entry on watch section in VSCode debugger
+
+![watch](https://i.imgur.com/EpQinL7.png)
+
+### 5. Printing array variables
+
+To print array items like:
+
+```crystal
+foo = ["item 0", "item 1", "item 2"]
+debugger
+```
+
+Try in your debugger this command:
+
+```
+(gdb) print &foo.buffer[0].c
+$19 = (UInt8 *) 0x10008e7f4 "item 0"
+```
+
+Changing the buffer index for each item.
 
 
+### 6. Printing instance variables
 
+For printing `@foo` var in this code:
+
+```crystal
+class Bar
+  @foo = 0
+  def baz
+    debugger
+  end
+end
+
+Bar.new
+```
+
+You can use `self.foo` in debugger terminal or VSCode GUI.
+
+### 7. Print hidden objects
+
+Some objects doen't show at all. So you can unhide them by using `.to_s` method and an auxiliar variable, like this:
+
+```crystal
+def bar(hello)
+  "#{hello} World!"
+end
+
+def foo(hello)
+  auxiliar = bar(hello).to_s
+  debugger
+end
+
+foo("Hello")
+```
+
+This trick allows to show auxiliar variable inside debugger tool.

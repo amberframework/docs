@@ -29,6 +29,6 @@ channel.on('user_join', (message) => {})
 
 Seng events / messages:
 
-```javasript
+```javascript
 channel.push('message_new', { message: 'amber websockets is the bomb diggity!' })
 ```

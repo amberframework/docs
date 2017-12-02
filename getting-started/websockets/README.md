@@ -2,7 +2,7 @@
 
 Websockets allow instant communication between clients for building applications like chat apps, multiplayer games, live tickers or other forms of real time featured interactions. Much like Node Socket.io, Rails ActionCable, or Phoenix Channels, Amber websockets is based around messages and topics.
 
-To try a minimal working example see [Ambrockets](https://ambrockets.herokuapp.com/).
+You can try a minimal working example see [Ambrockets](https://ambrockets.herokuapp.com/).
 
 [![ambrockets](https://raw.githubusercontent.com/faustinoaq/ambrockets/master/src/assets/images/logo.png)](https://ambrockets.herokuapp.com)
 

@@ -1,15 +1,15 @@
-# Debugging Crystal Projects
+# Debugging Crystal Projects using VSCode
 
 This tutorial have some tips and tricks to debug Crystal projects with tools like GDB or LLDB using debugger clients like [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) for VSCode.
 
-## Requisites
+## Prerequisites
 
 * Crystal - See instalation guide [here](https://crystal-lang.org/docs/installation/)
-* Amber Project - See installation guide [here](/getting-started/Installation/README.md)
-* GNU Debugger (GDB) or LLVM Debugger (LLDB)
-* VSCode + [Crystal Support](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang) + [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug)
+* Crystal project - See installation guide [here](https://crystal-lang.org/docs/using_the_compiler/#creating-a-project-or-library) or [here (Amber)](/getting-started/Installation/README.md)
+* VSCode with [Crystal Lang](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang) and [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) extensions
+* GNU debugger (GDB) or LLVM debugger (LLDB) - See installation guide below
 
-To install GDB and LLDB according with your OS use one of the following commands:
+To install GDB or LLDB according with your OS use one of the following commands:
 
 ##### MacOS
 
@@ -28,9 +28,11 @@ To install GDB and LLDB according with your OS use one of the following commands
 `pacman -S gdb lldb`
 
 
-> Note: Before continuing setting up the debugger make sure you have the above requisites install. These settings have been verified for a MacOS and Linux's enviroments
+> Note: Before continuing setting up the debugger make sure you have the above prerequisites installed. These settings have been verified for a MacOS and Linux's enviroments
 
 ## Steps
+
+> By convention project directory name is equal to your application name, if you have changed it, please update `${workspaceFolderBasename}` by your prefered name configured inside `shards.yml`
 
 ### 1. `task.json` configuration to compile a crystal project
 

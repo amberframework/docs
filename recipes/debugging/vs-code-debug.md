@@ -191,7 +191,7 @@ You can use `self.foo` in debugger terminal or VSCode GUI.
 
 ### 7. Print hidden objects
 
-Some objects doen't show at all. So you can unhide them by using `.to_s` method and an auxiliar variable, like this:
+Some objects doesn't show at all. So you can unhide them by using `.to_s` method and an auxiliar variable, like this:
 
 ```crystal
 def bar(hello)

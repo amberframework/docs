@@ -102,8 +102,8 @@ Instead of putting breakpoints using commands inside GDB or LLDB you can try to 
 ```crystal
 i = 0
 while i < 3
-  debugger # => breakpoint
   i += 1
+  debugger # => breakpoint
 end
 ```
 

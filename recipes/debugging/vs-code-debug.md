@@ -91,9 +91,9 @@ Install GDB or LLDB based commands below for your OS.
 
 ![debugging](https://i.imgur.com/GsGT1h0.png)
 
-## TTips and Tricks for debugging Crystal applications
+## Tips and Tricks for debugging Crystal applications
 
-> DISCLAIMER: LLDB does not show variable data for crystal applications yet, see [issue #4457](https://github.com/crystal-lang/crystal/issues/4457).
+> DISCLAIMER: LLDB does not show data for variables in crystal applications yet, see [issue #4457](https://github.com/crystal-lang/crystal/issues/4457).
 
 Fully debugging Crystal applications is not supported yet. You can use some of the techniques below to improve the debugging experience.
 

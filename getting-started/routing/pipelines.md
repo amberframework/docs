@@ -44,8 +44,6 @@ Amber provides us some default pipes for a number of common tasks. In turn we ca
 
 * **Pipe::Logger** logs incoming requests
 
-* **Pipe::CodeReload** enables code reloading for all entries in the web directory.
-
 * **Pipe::CORS** Handler adds support for Cross Origin Resource Sharing.
 
 * **Pipe::CSRF** Handler adds support for Cross Site Request Forgery.

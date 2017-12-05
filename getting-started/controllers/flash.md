@@ -57,7 +57,7 @@ If you want a flash value to be carried over to another request, use the keep me
 ```crystal
 class MainController < ApplicationController
 
-  # Let's say this action corresponds to root url, but you want
+  # Let's say this action corresponds to root URL, but you want
   # all requests here to be redirected to UsersController#index.
   # If an action sets the flash and redirects here, the values
   # would normally be lost when another redirect happens, but you

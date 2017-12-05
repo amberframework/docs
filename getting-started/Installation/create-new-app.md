@@ -61,7 +61,7 @@ Installing amber_spec (0.1.1)
 
 ### Creating the database
 
-Amber makes it easy to interact with your database. Amber supports Postgres, MySql and Sqlite.
+Amber makes it easy to interact with your database. Amber supports Postgres, MySql, and Sqlite.
 
 Edit the database setting for your current environment by editing {project_name}/config/environments/{current_environment}.yml file. Amber looks at the database_url key for the default database connection string.
 
@@ -93,7 +93,7 @@ If your screen looks like the image above, congratulations!
 
 You now have a working Amber application. If you don’t see the page above, try accessing it via [http://127.0.0.1:3000](http://127.0.0.1:3000).
 
-Locally, the application is running in a Crystal process. To stop it, we hit ctrl-c once, just as we would to terminate the program normally.
+Locally, the application is running in a Crystal process. To stop it, we hit ctrl-c once, just as we would terminate the program normally.
 
 > **Note:** The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically. If you don't want to use Sentry, you can compile and run manually:  
 > 1. Build the app `crystal build --release src/[your_app].cr`  

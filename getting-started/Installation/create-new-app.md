@@ -31,7 +31,7 @@ Additionally, the following options may be passed to the above command:
 * `--deps` This will download and install project dependencies for you, to save the additional step of having to type `shards install`.
 
 
-Amber generates the directory structure along with files necessary for the application.
+Amber generates the [directory structure](/guides/getting-started/Installation/directory-structure.md#directory-structure) along with files necessary for the application.
 
 
 Change your current directory to `weblog`, if that was the path you chose:

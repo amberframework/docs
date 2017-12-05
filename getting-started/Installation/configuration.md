@@ -36,12 +36,17 @@ Amber makes use of environment variable `AMBER_ENV` to set the current environme
 All amber project have a directory called `{project_name}/config/` in this directory you will find
 
 #### Initializers
+
+You can use initializers to hold configuration settings that should be made after all of the frameworks and shards are loaded, such as options to configure settings for these parts.
+
 - `{project_name}/config/initializers` place any initializer file here to load at runtime.
 
 #### Environments
+
 - `{project_name}/config/environments` all your environment YAML configuration files live here, these files get loaded based on the `AMBER_ENV` value. For example `AMBER_ENV=staging` then this will expect a `{project_name}/config/environments/staging.yml` file to exist.
 
 #### Application.cr
+
 - `{project_name}/config/application.cr` this is the main entry file for amber application files and it allows you to overwrite setting based on dynamic values, it makes it possible to use environment variables as your settings.
 
 ```

@@ -29,7 +29,7 @@ To get the current amber environment just type `Amber.env.to_s`. You can also ch
 
 ### Setting the current environment
 
-Amber makes use of environment variable `AMBER_ENV` to set the current environment. By default the current environment is `development`. 
+Amber makes use of environment variable `AMBER_ENV` to set the current environment. By default, the current environment is `development`. 
 
 ### Configuring Amber
 
@@ -55,7 +55,7 @@ end
 
 ### Where do custom settings go?
 
-You can include new settings withing your environment yaml file by specifying them in the secrets section of the yaml.
+You can include new settings within your environment YAML file by specifying them in the secrets section of the YAML.
 
 ```
 database_url: postgress:://postgres:@localhost:5432/test_development
@@ -67,6 +67,6 @@ secrets:
 
 With Amber you can encrypt your environment setting `amber encrypt {envrionment}`, this command will open your editor to allow make changes if needed and then encrypt the file `{envrionment}.enc`.
 
-A `{project_name}/.encryption_key` file is provided containing a secret key base this is by default added to your `.gitignore` so it does not get commited to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
+A `{project_name}/.encryption_key` file is provided containing a secret key base this is by default added to your `.gitignore` so it does not get committed to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
 
 > It's safe then to commit the encrypted file to your repository. Never commit the encryption key!

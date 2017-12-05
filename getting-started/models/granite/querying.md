@@ -93,6 +93,24 @@ if post
 end
 ```
 
+#### Find in Batches
+
+find_in_batches(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
+
+```crystal
+posts = Post.find_in_batches("name == ?", ["test"])
+```
+
+#### Find Each
+
+find_each(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
+
+```crystal
+posts = Post.find_each("name like ?", ["%test%"]) do |post|
+  puts post
+end
+```
+
 #### Insert
 
 ```crystal

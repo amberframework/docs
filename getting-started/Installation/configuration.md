@@ -29,7 +29,7 @@ To get the current amber environment just type `Amber.env.to_s`. You can also ch
 
 ### Setting the current environment
 
-Amber sets the current environment based on the AMBER_ENV environment variable. The default environment is development. 
+Amber sets the current environment based on the `AMBER_ENV` environment variable. The default environment is development. 
 
 ### Configuring Amber
 

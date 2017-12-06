@@ -8,10 +8,8 @@ Here is a list of the available commands:
 - **amber ex exec [OPTION] [CODE]**  - Executes the specified code or file in the application scope. Options: [-e --editor | -b --back]
 - **amber g generate [SUBCOMMAND]**   - Generate Amber classes
 - **amber n new**                     - Generate a new amber project
-- **amber m migrate [SUBCOMMAND]**    - Performs database migrations tasks
 - **amber w watch**                   - Starts amber server and rebuilds on file changes
 - **amber routes**                    - Prints the routes (In Development)
-- **amber r run [OPTION]**            - Compiles and runs your project. Options: [-p --port | -e -environment]
 - **amber deploy [OPTION]**           - Provisions server and deploys project. [-s --service | -k --key | -t --tag | -b --branch]
 - **amber encrypt [OPTION]**          - Encrypts environment YAML file. [env | -e --editor | --noedit]
 

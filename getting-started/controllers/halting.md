@@ -22,7 +22,7 @@ The next time you’re building a Amber application, consider using halt to simp
 
 Unlike other frameworks Amber `redirect_to` stops the current execution of the request and performs the redirection at that given time. 
 
-For example, in order frameworks you will have to do something similar to:
+For example, in other frameworks you will have to do something similar to:
 
 ```
 class UserController < ApplicationController

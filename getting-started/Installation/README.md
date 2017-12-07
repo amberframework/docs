@@ -2,8 +2,6 @@
 
 The **Amber CLI** offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** Amber.
 
-### Installing the Amber CLI
-
 #### Linux
 
 Ensure you have the necessary dependencies:

@@ -33,7 +33,7 @@ def update
 end
 ```
 
-##  # Rendering an Action's Template from Another Controller
+### Rendering an Action's Template from Another Controller
 
 If you want to render a template from an entirely different controller from the one that contains the action code, You can accomplish that with `render`, which accepts the full path (relative to `src/views`) of the template to render. 
 

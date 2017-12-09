@@ -1,16 +1,5 @@
 # Configuring Amber
 
-- [Configuring Your Application](#configuring-your-application)
-    + [Default Environments](#default-environments)
-    + [Getting the current environment](#getting-the-current-environment)
-    + [Setting the current environment](#setting-the-current-environment)
-    + [Configuring Amber](#configuring-amber)
-      - [Initializers](#initializers)
-      - [Environments](#environments)
-      - [Application.cr](#applicationcr)
-    + [Where do new settings go](#where-do-new-settings-go)
-    + [Encrypted Environment Settings](#encrypted-environment-settings)
-
 Your Amber project has a `{project_name}/config` directory, this directory contains Amber configuration files. 
 
 ### Default Environments

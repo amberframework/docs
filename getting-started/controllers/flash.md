@@ -1,12 +1,5 @@
 # Flash messages
 
-- [Flash messages](#flash-messages)
-    + [Accessing the flash scope](#accessing-the-flash-scope)
-    + [Rendering the flash message](#rendering-the-flash-message)
-    + [Flash values](#flash-values)
-    + [Flash.keep](#flashkeep)
-    + [Flash.now](#flashnow)
-
 The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available on the next request, which is useful for passing error messages etc.
 
 ### Accessing the flash scope

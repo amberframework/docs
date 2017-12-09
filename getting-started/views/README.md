@@ -1,19 +1,4 @@
 # Working with Views
-- [Rendering Content](#rendering-content)
-    + [Rendering an Action's View](#rendering-an-action-s-view)
-  * [# Rendering an Action's Template from Another Controller](#--rendering-an-action-s-template-from-another-controller)
-    + [Ways to render](#ways-to-render)
-    + [The :template Option](#the--template-option)
-    + [The :layout Option](#the--layout-option)
-      - [Examples](#examples)
-- [Layouts](#layouts)
-    + [Finding Layouts](#finding-layouts)
-    + [Specifying Layouts for Controllers](#specifying-layouts-for-controllers)
-    + [Passing data from Controllers to Views](#passing-data-from-controllers-to-views)
-- [Using Partials](#using-partials)
-    + [Naming Partials](#naming-partials)
-    + [Using Partials to Simplify Views](#using-partials-to-simplify-views)
-
 
 Views are rendered using the amber `render` macro, which uses [Kilt](http://github.com/jeromegn/kilt). Currently amber
 there are 4 different templating languages supported by Kilt: `slang` `ecr`, `mustache`,

@@ -2,54 +2,36 @@
 
 Routing provides you tools that map URLs to controller actions. By defining routes, you can separate how your application is implemented from how its URL’s are structured, Routes wire up real-time web socket handlers, and define a series of pipeline transformations for scoping middleware to sets of routes.
 
-```ruby
-Amber::Server.configure do |app|
+A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
 
+### Configuring Routes
+
+Routes are configured in the `{project_name}/config/routes.cr` file.
+
+```crystal
+Amber::Server.configure do |app|
   routes :static do
     # Each route is defined as follow
     # verb resource : String, controller : Symbol, action : Symbol
     get "/*", StaticController, :index
   end
-
-  routes :web do
-    # You can also define all resources at once with the resources macro.
-    # This will define the following routes:
-    # resources path, controller, actions
-    # resources "/user", UserController, only: [:index, :show]
-    # resources "/user", UserController, except: [:index, :show]
-    #
-    # GET     /users          UserController  :index
-    # GET     /users/:id/edit UserController  :edit
-    # GET     /users/new      UserController  :new
-    # GET     /users/:id      UserController  :show
-    # POST    /users          UserController  :create
-    # PATCH   /users/:id      UserController  :update
-    # PUT     /users/:id      UserController  :update
-    # DELETE  /users/:id      UserController  :delete
-    get "/", HomeController, :index
-  end
-
-  routes :api, "/api" do
-    get "/", ApiController, :index
-  end
-
 end
 ```
 
-A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
+### Defining Routes
 
-The **routes** macro accepts a _pipeline_ name and a \_scope, \_in which all routes define within this block will make use of the pipeline and the url will be scoped.
+The **routes** macro accepts a **pipeline** name and a **scope**, in which all routes define within this block will make use of the pipeline and the url will be scoped.
 
 Lets say you are defining a static website and you want all your URL to be displayed as `http://www.mycoolsite.com/page` you will define your routes as:
 
-```ruby
+```crystal
 # routes(pipeline, scope)
 routes :web, "/page"
 ```
 
-The routes macro takes a last argument, a \_block, \_within the block is where you define your routes.
+The routes macro takes a last argument, a block, within the block is where you define your routes.
 
-```ruby
+```crystal
 routes :web, '/static' do
   get "/about", StaticController, :about
 end
@@ -191,4 +173,14 @@ Running `amber routes` again we get the following:
 ╚════════╩═════════════════════╩═════════╩══════════╩════════╩═══════════════════════╝
 ```
 
-This is great, exactly what we want!
+#### Excluding and Including actions
+
+Sometimes you want to use `resources` as as shortcut for defining routes, and with that you don't want to define routes for actions the don't exists just yet. The `resources` allows you to pass another argument `only:` or `except:` to either include actions or exclude them from bein generated.
+
+This will define the following routes:
+
+```
+resources "/user", UserController, only: [:index, :show]
+resources "/user", UserController, except: [:index, :show]
+```
+

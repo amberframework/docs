@@ -11,13 +11,14 @@ If you already have `crystal`, `amber`, and a database installed, you can skip t
 ### Install `crystal`
 
 #### OS X with homebrew
+_You can skip this step if installing amber with homebrew, it installs crystal_
  ```
-$ brew install crystal-lang
+brew install crystal-lang
 ```
 #### Ubuntu or Debian
  ```
-$ curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
-$ sudo apt-get install build-essential crystal
+curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
+sudo apt-get install build-essential crystal
 ```
 
 #### Full Install Instructions
@@ -26,21 +27,23 @@ See full installation instructions [here](https://crystal-lang.org/docs/installa
 ### Install `amber`
 
 #### OS X with homebrew
+_This will also install crystal_
 ```
 brew install amberframework/amber/amber
 ```
 
-#### Ubuntu or Debian
+#### Ubuntu or Debian (Installing from Source)
+_Below are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](https://amberframework.org/guides/getting-started/Installation/README.md#installation) for other Linux Distributions_
 ```
-$ sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
-$ curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
-$ cd amber-stable/
-$ shards install
-$ make install
+sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
+curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
+cd amber-stable/
+shards install
+make install
 ```
 
 #### Full Install Instructions
-See full installation instructions [here](https://amberframework.org/guides/getting-started/Installation/README.md#installation)
+See full installation instructions [here](https://amberframework.org/guides/getting-started/Installation/README.md#installation) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
 
 ### Install a database
 Amber works with `postgresql` (default), `mysql`, or `sqlite`.
@@ -91,7 +94,7 @@ This will create a new database and run the migration to create a `pets` table w
 ## Build the application and run the server
 We can use `amber watch` to both build the binary application and start the server. Additionally, `amber watch` will detect code changes then recompile and restart the application automatically.
 ```
-$ amber watch
+amber watch
 ```
 
 ## Use your brand new web application!
@@ -101,10 +104,10 @@ If you click on the “Pets” link, you should be able to perform all 7 RESTful
 
 ## List of Commands
 ```
-$ amber new pet-tracker
-$ cd pet-tracker
-$ shards install
-$ amber generate scaffold Pet name breed age:integer weight:integer
-$ amber db create migrate
-$ amber watch
+amber new pet-tracker
+cd pet-tracker
+shards install
+amber generate scaffold Pet name breed age:integer weight:integer
+amber db create migrate
+amber watch
 ```

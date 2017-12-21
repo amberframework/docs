@@ -18,9 +18,7 @@ application root directory with the version that should be used (e.g. `0.23.1`).
 
 ## Requirements
 
-In order for the buildpack to work properly you should have a `shard.yml` file,as it is how it will detect that your app is a Crystal app.
-
-Your application has to listen on a port defined by Heroku.
+In order for the buildpack to work properly you should have a `shard.yml` file,as it is how it will detect that your app is a Crystal app. Your application has to listen on a port defined by Heroku.
 
 Append the following code to your `config/application.cr` file:
 
@@ -49,7 +47,7 @@ $ git push heroku master
 
 When you deploy your project to heroku the amber build-pack will make available the `amber cli` to you via the `bin/amber` path.
 
-To run an amber command just do the following:
+To run an amber command just on heroku do the following:
 
 ```
 heroku run bin/amber [command]
@@ -59,18 +57,16 @@ heroku run bin/amber [command]
 
 ### The Heroku Procfile
 
-To deploy your app to heroku you're going to need a `Profile` this file tells Heroku how to run your app. 
-
-Create a Profile at the root of your Amber application and add the following:
+To deploy your app to heroku you're going to need a `Profile`. Create a Profile at the root of your Amber application and add the following:
 
 ```
 release: bin/amber db migrate
 web: bin/{your-app-name}
 ```
 
-The Amber buildpack takes care of compiling the project for you but if you wish to run your project locally using the heroku command `heroku local` you must do the following steps:
+The Amber buildpack takes care of compiling the project for you but if you wish to run your project locally using the heroku command `heroku local` you must do the following steps.
 
-Create an `.emv` at the root of your Amber project and add the following:
+Create an `.emv` at the root of your Amber project and add the following 2 lines to the `.env`
 
 ```
 AMBER_ENV=development
@@ -81,11 +77,12 @@ Then you must compile your project locally with the following command:
 
 `crystal build src/{your-app-name}.cr -o bin/{your-app-name}`.
 
-When the compilation process is complete a `bin` directory is added with the binary of your application with this binary file ready you can proceed to run your application locally with heroku. 
+When the compilation process is complete a `bin/{your-app-name}` directory is added, with this binary of your application with this binary file ready you can proceed to run your application locally with heroku. 
 
 ```
 heroku local
 ```
+
 And should output something similar to:
 
 ```

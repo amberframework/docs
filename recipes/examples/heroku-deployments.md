@@ -45,7 +45,7 @@ $ git commit -m "My first Amber app"
 $ git push heroku master
 ```
 
-### Using tha Amber CLI on Heroku
+### Using the Amber CLI on Heroku
 
 When you deploy your project to heroku the amber build-pack will make available the `amber cli` to you via the `bin/amber` path.
 

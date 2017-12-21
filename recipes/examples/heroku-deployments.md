@@ -2,25 +2,40 @@
 
 If you haven't done so please read the guides to install the [Amber CLI](/getting-started/installation/heroku.md)
 
-## Heroku
+## The Amber Heroku Buildpack
 
-If you have generated your project with the Amber CLI and successfully run it locally we are now at a point where we can create an application on [Heroku](https://www.heroku.com/). If you haven't yet done it, create an account on Heroku and install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+> Based on [Crystal Heroku Buildpack](https://github.com/crystal-lang/heroku-buildpack-crystal)
 
-The Crystal Language is not supported out of the box by Heroku, so we'll need to use a custom buildpack.
+[![Amber logo](https://i.imgur.com/NEodgHV.png)](https://amberframework.org)
 
-You can create an app in Heroku with Crystal's buildpack by running the following command:
+You can create an app in Heroku with Amber buildpack by running the following command:
 
+```bash
+$ heroku create myapp --buildpack https://github.com/amberframework/heroku-buildpack-amber.git
 ```
-$ heroku create myapp --buildpack https://github.com/crystal-lang/heroku-buildpack-crystal.git
+
+The default behaviour is to use the [latest crystal release](https://github.com/crystal-lang/crystal/releases/latest).
+If you need to use a specific version create a `.crystal-version` file in your
+application root directory with the version that should be used (e.g. `0.23.1`).
+
+## Requirements
+
+In order for the buildpack to work properly you should have a `shard.yml` file,as it is how it will detect that your app is a Crystal app.
+
+Your application has to listen on a port defined by Heroku.
+
+Append the following code to your `config/application.cr` file:
+
+```crystal
+Amber::Server.configure do |settings|
+  settings.host = "0.0.0.0"
+  settings.port = ENV["PORT"].to_i if ENV["PORT"]?
+end
 ```
 
-The default behaviour is to use the [latest crystal release](https://github.com/crystal-lang/crystal/releases/latest). If you need to use a specific version create a `.crystal-version`file in your application root directory with the version that should be used \(e.g.`0.17.1`\).
+To be able to use production enviroment config Heroku needs `.amber_secret_key` or `.encryption_key` during compilation process, so in this case you should remove the encryption key from `.gitignore` file.
 
-### Requirements
-
-In order for the buildpack to work properly you should have a`shard.yml`file, as it is how it will detect that your app is a Crystal app.
-
-Your application has to listen on a port defined by Heroku. It is given to you through the command line option`--port`and the environment variable`PORT`\(accessible through`ENV["PORT"]`in Crystal\). However, Amber should handle this for you.
+> IMPORTANT: Don't publish encryption key in open source projects if you have sensitive config
 
 All that's left is to create a git repository, add the Heroku remote and push it there. Don't forget to add`.deps, .crystal`and `libs`to`.gitignore.`
 
@@ -31,3 +46,56 @@ $ git add -A
 $ git commit -m "My first Amber app"
 $ git push heroku master
 ```
+
+### Using tha Amber CLI on Heroku
+
+When you deploy your project to heroku the amber build-pack will make available the `amber cli` to you via the `bin/amber` path.
+
+To run an amber command just do the following:
+
+```
+heroku run bin/amber [command]
+```
+
+> Read more about `heroku run` command https://devcenter.heroku.com/articles/one-off-dynos
+
+### The Heroku Procfile
+
+To deploy your app to heroku you're going to need a `Profile` this file tells Heroku how to run your app. 
+
+Create a Profile at the root of your Amber application and add the following:
+
+```
+release: bin/amber db migrate
+web: PORT=$PORT ./bin/{your-app-name}
+```
+
+The Amber buildpack takes care of compiling the project for you but if you wish to run your project locally using the heroku command `heroku local` you must do the following steps:
+
+Create an `.emv` at the root of your Amber project and add the following:
+
+```
+AMBER_ENV=development
+PORT=3000
+```
+
+Then you must compile your project locally with the following command: 
+
+`crystal build src/{your-app-name}.cr -o bin/{your-app-name}`.
+
+When the compilation process is complete a `bin` directory is added with the binary of your application with this binary file ready you can proceed to run your application locally with heroku. 
+
+```
+heroku local
+```
+And should output something similar to:
+
+```
+[OKAY] Loaded ENV .env File as KEY=VALUE Format
+18:50:27 web.1   |  I, [2017-12-20 18:50:27 -0500 #93113]  INFO -- : [Amber 0.3.7] serving application "heroku-app" at http://0.0.0.0:3000
+18:50:27 web.1   |  I, [2017-12-20 18:50:27 -0500 #93113]  INFO -- : Server started in development.
+18:50:27 web.1   |  I, [2017-12-20 18:50:27 -0500 #93113]  INFO -- : Startup Time 00:00:00.0003510
+```
+
+You're are now all set and ready to deploy with Heroku.
+

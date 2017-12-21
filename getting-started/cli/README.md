@@ -4,13 +4,14 @@ Amber has a built in CLI tool, to make your life easier while developing applica
 
 Here is a list of the available commands:
 
-- **amber ex exec [OPTION] [CODE]**  - Executes the specified code or file in the application scope. Options: [-e --editor | -b --back]
-- **amber g generate [SUBCOMMAND]**   - Generate Amber classes
-- **amber n new**                     - Generate a new amber project
-- **amber w watch**                   - Starts amber server and rebuilds on file changes
-- **amber routes**                    - Prints the routes (In Development)
-- **amber deploy [OPTION]**           - Provisions server and deploys project. [-s --service | -k --key | -t --tag | -b --branch]
-- **amber encrypt [OPTION]**          - Encrypts environment YAML file. [env | -e --editor | --noedit]
+- **d, deploy**     - Provisions server and deploys project.
+- **db, database**  - Performs database maintenance tasks
+- **e, encrypt**    - Encrypts environment YAML file. [env | -e --editor | --noedit]
+- **x, exec**       - Executes Crystal code within the application scope
+- **g, generate**   - Generate Amber classes
+- **n, new**        - Generates a new Amber project
+- **routes**        - Prints all defined application routes
+- **w, watch**      - Starts amber development server and rebuilds on file changes
 
 Read a long this guide to learn more about these command and how much time and efficient it can make your development experience.
 
@@ -25,41 +26,40 @@ $ amber --help
 
 This will output to your shell the following documentation.
 
-```shell
+```bash
 amber [OPTIONS] SUBCOMMAND
 
-Amber
+Amber - Command Line Interface
 
-The `amber new` command creates a new Amber application with a default
-directory structure and configuration at the path you specify.
+  The `amber new` command creates a new Amber application with a default
+  directory structure and configuration at the path you specify.
 
-You can specify extra command-line arguments to be used every time
-`amber new` runs in the .amber.yml configuration file in your project
-root directory
+  You can specify extra command-line arguments to be used every time
+  `amber new` runs in the .amber.yml configuration file in your project
+  root directory
 
-Note that the arguments specified in the .amber.yml file does not affect the
-defaults values shown above in this help message.
+  Note that the arguments specified in the .amber.yml file does not affect the
+  defaults values shown above in this help message.
 
-Usage:
-amber new [app_name] -d [pg | mysql | sqlite] -t [slang | ecr] --deps
+  Usage:
+  amber new [app_name] -d [pg | mysql | sqlite] -t [slang | ecr] -m [granite, crecto] --deps
 
-Commands:
-  amber c console                 - Starts a amber console
-  amber g generate [SUBCOMMAND]   - Generate Amber classes
-  amber n new                     - Generate a new amber project
-  amber m migrate [SUBCOMMAND]    - Performs database migrations tasks
-  amber w watch                   - Starts amber server and rebuilds on file changes
-  amber routes                    - Prints the routes (In Development)
-  amber r run [OPTION]            - Compiles and runs your project. Options: [-p --port | -e -environment]
-  amber deploy [OPTION]           - Provisions server and deploys project. [-s --service | -k --key | -t --tag | -b --branch]
-  amber encrypt [OPTION]          - Encrypts environment YAML file. [env | -e --editor | --noedit]
+Subcommands:
+  d, deploy     # Provisions server and deploys project.
+  db, database  # Performs database maintenance tasks
+  e, encrypt    # Encrypts environment YAML file. [env | -e --editor | --noedit]
+  x, exec       # Executes Crystal code within the application scope
+  g, generate   # Generate Amber classes
+  n, new        # Generates a new Amber project
+  routes        # Prints all defined application routes
+  w, watch      # Starts amber development server and rebuilds on file changes
 
 Options:
-  -t, --template [name]           - Specifies the template engine to be use. Options: slang | ecr
-  -d, --database [name]           - Specifies the database engine to be use. Options: pg | mysql | sqlite
-  -h, --help                      - Describe available commands and usages
-  -v, --version                   - Prints Amber version
-  --deps                          - Installs project dependencies
+  -d, --database  # Preconfigure for selected database. Options: pg | mysql | sqlite (default: pg)
+  -m, --model     # Preconfigure for selected model. Options: granite | crecto (default: granite)
+  -t, --template  # Preconfigure for selected template engine. Options: slang | ecr (default: slang)
+  -h, --help      # Describe available commands and usages
+  -v, --version   # Prints Amber version
 
 Example:
   amber new ~/Code/Projects/weblog

@@ -6,8 +6,6 @@ If you haven't done so please read the guides to install the [Amber CLI](/gettin
 
 > Based on [Crystal Heroku Buildpack](https://github.com/crystal-lang/heroku-buildpack-crystal)
 
-[![Amber logo](https://i.imgur.com/NEodgHV.png)](https://amberframework.org)
-
 You can create an app in Heroku with Amber buildpack by running the following command:
 
 ```bash

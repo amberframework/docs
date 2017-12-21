@@ -65,7 +65,7 @@ Create a Profile at the root of your Amber application and add the following:
 
 ```
 release: bin/amber db migrate
-web: PORT=$PORT ./bin/{your-app-name}
+web: bin/{your-app-name}
 ```
 
 The Amber buildpack takes care of compiling the project for you but if you wish to run your project locally using the heroku command `heroku local` you must do the following steps:

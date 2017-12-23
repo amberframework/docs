@@ -1,42 +1,34 @@
-# Zero to Deploy
+# Quick Start - Zero to Deploy
 
-# Getting Started with Amber
-This getting started guide will help you get a full stack web application running in just a few minutes by leveraging amber’s code generators.
-
-After we have a working application, then we will walk through the code that is making it all happen and code some enhancements along the way. (Additional guides are pending)
+This quick start guide will help you get a full stack web application running in just a few minutes by leveraging amber’s code generators.
 
 Let’s get started!
 
 ## Install dependencies
+
 If you already have `crystal`, `amber`, and a database installed, you can skip this step.
 
-### Install `crystal`
+### Install `crystal` and `amber`
+
+Instructions for OS X using homebrew and Debian/Ubuntu are below. See full installation instructions [here](https://crystal-lang.org/docs/installation/) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
 
 #### OS X with homebrew
-_You can skip this step if installing amber with homebrew, it installs crystal_
+
+Installing amber with homebrew also installs crystal
  ```
-brew install crystal-lang
+brew install amberframework/amber/amber
 ```
+_Note: Soon, you should be able to use `brew install amber`_
+
 #### Ubuntu or Debian
+
+First install crystal
  ```
 curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 sudo apt-get install build-essential crystal
 ```
 
-#### Full Install Instructions
-See full installation instructions [here](https://crystal-lang.org/docs/installation/)
-
-### Install `amber`
-
-#### OS X with homebrew
-_This will also install crystal_
-```
-brew install amberframework/amber/amber
-```
-_Note: Soon, you should be able to use `brew install amber`_
-
-#### Ubuntu or Debian (Installing from Source)
-_Below are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](https://amberframework.org/guides/getting-started/Installation/README.md#installation) for other Linux Distributions_
+Then install amber (from source)
 ```
 sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
 curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
@@ -44,11 +36,10 @@ cd amber-stable/
 shards install
 make install
 ```
-
-#### Full Install Instructions
-See full installation instructions [here](https://amberframework.org/guides/getting-started/Installation/README.md#installation) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
+_Note: Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](https://amberframework.org/guides/getting-started/Installation/README.md#installation) for other Linux Distributions_
 
 ### Install a database
+
 Amber works with `postgresql` (default), `mysql`, or `sqlite`.
 
 If you don’t already have one of these installed, please follow the guides provided by each database maintainer:

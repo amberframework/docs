@@ -31,6 +31,7 @@ _This will also install crystal_
 ```
 brew install amberframework/amber/amber
 ```
+_Note: Soon, you should be able to use `brew install amber`_
 
 #### Ubuntu or Debian (Installing from Source)
 _Below are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](https://amberframework.org/guides/getting-started/Installation/README.md#installation) for other Linux Distributions_
@@ -64,11 +65,9 @@ After the code for the new application is generated, we will `cd` into the new d
 The shards install command may take a little while - it has to download all shard dependencies.
 ```
 # The default setup will use a postgresql database, use `-d mysql` or `-d sqlite` for mysql and sqlite, respectively
-$ amber new pet-tracker
-[output of all the generated files]
-$ cd pet-tracker
-$ shards install
-[output of shard dependencies being installed]
+amber new pet-tracker
+cd pet-tracker
+shards install
 ```
 
 ## Generate a resource
@@ -77,8 +76,8 @@ With the skeleton application generated, we can generate our first RESTful resou
  The `amber generate scaffold` command will help us do this.
 
 ```
-$ amber generate scaffold Pet name breed age:integer weight:integer
-[output of scaffold code generated]
+# 'g' is shorthand for 'generate'
+amber g scaffold Pet name:string breed:string age:integer
 ```
 
 ## Create and migrate the database
@@ -86,8 +85,7 @@ Generating the application and the scaffolded resource provides the configuratio
 
 `amber db` will help us do this.
 ```
-$ amber db create migrate
-[output of database operations]
+amber db create migrate
 ```
 This will create a new database and run the migration to create a `pets` table with the specified columns.
 

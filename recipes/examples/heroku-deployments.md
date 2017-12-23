@@ -20,7 +20,8 @@ application root directory with the version that should be used (e.g. `0.23.1`).
 
 In order for the buildpack to work properly you should have a `shard.yml` file,as it is how it will detect that your app is a Crystal app. Your application has to listen on a port defined by Heroku.
 
-Append the following code to your `config/application.cr` file:
+
+_NOTE: In Amber versions less than or equal to 0.3.7 add the following code to your `config/application.cr` file:_**
 
 ```crystal
 Amber::Server.configure do |settings|
@@ -29,11 +30,11 @@ Amber::Server.configure do |settings|
 end
 ```
 
-To be able to use production enviroment config Heroku needs `.amber_secret_key` or `.encryption_key` during compilation process, so in this case you should remove the encryption key from `.gitignore` file.
+To be able to decrypt and use production environment you'll need to set `ENV["AMBER_ENCRYPTION_KEY"]` to the value of your local projects `.encryption_key` file.
 
-> IMPORTANT: Don't publish encryption key in open source projects if you have sensitive config
+> IMPORTANT: Never add `.encryption_key` to github. Amber adds it by default to your `.gitignore` file.
 
-All that's left is to create a git repository, add the Heroku remote and push it there. Don't forget to add`.deps, .crystal`and `libs`to`.gitignore.`
+All that's left is to create a git repository, add the Heroku remote and push it there.
 
 ```
 $ git init

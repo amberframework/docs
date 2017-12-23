@@ -100,6 +100,11 @@ Open any browser and goto http://localhost:3000
 You should see a home page load and “Pets” in the nav bar.
 If you click on the “Pets” link, you should be able to perform all 7 RESTful actions for the “pets” resource.
 
+## Deploy your web application
+
+[Digital Ocean Deployment Guide](/guides/recipes/examples/digital-ocean-deployments.md#digital-ocean-deployments)
+[Heroku Deployment Guide](/guides/recipes/examples/heroku-deployments.md#heroku-deployments)
+
 ## List of Commands
 ```
 amber new pet-tracker

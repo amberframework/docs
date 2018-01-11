@@ -15,7 +15,7 @@ Virtually all web applications require a form of authenticating and registering 
 
 Let’s start by first generating an application, for our example we will call our application `blogsy`
 
-####1. Generate Blogsy App
+#### 1. Generate Blogsy App
 
 First, we generate our app by typing the following command in a terminal console.
 
@@ -23,13 +23,13 @@ First, we generate our app by typing the following command in a terminal console
 
 > Note: The `--deps` will automatically install project dependencies.
 
-####2. Go to your project directory 
+#### 2. Go to your project directory 
 
 Commands are perform within the root directory of our project.
 
 `cd blogsy`
 
-####3. Scaffold the User Authentication
+#### 3. Scaffold the User Authentication
 
 Next, we will scaffold our authentication system. The scaffold will generate a list of files that we will later visit each one individually. For now, just type the following command within the root directory of the `Blogsy` project.
 
@@ -80,7 +80,7 @@ Run `amber w`
 08:54:05 (INFO) Server	| Startup Time 00:00:00.000596000
 ```
 
-####4. Sign up and Sign in Pages 
+#### 4. Sign up and Sign in Pages 
 
 To see the signup page visit `http://0.0.0.0:3000/signup`
 

@@ -182,4 +182,4 @@ One way to use partials is to treat them as the equivalent of subroutines: as a 
 <%= render "shared/footer" %>
 ``` 
 
-Here, the _ad_banner.html.erb and _footer.html.erb partials could contain content that is shared by many pages in your application. You don't need to see the details of these sections when you're concentrating on a particular page.
+Here, the _ad_banner.html.ecr and _footer.html.ecr partials could contain content that is shared by many pages in your application. You don't need to see the details of these sections when you're concentrating on a particular page.

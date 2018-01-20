@@ -49,15 +49,15 @@ sudo swapon /swapfile
 
 You should now be able to run `amber` in the command line.
 
-#### Homebrew MacOS 
+#### Homebrew MacOS
 
 ```
-brew install amberframework/amber/amber
+brew install amber
 ```
 
-Optionally you can install as follow:
+If you have previously installed amber with `brew`, you may need to uninstall and untap it:
 
 ```
-brew tap amberframework/amber
-brew install amberframework/amber/amber
+brew uninstall amberframework/amber/amber
+brew untap amberframework/amber
 ```

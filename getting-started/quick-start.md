@@ -16,9 +16,8 @@ Instructions for OS X using homebrew and Debian/Ubuntu are below. See full insta
 
 Installing amber with homebrew also installs crystal
 ```shell
-brew install amberframework/amber/amber
+brew install amber
 ```
-_Note: Soon, you should be able to use `brew install amber`_
 
 #### Ubuntu or Debian
 

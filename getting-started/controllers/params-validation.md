@@ -1,4 +1,4 @@
-# Params Validation
+# Parameter Validation
 
 You will probably want to access data sent in by the user or other parameters in your controller actions. There are two types of parameters possible in a web application:
 

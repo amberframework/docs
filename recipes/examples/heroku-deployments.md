@@ -67,18 +67,18 @@ web: bin/{your-app-name}
 
 The Amber buildpack takes care of compiling the project for you but if you wish to run your project locally using the heroku command `heroku local` you must do the following steps.
 
-Create an `.emv` at the root of your Amber project and add the following 2 lines to the `.env`
+Create an `.env` at the root of your Amber project and add the following 2 lines to the `.env`
 
 ```
 AMBER_ENV=development
 PORT=3000
 ```
 
-Then you must compile your project locally with the following command: 
+Then you must compile your project locally with the following command:
 
 `crystal build src/{your-app-name}.cr -o bin/{your-app-name}`.
 
-When the compilation process is complete a `bin/{your-app-name}` directory is added, with this binary of your application with this binary file ready you can proceed to run your application locally with heroku. 
+When the compilation process is complete a `bin/{your-app-name}` directory is added, with this binary of your application with this binary file ready you can proceed to run your application locally with heroku.
 
 ```
 heroku local
@@ -94,4 +94,3 @@ And should output something similar to:
 ```
 
 You're are now all set and ready to deploy with Heroku.
-

@@ -58,7 +58,7 @@ heroku run bin/amber [command]
 
 ### The Heroku Procfile
 
-To deploy your app to heroku you're going to need a `Profile`. Create a Profile at the root of your Amber application and add the following:
+To deploy your app to heroku you're going to need a `Procfile`. Create a Procfile at the root of your Amber application and add the following:
 
 ```
 release: bin/amber db migrate

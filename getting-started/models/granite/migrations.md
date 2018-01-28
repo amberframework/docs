@@ -68,7 +68,7 @@ Sometimes you need to pre-populate your tables with data.  This is common if you
 
 You can do this by creating a `db/seeds.cr` file
 ```crystal
-require "../config/appliction.cr"
+require "../config/application.cr"
 
 user = User.new
 user.email = "admin@example.com"

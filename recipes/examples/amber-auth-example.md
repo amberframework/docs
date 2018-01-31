@@ -57,7 +57,7 @@ The above command will give you the following output:
 
 To finalize installing the generated authentication system, we have to migrate the database. 
 
-`amber db create migrate`
+`amber db migrate`
 
 ```
 08:52:25 (INFO) Database	| Created database blogsy_development

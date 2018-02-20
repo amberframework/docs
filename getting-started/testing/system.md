@@ -42,7 +42,7 @@ Each environment's configuration can be modified similarly. In this case, we can
 
 **Setting Up System Specs**
 
-We have made it as simple as possible to have your system specs. Before running your specs ensure you have installed the `chromedriver` and  that `selenium standalone server` is in your system path.
+We have made it as simple as possible to have your system specs. Before running your specs ensure you have installed the `chromedriver` and that `selenium-server standalone` is in your system path.
 
 **Mac OS**
 

@@ -29,7 +29,7 @@ Lets say you are defining a static website and you want the URL to be displayed 
 routes :web, "/page"
 ```
 
-The routes macro takes a last argument and a block, within the block is where you define your routes.
+The routes macro takes a last argument. And a block within the block is where you define your routes.
 
 ```crystal
 routes :web, '/static' do

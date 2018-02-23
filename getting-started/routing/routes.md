@@ -1,8 +1,8 @@
 # Routes
 
-Routing provides you tools that map URLs to controller actions. By defining routes, you can separate how your application is implemented from how its URL’s are structured, Routes wire up real-time web socket handlers, and define a series of pipeline transformations for scoping middleware to sets of routes.
+Routing provides you tools that map URLs to controller actions. By defining routes, you can separate how your application is implemented from how its URL’s are structured. Routes wire up real-time web socket handlers, and define a series of pipeline transformations for scoping middleware to sets of routes.
 
-A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. it the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
+A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for:  `GET /users/24` it asks the Amber router to match it to a controller action. If the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
 
 ### Configuring Routes
 
@@ -20,16 +20,16 @@ end
 
 ### Defining Routes
 
-The **routes** macro accepts a **pipeline** name and a **scope**, in which all routes define within this block will make use of the pipeline and the url will be scoped.
+The **routes** macro accepts a **pipeline** name and a **scope**, in which all routes defined within this block will make use of the pipeline and the url will be scoped.
 
-Lets say you are defining a static website and you want all your URL to be displayed as `http://www.mycoolsite.com/page` you will define your routes as:
+Lets say you are defining a static website and you want the URL to be displayed as `http://www.mycoolsite.com/page`. You will define your routes as:
 
 ```crystal
 # routes(pipeline, scope)
 routes :web, "/page"
 ```
 
-The routes macro takes a last argument, a block, within the block is where you define your routes.
+The routes macro takes a last argument. And a block within the block is where you define your routes.
 
 ```crystal
 routes :web, '/static' do
@@ -98,7 +98,7 @@ It outputs the standard matrix of HTTP verbs, controller, action, pipeline, scop
 
 ## Scoped Routes
 
-Scopes are a way to group routes under a common path prefix and scoped set of pipeline handlers. We might want to do this for admin functionality, APIs, and especially for versioned APIs. Let’s say we have user generated posts on a site, and that those posts first need to be approved by an admin. The semantics of these resources are quite different, and they might not share the same controller. Scopes enable us to segregate these routes.
+Scopes are a way to group routes under a common path prefix and scoped set of pipeline handlers. We might want to do this for admin functionality, APIs, and especially for versioned APIs. Let’s say we have user-generated posts on a site, and that those posts first need to be approved by an admin. The semantics of these resources are quite different, and they might not share the same controller. Scopes enable us to segregate these routes.
 
 The paths to the user facing reviews would look like a standard resource.
 
@@ -118,7 +118,7 @@ But for the admin console paths could be prefixed with /admin.
 ...
 ```
 
-We accomplish this with a scoped route that sets a path option to /admin like this one. For now, let’s not nest this scope inside of any other scopes (like the scope "/", HelloWeb do one provided for us in a new app).
+We accomplish this with a scoped route that sets a path option to /admin like this one. For now, let’s not nest this scope inside of any other scopes (like the scope "/", HelloWeb provides in a new app).
 
 ```crystal
 # Not Scoped
@@ -173,9 +173,9 @@ Running `amber routes` again we get the following:
 ╚════════╩═════════════════════╩═════════╩══════════╩════════╩═══════════════════════╝
 ```
 
-#### Excluding and Including actions
+#### Excluding and Including Actions
 
-Sometimes you want to use `resources` as as shortcut for defining routes, and with that you don't want to define routes for actions the don't exists just yet. The `resources` allows you to pass another argument `only:` or `except:` to either include actions or exclude them from bein generated.
+Sometimes you want to use `resources` as a shortcut for defining routes, and with that you don't want to define routes for actions that don't exist yet. `Resources` allow you to pass another argument, `only:` or `except:` to either include actions or exclude them from being generated.
 
 This will define the following routes:
 

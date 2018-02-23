@@ -11,8 +11,8 @@ With this guide you will learn:
 ## Why write tests for your Amber Application?
 
 * Amber makes it very easy to test your application. Amber generates skeleton test code when you generate your controllers, models.
-* Tests ensures your application adheres for the specifications it was built for.
-* Tests helps and guides you thru a code refactor.
+* Tests ensure your application adheres to the specifications it was built for.
+* Tests help and guide you through a code refactor.
 * Amber tests can also simulate browser requests and thus you can test your application's response without having to test it through your browser.
 
 ### Amber Testing
@@ -24,7 +24,7 @@ Amber was built with testing in mind. The first time you generate an Amber appli
 	- /system
 	- /models
 	- /integrations
-	- /mailers 
+	- /mailers
 
 The `helpers`, `mailers`, and `models` directories are meant to hold tests for view helpers, mailers, and models, respectively. The `controllers` directory is meant to hold tests for controllers, routes, and views. The integration directory is meant to hold tests for interactions between controllers.
 
@@ -32,7 +32,7 @@ The `system` test directory holds system tests, which are used for full browser 
 
 ### The Test Environment
 
-By default every Amber application is generate with three environments: `development`, `test` and `production`.
+By default every Amber application generates with three environments: `development`, `test` and `production`.
 
 Each environment's configuration can be modified similarly. In this case, we can modify our test environment by changing the options found in `config/environments/test.yml`.
 
@@ -42,7 +42,7 @@ Each environment's configuration can be modified similarly. In this case, we can
 
 **Setting Up System Specs**
 
-We have made it as simple as possible to have your system specs. Before running your specs ensure you have installed the `chromedriver` and `selenium standalone server` is in your system path. 
+We have made it as simple as possible to have your system specs. Before running your specs ensure you have installed the `chromedriver` and that `selenium-server standalone` is in your system path.
 
 **Mac OS**
 
@@ -55,7 +55,7 @@ brew install chromedriver
 
 This will install the chrome driver on the system path `/usr/local/bin/chromedriver`
 
-If you're running in a different OS such a Linux you can specify the chromedriver path as such
+If you're running in a different OS such as Linux you can specify the chromedriver path as such
 
 ```crystal
 module GarnetSpec
@@ -64,7 +64,7 @@ module GarnetSpec
 end
 ```
 
-System tests allows test user interactions with your application, running tests in either a real  chrome browser. System tests uses Selenium Standalone Server.
+System tests allows test user interactions with your application, running tests in either a real  chrome browser. System tests use the Selenium Standalone Server.
 
 For creating Amber system tests, you use the spec/system directory in your application. Amber provides a generator to create a system test skeleton for you.
 
@@ -83,7 +83,7 @@ class SomeFeature < GarnetSpec::System::Test
     wait 2000
     element(:tag_name, "body").text.should contain "Introduction"
   end
-	
+
   scenario "user visits amberframwork homepage and sees logo" do
     visit "http://www.amberframework.org"
     wait 2000
@@ -94,7 +94,7 @@ class SomeFeature < GarnetSpec::System::Test
 end
 ```
 
-Run your specs with `crystal spec` 
+Run your specs with `crystal spec`
 
 > Important: System Test currently only work with the Chrome Browser
 

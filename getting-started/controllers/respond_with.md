@@ -13,8 +13,7 @@ https://www.youtube.com/watch?v=6KNjWDRUo_c
 class PetController < ApplicationController
   def index
     pets = Pet.all
-    respond_with{ json pets.to_json }
-    end
+    respond_with { json pets.to_json }
   end
 end
 ```

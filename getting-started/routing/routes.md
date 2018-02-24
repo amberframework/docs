@@ -127,7 +127,7 @@ routes :web do
 end
 
 # Scoped
-routes :web, '/admin' do
+routes :web, "/admin" do
   resources "/posts", AdminPostsController
 end
 ```

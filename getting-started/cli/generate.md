@@ -112,3 +112,10 @@ skipped   spec/controllers/spec_helper.cr
 new       spec/controllers/person_controller_spec.cr
 new       src/controllers/person_controller.cr
 ```
+
+## Recipes
+
+Different recipes are available to generate Scaffolding, Controller and Model artifacts
+in ways that vary from the standard built in generator.  See the **Recipes**
+option of the **Command Line Tool** for more information about using recipes to
+generate applications.

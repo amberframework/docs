@@ -9,21 +9,15 @@ that only renders JSON or use React or AngularJS for views.
 ## Recipe repository
 
 Visit the [recipe repository](https://github.com/AmberRecipes/recipes) to discover
-what recipes are available. The available recipes are listed in the Contributions.md
-file and you can drill down into each sub folder for more details about each recipe.
+what recipes are available. The available recipes are listed in the [Contributions.md](https://github.com/AmberRecipes/recipes/blob/master/Contributions.md)
+file. Each recipe contributor provides additional information in their own Readme.
 
 # Amber New Command with a recipe
 
-This is the first command that you will run when generating a new Amber application.
-It creates a new Amber application with a default directory structure and configuration
-setting at the path you specify.
-
-An `.amber.yml` configuration file is generated along with the default application directory
-structure and any additional items or modifications provided by the recipe.
-This stores some metadata for the Amber CLI to make use of for generating migrations,
-scaffolding templates, and more.  The recipe name that you use to generate the application is saved
-in the `.amber.yml` file so that when you generate controllers, models and views with the
-scaffold generator the same recipe is used - you don't have to specify the recipe each time.
+Add a recipe name command line argument to create a new amber application from the recipe.  
+The recipe name that you use to generate the application is saved so that when you
+generate controllers, models and views with the scaffold generator the same recipe
+is used - you don't have to specify the recipe each time.
 
 ### `amber new`
 
@@ -49,8 +43,9 @@ You can have a running web application in a matter of minutes:
 1. `amber new microsecond-blog -r damianham/modular`
 1. `cd microsecond-blog`
 1. `shards install`
-1. `amber run &` or `amber watch &` (also can execute these in foreground of separate terminal)
-1. `open http://localhost:3000`
+1. `amber watch`
+
+Now open a web browser for your [new amber app](http://localhost:3000).
 
 Full example in terminal:
 ```shell
@@ -92,20 +87,19 @@ The generators in amber are a great way to get an application up and running qui
 In addition, they help keep code consistent and following convention.  See the
 **Generate** option of the **Command Line Tool** for details about the generate command.
 
-Once you have generated an application with a recipe, the same recipe will be used
-by the generate command when you generate controllers, models or scaffold controllers,
-models and views with the scaffold generator.
+Once an application is generated with a recipe, it will be used by future generate or
+scaffold commands to maintain consistency with the recipe. For example, an application
+generated with a "json-api" recipe will continue to generate controllers and views
+according to the "json-api" recipe.
 
 # Custom Recipe
 
-One of the recipes available from the recipe repository may almost suit your requirements,
-but not quite.  The recipes are just a set of files that are templates for various
-parts of an application.  You can download and extract a recipe and modify the templates
-to better suit your requirements (and then contribute your modified recipe to the repository so
-everyone can benefit from your changes).
+When a recipe doesn't quite suite your requirements, it's easy to modify. Recipes are
+application stubs written in [Liquid](https://github.com/TechMagister/liquid.cr).  
+Modified recipes can be stored and sourced locally or contributed back to the community repository.
 
-Download the recipe and extract it to a folder and then give the path to the folder as
-the recipe command line argument.  For example;
+Download a recipe that you want to modify, extract it, and use the extracted recipe
+on the command line. For example:
 
 1. `wget https://raw.githubusercontent.com/AmberRecipes/recipes/master/damianham/modular.zip`
 1. `mkdir ~/mymodular`
@@ -114,10 +108,11 @@ the recipe command line argument.  For example;
 1. `amber new microsecond-blog -r ~/mymodular`
 1. `cd microsecond-blog`
 1. `shards install`
-1. `amber run &` or `amber watch &` (also can execute these in foreground of separate terminal)
-1. `open http://localhost:3000`
+1. `amber watch`
 
-It is important to give the full path to the recipe folder as the recipe command line
+Now open a web browser for your [new amber app](http://localhost:3000).
+
+It is important to give the absolute path to the recipe folder as the recipe command line
 argument to ensure that the recipe can be found when generating subsequent artifacts.
 
 # Custom Repository

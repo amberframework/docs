@@ -8,8 +8,8 @@ that only renders JSON or use React or AngularJS for views.
 
 ## Recipe repository
 
-Visit the [recipe repository](https://github.com/AmberRecipes/recipes) to discover
-what recipes are available. The available recipes are listed in the [Contributions.md](https://github.com/AmberRecipes/recipes/blob/master/Contributions.md)
+Visit the [recipe repository](https://github.com/amberframework/recipes) to discover
+what recipes are available. The available recipes are listed in the [Contributions.md](https://github.com/amberframework/recipes/blob/master/Contributions.md)
 file. Each recipe contributor provides additional information in their own Readme.
 
 # Amber New Command with a recipe
@@ -101,7 +101,7 @@ Modified recipes can be stored and sourced locally or contributed back to the co
 Download a recipe that you want to modify, extract it, and use the extracted recipe
 on the command line. For example:
 
-1. `wget https://raw.githubusercontent.com/AmberRecipes/recipes/master/damianham/modular.zip`
+1. `wget https://raw.githubusercontent.com/amberframework/recipes/master/damianham/modular.zip`
 1. `mkdir ~/mymodular`
 1. `unzip -d ~/mymodular modular.zip`
 1. `# modify the recipe in ~/mymodular some way`

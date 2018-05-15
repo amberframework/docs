@@ -54,8 +54,8 @@
 * [Testing](testing/README.md)
   * [System Tests](testing/system-tests.md)
 * [Deployments](deployments/README.md)
-  * Digital Ocean
-  * Heroku
+  * [Digital Ocean](deployments/digital-ocean-deployments.md)
+  * [Heroku](deployments/heroku-deployments.md)
 * [Examples](examples/README.md)
   * [Amber Auth Example](examples/amber-auth-example.md)
   * [Crystal Debug Example](examples/crystal-debug-example.md)

@@ -38,5 +38,3 @@ Amber is a community effort and we want You to be part of ours [Join Amber Commu
 
 Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. If you are new, you should start off with the getting started guide.
 
-{% page-ref page="getting-started/" %}
-

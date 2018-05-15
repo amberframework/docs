@@ -18,15 +18,11 @@ The aim of this introductory guide is to present a brief, high-level overview of
 
 If you’re stuck, there are a number of places you can get help.
 
-[**GITTER**](https://gitter.im/amberframework/amber) for quick questions.
-
-[**STACK OVERFLOW**](https://stackoverflow.com/questions/tagged/amber-framework) for questions about the Crystal Language and Amber Framework.
-
-[**GITHUB**](https://github.com/amberframework/amber) for getting acquainted with source code, current issues and progress.
-
-[**ONLINE GUIDES**](https://amberframework.gitbook.io/amber) for getting down and dirty working with Amber.
-
-[**TWITTER**](https://twitter.com/amberframework) to see latest news and announcements about Amber Framework.
+* [**GITTER**](https://gitter.im/amberframework/amber) for quick questions.
+* [**STACK OVERFLOW**](https://stackoverflow.com/questions/tagged/amber-framework) for questions about the Crystal Language and Amber Framework.
+* [**GITHUB**](https://github.com/amberframework/amber) for getting acquainted with source code, current issues and progress.
+* [**ONLINE GUIDES**](https://amberframework.gitbook.io/amber) for getting down and dirty working with Amber.
+* [**TWITTER**](https://twitter.com/amberframework) to see latest news and announcements about Amber Framework.
 
 ## Contributing
 

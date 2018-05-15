@@ -1,6 +1,6 @@
-### Javascript client
+# Client-js
 
-For use with web based applications, a javascript library (`amber.js`) is included.
+For use with web based applications, a javascript library \(`amber.js`\) is included.
 
 Create a single connection to the server:
 
@@ -32,3 +32,4 @@ Seng events / messages:
 ```javascript
 channel.push('message_new', { message: 'amber websockets is the bomb diggity!' })
 ```
+

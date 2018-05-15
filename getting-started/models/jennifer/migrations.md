@@ -1,12 +1,12 @@
-# Using Jennifer ORM with Amber - Migrations
+# Migrations
 
 To generate a migration run `crystal sam.cr generate:migration your_migration_name`
 
-#### Migration DSL
+## Migration DSL
 
 Generator will create template file for you with next name pattern **timestamp\_migration\_name.cr**. Empty file looks like this:
 
-```crystal
+```text
 class YourCamelcasedMigrationName20170119011451314 < Jennifer::Migration::Base
   def up
   end
@@ -16,11 +16,11 @@ class YourCamelcasedMigrationName20170119011451314 < Jennifer::Migration::Base
 end
 ```
 
-`up `method is needed for placing your db changes there, `down`- for reverting your changes back.
+`up`method is needed for placing your db changes there, `down`- for reverting your changes back.
 
 Example for creating table:
 
-```crystal
+```text
 create_table(:addresses) do |t|
   t.reference :contact # creates field contact_id with Int type and allows null values
   t.string :street, {:size => 20, :sql_type => "char"} # creates string field with CHAR(20) db type
@@ -28,7 +28,7 @@ create_table(:addresses) do |t|
 end
 ```
 
-#### Data Types and Mappings
+## Data Types and Mappings
 
 | internal alias | PostgreSQL | MySql | Crystal type |
 | :--- | :--- | :--- | :--- |
@@ -57,11 +57,11 @@ All of them accepts additional options:
 * `:auto_increment`- marks field to use auto increment \(properly works only with`Int32`fields, another crystal types have cut functionality for it\);
 * `:array`- mark field to be array type \(Postgres only\)
 
-Also there is`#field `method which allows to directly define sql type \(very suitable for enums in Postgres\).
+Also there is`#field`method which allows to directly define sql type \(very suitable for enums in Postgres\).
 
 To drop table just write
 
-```
+```text
 drop_table(:addresses) # drops if exists
 ```
 
@@ -83,7 +83,7 @@ Also next support methods are available:
 
 Also plain SQL could be executed as well:
 
-```
+```text
 execute("ALTER TABLE addresses CHANGE street st VARCHAR(20)")
 ```
 
@@ -91,11 +91,11 @@ All changes are executed one by one so you also could add data changes here \(in
 
 To be sure that your db is up to date before run tests of your application, add`Jennifer::Migration::Runner.migrate`.
 
-#### Enum
+## Enum
 
-Now enums are supported as well but it has different implementation for adapters. For mysql is enough just write down all values: 
+Now enums are supported as well but it has different implementation for adapters. For mysql is enough just write down all values:
 
-```crystal
+```text
 create_table(:contacts) do |t|
   t.enum(:gender, values: ["male", "female"])
 end
@@ -103,7 +103,7 @@ end
 
 Postgres provide much more flexible and complex behavior. Using it you need to create it firstly:
 
-```crystal
+```text
 create_enum(:gender_enum, ["male", "female"])
 create_table(:contacts) do |t|
   t.string :name, {:size => 30}

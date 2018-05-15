@@ -8,9 +8,9 @@ It's advisable that you only store simple data \(strings and numbers\) in cookie
 
 Amber also has an encrypted cookie jar for storing sensitive data. The encrypted cookie jar encrypts the values in addition to signing them, so that they cannot be read by the end user.
 
-### Examples of writing:
+## Examples of writing:
 
-```crystal
+```text
 class CommentsController < ApplicationController
   def new
     # Auto-fill the commenter's name if it has been stored in a cookie
@@ -36,9 +36,9 @@ class CommentsController < ApplicationController
 end
 ```
 
-### Examples of Reading
+## Examples of Reading
 
-```crystal
+```text
 cookies[:user_name]           # => "david"
 cookies.size                  # => 2
 JSON.parse(cookies[:lat_lon]) # => [47.68, -122.37]
@@ -47,7 +47,7 @@ cookies.encrypted[:discount]  # => 45
 
 Please note that if you specify a :domain when setting a cookie, you must also specify the domain when deleting the cookie:
 
-```crystal
+```text
 cookies[:name] = {
   value:   'a yummy cookie',
   expires: 1.year.from_now,
@@ -58,7 +58,7 @@ cookies.delete(:name, domain: 'domain.com')
 
 The option symbols for setting cookies are:
 
-```crystal
+```text
 :value  - The cookies value.
 :path   - The path for which this cookie applies. Defaults to the root of the application.
 :domain - The domain for which this cookie applies so you can restrict to the domain level. 
@@ -78,6 +78,4 @@ domain: %w(.example.com .example.org) # Allow the cookie for concrete domain nam
 :secure     - Whether this cookie is only transmitted to HTTPS servers. Default is false.
 :httponly   - Whether this cookie is accessible via scripting or only HTTP. Defaults to false.
 ```
-
-
 

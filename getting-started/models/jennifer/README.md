@@ -1,16 +1,16 @@
-# Using Jennifer ORM with Amber - Installation
+# Jennifer
 
 ### What is Jennifer?
 
-**Jennifer** is  an ActiveRecord pattern for Crystal with great query DSL and migration mechanism.
+**Jennifer** is an ActiveRecord pattern for Crystal with great query DSL and migration mechanism.
 
-> Example Reference App https://github.com/eliasjpr/amber-jennnifer-app-example
+> Example Reference App [https://github.com/eliasjpr/amber-jennnifer-app-example](https://github.com/eliasjpr/amber-jennnifer-app-example)
 
 ## Installing Jennifer for Amber
 
 #### Generate a normal amber app
 
-```crystal
+```text
 amber new {project}
 ```
 
@@ -18,7 +18,7 @@ amber new {project}
 
 Add this to your application's
 
-```crystal
+```text
 # Add the following dependencies
 jennifer:
   github: imdrasil/jennifer.cr
@@ -31,13 +31,13 @@ sam:
 
 Then in the console
 
-```crystal
+```text
 shards update
 ```
 
 #### Setup your database information
 
-```crystal
+```text
 defaults : &defaults
   host: localhost
   adapter: postgres
@@ -56,7 +56,7 @@ test:
 
 #### Create a **jennifer.c**r under the **/config** directory
 
-```crystal
+```text
 require "colorize"
 
 Jennifer::Config.read("config/database.yml", AMBER_ENV)
@@ -77,7 +77,7 @@ end
 
 Jennifer uses Sam for running tasks pertinent to ORM operations. Sam is a Make-like utility which allows to specify tasks like Ruby's Rake do using plain Crystal. For how to use [Sam](https://github.com/imdrasil/sam.cr) visit the Github repository [https://github.com/imdrasil/sam.cr](https://github.com/imdrasil/sam.cr)
 
-```crystal
+```text
 # src/sam.cr
 require "jennifer/adapter/postgres"
 require "jennifer"
@@ -94,7 +94,7 @@ Sam.help
 
 This should be done before you load your application configurations \(or at least models\). With Amber this is very easy. Also the order is very important the adapter should come before Jennifer.
 
-```crystal
+```text
 require "jennifer/adapter/postgres" # for postgres
 require "jennifer"
 

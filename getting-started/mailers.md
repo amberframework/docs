@@ -2,7 +2,7 @@
 
 The mailer has the ability to set the`from`,`to`,`cc`,`bcc`,`subject`and`body`. You may use the`render`helper to create the body of the email.
 
-```crystal
+```text
 class WelcomeMailer < Quartz::Mailer
   def initialize
     super
@@ -20,10 +20,8 @@ end
 
 To delivery a new email:
 
-```crystal
+```text
 mailer = WelcomeMailer.new
 mailer.deliver(name, email)
 ```
-
-
 

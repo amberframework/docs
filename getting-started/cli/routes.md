@@ -1,10 +1,10 @@
-# Routes Command
+# Routes
 
 The `amber routes` command returns all of your routes in a pretty table format.
 
 ## Example
 
-```zsh
+```text
 ~/crystal/amberdemo  ᐅ amber routes
 ╔════════╦══════════════════╦═════════╦══════════╦═══════╦════════════════╗
 ║ Verb   | Controller       | Action  | Pipeline | Scope | URI Pattern    ║
@@ -30,3 +30,4 @@ The `amber routes` command returns all of your routes in a pretty table format.
 ║ get    | HomeController   | index   | web      |       | /              ║
 ╚════════╩══════════════════╩═════════╩══════════╩═══════╩════════════════╝
 ```
+

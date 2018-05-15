@@ -1,8 +1,6 @@
 # Crecto
 
-Database wrapper for Crystal.  Inspired by [Ecto](https://github.com/elixir-ecto/ecto) for Elixir language.
-
----
+Database wrapper for Crystal. Inspired by [Ecto](https://github.com/elixir-ecto/ecto) for Elixir language.
 
 #### [Docs](http://docs.crecto.com)
 
@@ -24,7 +22,7 @@ Include [crystal-pg](https://github.com/will/crystal-pg) in your project
 
 in your application:
 
-```crystal
+```text
 require "pg"
 require "crecto"
 ```
@@ -35,31 +33,29 @@ Include [crystal-mysql](https://github.com/crystal-lang/crystal-mysql) in your p
 
 in your application:
 
-```crystal
+```text
 require "mysql"
 require "crecto"
 ```
 
 #### Sqlite
 
-~~Include [crystal-sqlite3](https://github.com/crystal-lang/crystal-sqlite3) in your project~~
-Include [zhomarts fork of of crystal-sqlite3](https://github.com/Zhomart/crystal-sqlite3) in your project
+~~Include ~~[~~crystal-sqlite3~~](https://github.com/crystal-lang/crystal-sqlite3)~~ in your project~~ Include [zhomarts fork of of crystal-sqlite3](https://github.com/Zhomart/crystal-sqlite3) in your project
 
 in your appplication:
 
-```crystal
+```text
 require "sqlite3"
 require "crecto"
 ```
 
 ## Migrations
 
-[Micrate](https://github.com/juanedi/micrate) is recommended.  It is used and supported by core crystal members.
+[Micrate](https://github.com/juanedi/micrate) is recommended. It is used and supported by core crystal members.
 
 ## Usage
 
-```crystal
-
+```text
 # First create a Repo.  The Repo maps to the datastore and the database adapter and is used to run queries.
 # You can even create multiple repos if you need to access multiple databases.
 #
@@ -287,21 +283,17 @@ Crecto::DbLogger.set_handler(f)
 
 ## Contributing
 
-1. Fork it ( https://github.com/fridgerator/crecto/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
+1. Fork it \( [https://github.com/fridgerator/crecto/fork](https://github.com/fridgerator/crecto/fork) \)
+2. Create your feature branch \(git checkout -b my-new-feature\)
+3. Commit your changes \(git commit -am 'Add some feature'\)
+4. Push to the branch \(git push origin my-new-feature\)
 5. Create a new Pull Request
 
 ### Development Notes
 
-When developing against crecto, the database must exist prior to
-testing. There are migrations for each database type in `spec/migrations`,
-and references on how to migrate then in the `.travis.yml` file.
+When developing against crecto, the database must exist prior to testing. There are migrations for each database type in `spec/migrations`, and references on how to migrate then in the `.travis.yml` file.
 
-Create a new file `spec/repo.cr` and create a module name `Repo` to use for testing.
-There are example repos for each database type in the spec folder: `travis_pg_repo.cr`,
-`travis_mysql_repo.cr`, and `travis_sqlite_repo.cr`
+Create a new file `spec/repo.cr` and create a module name `Repo` to use for testing. There are example repos for each database type in the spec folder: `travis_pg_repo.cr`, `travis_mysql_repo.cr`, and `travis_sqlite_repo.cr`
 
 When submitting a pull request, please test against all 3 databases.
 
@@ -309,5 +301,6 @@ When submitting a pull request, please test against all 3 databases.
 
 * [Ecto](https://github.com/elixir-ecto/ecto)
 * [AciveRecord](https://github.com/rails/rails/tree/master/activerecord)
-* [active_record.cr](https://github.com/waterlink/active_record.cr)
+* [active\_record.cr](https://github.com/waterlink/active_record.cr)
 * [crystal-api-backend](https://github.com/dantebronto/crystal-api-backend)
+

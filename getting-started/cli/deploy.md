@@ -1,10 +1,10 @@
-# Deploy Command
+# Deploy
 
-The deploy command lets you deploy your amber project in a heroku like fashion. This works as proof of concept but isn't currently very configurable. In most cases Amber is super easy to deploy via multiple methods docker, chef, capistrano, or manual git checkout and compile.  
+The deploy command lets you deploy your amber project in a heroku like fashion. This works as proof of concept but isn't currently very configurable. In most cases Amber is super easy to deploy via multiple methods docker, chef, capistrano, or manual git checkout and compile.
 
-#### `amber deploy`
+### `amber deploy`
 
-```shell
+```text
 amber deploy [OPTIONS] [SERVER_SUFFIX]
 
 Arguments:
@@ -24,4 +24,5 @@ Options:
 
 ## Example Usage
 
-[![Amber Deploy Cast](http://img.youtube.com/vi/EhOPNKNjdBw/0.jpg)](http://www.youtube.com/watch?v=EhOPNKNjdBw)
+![Amber Deploy Cast](http://img.youtube.com/vi/EhOPNKNjdBw/0.jpg)
+

@@ -1,11 +1,8 @@
-# Granite::ORM
+# Granite
 
 ## Installation
 
-Add this library to your projects dependencies along with the driver in
-your `shard.yml`.  This can be used with any framework but was originally
-designed to work with the amber framework in mind.  This library will work
-with kemal or any other framework as well.
+Add this library to your projects dependencies along with the driver in your `shard.yml`. This can be used with any framework but was originally designed to work with the amber framework in mind. This library will work with kemal or any other framework as well.
 
 ```yaml
 dependencies:
@@ -23,7 +20,7 @@ dependencies:
     github: will/crystal-pg
 ```
 
-Next you will need to set the `database_url` to point to your database.  
+Next you will need to set the `database_url` to point to your database.
 
 You will set this in the `config/environments/development.yml` and `config/environments/test.yml`
 
@@ -35,13 +32,13 @@ database_url: "postgres://username:password@host:5432/database_environment"
 database_url: "sqlite3:./config/database_environment.db"
 ```
 
-Or you can set the `DATABASE_URL` environment variable.  This will override the environments setting.
+Or you can set the `DATABASE_URL` environment variable. This will override the environments setting.
 
 ## Usage
 
 Here is an example using Granite ORM Model
 
-```crystal
+```text
 require "granite_orm/adapter/mysql"
 
 class Post < Granite::ORM::Base
@@ -53,7 +50,8 @@ end
 ```
 
 You can disable the timestamps for SqlLite since TIMESTAMP is not supported for this database:
-```crystal
+
+```text
 require "granite_orm/adapter/sqlite"
 
 class Comment < Granite::ORM::Base
@@ -64,14 +62,13 @@ class Comment < Granite::ORM::Base
 end
 ```
 
-### id, created_at, updated_at
+### id, created\_at, updated\_at
 
-The primary key is automatically created for you and if you use `timestamps` they will be
-automatically updated for you.
+The primary key is automatically created for you and if you use `timestamps` they will be automatically updated for you.
 
-Here are the MySQL field definitions for id, created_at, updated_at
+Here are the MySQL field definitions for id, created\_at, updated\_at
 
-```mysql
+```text
 id BIGINT NOT NULL AUTO_INCREMENT
 # Your fields go here
 created_at TIMESTAMP
@@ -85,7 +82,7 @@ For legacy database mappings, you may already have a table and the primary key i
 
 We have a macro called `primary` to help you out:
 
-```crystal
+```text
 class Site < Granite::ORM::Base
   adapter mysql
   primary custom_id : Int32
@@ -94,3 +91,4 @@ end
 ```
 
 This will override the default primary key of `id : Int64`.
+

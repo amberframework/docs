@@ -1,6 +1,6 @@
-# Amber Application Directory Structure
+# Directory Structure
 
-A generated Amber app has a number of auto-generated files and folders that make up the structure of an Amber application. 
+A generated Amber app has a number of auto-generated files and folders that make up the structure of an Amber application.
 
 When you use the `amber new` command to create your application, it creates the entire directory structure for the application, because of this Amber knows where to find the files it needs within this structure, so you don't have to provide additional input.
 
@@ -19,3 +19,4 @@ When you use the `amber new` command to create your application, it creates the 
 | docker-compose.yml | A file which defines services, networking, and drives for docker deployment. |
 | Dockerfile | A file which contains all the commands needed to build a docker image. |
 | README.md | A brief instruction manual about your application |
+

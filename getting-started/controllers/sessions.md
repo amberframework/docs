@@ -1,4 +1,6 @@
-# The Session
+# Sessions
+
+## The Session
 
 A session store that uses an Amber:Router::Session::Store to store the sessions. This store is most useful if you don't store critical data in your sessions and you don't need them to live for extended periods of time.
 
@@ -10,7 +12,7 @@ Sessions typically contain at most a user\_id and flash message; both fit within
 
 To configure the session:
 
-```crystal
+```text
 #  Cookie Store
 Amber::Server.instance.session = {
   :key     => "name.session",
@@ -31,7 +33,7 @@ Amber::Server.instance.session = {
 
 Configure the Pipeline
 
-```crystal
+```text
 # Keep in mind the order of the Pipes. Session hash needs to be populated before 
 # trying to access the session flash scope, the flash depends on the session. 
 pipeline :web do
@@ -44,7 +46,7 @@ end
 
 Accessing the session
 
-```crystal
+```text
 class ApplicationController < Amber::Controller::Base
   # Finds the User with the ID stored in the session with the key
   # :current_user_id This is a common way to handle user login in
@@ -59,7 +61,7 @@ end
 
 To store something in the session, just assign it to the key like a hash:
 
-```crystal
+```text
 class LoginsController < ApplicationController
   # "Create" a login, aka "log the user in"
   def create
@@ -75,7 +77,7 @@ end
 
 To remove something from the session, assign that key to be nil or use`session.delete(key)`
 
-```crystal
+```text
 class LoginsController < ApplicationController
   # "Delete" a login, aka "log the user out"
   def destroy
@@ -86,7 +88,7 @@ class LoginsController < ApplicationController
 end
 ```
 
-## The Flash
+### The Flash
 
 The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available on the next request, which is useful for passing error messages etc.
 
@@ -94,7 +96,7 @@ It is accessed in much the same way as the session, as a hash.
 
 Let's use the act of logging out as an example. The controller can send a message which will be displayed to the user on the next request:
 
-```crystal
+```text
 class LoginsController < ApplicationController
   def destroy
     session[:current_user_id] = nil
@@ -107,7 +109,7 @@ end
 
 Rendering the flash message
 
-```html
+```markup
 <html>
   <!-- <head/> -->
   <body>
@@ -122,7 +124,7 @@ Rendering the flash message
 
 If you want a flash value to be carried over to another request, use the keep method:
 
-```crystal
+```text
 class MainController < ApplicationController
   # Let's say this action corresponds to root_url, but you want
   # all requests here to be redirected to UsersController#index.
@@ -140,11 +142,11 @@ class MainController < ApplicationController
 end
 ```
 
-### Flash.now
+#### Flash.now
 
 By default, adding values to the flash will make them available to the next request, but sometimes you may want to access those values in the same request. For example, if the create action fails to save a resource and you render the new template directly, that's not going to result in a new request, but you may still want to display a message using the flash. To do this, you can use flash.now in the same way you use the normal flash.
 
-```crystal
+```text
 class ClientsController < ApplicationController
   def create
     @client = Client.new(params[:client])
@@ -160,17 +162,17 @@ end
 
 Make sure the Flash, Session and CSRF pipelines are enabled in your `routes.cr` file and in the order that the scaffolding renders them.
 
-# CSRF
+## CSRF
 
 To use CSRF, enable the pipe in your `routes.cr`
 
 Then, insert the `csrf_tag` helper in your forms.
 
-## How to use CSRF with Ajax
+### How to use CSRF with Ajax
 
 Simply call the `csrf_tag` helper inside your controller and return it as part of a JSON object:
 
-```crystal
+```text
 def my_action
     {csrf: csrf_tag}.to_json
 end
@@ -181,6 +183,4 @@ In your Javascript, after getting the JSON object back, refresh your CSRF tag wi
 ```javascript
 $("input[name*=_csrf]").replaceWith(e['csrf']);
 ```
-
-
 

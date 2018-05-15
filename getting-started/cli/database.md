@@ -1,22 +1,21 @@
-# Database Command
+# Database
 
-The `database` or `db` command is one of the most common command that you will be operating. This
-command allows you to work with the database engine of choice when the Amber application was generated.
+The `database` or `db` command is one of the most common command that you will be operating. This command allows you to work with the database engine of choice when the Amber application was generated.
 
 Here is a list of the commands available:
 
-- **create** Creates the database for the environment specified in your `config/database.yml`
-- **drop**   Drops the database for the environment specified in your `config/database.yml`
-- **migrate** or **m** Migrates `up` or `down` the database version
-- **rollback** Rolls back your database to a specific version or to previous version
-- **redo** Repeats the database version specified or lasted version
-- **status** Prints the current database migration status
-- **seed** Adds initial data after a database is created
-- **version** Prints the database current version.
+* **create** Creates the database for the environment specified in your `config/database.yml`
+* **drop**   Drops the database for the environment specified in your `config/database.yml`
+* **migrate** or **m** Migrates `up` or `down` the database version
+* **rollback** Rolls back your database to a specific version or to previous version
+* **redo** Repeats the database version specified or lasted version
+* **status** Prints the current database migration status
+* **seed** Adds initial data after a database is created
+* **version** Prints the database current version.
 
-**`amber migrate` or `amber m`**
+`amber migrate`** or **`amber m`
 
-```shell
+```text
 amber database [COMMANDS1 COMMANDS2...]
 
 Arguments:
@@ -27,32 +26,35 @@ Arguments:
 
 **Create**
 
-```shell
+```text
 $ amber db create
 Created database blog_development
 ```
-*Note: Starting with v0.3.5 - Amber made two changes regarding databases:*
-- Amber will substitute hypens (-) for underscores (\_) in database names (keeps it postgresql friendly)
-- The default user for pg databases is `postgres` rather than `root`
-  - in config/database.yml: `postgres://postgres:@localhost:5432/microsecond_blog_development`
-```shell
-$ amber new microsecond-blog
-... [clipped]
-$ cd microsecond-blog
-$ amber db create
-Created database microsecond_blog_development
-```
+
+_Note: Starting with v0.3.5 - Amber made two changes regarding databases:_
+
+* Amber will substitute hypens \(-\) for underscores \(\_\) in database names \(keeps it postgresql friendly\)
+* The default user for pg databases is `postgres` rather than `root`
+  * in config/database.yml: `postgres://postgres:@localhost:5432/microsecond_blog_development`
+
+    ```text
+    $ amber new microsecond-blog
+    ... [clipped]
+    $ cd microsecond-blog
+    $ amber db create
+    Created database microsecond_blog_development
+    ```
 
 **Drop**
 
-```shell
+```text
 $ amber db drop
 Dropped database blog_development
 ```
 
 **Migrate**
 
-```shell
+```text
 $ amber db migrate
 Migrating db, current version: 0, target: 20170928204246
 OK   20170928204246_create_post.sql
@@ -60,7 +62,7 @@ OK   20170928204246_create_post.sql
 
 **Rollback**
 
-```shell
+```text
 $ amber db rollback
 Migrating db, current version: 20170928204246, target: 0
 OK   20170928204246_create_post.sql
@@ -68,7 +70,7 @@ OK   20170928204246_create_post.sql
 
 **Redo**
 
-```shell
+```text
 $ amber db redo
 Migrating db, current version: 20170928204246, target: 0
 OK   20170928204246_create_post.sql
@@ -78,7 +80,7 @@ OK   20170928204246_create_post.sql
 
 **Status**
 
-```shell
+```text
 $ amber db status
 Applied At                  Migration
 =======================================
@@ -87,14 +89,15 @@ Applied At                  Migration
 
 **Seed**
 
-```shell
+```text
 $ amber db seed
 Seeded database
 ```
 
 **Version**
 
-```shell
+```text
 $ amber db version
 20170928204246
 ```
+

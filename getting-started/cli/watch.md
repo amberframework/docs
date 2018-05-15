@@ -1,4 +1,4 @@
-# Watch Command
+# Watch
 
 The `amber watch` compiles and runs your project. It also monitors for changes and recompiles when necessary.
 
@@ -6,7 +6,7 @@ Here is a list of the commands available:
 
 `amber watch` or `amber w`
 
-```sh
+```bash
 amber watch [OPTIONS]
 
 Options:
@@ -27,7 +27,7 @@ Options:
 
 ## Example
 
-```sh
+```bash
 ~/crystal/amberdemo  ᐅ amber w                
 🤖  Your SentryBot is vigilant. beep-boop...
 🤖  watching file: ./src/controllers/application_controller.cr
@@ -52,3 +52,4 @@ I, [2017-10-26 21:40:50 -0600 #30657]  INFO -- : [Amber 0.1.8] serving applicati
 I, [2017-10-26 21:40:50 -0600 #30657]  INFO -- : Server started in development.
 I, [2017-10-26 21:40:50 -0600 #30657]  INFO -- : Startup Time 00:00:00.0012720
 ```
+

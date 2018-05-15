@@ -1,16 +1,12 @@
-# Amber New Command
+# New
 
-This is the first command that you will run when generating a new Amber application.
-It creates a new Amber application with a default directory structure and configuration
-setting at the path you specify.
+This is the first command that you will run when generating a new Amber application. It creates a new Amber application with a default directory structure and configuration setting at the path you specify.
 
-An `.amber.yml` configuration file is generated a long with the default application directory
-structure. This stores some metadata for the Amber CLI to make use of for generating migrations,
-scaffolding templates, and more.
+An `.amber.yml` configuration file is generated a long with the default application directory structure. This stores some metadata for the Amber CLI to make use of for generating migrations, scaffolding templates, and more.
 
 ### `amber new`
 
-```shell
+```text
 amber new OPTIONS NAME
 
 Arguments:
@@ -23,20 +19,15 @@ Options:
   -r      Use a named recipe.  See documentation at https://amberframework.org.
 ```
 
-See the **Recipes** option of the **Command Line Tool** for information about using
-recipes to generate applications.
+See the **Recipes** option of the **Command Line Tool** for information about using recipes to generate applications.
 
 ## Example Usage
-Using `amber new microsecond-blog` will generate a skeleton Amber application in `./microsecond-blog`.
-You can have a running web application in a matter of minutes:
-1. `amber new microsecond-blog`
-1. `cd microsecond-blog`
-1. `shards install`
-1. `amber run &` or `amber watch &` (also can execute these in foreground of separate terminal)
-1. `open http://localhost:3000`
+
+Using `amber new microsecond-blog` will generate a skeleton Amber application in `./microsecond-blog`. You can have a running web application in a matter of minutes: 1. `amber new microsecond-blog` 1. `cd microsecond-blog` 1. `shards install` 1. `amber run &` or `amber watch &` \(also can execute these in foreground of separate terminal\) 1. `open http://localhost:3000`
 
 Full example in terminal:
-```shell
+
+```text
 $ amber new microsecond-blog
 Rendering App microsecond-blog in ./microsecond-blog
 new       .amber.yml
@@ -68,3 +59,4 @@ $ open http://localhost:3000
 200  | GET  "/"  | 294.0µs
 Params:
 ```
+

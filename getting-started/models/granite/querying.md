@@ -1,18 +1,18 @@
-### Queries
+# Querying
+
+## Queries
 
 The where clause will give you full control over your query.
 
-#### All
+### All
 
-When using the `all` method, the SQL selected fields will always match the
-fields specified in the model.
+When using the `all` method, the SQL selected fields will always match the fields specified in the model.
 
-Always pass in parameters to avoid SQL Injection.  Use a `?`
-in your query as placeholder. Checkout the [Crystal DB Driver](https://github.com/crystal-lang/crystal-db)
-for documentation of the drivers.
+Always pass in parameters to avoid SQL Injection. Use a `?` in your query as placeholder. Checkout the [Crystal DB Driver](https://github.com/crystal-lang/crystal-db) for documentation of the drivers.
 
 Here are some examples:
-```crystal
+
+```text
 posts = Post.all("WHERE name LIKE ?", ["Joe%"])
 if posts
   posts.each do |post|
@@ -30,34 +30,33 @@ posts = Post.all("JOIN comments c ON c.post_id = post.id
                   ["Joe"])
 ```
 
-#### First
+### First
 
-It is common to only want the first result and append a `LIMIT 1` to the query.
-This is what the `first` method does.
+It is common to only want the first result and append a `LIMIT 1` to the query. This is what the `first` method does.
 
 For example:
 
-```crystal
+```text
 post = Post.first("ORDER BY posts.name DESC")
 ```
 
 This is the same as:
 
-```crystal
+```text
 post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 ```
 
-### Clearing
+## Clearing
 
 To clear all the rows in the database:
 
-```crystal
+```text
 Post.clear #truncate the table
 ```
 
-#### Find All
+### Find All
 
-```crystal
+```text
 posts = Post.all
 if posts
   posts.each do |post|
@@ -66,72 +65,73 @@ if posts
 end
 ```
 
-#### Find First
+### Find First
 
-```crystal
+```text
 post = Post.first
 if post
   puts post.name
 end
 ```
 
-#### Find
+### Find
 
-```crystal
+```text
 post = Post.find 1
 if post
   puts post.name
 end
 ```
 
-#### Find By
+### Find By
 
-```crystal
+```text
 post = Post.find_by :slug, "example_slug"
 if post
   puts post.name
 end
 ```
 
-#### Find in Batches
+### Find in Batches
 
-find_in_batches(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
+find\_in\_batches\(clause = "", params = \[\] of DB::Any, batch\_size limit = 100, offset = 0\)
 
-```crystal
+```text
 posts = Post.find_in_batches("name == ?", ["test"])
 ```
 
-#### Find Each
+### Find Each
 
-find_each(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
+find\_each\(clause = "", params = \[\] of DB::Any, batch\_size limit = 100, offset = 0\)
 
-```crystal
+```text
 posts = Post.find_each("name like ?", ["%test%"]) do |post|
   puts post
 end
 ```
 
-#### Insert
+### Insert
 
-```crystal
+```text
 post = Post.new
 post.name = "Granite ORM Rocks!"
 post.body = "Check this out."
 post.save
 ```
 
-#### Update
+### Update
 
-```crystal
+```text
 post = Post.find 1
 post.name = "Granite Really Rocks!"
 post.save
 ```
 
-#### Delete
+### Delete
 
-```crystal
+```text
 post = Post.find 1
 post.destroy
 puts "deleted" unless post
 ```
+

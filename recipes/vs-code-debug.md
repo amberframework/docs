@@ -1,32 +1,31 @@
-# Debugging Crystal Projects using VSCode
+# VS Code Debug
 
 This tutorial has tips and tricks on how to debug Crystal projects. It shows how to leverage tools like GDB or LLDB using debugger clients like [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) for VSCode.
 
 ## Prerequisites
 
 * Crystal - See instalation guide [here](https://crystal-lang.org/docs/installation/)
-* Crystal project - See installation guide [here](https://crystal-lang.org/docs/using_the_compiler/#creating-a-project-or-library) or [here (Amber)](/getting-started/Installation/README.md)
+* Crystal project - See installation guide [here](https://crystal-lang.org/docs/using_the_compiler/#creating-a-project-or-library) or [here \(Amber\)](../getting-started/installation.md)
 * VSCode with [Crystal Lang](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang) and [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) extensions
-* GNU debugger (GDB) or LLVM debugger (LLDB) - See installation guide below
+* GNU debugger \(GDB\) or LLVM debugger \(LLDB\) - See installation guide below
 
 Install GDB or LLDB based commands below for your OS.
 
-##### MacOS
+**MacOS**
 
 `brew install gdb lldb`
 
-##### Ubuntu
+**Ubuntu**
 
 `apt install gdb lldb`
 
-##### Fedora
+**Fedora**
 
 `dnf install gdb lldb`
 
-##### ArchLinux
+**ArchLinux**
 
 `pacman -S gdb lldb`
-
 
 > Note: Confirm that the above prerequisites are installed before setting up the debugger. These settings have been verified for a MacOS and Linux's environments.
 
@@ -36,7 +35,7 @@ Install GDB or LLDB based commands below for your OS.
 
 ### 1. `task.json` configuration to compile a crystal project
 
-```json
+```javascript
 {
   "version": "2.0.0",
   "tasks": [
@@ -53,7 +52,7 @@ Install GDB or LLDB based commands below for your OS.
 
 #### Using GDB
 
-```json
+```javascript
 {
   "version": "0.2.0",
   "configurations": [
@@ -71,7 +70,7 @@ Install GDB or LLDB based commands below for your OS.
 
 #### Using LLDB
 
-```json
+```javascript
 {
   "version": "0.2.0",
   "configurations": [
@@ -93,7 +92,7 @@ Install GDB or LLDB based commands below for your OS.
 
 ## Tips and Tricks for debugging Crystal applications
 
-> DISCLAIMER: LLDB does not show data for variables in crystal applications yet, see [issue #4457](https://github.com/crystal-lang/crystal/issues/4457).
+> DISCLAIMER: LLDB does not show data for variables in crystal applications yet, see [issue \#4457](https://github.com/crystal-lang/crystal/issues/4457).
 
 Fully debugging Crystal applications is not supported yet. You can use some of the techniques below to improve the debugging experience.
 
@@ -101,7 +100,7 @@ Fully debugging Crystal applications is not supported yet. You can use some of t
 
 Instead of putting breakpoints using commands inside GDB or LLDB you can try to set a breakpoint using `debugger` keyword.
 
-```crystal
+```text
 i = 0
 while i < 3
   i += 1
@@ -115,7 +114,7 @@ Currently, Crystal lacks support for debugging inside of blocks. If you put a br
 
 As a workaround, use `pp` to pretty print objects inside of blocks.
 
-```crystal
+```text
 3.times do |i|
   pp i
 end
@@ -128,34 +127,34 @@ end
 
 Sometimes crystal will optimize argument data, so the debugger will show `<optimized output>` instead of the arguments. To avoid this behavior use the `@[NoInline]` attribute before your function implementation.
 
-```crystal
+```text
 @[NoInline]
 def foo(bar)
   debugger
 end
 ```
 
-### 4. Printing strings objects (GDB)
+### 4. Printing strings objects \(GDB\)
 
 To print string objects in the debugger:
 
 First, setup the debugger with the `debugger` statement:
 
-```crystal
+```text
 foo = "Hello World!"
 debugger
 ```
 
 Then use `print` in the debugging console.
 
-```sh
+```bash
 (gdb) print &foo.c
 $1 = (UInt8 *) 0x10008e6c4 "Hello World!"
 ```
 
 Or add `&foo.c` using a new variable entry on watch section in VSCode debugger
 
-![watch](https://i.imgur.com/EpQinL7.png "Using VSCode GUI")
+![Using VSCode GUI](https://i.imgur.com/EpQinL7.png)
 
 ### 5. Printing array variables
 
@@ -163,26 +162,25 @@ To print array items in the debugger:
 
 First, setup the debugger with the `debugger` statement:
 
-```crystal
+```text
 foo = ["item 0", "item 1", "item 2"]
 debugger
 ```
 
 Then use `print` in the debugging console:
 
-```
+```text
 (gdb) print &foo.buffer[0].c
 $19 = (UInt8 *) 0x10008e7f4 "item 0"
 ```
 
 Change the buffer index for each item you want to print.
 
-
 ### 6. Printing instance variables
 
 For printing `@foo` var in this code:
 
-```crystal
+```text
 class Bar
   @foo = 0
   def baz
@@ -199,7 +197,7 @@ You can use `self.foo` in the debugger terminal or VSCode GUI.
 
 Some objects do not show at all. You can unhide them using the `.to_s` method and a temporary debugging variable, like this:
 
-```crystal
+```text
 def bar(hello)
   "#{hello} World!"
 end
@@ -213,3 +211,4 @@ foo("Hello")
 ```
 
 This trick allows showing the `bar_hello_to_s` variable inside the debugger tool.
+

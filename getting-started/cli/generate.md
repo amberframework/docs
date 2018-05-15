@@ -1,11 +1,12 @@
-# Generate Command
+# Generate
 
 The generators in amber are a great way to get an application up and running quickly. In addition, they help keep code consistent and following convention.
 
 ## Usage
 
 You can always see the available generators by running `amber generate` as below:
-```shell
+
+```text
 $ amber generate
 Parsing Error: The TYPE argument is required.
 
@@ -19,23 +20,29 @@ Arguments:
 Options:
   --no-color  Disable colored output
 ```
+
 Generators can be used multi-word names, the class names will be `CamelCase` and file names will be `snake_case`, the command line input can be either:
-```shell
+
+```text
 $ amber generate [TYPE] MultiWordName [FIELD1 FIELD2 ...]
 # OR
 $ amber generate [TYPE] multi_word_name [FIELD1 FIELD2 ...]
 ```
-See [Scaffolding](###scaffolding) below for full example.
+
+See [Scaffolding](generate.md###scaffolding) below for full example.
 
 Examples of Usage
-- [Scaffolding](###scaffolding)
-- [Auth](###auth)
-- [Model](###model)
-- [Controller](###controller)
+
+* [Scaffolding](generate.md###scaffolding)
+* [Auth](generate.md###auth)
+* [Model](generate.md###model)
+* [Controller](generate.md###controller)
 
 ### Scaffolding
-Scaffolding will create the model (and specs), views, controller (and specs) and migrations for a resource. Additionally, it will add the new resource to the nav bar and
-```shell
+
+Scaffolding will create the model \(and specs\), views, controller \(and specs\) and migrations for a resource. Additionally, it will add the new resource to the nav bar and
+
+```text
 $ amber generate scaffold Post title body:text
 Rendering Scaffold post
 new       db/migrations/20171114103058417_create_post.sql
@@ -52,8 +59,10 @@ new       src/views/post/index.slang
 new       src/views/post/new.slang
 new       src/views/post/show.slang
 ```
+
 If you scaffold a multi-word resource, the class names will be `CamelCase` and file names will be `snake_case`, the command line input can be either:
-```shell
+
+```text
 $ amber generate scaffold PostComment post:reference body:text
 # OR
 $ amber generate scaffold post_comment post:reference body:text
@@ -75,7 +84,7 @@ new       src/views/post_comment/show.slang
 
 ### Auth
 
-```shell
+```text
 $ amber g auth User
 Rendering Auth user
 new       db/migrations/20171019214851_create_user.sql
@@ -94,7 +103,7 @@ new       src/views/session/new.slang
 
 ### Model
 
-```sh
+```bash
 $ amber g model Person name:string age:integer
 Rendering Model person
 new       db/migrations/20171019214940_create_person.sql
@@ -105,7 +114,7 @@ new       src/models/person.cr
 
 ### Controller
 
-```sh
+```bash
 $ amber g controller Person index:get show:get create:post update:patch
 Rendering Controller person
 skipped   spec/controllers/spec_helper.cr
@@ -115,7 +124,5 @@ new       src/controllers/person_controller.cr
 
 ## Recipes
 
-Recipes are available to generate Scaffolding, Controller and Model artifacts
-in ways that vary from the standard built in generator.  See the **Recipes**
-option of the **Command Line Tool** for more information about using recipes to
-generate applications.
+Recipes are available to generate Scaffolding, Controller and Model artifacts in ways that vary from the standard built in generator. See the **Recipes** option of the **Command Line Tool** for more information about using recipes to generate applications.
+

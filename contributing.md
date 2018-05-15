@@ -1,4 +1,4 @@
-# Contributing to Amber
+# Contributing
 
 First thank you for taking the time to contribute and making our community great!
 
@@ -102,11 +102,15 @@ Beginner issues - issues which should only require a few lines of code, and a te
 
 * Fill in the required template
 * Document new code based on the
+
   [Documenting Code](https://crystal-lang.org/docs/conventions/documenting_code.html)
+
 * Include thoughtfully-worded, well-structured
 * End files with a newline.
 * Format your code with
+
   `crystal tool format`
+
 * Specs Styleguide
 
 ## Coding Style Guides
@@ -120,14 +124,20 @@ Beginner issues - issues which should only require a few lines of code, and a te
 ## Spec Guides
 
 * Include thoughtfully-worded, well-structured Crystal specs in the
+
   `./spec`
+
   folder.
+
 * Treat
+
   `describe`
+
   as a noun or situation.
+
 * Teat
+
   `it`
+
   as a statement about state or how an operation changes state.
-
-
 

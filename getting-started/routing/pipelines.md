@@ -1,12 +1,12 @@
 # Pipelines
 
-A _pipeline_ is a set of of transformations that is performed to a HTTP request. These transformations come in the form of a pipe. A _pipe_ is a class which includes [HTTP::Handler](https://crystal-lang.org/api/latest/HTTP/Handler.html) and implements the [#call](https://crystal-lang.org/api/latest/HTTP/Handler.html#call%28context%3AHTTP%3A%3AServer%3A%3AContext%29-instance-method) method.
+A _pipeline_ is a set of of transformations that is performed to a HTTP request. These transformations come in the form of a pipe. A _pipe_ is a class which includes [HTTP::Handler](https://crystal-lang.org/api/latest/HTTP/Handler.html) and implements the [\#call](https://crystal-lang.org/api/latest/HTTP/Handler.html#call%28context%3AHTTP%3A%3AServer%3A%3AContext%29-instance-method) method.
 
 You can use a handler to intercept any incoming request and modify the response. These can be used for request throttling, ip-based whitelisting, adding custom headers.
 
 Every Amber application needs to define a _pipeline_ with a set of _pipes_ each pipeline allow a set of transformations to be applied to different sets of route, this give you granular control and explicitness of which transformation to run for each of the requests.
 
-```crystal
+```text
 Amber::Server.configure do |app|
   pipeline :web do
     # Plug is the method to use connect a pipe (middleware)
@@ -41,17 +41,11 @@ Above we define a pipeline called `:web` as you can see the `:web` pipeline tran
 Amber provides us some default pipes for a number of common tasks. In turn we can customize them as well as create new pipelines to meet our needs.
 
 * **Pipe::Static** serves static assets
-
 * **Pipe::Logger** logs incoming requests
-
 * **Pipe::CORS** Handler adds support for Cross Origin Resource Sharing.
-
 * **Pipe::CSRF** Handler adds support for Cross Site Request Forgery.
-
 * **Pipe::Error** Handler catches RouteNotFound and returns.
-
 * **Pipe::Flash** handler provides a mechanism to pass flash message between
-
 * **Pipe::Session** a plug that sets up session management.
 
 With our `:web` pipeline now define we can use it in our routes definitions.
@@ -63,7 +57,8 @@ With our `:web` pipeline now define we can use it in our routes definitions.
 If you have two pipelines that share a lot of the same pipes, you can assign the shared pipes in one block: `pipeline :web, :auth do ... end`
 
 Full example for `config/routes.cr`:
-```crystal
+
+```text
 Amber::Server.configure do |app|
   pipeline :web, :auth do
     plug Amber::Pipe::Logger.new
@@ -85,3 +80,4 @@ Amber::Server.configure do |app|
   end
 end
 ```
+

@@ -1,4 +1,4 @@
-# A Guide to Testing Amber Applications
+# System
 
 This guide covers built-in mechanisms in Amber for testing your application.
 
@@ -6,7 +6,6 @@ With this guide you will learn:
 
 * Amber testing terminology
 * How to write unit, functional, integration, and system tests for your application.
-
 
 ## Why write tests for your Amber Application?
 
@@ -19,12 +18,12 @@ With this guide you will learn:
 
 Amber was built with testing in mind. The first time you generate an Amber application using `amber new your_app_name` a `spec` directory is generated. The contents of this directory looks as follow.
 
-- /spec
-	- /controllers
-	- /system
-	- /models
-	- /integrations
-	- /mailers
+* /spec
+  * /controllers
+  * /system
+  * /models
+  * /integrations
+  * /mailers
 
 The `helpers`, `mailers`, and `models` directories are meant to hold tests for view helpers, mailers, and models, respectively. The `controllers` directory is meant to hold tests for controllers, routes, and views. The integration directory is meant to hold tests for interactions between controllers.
 
@@ -36,7 +35,7 @@ By default every Amber application generates with three environments: `developme
 
 Each environment's configuration can be modified similarly. In this case, we can modify our test environment by changing the options found in `config/environments/test.yml`.
 
-> Your tests are run under AMBER_ENV=test.
+> Your tests are run under AMBER\_ENV=test.
 
 ### System Specs
 
@@ -57,24 +56,24 @@ This will install the chrome driver on the system path `/usr/local/bin/chromedri
 
 If you're running in a different OS such as Linux you can specify the chromedriver path as such
 
-```crystal
+```text
 module GarnetSpec
   DRIVER = :chrome
   PATH = "/usr/local/bin/chromedriver"
 end
 ```
 
-System tests allows test user interactions with your application, running tests in either a real  chrome browser. System tests use the Selenium Standalone Server.
+System tests allows test user interactions with your application, running tests in either a real chrome browser. System tests use the Selenium Standalone Server.
 
 For creating Amber system tests, you use the spec/system directory in your application. Amber provides a generator to create a system test skeleton for you.
 
-```crystal
+```text
 amber g system_test users
 ```
 
 Here's what a freshly-generated system test looks like:
 
-```crystal
+```text
 class SomeFeature < GarnetSpec::System::Test
   scenario "user visits amber framework and sees getting started button" do
     visit "http://www.amberframework.org"
@@ -97,5 +96,4 @@ end
 Run your specs with `crystal spec`
 
 > Important: System Test currently only work with the Chrome Browser
-
 

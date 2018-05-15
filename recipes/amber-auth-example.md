@@ -7,7 +7,7 @@ description: I didn't choose security. Security chose me.
 **Prerequisites**
 
 * Familiar with MVC and terms such as Migrations, Database
-* Amber Framework CLI already installed \([Installation Instructions](../getting-started/installation.md)\)
+* Amber Framework CLI already installed \([Installation Instructions](../docs/installation.md)\)
 * Terminal console
 
 ## Overview

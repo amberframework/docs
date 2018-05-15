@@ -43,7 +43,7 @@
   * [Sockets](websockets/sockets.md)
   * [JavaScript Client](websockets/client-js.md)
 * [Testing](testing/README.md)
-  * [System](testing/system.md)
+  * [System Tests](testing/system.md)
 * [Mailers](mailers.md)
 * [Examples](recipes/README.md)
   * [Amber Auth Example](recipes/amber-auth-example.md)

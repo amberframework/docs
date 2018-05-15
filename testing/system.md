@@ -1,4 +1,4 @@
-# System
+# System Tests
 
 This guide covers built-in mechanisms in Amber for testing your application.
 

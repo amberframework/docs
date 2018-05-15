@@ -1,7 +1,3 @@
----
-description: 'So, tell me. What are your favorite tools?'
----
-
 # CLI
 
 Amber has a built in CLI tool, to make your life easier while developing applications.

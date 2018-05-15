@@ -1,7 +1,3 @@
----
-description: Much to learn. You still have.
----
-
 # Contributing
 
 First thank you for taking the time to contribute and making our community great!

@@ -28,4 +28,5 @@ Options:
 
 ## Example Usage
 
-{% page-ref page="../deployments/README.md" %}
+{% page-ref page="../deployments/" %}
+

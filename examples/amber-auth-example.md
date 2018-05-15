@@ -1,7 +1,3 @@
----
-description: I didn't choose security. Security chose me.
----
-
 # Amber Auth Example
 
 **Prerequisites**

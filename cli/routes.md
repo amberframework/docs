@@ -1,7 +1,3 @@
----
-description: Defect in production? Works in my machine...
----
-
 # Routes
 
 ## `amber routes`

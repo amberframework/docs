@@ -17,3 +17,4 @@ class WelcomeMailer < Quartz::Mailer
   end
 end
 ```
+

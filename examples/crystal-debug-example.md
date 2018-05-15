@@ -1,7 +1,3 @@
----
-description: I don't use debuggers. I stare down until the code confesses...
----
-
 # Crystal Debug Example
 
 This tutorial has tips and tricks on how to debug Crystal projects. It shows how to leverage tools like GDB or LLDB using debugger clients like [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) for VSCode.

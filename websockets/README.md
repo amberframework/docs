@@ -4,7 +4,7 @@
 
 {% page-ref page="sockets.md" %}
 
-{% page-ref page="client-js.md" %}
+{% page-ref page="javascript-client.md" %}
 
 
 

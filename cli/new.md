@@ -1,7 +1,3 @@
----
-description: Five minutes programming. Five hours arguing with project managers.
----
-
 # New
 
 ## `amber new`

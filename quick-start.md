@@ -6,7 +6,7 @@ It will take us just 7 steps. Let’s get started!
 
 ## 1. Install dependencies
 
-{% hint style="tip" %}
+{% hint style="info" %}
 If you already have `crystal`, `amber`, and a database installed, you can skip this step.
 {% endhint %}
 
@@ -18,7 +18,7 @@ Instructions for OS X using homebrew and Debian/Ubuntu are below. See full insta
 
 Installing amber with homebrew also installs crystal
 
-```shell
+```text
 brew install amber
 ```
 
@@ -26,14 +26,14 @@ brew install amber
 
 First install crystal
 
-```shell
+```text
 curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 sudo apt-get install build-essential crystal
 ```
 
-Then install amber (from source)
+Then install amber \(from source\)
 
-```shell
+```text
 sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
 curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
 cd amber-stable/
@@ -47,7 +47,7 @@ Above are the steps for building from source, the dependencies are specific to U
 
 ### Install a database
 
-Amber works with `postgresql` (default), `mysql`, or `sqlite`.
+Amber works with `postgresql` \(default\), `mysql`, or `sqlite`.
 
 If you don’t already have one of these installed, please follow the guides provided by each database maintainer:
 
@@ -71,7 +71,7 @@ The shards install command may take a little while - it has to download all shar
 The default setup will use a postgresql database, use `-d mysql` or `-d sqlite` for mysql and sqlite, respectively.
 {% endhint %}
 
-```shell
+```text
 amber new pet-tracker
 cd pet-tracker
 shards install
@@ -87,7 +87,7 @@ The `amber generate scaffold` command will help us do this.
 `g` is shorthand for `generate`
 {% endhint %}
 
-```shell
+```text
 amber g scaffold Pet name:string breed:string age:integer
 ```
 
@@ -97,7 +97,7 @@ Generating the application and the scaffolded resource provides the configuratio
 
 `amber db` will help us do this.
 
-```shell
+```text
 amber db create migrate
 ```
 
@@ -107,23 +107,21 @@ This will create a new database and run the migration to create a `pets` table w
 
 We can use `amber watch` to both build the binary application and start the server. Additionally, `amber watch` will detect code changes then recompile and restart the application automatically.
 
-```shell
+```text
 amber watch
 ```
 
 ## 6. Use your brand new web application!
 
-Open any browser and goto http://localhost:3000
-You should see a home page load and “Pets” in the nav bar.
-If you click on the “Pets” link, you should be able to perform all 7 RESTful actions for the “pets” resource.
+Open any browser and goto [http://localhost:3000](http://localhost:3000) You should see a home page load and “Pets” in the nav bar. If you click on the “Pets” link, you should be able to perform all 7 RESTful actions for the “pets” resource.
 
 ## 7. Deploy your web application
 
-* [Amber Deploy Guide](cli/deploy.md)  
+{% page-ref page="deployments/" %}
 
 ## List of Commands
 
-```shell
+```text
 amber new pet-tracker
 cd pet-tracker
 shards install
@@ -131,3 +129,4 @@ amber generate scaffold Pet name:string breed:string age:integer weight:integer
 amber db create migrate
 amber watch
 ```
+

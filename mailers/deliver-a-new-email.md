@@ -1,4 +1,4 @@
-### Deliver a new email
+# Deliver a new Email
 
 To delivery a new email:
 
@@ -6,3 +6,4 @@ To delivery a new email:
 mailer = WelcomeMailer.new
 mailer.deliver(name, email)
 ```
+

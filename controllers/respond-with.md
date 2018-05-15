@@ -1,15 +1,14 @@
 # Respond With
 
-If we need to render a template to html `render("template.slang")` works nicely.
-A lot of times we want to respond with json, xml, text or something else. In those cases we use `respond_with`.
+If we need to render a template to html `render("template.slang")` works nicely. A lot of times we want to respond with json, xml, text or something else. In those cases we use `respond_with`.
 
-![Respond_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
+![Respond\_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
 
-https://www.youtube.com/watch?v=6KNjWDRUo_c
+[https://www.youtube.com/watch?v=6KNjWDRUo\_c](https://www.youtube.com/watch?v=6KNjWDRUo_c)
 
 **Responding with JSON**
 
-```crystal
+```text
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -20,7 +19,7 @@ end
 
 **Responding with XML**
 
-```crystal
+```text
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -33,7 +32,7 @@ end
 
 **Responding with Text**
 
-```crystal
+```text
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -45,7 +44,7 @@ end
 
 **Put it all together and you can respond to whatever is asked for.**
 
-```crystal
+```text
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -58,3 +57,4 @@ class PetController < ApplicationController
   end
 end
 ```
+

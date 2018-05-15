@@ -1,7 +1,3 @@
----
-description: I don't test. I'm a developer. I never make mistakes.
----
-
 # Watch
 
 The `amber watch` compiles and runs your project. It also monitors for changes and rebuilds when necessary.

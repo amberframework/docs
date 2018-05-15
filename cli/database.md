@@ -1,7 +1,3 @@
----
-description: When you forget to add the where clause in an SQL delete statement
----
-
 # Database
 
 ## `amber db`

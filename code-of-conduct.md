@@ -1,7 +1,3 @@
----
-description: 'Yeah, you can get suspended for that...'
----
-
 # Code of Conduct
 
 ## Our Pledge

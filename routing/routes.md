@@ -111,7 +111,7 @@ routes :web, "/admin" do
 end
 ```
 
-#### Excluding and Including Actions
+### Excluding and Including Actions
 
 Sometimes you want to use `resources` as a shortcut for defining routes, and with that you don't want to define routes for actions that don't exist yet. `Resources` allow you to pass another argument, `only:` or `except:` to either include actions or exclude them from being generated.
 

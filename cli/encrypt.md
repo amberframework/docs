@@ -1,7 +1,3 @@
----
-description: Tell me again. How you have never had a secret?
----
-
 # Encrypt
 
 The `encrypt` command allows you to encrypt and edit your environment settings. This allows you to store production secrets in your repo safely.

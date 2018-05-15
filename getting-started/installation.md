@@ -1,28 +1,32 @@
+---
+description: That feeling you get when that right tool did all the work
+---
+
 # Installation
 
-The **Amber CLI** offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** Amber.
+Amber CLI offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** your projects easily and fast.
+
+## From Source
+
+Download and install `amber`
+
+```bash
+curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
+cd amber-stable/
+make
+sudo make install
+```
 
 ## Linux
 
 Ensure you have the necessary dependencies:
 
-* `Git`: Use your platform specific package manager to install `git`
-* `Crystal`: Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
-* `NodeJS` and `Webpack` Node is an optional dependency and is used to compile JS and assets.
-* `PostgreSQL` PostgreSQL is a relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the -database mysql flag when creating a new application.
-
-### From Source
+* **Git:** Use your platform specific package manager to install `git`
+* **Crystal:** Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
+* **NodeJS and Webpack:** `node` is an optional dependency and is used to compile JavaScript and other assets.
+* **PostgreSQL:** `postgres` is a relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the flag `--database mysql` when creating a new application.
 
 Once you have these dependencies, You can build the `amber` tool from source:
-
-Download and install `amber`
-
-```text
-curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
-cd amber-stable/
-shards install
-make install
-```
 
 If you run into an issue on compiling regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
 

@@ -1,6 +1,10 @@
+---
+description: I don't test. I'm a developer. I never make mistakes.
+---
+
 # Watch
 
-The `amber watch` compiles and runs your project. It also monitors for changes and recompiles when necessary.
+The `amber watch` compiles and runs your project. It also monitors for changes and rebuilds when necessary.
 
 Here is a list of the commands available:
 
@@ -28,28 +32,16 @@ Options:
 ## Example
 
 ```bash
-~/crystal/amberdemo  ᐅ amber w                
-🤖  Your SentryBot is vigilant. beep-boop...
-🤖  watching file: ./src/controllers/application_controller.cr
-🤖  watching file: ./src/controllers/home_controller.cr
-🤖  watching file: ./src/controllers/pet_controller.cr
-🤖  watching file: ./src/controllers/static_controller.cr
-🤖  watching file: ./src/dbtest.cr
-🤖  watching file: ./src/models/pet.cr
-🤖  watching file: ./config/application.cr
-🤖  watching file: ./config/routes.cr
-🤖  watching file: ./src/views/home/index.slang
-🤖  watching file: ./src/views/layouts/_nav.slang
-🤖  watching file: ./src/views/layouts/application.slang
-🤖  watching file: ./src/views/pet/_form.slang
-🤖  watching file: ./src/views/pet/edit.slang
-🤖  watching file: ./src/views/pet/index.slang
-🤖  watching file: ./src/views/pet/new.slang
-🤖  watching file: ./src/views/pet/show.slang
-🤖  compiling dbtest...
-🤖  starting dbtest...
-I, [2017-10-26 21:40:50 -0600 #30657]  INFO -- : [Amber 0.1.8] serving application "Amberdemo web application." at http://0.0.0.0:3000
-I, [2017-10-26 21:40:50 -0600 #30657]  INFO -- : Server started in development.
-I, [2017-10-26 21:40:50 -0600 #30657]  INFO -- : Startup Time 00:00:00.0012720
+$ amber watch
+02:58:23 Watcher    | (INFO) Watching 22 files (server reload)...
+02:58:23 Watcher    | (INFO) Building project App01...
+02:58:31 Watcher    | (INFO) Terminating app App01...
+02:58:31 Watcher    | (INFO) Starting App01...
+02:58:31 NodeJS     | (INFO) Installing dependencies...
+02:58:31 NodeJS     | (INFO) Watching public directory
+02:58:31 Server     | (INFO) Amber 0.7.2 serving application "App01" at http://0.0.0.0:3000
+02:58:31 Server     | (INFO) Server started in development.
+02:58:31 Server     | (INFO) Startup Time 00:00:00.000182000
+02:58:31 Watcher    | Watching 10 client files...
 ```
 

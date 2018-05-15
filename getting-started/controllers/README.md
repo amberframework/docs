@@ -12,7 +12,7 @@ For most conventional [RESTful](http://en.wikipedia.org/wiki/Representational_st
 
 When defining your routes you specify the controller that the route will match to
 
-```text
+```ruby
 get "/", ApiController, :index
 ```
 
@@ -24,7 +24,7 @@ A controller is a Crystal class which inherits from `ApplicationController`and h
 
 Controllers are defined as such:
 
-```text
+```ruby
 class ApiController < ApplicationController
   def index
     @client = Client.new

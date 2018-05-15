@@ -6,7 +6,7 @@ To generate a migration run `crystal sam.cr generate:migration your_migration_na
 
 Generator will create template file for you with next name pattern **timestamp\_migration\_name.cr**. Empty file looks like this:
 
-```text
+```ruby
 class YourCamelcasedMigrationName20170119011451314 < Jennifer::Migration::Base
   def up
   end
@@ -20,7 +20,7 @@ end
 
 Example for creating table:
 
-```text
+```ruby
 create_table(:addresses) do |t|
   t.reference :contact # creates field contact_id with Int type and allows null values
   t.string :street, {:size => 20, :sql_type => "char"} # creates string field with CHAR(20) db type
@@ -46,7 +46,11 @@ end
 | `#json` | `json` | `json` | `JSON::Any` |
 | `#enum` | `enum` | `enum` | `String` |
 
-Also if you use postgres array types are available a well:`Array(Int32)`,`Array(Char)`,`Array(Float32)`,`Array(Float64)`,`Array(Int16)`,`Array(Int32)`,`Array(Int64)`,`Array(String)`.
+Also if you use PostgreSQL array types are available a well:
+
+```text
+Array(Int32), Array(Char), Array(Float32), Array(Float64),Array(Int16), Array(Int32), Array(Int64), Array(String).
+```
 
 All of them accepts additional options:
 
@@ -61,7 +65,7 @@ Also there is`#field`method which allows to directly define sql type \(very suit
 
 To drop table just write
 
-```text
+```ruby
 drop_table(:addresses) # drops if exists
 ```
 
@@ -83,7 +87,7 @@ Also next support methods are available:
 
 Also plain SQL could be executed as well:
 
-```text
+```ruby
 execute("ALTER TABLE addresses CHANGE street st VARCHAR(20)")
 ```
 
@@ -95,7 +99,7 @@ To be sure that your db is up to date before run tests of your application, add`
 
 Now enums are supported as well but it has different implementation for adapters. For mysql is enough just write down all values:
 
-```text
+```ruby
 create_table(:contacts) do |t|
   t.enum(:gender, values: ["male", "female"])
 end
@@ -103,7 +107,7 @@ end
 
 Postgres provide much more flexible and complex behavior. Using it you need to create it firstly:
 
-```text
+```ruby
 create_enum(:gender_enum, ["male", "female"])
 create_table(:contacts) do |t|
   t.string :name, {:size => 30}

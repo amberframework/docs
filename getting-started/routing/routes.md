@@ -4,11 +4,11 @@ Routing provides you tools that map URLs to controller actions. By defining rout
 
 A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for: `GET /users/24` it asks the Amber router to match it to a controller action. If the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
 
-### Configuring Routes
+## Configuring Routes
 
 Routes are configured in the `{project_name}/config/routes.cr` file.
 
-```text
+```ruby
 Amber::Server.configure do |app|
   routes :static do
     # Each route is defined as follow
@@ -18,20 +18,20 @@ Amber::Server.configure do |app|
 end
 ```
 
-### Defining Routes
+## Defining Routes
 
 The **routes** macro accepts a **pipeline** name and a **scope**, in which all routes defined within this block will make use of the pipeline and the url will be scoped.
 
 Lets say you are defining a static website and you want the URL to be displayed as `http://www.mycoolsite.com/page`. You will define your routes as:
 
-```text
+```ruby
 # routes(pipeline, scope)
 routes :web, "/page"
 ```
 
 The routes macro takes a last argument. And a block within the block is where you define your routes.
 
-```text
+```ruby
 routes :web, '/static' do
   get "/about", StaticController, :about
 end
@@ -45,7 +45,7 @@ Mapping the above route
 
 Your action will need to return a string or render a view or this will cause your routes to throw an error during compilation.
 
-```text
+```ruby
 def about
   "About my cool page!"
 end
@@ -63,7 +63,7 @@ The router supports other macros besides those for HTTP verbs like _get_, _post_
 
 Let’s add a resource to the `config/routes.cr`
 
-```text
+```ruby
 routes :web do
   resources "/posts", PostsController
 end
@@ -73,28 +73,7 @@ Then go to the root of your project, and run `amber routes`
 
 It outputs the standard matrix of HTTP verbs, controller, action, pipeline, scope, and URI pattern.
 
-```text
-○ amber routes
-╔════════╦══════════════════╦═════════╦══════════╦═══════╦═════════════════╗
-║ Verb   | Controller       | Action  | Pipeline | Scope | URI Pattern     ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ GET    | PostController   | index   | web      |       | /posts          ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ GET    | PostController   | show    | web      |       | /posts/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ GET    | PostController   | new     | web      |       | /posts/new      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ GET    | PostController   | edit    | web      |       | /posts/:id/edit ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ POST   | PostController   | create  | web      |       | /posts          ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ PATCH  | PostController   | update  | web      |       | /posts/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ PUT    | PostController   | update  | web      |       | /posts/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼─────────────────╣
-║ DELETE | PostController   | destroy | web      |       | /posts/:id      ║
-╚════════╩══════════════════╩═════════╩══════════╩═══════╩═════════════════╝
-```
+![Amber Routes Matrix Example](../../.gitbook/assets/screenshot_20180515_150328%20%281%29.png)
 
 ## Scoped Routes
 
@@ -120,7 +99,7 @@ But for the admin console paths could be prefixed with /admin.
 
 We accomplish this with a scoped route that sets a path option to /admin like this one. For now, let’s not nest this scope inside of any other scopes \(like the scope "/", HelloWeb provides in a new app\).
 
-```text
+```ruby
 # Not Scoped
 routes :web do
   resources "/posts", PostsController
@@ -132,54 +111,13 @@ routes :web, "/admin" do
 end
 ```
 
-Running `amber routes` again we get the following:
-
-```text
- ○ amber routes
-╔════════╦═════════════════════╦═════════╦══════════╦════════╦═══════════════════════╗
-║ Verb   | Controller          | Action  | Pipeline | Scope  | URI Pattern           ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | PostsController     | index   | web      |        | /posts                ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | PostsController     | show    | web      |        | /posts/:id            ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | PostsController     | new     | web      |        | /posts/new            ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | PostsController     | edit    | web      |        | /posts/:id/edit       ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ post   | PostsController     | create  | web      |        | /posts                ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ patch  | PostsController     | update  | web      |        | /posts/:id            ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ put    | PostsController     | update  | web      |        | /posts/:id            ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ delete | PostsController     | destroy | web      |        | /posts/:id            ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | AdminPostController | index   | web      | /admin | /admin/posts          ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | AdminPostController | show    | web      | /admin | /admin/posts/:id      ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | AdminPostController | new     | web      | /admin | /admin/posts/new      ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ get    | AdminPostController | edit    | web      | /admin | /admin/posts/:id/edit ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ post   | AdminPostController | create  | web      | /admin | /admin/posts          ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ patch  | AdminPostController | update  | web      | /admin | /admin/posts/:id      ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ put    | AdminPostController | update  | web      | /admin | /admin/posts/:id      ║
-╠────────┼─────────────────────┼─────────┼──────────┼────────┼───────────────────────╣
-║ delete | AdminPostController | destroy | web      | /admin | /admin/posts/:id      ║
-╚════════╩═════════════════════╩═════════╩══════════╩════════╩═══════════════════════╝
-```
-
 #### Excluding and Including Actions
 
 Sometimes you want to use `resources` as a shortcut for defining routes, and with that you don't want to define routes for actions that don't exist yet. `Resources` allow you to pass another argument, `only:` or `except:` to either include actions or exclude them from being generated.
 
 This will define the following routes:
 
-```text
+```ruby
 resources "/user", UserController, only: [:index, :show]
 resources "/user", UserController, except: [:index, :show]
 ```

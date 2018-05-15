@@ -1,3 +1,7 @@
+---
+description: 'So, tell me. What are your favorite tools?'
+---
+
 # CLI
 
 Amber has a built in CLI tool, to make your life easier while developing applications.
@@ -27,7 +31,7 @@ $ amber --help
 
 This will output to your shell the following documentation.
 
-```bash
+```text
 amber [OPTIONS] SUBCOMMAND
 
 Amber - Command Line Interface
@@ -74,5 +78,9 @@ amber new [your_app] -d [pg | mysql | sqlite] -t [slang | ecr] --deps
 cd [your_app]
 ```
 
-options: `-d` defaults to pg. `-t` defaults to slang. `--deps` will run `crystal deps` for you.
+### Options
+
+* `-d` defaults to pg
+* `-t` defaults to slang
+* `--deps` will run `crystal deps` for you.
 

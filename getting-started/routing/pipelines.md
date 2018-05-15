@@ -6,7 +6,7 @@ You can use a handler to intercept any incoming request and modify the response.
 
 Every Amber application needs to define a _pipeline_ with a set of _pipes_ each pipeline allow a set of transformations to be applied to different sets of route, this give you granular control and explicitness of which transformation to run for each of the requests.
 
-```text
+```ruby
 Amber::Server.configure do |app|
   pipeline :web do
     # Plug is the method to use connect a pipe (middleware)
@@ -50,7 +50,9 @@ Amber provides us some default pipes for a number of common tasks. In turn we ca
 
 With our `:web` pipeline now define we can use it in our routes definitions.
 
-> Note: Don't get rid of StaticController if you need to serve static assets.
+{% hint style="warning" %}
+Don't get rid of `StaticController` if you need to serve static assets.
+{% endhint %}
 
 ## Sharing Pipelines
 
@@ -58,7 +60,7 @@ If you have two pipelines that share a lot of the same pipes, you can assign the
 
 Full example for `config/routes.cr`:
 
-```text
+```ruby
 Amber::Server.configure do |app|
   pipeline :web, :auth do
     plug Amber::Pipe::Logger.new

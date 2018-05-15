@@ -12,8 +12,8 @@ Always pass in parameters to avoid SQL Injection. Use a `?` in your query as pla
 
 Here are some examples:
 
-```text
-posts = Post.all("WHERE name LIKE ?", ["Joe%"])
+```ruby
+posts = Post.all("WHERE name LIKE ?", [%{Joe%}])
 if posts
   posts.each do |post|
     puts post.name
@@ -36,13 +36,13 @@ It is common to only want the first result and append a `LIMIT 1` to the query. 
 
 For example:
 
-```text
+```ruby
 post = Post.first("ORDER BY posts.name DESC")
 ```
 
 This is the same as:
 
-```text
+```ruby
 post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 ```
 
@@ -50,13 +50,13 @@ post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 
 To clear all the rows in the database:
 
-```text
+```ruby
 Post.clear #truncate the table
 ```
 
 ### Find All
 
-```text
+```ruby
 posts = Post.all
 if posts
   posts.each do |post|
@@ -67,7 +67,7 @@ end
 
 ### Find First
 
-```text
+```ruby
 post = Post.first
 if post
   puts post.name
@@ -76,7 +76,7 @@ end
 
 ### Find
 
-```text
+```ruby
 post = Post.find 1
 if post
   puts post.name
@@ -85,7 +85,7 @@ end
 
 ### Find By
 
-```text
+```ruby
 post = Post.find_by :slug, "example_slug"
 if post
   puts post.name
@@ -94,17 +94,21 @@ end
 
 ### Find in Batches
 
-find\_in\_batches\(clause = "", params = \[\] of DB::Any, batch\_size limit = 100, offset = 0\)
-
 ```text
+find_in_batches(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
+```
+
+```ruby
 posts = Post.find_in_batches("name == ?", ["test"])
 ```
 
 ### Find Each
 
-find\_each\(clause = "", params = \[\] of DB::Any, batch\_size limit = 100, offset = 0\)
-
 ```text
+find_each(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
+```
+
+```ruby
 posts = Post.find_each("name like ?", ["%test%"]) do |post|
   puts post
 end
@@ -112,7 +116,7 @@ end
 
 ### Insert
 
-```text
+```ruby
 post = Post.new
 post.name = "Granite ORM Rocks!"
 post.body = "Check this out."
@@ -121,7 +125,7 @@ post.save
 
 ### Update
 
-```text
+```ruby
 post = Post.find 1
 post.name = "Granite Really Rocks!"
 post.save
@@ -129,7 +133,7 @@ post.save
 
 ### Delete
 
-```text
+```ruby
 post = Post.find 1
 post.destroy
 puts "deleted" unless post

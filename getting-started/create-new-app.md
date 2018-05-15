@@ -1,11 +1,6 @@
 # Create New App
 
-* [Create an Amber Application](create-new-app.md#create-an-amber-application)
-  * [Bootstrap an Application](create-new-app.md#bootstrap-an-application)
-  * [Installing Dependencies](create-new-app.md#installing-dependencies)
-  * [Creating the database](create-new-app.md#creating-the-database)
-
-Before we begin, please take a minute to read the [Installation Guide](https://github.com/amberframework/online-docs/tree/77946b0fbe0e43bff1a43e42ac904d10ff436067/getting-started/Installation/getting-started/Installation/README.md). By installing any necessary dependencies beforehand, we’ll be able to get our application up and running smoothly.
+Before we begin, please take a minute to read the [Installation Guide](installation.md). By installing any necessary dependencies beforehand, we’ll be able to get our application up and running smoothly.
 
 At this point, we should have Crystal and Amber installed. We should also have PostgreSQL and NodeJS installed to build a default application.
 
@@ -63,7 +58,9 @@ Amber makes it easy to interact with your database. Amber supports Postgres, MyS
 
 Edit the database setting for your current environment by editing {project\_name}/config/environments/{current\_environment}.yml file. Amber looks at the database\_url key for the default database connection string.
 
-> Amber assumes that your PostgreSQL database will have a `postgres` user account with the correct permissions and no password set for this user. If that isn’t the case, update the `database_url` key `config/environment/{current_environment}.yml` with the correct database credentials for your environment.
+{% hint style="info" %}
+Amber assumes that your PostgreSQL database will have a `postgres` user account with the correct permissions and no password set for this user. If that isn’t the case, update the `database_url` key `config/environment/{current_environment}.yml` with the correct database credentials for your environment.
+{% endhint %}
 
 With your database credentials ready, run the following command in your terminal window:
 
@@ -93,8 +90,10 @@ You now have a working Amber application. If you don’t see the page above, try
 
 Locally, the application is running in a Crystal process. To stop it, we hit ctrl-c once, just as we would terminate the program normally.
 
-> **Note:** The **amber watch** command uses [Sentry](https://github.com/samueleaton/sentry) to watch for any changes in your source files, recompiling automatically. If you don't want to use Sentry, you can compile and run manually:  
-> 1. Build the app `crystal build --release src/[your_app].cr`  
-> 2. Run with `./[your_app]`  
-> 3. Visit `http://0.0.0.0:3000/`
+{% hint style="info" %}
+The `amber watch` command watches for any changes in your source files, recompiling automatically. If you don't want this, you can compile and run manually:  
+1. Build the app `shards build -v`  
+2. Run with `./[your_app]`  
+3. Visit [http://127.0.0.1:3000](http://127.0.0.1:3000)
+{% endhint %}
 

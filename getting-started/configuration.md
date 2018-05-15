@@ -38,7 +38,7 @@ You can use initializers to hold configuration settings that should be made afte
 
 * `{project_name}/config/application.cr` this is the main entry file for amber application files and it allows you to overwrite setting based on dynamic values, it makes it possible to use environment variables as your settings.
 
-```text
+```ruby
 Amber::Server.configure do |app|
   app.name = ENV["APP_NAME"] if ENV["APP_NAME"]?
   app.host = ENV["HOSTNAME"] if ENV["HOSTNAME"]?
@@ -51,7 +51,7 @@ end
 
 You can include new settings in any of the environment YAML files by specifying them in the secrets section.
 
-```text
+```yaml
 database_url: postgress:://postgres:@localhost:5432/test_development
 secrets: 
   custom: secret value here
@@ -63,5 +63,7 @@ With Amber you can encrypt your environment setting `amber encrypt {envrionment}
 
 A `{project_name}/.encryption_key` file is provided. It contains a secret\_key\_base that is used to decrypt your encrypted environment settings. This file is added to `.gitignore` so it will not be committed to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
 
-> It's safe then to commit the encrypted file to your repository. Never commit the encryption key!
+{% hint style="warning" %}
+**Never commit the encryption key!** Use environment variables or setup your production machine.
+{% endhint %}
 

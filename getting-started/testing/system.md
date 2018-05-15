@@ -14,7 +14,7 @@ With this guide you will learn:
 * Tests help and guide you through a code refactor.
 * Amber tests can also simulate browser requests and thus you can test your application's response without having to test it through your browser.
 
-### Amber Testing
+## Amber Testing
 
 Amber was built with testing in mind. The first time you generate an Amber application using `amber new your_app_name` a `spec` directory is generated. The contents of this directory looks as follow.
 
@@ -56,7 +56,7 @@ This will install the chrome driver on the system path `/usr/local/bin/chromedri
 
 If you're running in a different OS such as Linux you can specify the chromedriver path as such
 
-```text
+```ruby
 module GarnetSpec
   DRIVER = :chrome
   PATH = "/usr/local/bin/chromedriver"
@@ -73,7 +73,7 @@ amber g system_test users
 
 Here's what a freshly-generated system test looks like:
 
-```text
+```ruby
 class SomeFeature < GarnetSpec::System::Test
   scenario "user visits amber framework and sees getting started button" do
     visit "http://www.amberframework.org"
@@ -95,5 +95,7 @@ end
 
 Run your specs with `crystal spec`
 
-> Important: System Test currently only work with the Chrome Browser
+{% hint style="warning" %}
+System Test currently only work with the Chrome Browser
+{% endhint %}
 

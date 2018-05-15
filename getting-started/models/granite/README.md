@@ -38,7 +38,7 @@ Or you can set the `DATABASE_URL` environment variable. This will override the e
 
 Here is an example using Granite ORM Model
 
-```text
+```ruby
 require "granite_orm/adapter/mysql"
 
 class Post < Granite::ORM::Base
@@ -51,7 +51,7 @@ end
 
 You can disable the timestamps for SqlLite since TIMESTAMP is not supported for this database:
 
-```text
+```ruby
 require "granite_orm/adapter/sqlite"
 
 class Comment < Granite::ORM::Base
@@ -68,7 +68,7 @@ The primary key is automatically created for you and if you use `timestamps` the
 
 Here are the MySQL field definitions for id, created\_at, updated\_at
 
-```text
+```sql
 id BIGINT NOT NULL AUTO_INCREMENT
 # Your fields go here
 created_at TIMESTAMP
@@ -82,7 +82,7 @@ For legacy database mappings, you may already have a table and the primary key i
 
 We have a macro called `primary` to help you out:
 
-```text
+```ruby
 class Site < Granite::ORM::Base
   adapter mysql
   primary custom_id : Int32

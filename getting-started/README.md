@@ -1,3 +1,7 @@
+---
+description: 'So, you''re a developer?'
+---
+
 # Getting Started
 
 Amber is designed to make common web-development tasks simple, and easy, maintaining developer engagement, productivity without performance penalties. By providing an all-in-one toolbox to get you started the various parts of Amber work well together or separately.
@@ -25,7 +29,7 @@ Model–view–controller \(MVC\) is a software architectural pattern for implem
 
 The Controller is responsible for controlling the application logic and acts as the coordinator between the View and the Model. The Controller receives an input from the users via the View, then processes the user's data with the help of Model and passes the results back to the View.
 
-```text
+```ruby
 class UsersController < ApplicationController
   def index
     @users = Users.all
@@ -38,7 +42,7 @@ end
 
 View is the component involved with the application's User Interface. These Views are generally bind from the model data and have extensions such as html, slang, ecr.
 
-```text
+```ruby
 # Slang - /views/users/index.slang
 
 doctype html
@@ -64,10 +68,11 @@ In the case of a social network, the Model layer would take care of tasks such a
 
 ```ruby
 class User
-    getter name : String
-    getter email : String
+  getter name : String
+  getter email : String
 
-    def initialize(@name, @email); end
+  def initialize(@name, @email)
+  end
 end
 ```
 

@@ -17,7 +17,7 @@ In most cases, the `Controller::Base#render` method does the heavy lifting of re
 
 If you want to render the view that corresponds to a different template within the same controller, you can use render with the name of the view:
 
-```text
+```ruby
 def update
   @post = Post.find(params[:id])
   if @post.update(post_params)
@@ -34,13 +34,13 @@ If you want to render a template from an entirely different controller from the 
 
 For example, if you're running code in an AdminPostController that lives in `src/controllers/admin`, you can render the results of an action to a template in `src/views/admin/products` this way:
 
-```text
+```ruby
 render "show.slang", path: "views/products"
 ```
 
 ### Ways to render
 
-```text
+```ruby
 render "index.slang" path: "views/admin/books"
 render "show.slang", layout: "new_layout.slang")
 render "edit.html.erb" path: "books"
@@ -51,7 +51,7 @@ render partial: "_form.slang"
 
 This is the view template you would like to render, this could be of `slang`, `ecr`, `mustache`, or `temel`
 
-```text
+```ruby
 render template: "edit.ecr"
 render template: "edit.html.ecr"
 render template: "edit.html.slang"
@@ -63,13 +63,13 @@ With most of the options to render, the rendered content is displayed as part of
 
 You can use the :layout option to tell Rails to use a specific file as the layout for the current action:
 
-```text
+```ruby
 render("show.slang", layout: "new_layout.slang")
 ```
 
 You can also tell Rails to render with no layout at all:
 
-```text
+```ruby
 render("show.slang", layout: false)
 ```
 
@@ -77,7 +77,7 @@ render("show.slang", layout: false)
 
 The render method is configured to look in the "src/views" path to keep the controllers simple. You may also render with a layout which will look for this in the "src/views/layouts" directory.
 
-```text
+```ruby
 class HomeController < ApplicationController
   LAYOUT = "application.slang"
 
@@ -136,7 +136,7 @@ Amber also provides several ways to more precisely assign specific layouts to in
 
 You can override the default layout conventions in your controllers by using the layout declaration. For example:
 
-```text
+```ruby
 class ProductsController < ApplicationController
   LAYOUT = "inventory.slang"
   #...
@@ -167,7 +167,7 @@ That code will pull in the partial from `app/views/shared/_menu.html.ecr`.
 
 One way to use partials is to treat them as the equivalent of subroutines: as a way to move details out of a view so that you can grasp what's going on more easily. For example, you might have a view that looked like this:
 
-```text
+```markup
 <%= render "shared/ad_banner" %>
 <h1>Products</h1>
 <p>Here are a few of our fine products:</p>

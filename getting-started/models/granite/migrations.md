@@ -70,7 +70,7 @@ Sometimes you need to pre-populate your tables with data. This is common if you 
 
 You can do this by creating a `db/seeds.cr` file
 
-```text
+```ruby
 require "../config/application.cr"
 
 user = User.new

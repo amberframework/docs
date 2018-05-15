@@ -4,7 +4,7 @@
 
 `belongs_to` and `has_many` macros provide a rails like mapping between Objects.
 
-```text
+```ruby
 class User < Granite::ORM::Base
   adapter mysql
 
@@ -18,7 +18,7 @@ end
 
 This will add a `posts` instance method to the user which returns an array of posts.
 
-```text
+```ruby
 class Post < Granite::ORM::Base
   adapter mysql
 
@@ -33,7 +33,7 @@ This will add a `user` and `user=` instance method to the post.
 
 For example:
 
-```text
+```ruby
 user = User.find 1
 user.posts.each do |post|
   puts post.title
@@ -48,7 +48,7 @@ post.save
 
 In this example, you will need to add a `user_id` and index to your posts table:
 
-```text
+```sql
 CREATE TABLE posts (
   id BIGSERIAL PRIMARY KEY,
   user_id BIGINT,
@@ -66,7 +66,7 @@ Instead of using a hidden many-to-many table, Granite recommends always creating
 
 Then you can use the `belongs_to` and `has_many` relationships going both ways.
 
-```text
+```ruby
 class User < Granite::ORM::Base
   has_many :participants
 
@@ -89,7 +89,7 @@ The Participant class represents the many-to-many relationship between the Users
 
 Here is what the database table would look like:
 
-```text
+```sql
 CREATE TABLE participants (
   id BIGSERIAL PRIMARY KEY,
   user_id BIGINT,
@@ -106,7 +106,7 @@ CREATE INDEX 'room_id_idx' ON TABLE participants (room_id);
 
 As a convenience, we provide a `through:` clause to simplify accessing the many-to-many relationship:
 
-```text
+```ruby
 class User < Granite::ORM::Base
   has_many :participants
   has_many :rooms, through: participants
@@ -129,7 +129,7 @@ end
 
 This will allow you to find all the rooms that a user is in:
 
-```text
+```ruby
 user = User.first
 user.rooms.each do |room|
   puts room.name
@@ -138,7 +138,7 @@ end
 
 And the reverse, all the users in a room:
 
-```text
+```ruby
 room = Room.first
 room.users.each do |user|
   puts user.name

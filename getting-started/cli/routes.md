@@ -1,33 +1,14 @@
+---
+description: Defect in production? Works in my machine...
+---
+
 # Routes
+
+## `amber routes`
 
 The `amber routes` command returns all of your routes in a pretty table format.
 
-## Example
+## Example Usage
 
-```text
-~/crystal/amberdemo  ᐅ amber routes
-╔════════╦══════════════════╦═════════╦══════════╦═══════╦════════════════╗
-║ Verb   | Controller       | Action  | Pipeline | Scope | URI Pattern    ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ get    | StaticController | index   | static   |       | /*             ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ get    | PetController    | index   | web      |       | /pets          ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ get    | PetController    | show    | web      |       | /pets/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ get    | PetController    | new     | web      |       | /pets/new      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ get    | PetController    | edit    | web      |       | /pets/:id/edit ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ post   | PetController    | create  | web      |       | /pets          ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ patch  | PetController    | update  | web      |       | /pets/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ put    | PetController    | update  | web      |       | /pets/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ delete | PetController    | destroy | web      |       | /pets/:id      ║
-╠────────┼──────────────────┼─────────┼──────────┼───────┼────────────────╣
-║ get    | HomeController   | index   | web      |       | /              ║
-╚════════╩══════════════════╩═════════╩══════════╩═══════╩════════════════╝
-```
+![Amber Routes Table](../../.gitbook/assets/screenshot_20180515_150328.png)
 

@@ -6,7 +6,7 @@ Filters are inherited, so if you set a filter on`ApplicationController`, it will
 
 "before" filters may halt the request cycle. A common "before" filter is one which requires that a user is logged in for an action to be run. You can define the filter method this way:
 
-```text
+```ruby
 # Filters are methods that are run "before", "after" a controller action.
 before_action do
   # runs for specified actions

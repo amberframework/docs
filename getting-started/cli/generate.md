@@ -1,8 +1,12 @@
+---
+description: One day to design and code...
+---
+
 # Generate
 
 The generators in amber are a great way to get an application up and running quickly. In addition, they help keep code consistent and following convention.
 
-## Usage
+## Example Usage
 
 You can always see the available generators by running `amber generate` as below:
 
@@ -33,10 +37,10 @@ See [Scaffolding](generate.md###scaffolding) below for full example.
 
 Examples of Usage
 
-* [Scaffolding](generate.md###scaffolding)
-* [Auth](generate.md###auth)
-* [Model](generate.md###model)
-* [Controller](generate.md###controller)
+* [Scaffolding](generate.md#scaffolding)
+* [Auth](generate.md#auth)
+* [Model](generate.md#model)
+* [Controller](generate.md#controller)
 
 ### Scaffolding
 
@@ -124,5 +128,5 @@ new       src/controllers/person_controller.cr
 
 ## Recipes
 
-Recipes are available to generate Scaffolding, Controller and Model artifacts in ways that vary from the standard built in generator. See the **Recipes** option of the **Command Line Tool** for more information about using recipes to generate applications.
+Recipes are available to generate Scaffolding, Controller and Model artifacts in ways that vary from the standard built in generator. See the `--recipes` option of the Command Line Tool for more information about using recipes to generate applications.
 

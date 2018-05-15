@@ -4,7 +4,7 @@ There is support for callbacks on certain events.
 
 Here is an example:
 
-```text
+```ruby
 require "granite_orm/adapter/pg"
 
 class Post < Granite::ORM
@@ -28,23 +28,23 @@ You can register callbacks for the following events:
 
 ## Create
 
-* before\_save
-* before\_create
-* **save**
-* after\_create
-* after\_save
+* `before_save`
+* `before_create`
+* `save`
+* `after_create`
+* `after_save`
 
 ## Update
 
-* before\_save
-* before\_update
-* **save**
-* after\_update
-* after\_save
+* `before_save`
+* `before_update`
+* `save`
+* `after_update`
+* `after_save`
 
 ## Destroy
 
-* before\_destroy
-* **destroy**
-* after\_destroy
+* `before_destroy`
+* `destroy`
+* `after_destroy`
 

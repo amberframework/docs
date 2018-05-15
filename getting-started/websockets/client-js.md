@@ -1,8 +1,10 @@
-# Client-js
+# JavaScript Client
 
-For use with web based applications, a javascript library \(`amber.js`\) is included.
+## Example Usage
 
-Create a single connection to the server:
+For use with web based applications, a JavaScript library \(`amber.js`\) is included.
+
+### Create a single connection to the server
 
 ```javascript
 let socket = new Amber.Socket('/chat')
@@ -10,14 +12,14 @@ socket.connect() # returns a promise
   .then(() => {})
 ```
 
-Join a channel:
+### Join a channel
 
 ```javascript
 let channel = socket.channel('chat_room:123')
 channel.join()
 ```
 
-Subscribe to events / messages:
+### Subscribe to events / messages
 
 ```javascript
 channel.on('message_new', (message) => {
@@ -27,7 +29,7 @@ channel.on('message_new', (message) => {
 channel.on('user_join', (message) => {})
 ```
 
-Seng events / messages:
+### Send events / messages
 
 ```javascript
 channel.push('message_new', { message: 'amber websockets is the bomb diggity!' })

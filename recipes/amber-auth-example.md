@@ -1,9 +1,13 @@
+---
+description: I didn't choose security. Security chose me.
+---
+
 # Amber Auth Example
 
 **Prerequisites**
 
 * Familiar with MVC and terms such as Migrations, Database
-* Amber Framework CLI already installed \([Installation Instructions](https://github.com/amberframework/online-docs/tree/77946b0fbe0e43bff1a43e42ac904d10ff436067/guides/getting-started/Installation/README.md#installation)\)
+* Amber Framework CLI already installed \([Installation Instructions](../getting-started/installation.md)\)
 * Terminal console
 
 ## Overview
@@ -16,21 +20,29 @@ Virtually all web applications require a registering and authenticating users. A
 
 First, we generate our app by typing the following command in a terminal console.
 
-`amber new blogsy --deps -d sqlite`
+```bash
+amber new blogsy --deps -d sqlite
+```
 
-> Note: The `--deps` will automatically install project dependencies. `-d sqlite` builds the project with a sqlite database.
+{% hint style="info" %}
+The `--deps` will automatically install project dependencies. `-d sqlite` builds the project with a SQLite database.
+{% endhint %}
 
 ### 2. Go to your project directory
 
 Commands are performed within the root directory of our project.
 
-`cd blogsy`
+```bash
+cd blogsy
+```
 
 ### 3. Scaffold the User Authentication
 
 Next, we will scaffold our authentication system. The scaffold will generate several files to build a basic authentication system.
 
-`amber g auth User`
+```bash
+amber g auth User
+```
 
 The above command will give you the following output:
 
@@ -56,7 +68,9 @@ The above command will give you the following output:
 
 To finalize installing the generated authentication system, we have to migrate the database.
 
-`amber db create migrate`
+```text
+amber db create migrate
+```
 
 ```text
 08:52:25 (INFO) Database    | Created database blogsy_development
@@ -66,21 +80,22 @@ To finalize installing the generated authentication system, we have to migrate t
 
 Now we can run our local development server and see our working authentication system.
 
-`amber w`
+```text
+amber watch
+```
 
 ```text
 08:53:52 Watcher    | Terminating app Blogsy...
 08:53:52 Watcher    | Compiling Blogsy...
 08:53:52 Watcher    | Building project Blogsy...
-
-08:54:05 (INFO) Server    | [Amber 0.6.1] serving application "Blogsy" at http://0.0.0.0:3000
-08:54:05 (INFO) Server    | Server started in development.
-08:54:05 (INFO) Server    | Startup Time 00:00:00.000596000
+08:54:05 Server     | [Amber 0.6.1] serving application "Blogsy" at http://0.0.0.0:3000
+08:54:05 Server     | Server started in development.
+08:54:05 Server     | Startup Time 00:00:00.000596000
 ```
 
 ### 4. Sign up and Sign in Pages
 
-To see the signup page visit `http://0.0.0.0:3000/signup`
+To see the signup page visit [http://0.0.0.0:3000/signup](http://0.0.0.0:3000/signup)
 
 ## Recap
 

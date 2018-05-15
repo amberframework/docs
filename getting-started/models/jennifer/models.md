@@ -1,8 +1,8 @@
 # Models
 
-Several model examples
+## Several model examples
 
-```text
+```ruby
 class Contact < Jennifer::Model::Base
   with_timestamps
   mapping(
@@ -153,7 +153,7 @@ Automatically model is associated with table with underscored pluralized class n
 
 Singl table inheritance could be used in next way:
 
-```text
+```ruby
 class Profile < Jennifer::Model::Base
   mapping(
     id: {type: Int32, primary: true},
@@ -188,7 +188,7 @@ Subclass extends superclass definition with new fields and use string fild `type
 
 Also you can specify prepared query statement.
 
-```text
+```ruby
 scope :query_name { where { c("some_field") > 10 } }
 scope :query_with_arguments { |a, b| where { (c("f1") == a) && (c("f2").in(b) } }
 ```
@@ -200,7 +200,7 @@ As you can see arguments are next:
 
 Also they are chainable, so you could do:
 
-```text
+```ruby
 ModelName.all.where { _some_field > 1 }
          .query_with_arguments("done", [1,2])
          .order(f1: :asc).no_argument_query
@@ -235,7 +235,7 @@ All relation macroses provide next methods:
 
 This allows dynamically adds objects to relations with automacially settting foreign id:
 
-```text
+```ruby
 contact = Contact.all.find!
 contact.add_addresses({:main => true, :street => "some street", :details => nil})
 
@@ -279,7 +279,7 @@ They accept method names.
 
 To destroy object use `#delete` \(is called withoud callback\) or `#destroy`. To destroy several objects by their ids use class method:
 
-```text
+```ruby
 ids = [1, 20, 18]
 Contact.destroy(ids)
 Address.delete(1)
@@ -303,7 +303,7 @@ My favorite part. Jennifer allows you to build lazy evaluated queries with chain
 
 Object could be retrieved by id using `find` \(returns `T?`\) and `find!` \(returns `T` or raise `RecordNotFound` exception\) methods.
 
-```text
+```ruby
 Contact.find!(1)
 ```
 
@@ -311,15 +311,15 @@ Contact.find!(1)
 
 `all` retrieves everything \(only at the beginning; creates empty request\)
 
-```text
+```ruby
 Contact.all
 ```
 
 Specifying where clause is really flexible. Method accepts block which represents where clause of request \(or it's part - you can chain several `where` and they will be concatenated using `AND`\).
 
-To specify field use `c` method which accepts string as field name. As I've mentioned after declaring model attributes, you can use their names inside of block: `_field_name` if it is for current table and `ModelName._field_name` if for another model. Also there you can specify attribute of some model or table using underscores: `_some_model_or_table_name__field_name` - model/table name is separated from field name by "_\_". You can specify relation in space of which you want to declare condition using double _ at the beginning and block. Several examples:
+To specify field use `c` method which accepts string as field name. As I've mentioned after declaring model attributes, you can use their names inside of block: `_field_name` if it is for current table and `ModelName._field_name` if for another model. Also there you can specify attribute of some model or table using underscores: `_some_model_or_table_name__field_name` - model/table name is separated from field name by "_\_". You can specify relation in space of which you want to declare condition using double_  at the beginning and block. Several examples:
 
-```text
+```ruby
 Contact.where { c("id") == 1 }
 Contact.where { _id == 1 }
 Contact.all.join(Address) { Contact._id == _contact_id }
@@ -328,7 +328,7 @@ Contact.all.relation(:addresses).where { __addresses { _id > 1 } }
 
 Also you can use `primary` to mention primary field:
 
-```text
+```ruby
 Passport.where { primary.like("%123%") }
 ```
 
@@ -368,7 +368,7 @@ And postgres specific:
 
 To specify exact sql query use `#sql` method:
 
-```text
+```ruby
 # it behaves like regular criteria
 Contact.all.where { sql("age > ?",  [15]) & (_name == "Stephan") }
 ```
@@ -384,7 +384,7 @@ Query will be inserted "as is". Usage of `#sql` allows to use nested plain reque
 
 At the end - several examples:
 
-```text
+```ruby
 Contact.where { (_id > 40) & _name.regexp("^[a-d]") }
 
 Address.where { _contact_id.is(nil) }
@@ -394,7 +394,7 @@ Address.where { _contact_id.is(nil) }
 
 Raw sql for `SELECT` clause could be passed into `#select` method. This have highest priority during forming this query part.
 
-```text
+```ruby
 Contact.all.select("COUNT(id) as count, contacts.name").group("name")
        .having { sql("COUNT(id)") > 1 }.pluck(:name)
 ```
@@ -403,7 +403,7 @@ Contact.all.select("COUNT(id) as count, contacts.name").group("name")
 
 Also you can provide subquery to specify FROM clause \(but be carefull with source fields during result retriving and mapping to objects\)
 
-```text
+```ruby
 Contact.all.from("select * from contacts where id > 2")
 Contacts.all.from(Contact.where { _id > 2 })
 ```
@@ -414,7 +414,7 @@ For now they both are the same - creates delete query with given conditions. `de
 
 It can be only at the end of chain.
 
-```text
+```ruby
 Address.where { _main.not }.delete
 ```
 
@@ -422,7 +422,7 @@ Address.where { _main.not }.delete
 
 To join another table you can use `join` method passing model class or table name \(`String`\) and join type \(default is `:inner`\).
 
-```text
+```ruby
 field = "contact_id"
 table = "passports"
 Contact.all.join(Address) { Contact._id == _contact_id }.join(table) { c(field) == _id }
@@ -432,7 +432,7 @@ Query, built inside of block, will passed to `ON` section of `JOIN`. Current con
 
 Also there is two shortcuts for left and right joins:
 
-```text
+```ruby
 Contact.all.left_join(Address) { _contacts__id == _contact_id }
 Contact.all.right_join("addresses") { _contacts__id == c("contact_id") }
 ```
@@ -443,7 +443,7 @@ Contact.all.right_join("addresses") { _contacts__id == c("contact_id") }
 
 To join model relation \(has\_many, belongs\_to and has\_one\) pass it's name and join type:
 
-```text
+```ruby
 Contact.all.relation("addresses").relation(:passport, type: :left)
 ```
 
@@ -451,7 +451,7 @@ Contact.all.relation("addresses").relation(:passport, type: :left)
 
 To preload some relation use `includes` and pass relation name:
 
-```text
+```ruby
 Contact.all.includes("addresses")
 ```
 
@@ -459,13 +459,13 @@ If there are several includes with same table - Jennifer will auto alias tables.
 
 ### Group
 
-```text
+```ruby
 Contact.all.group("name", "id").pluck(:name, :id)
 ```
 
 `#group` allows to add columns for `GROUP BY` section. If passing arguments are tuple of strings or just one string - all columns will be parsed as current table columns. If there is a need to group on joined table or using fields from several tables use next:
 
-```text
+```ruby
 Contact.all.relation("addresses").group(addresses: ["street"], contacts: ["name"])
        .pluck("addresses.street", "contacts.name")
 ```
@@ -474,7 +474,7 @@ Here keys should be _table names_.
 
 ### Having
 
-```text
+```ruby
 Contact.all.group("name").having { _age > 15 }
 ```
 
@@ -482,7 +482,7 @@ Contact.all.group("name").having { _age > 15 }
 
 ### Exists
 
-```text
+```ruby
 Contact.where { _age > 42 }.exists? # returns true or false
 ```
 
@@ -490,7 +490,7 @@ Contact.where { _age > 42 }.exists? # returns true or false
 
 ### Distinct
 
-```text
+```ruby
 Contant.all.distinct("age") # returns array of ages (Array(DB::Any | Int16 | Int8))
 ```
 
@@ -502,58 +502,58 @@ There are 2 types of aggregation functions: ones which are orking without GROUP 
 
 ### Max
 
-```text
+```ruby
 Contact.all.max(:name, String)
 ```
 
 ### Min
 
-```text
+```ruby
 Contact.all.min(:age, Int32)
 ```
 
 ### Avg
 
-```text
+```ruby
 Contact.all.avg(:age, Float64) # mysql specific
 Contact.all.avg(:age, PG::Numeric) # Postgres specific
 ```
 
 ### Sum
 
-```text
+```ruby
 Contact.all.sum(:age, Float64) # mysql specific
 Contact.all.sum(:age, Int64) # postgre specific
 ```
 
 ### Count
 
-```text
+```ruby
 Contact.all.count
 ```
 
 ### Group Max
 
-```text
+```ruby
 Contact.all.group(:gender).group_max(:age, Int32)
 ```
 
 ### Group Min
 
-```text
+```ruby
 Contact.all.group(:gender).group_min(:age, Int32)
 ```
 
 ### Group Avg
 
-```text
+```ruby
 Contact.all.avg(:age, Float64) # mysql specific
 Contact.all.avg(:age, PG::Numeric) # Postgres specific
 ```
 
 ### Group Sum
 
-```text
+```ruby
 Contact.all.group(:gender).group_sum(:age, Float64) # mysql specific
 Contact.all.group(:gender).group_sum(:age, Int64) # postgre specific
 ```
@@ -562,7 +562,7 @@ Contact.all.group(:gender).group_sum(:age, Int64) # postgre specific
 
 For now you can only specify `limit` and `offset`:
 
-```text
+```ruby
 Contact.all.limit(10).offset(10)
 ```
 
@@ -570,7 +570,7 @@ Contact.all.limit(10).offset(10)
 
 You can specifies orders to sort:
 
-```text
+```ruby
 Contact.all.order(name: :asc, id: "desc")
 ```
 
@@ -580,7 +580,7 @@ It accepts hash as well.
 
 You can provide hash or named tuple with new field values:
 
-```text
+```ruby
 Contact.all.update(age: 1, name: "Wonder")
 ```
 
@@ -592,20 +592,20 @@ As was said Jennifer provide lazy query evaluation so it will be performed only 
 
 To extract only some fields rather then entire objects use `pluck`:
 
-```text
+```ruby
 Contact.all.pluck(:id, "name")
 ```
 
 It returns array of values if only one field was given and array of arrays if more. It accepts raw sql arguments so be care when using this with joining tables with same field names. But this allows to retrieve some custom data from specified select clause.
 
-```text
+```ruby
 Contact.all.select("COUNT(id) as count, contacts.name").group("name")
        .having { sql("COUNT(id)") > 1 }.pluck(:count)
 ```
 
 To load relations using same query joins needed tables \(yep you should specify join on condition by yourself again\) and specifies all needed relations in `with` \(relation name not table\).
 
-```text
+```ruby
 Contact.all.left_join(Address) { _contacts__id == _contact_id }.with(:addresses)
 ```
 
@@ -613,7 +613,7 @@ Contact.all.left_join(Address) { _contacts__id == _contact_id }.with(:addresses)
 
 Transaction mechanism provides block-like syntax:
 
-```text
+```ruby
 Jennifer::Adapter.adapter.transaction do |tx|
   Contact.create({:name => "Chose", :age => 20})
 end
@@ -627,7 +627,7 @@ Transaction lock connection for current fiber avoiding grepping new one from poo
 
 To truncate entire table use:
 
-```text
+```ruby
 Jennifer::Adapter.adapter.truncate("contacts")
 # or
 Jennifer::Adapter.adapter.truncate(Contact)
@@ -643,7 +643,7 @@ This functionality could be useful to clear db between test cases.
 
 The fastest way to rollback all changes in DB after test case - transaction. So add:
 
-```text
+```ruby
 Spec.before_each do
   Jennifer::Adapter.adapter.begin_transaction
 end
@@ -655,5 +655,7 @@ end
 
 to your `spec_helper.cr`. Also just regular deleting or truncation could be used but transaction provide 15x speed up \(at least for postgres; mysql gets less impact\).
 
-> This functions can be safely used only under test environment.
+{% hint style="info" %}
+This functions can be safely used only under test environment.
+{% endhint %}
 

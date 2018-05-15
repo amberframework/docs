@@ -1,8 +1,10 @@
 # Mailers
 
+## Example Usage
+
 The mailer has the ability to set the`from`,`to`,`cc`,`bcc`,`subject`and`body`. You may use the`render`helper to create the body of the email.
 
-```text
+```ruby
 class WelcomeMailer < Quartz::Mailer
   def initialize
     super
@@ -18,9 +20,11 @@ class WelcomeMailer < Quartz::Mailer
 end
 ```
 
+### Deliver a new email
+
 To delivery a new email:
 
-```text
+```ruby
 mailer = WelcomeMailer.new
 mailer.deliver(name, email)
 ```

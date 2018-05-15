@@ -4,7 +4,7 @@
 
 All database errors are added to the `errors` array used by Granite::ORM::Validators with the symbol ':base'
 
-```text
+```ruby
 post = Post.new
 post.save
 post.errors[0].to_s.should eq "ERROR: name cannot be null"
@@ -20,11 +20,13 @@ PS: Failing the validation does not prevent the object from being persisted\(sav
 
 ### To validate whole object
 
-`validate(message : String, block)`
+```ruby
+validate(message : String, block)
+```
 
 Example:
 
-```text
+```ruby
 require "granite_orm/adapter/sqlite"
 
 class Comment < Granite::ORM::Base
@@ -42,11 +44,13 @@ end
 
 ### To validate a field in an object
 
-`validate(name : Symbol, message : String, block)`
+```ruby
+validate(name : Symbol, message : String, block)
+```
 
 Example:
 
-```text
+```ruby
 require "granite_orm/adapter/sqlite"
 
 class Comment < Granite::ORM::Base

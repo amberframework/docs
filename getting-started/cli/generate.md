@@ -29,14 +29,14 @@ $ amber generate [TYPE] MultiWordName [FIELD1 FIELD2 ...]
 $ amber generate [TYPE] multi_word_name [FIELD1 FIELD2 ...]
 ```
 
-See [Scaffolding](generate.md###scaffolding) below for full example.
+See [Scaffolding](generate.md#scaffolding) below for full example.
 
 Examples of Usage
 
-* [Scaffolding](generate.md###scaffolding)
-* [Auth](generate.md###auth)
-* [Model](generate.md###model)
-* [Controller](generate.md###controller)
+* [Scaffolding](generate.md#scaffolding)
+* [Auth](generate.md#auth)
+* [Model](generate.md#model)
+* [Controller](generate.md#controller)
 
 ### Scaffolding
 

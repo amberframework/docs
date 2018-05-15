@@ -84,7 +84,7 @@ can quit without saving to abort, or you can save and quit, which will cause amb
 to run the code. Specifying a value for the `--back` option allows you to go _n_
 scripts back and edit+run that script.
 
-### Example:
+### Example
 ```
 $ amber exec -e nano -b 1
 (nano opens the previous script that was edited + run in editor mode)
@@ -100,13 +100,15 @@ The argument must be a string ending in .cr, and must correspond with a file tha
 
 The file then opens in edit mode. The changes you make will **not** modify the original source file, but they will be used when `amber exec` runs the code and saved as a `./tmp/{timestamp}_console.cr` file.
 
-### Example:
-```crystal
+### Example
+
+```ruby
 # ./cool_stuff.cr
 statement = "cool stuff happened"
 emoticon = "^_^"
 puts "#{statement} #{emoticon}"
 ```
+
 ```shell
 $ amber exec cool_script.cr
 # vim or another editor opens

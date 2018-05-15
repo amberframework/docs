@@ -128,5 +128,5 @@ new       src/controllers/person_controller.cr
 
 ## Recipes
 
-Recipes are available to generate Scaffolding, Controller and Model artifacts in ways that vary from the standard built in generator. See the `--recipes` option of the Command Line Tool for more information about using recipes to generate applications.
+Recipes are available to generate Scaffolding, Controller and Model artifacts in ways that vary from the standard built in generator. See the [Recipes](recipes.md) option of the Command Line Tool for more information about using recipes to generate applications.
 

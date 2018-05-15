@@ -1,4 +1,4 @@
-# Amber Generator Recipes
+# Recipes
 
 Amber generators can use a recipe to generate your application, and scaffold your
 application with controllers, models and views.  Using a recipe you can get started
@@ -68,17 +68,17 @@ Updating https://github.com/luislavena/radix.git
 ... [clipped]
 Installing garnet_spec (0.1.1)
 Installing selenium (0.3.0)
-$ amber run &
-[1] 65034
-💎  Crystalizing...
-microsecond-blog
-$ 💎  Crystalization complete!
-I, [2017-11-14 10:05:58 -0800 #65094]  INFO -- : [Amber 0.3.0] serving application "microsecond-blog" at http://0.0.0.0:3000
-I, [2017-11-14 10:05:58 -0800 #65094]  INFO -- : Server started in development.
-I, [2017-11-14 10:05:58 -0800 #65094]  INFO -- : Startup Time 00:00:00.0013140
-$ open http://localhost:3000
-200  | GET  "/"  | 294.0µs
-Params:
+$ amber watch
+02:58:23 Watcher    | (INFO) Watching 22 files (server reload)...
+02:58:23 Watcher    | (INFO) Building project App01...
+02:58:31 Watcher    | (INFO) Terminating app App01...
+02:58:31 Watcher    | (INFO) Starting App01...
+02:58:31 NodeJS     | (INFO) Installing dependencies...
+02:58:31 NodeJS     | (INFO) Watching public directory
+02:58:31 Server     | (INFO) Amber 0.7.2 serving application "App01" at http://0.0.0.0:3000
+02:58:31 Server     | (INFO) Server started in development.
+02:58:31 Server     | (INFO) Startup Time 00:00:00.000182000
+02:58:31 Watcher    | Watching 10 client files...
 ```
 
 # Amber Generate Command

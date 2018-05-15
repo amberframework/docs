@@ -6,17 +6,6 @@ description: That feeling you get when that right tool did all the work
 
 Amber CLI offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** your projects easily and fast.
 
-## From Source
-
-Download and install `amber`
-
-```bash
-curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
-cd amber-stable/
-make
-sudo make install
-```
-
 ## Linux
 
 Ensure you have the necessary dependencies:
@@ -27,6 +16,17 @@ Ensure you have the necessary dependencies:
 * **PostgreSQL:** `postgres` is a relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the flag `--database mysql` when creating a new application.
 
 Once you have these dependencies, You can build the `amber` tool from source:
+
+### From Source
+
+Download and install `amber`
+
+```bash
+curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
+cd amber-stable/
+make
+sudo make install
+```
 
 If you run into an issue on compiling regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
 

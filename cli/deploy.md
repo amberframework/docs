@@ -28,5 +28,4 @@ Options:
 
 ## Example Usage
 
-* [See deploy example video](https://www.youtube.com/watch?v=EhOPNKNjdBw)
-
+{% page-ref page="../deployments/README.md" %}

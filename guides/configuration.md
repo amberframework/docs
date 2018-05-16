@@ -18,25 +18,25 @@ To get the current amber environment just type `Amber.env.to_s`. You can also ch
 
 ## Setting the current environment
 
-Amber sets the current environment based on the `AMBER_ENV` environment variable. The default environment is development.
+Amber sets the current environment based on the `AMBER_ENV` environment variable. The default environment is `development`.
 
 ## Configuring Amber
 
-All amber project have a directory called `{project_name}/config/` in this directory you will find
+All amber project have a directory called `config/` in this directory you will find
 
 ### Initializers
 
 You can use initializers to hold configuration settings that should be made after all of the frameworks and shards are loaded, such as options to configure settings for these parts.
 
-* `{project_name}/config/initializers` place any initializer file here to load at runtime.
+`config/initializers`place any initializer file here to load at runtime.
 
 ### Environments
 
-* `{project_name}/config/environments` all your environment YAML configuration files live here, these files get loaded based on the `AMBER_ENV` value. For example `AMBER_ENV=staging` then this will expect a `{project_name}/config/environments/staging.yml` file to exist.
+`config/environments` all your environment YAML configuration files live here, these files get loaded based on the `AMBER_ENV` value. For example `AMBER_ENV=staging` then this will expect a `config/environments/staging.yml` file to exist.
 
 ### Application.cr
 
-* `{project_name}/config/application.cr` this is the main entry file for amber application files and it allows you to overwrite setting based on dynamic values, it makes it possible to use environment variables as your settings.
+`config/application.cr` this is the main entry file for amber application files and it allows you to overwrite setting based on dynamic values, it makes it possible to use environment variables as your settings.
 
 ```ruby
 Amber::Server.configure do |app|
@@ -61,7 +61,7 @@ secrets:
 
 With Amber you can encrypt your environment setting `amber encrypt {envrionment}`, this command will open your editor to allow make changes if needed and then encrypt the file `{envrionment}.enc`.
 
-A `{project_name}/.encryption_key` file is provided. It contains a secret\_key\_base that is used to decrypt your encrypted environment settings. This file is added to `.gitignore` so it will not be committed to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
+A `.encryption_key` file is provided. It contains a secret\_key\_base that is used to decrypt your encrypted environment settings. This file is added to `.gitignore` so it will not be committed to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
 
 {% hint style="danger" %}
 **Never commit the encryption key!**

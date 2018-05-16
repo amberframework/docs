@@ -8,7 +8,7 @@ To verify you have Amber installed, run the command `amber -v` in your terminal 
 
 ```bash
 $ amber -v
-Amber CMD (amberframework.org) - v0.2.6
+Amber CLI (amberframework.org) - vX.Y.Z
 ```
 
 ## Bootstrap an Application

@@ -39,17 +39,17 @@ Now install project dependencies with `shards install`:
 
 ```bash
 $ shards install
-Installing amber (0.2.6)
-Installing radix (master)
-Installing kilt (0.3.3)
-Installing slang (master)
+Using amber (0.7.2)
+Using amber_router (0.0.3)
+Using cli (0.7.0)
+Using optarg (0.5.8)
+Using callback (0.6.3)
+Using string_inflection (0.2.1)
+Using compiled_license (0.1.3)
 ...
-Installing sqlite3 (0.8.2)
-Installing granite_orm (0.7.3)
-Installing quartz-mailer (0.1.0)
-Installing smtp (master)
-Installing jasper_helpers (0.1.5)
-Installing amber_spec (0.1.1)
+Using jasper_helpers (0.2.0)
+Using garnet_spec (0.1.1)
+Using selenium (0.3.0)
 ```
 
 ## Creating the database

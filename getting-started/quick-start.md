@@ -7,7 +7,7 @@ It will take us just 7 steps. Let’s get started!
 ## 1. Install dependencies
 
 {% hint style="info" %}
-If you already have `crystal`, `amber`, and a database installed, you can skip this step.
+If you already have `crystal`, `amber`, and a database installed, you can [skip this step](quick-start.md#2-generate-a-new-amber-application).
 {% endhint %}
 
 ### 1.1 Install `crystal` and `amber`

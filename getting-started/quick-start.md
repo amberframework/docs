@@ -134,7 +134,7 @@ amber watch
 
 ## Demo
 
-Hi!, here is a demo and the source code is available on [Github](https://github.com/faustinoaq/pet-tracker).
+Here is a demo and the source code is available on [Github](https://github.com/faustinoaq/pet-tracker).
 
 ![Quick Start Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/quick-start-demo.gif)
 

@@ -119,16 +119,14 @@ Open any browser and goto [http://localhost:3000](http://localhost:3000) You sho
 
 {% page-ref page="../deployment/" %}
 
-{% hint style="info" %}
-List of Commands:
+## List of Commands
 
 ```text
 amber new pet-tracker
 cd pet-tracker
 shards install
-amber generate scaffold Pet name:string breed:string age:integer weight:integer
+amber generate scaffold Pet name:string breed:string age:integer
 amber db create migrate
 amber watch
 ```
-{% endhint %}
 

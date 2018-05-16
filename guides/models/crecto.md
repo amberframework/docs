@@ -379,7 +379,7 @@ user.name!
 user.age!
 ```
 
-**JSON type**
+### **JSON type**
 
 {% hint style="warning" %}
 PostgreSQL only

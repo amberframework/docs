@@ -82,7 +82,7 @@ amber watch
 
 By default Amber accepts requests on port 3000. If we point our favorite web browser at [http://localhost:3000](http://localhost:3000), we should see the Amber Framework welcome page.
 
-![Amber Framework Welcome](https://raw.githubusercontent.com/amberframework/site-assets/master/images/amber-framework-welcome.png "Oh, yeah!")
+![Oh, yeah!](https://raw.githubusercontent.com/amberframework/site-assets/master/images/amber-framework-welcome.png)
 
 If your screen looks like the image above, congratulations!
 

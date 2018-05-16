@@ -4,11 +4,11 @@ If we need to render a template to html `render("template.slang")` works nicely.
 
 ![Respond\_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
 
-[https://www.youtube.com/watch?v=6KNjWDRUo\_c](https://www.youtube.com/watch?v=6KNjWDRUo_c)
+[See video on Youtube](https://www.youtube.com/watch?v=6KNjWDRUo_c)
 
-**Responding with JSON**
+## Responding with JSON
 
-```text
+```ruby
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -17,9 +17,9 @@ class PetController < ApplicationController
 end
 ```
 
-**Responding with XML**
+## Responding with XML
 
-```text
+```ruby
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -32,7 +32,7 @@ end
 
 **Responding with Text**
 
-```text
+```ruby
 class PetController < ApplicationController
   def index
     pets = Pet.all
@@ -42,9 +42,11 @@ class PetController < ApplicationController
 end
 ```
 
-**Put it all together and you can respond to whatever is asked for.**
+{% hint style="tip" %}
+Put it all together and you can respond to whatever is asked for.
+{% endhint %}
 
-```text
+```ruby
 class PetController < ApplicationController
   def index
     pets = Pet.all

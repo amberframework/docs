@@ -46,11 +46,7 @@ end
 | `#json` | `json` | `json` | `JSON::Any` |
 | `#enum` | `enum` | `enum` | `String` |
 
-Also if you use PostgreSQL array types are available a well:
-
-```text
-Array(Int32), Array(Char), Array(Float32), Array(Float64),Array(Int16), Array(Int32), Array(Int64), Array(String).
-```
+Also if you use PostgreSQL array types are available a well: `Array(Int32)`, `Array(Char)`, `Array(Float32)`, `Array(Float64)`,`Array(Int16)`, `Array(Int32)`, `Array(Int64)`, `Array(String)`.
 
 All of them accepts additional options:
 

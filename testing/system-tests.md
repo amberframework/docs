@@ -18,12 +18,12 @@ With this guide you will learn:
 
 Amber was built with testing in mind. The first time you generate an Amber application using `amber new your_app_name` a `spec` directory is generated. The contents of this directory looks as follow.
 
-* /spec
-  * /controllers
-  * /system
-  * /models
-  * /integrations
-  * /mailers
+* `/spec`
+  * `/controllers`
+  * `/system`
+  * `/models`
+  * `/integrations`
+  * `/mailers`
 
 The `helpers`, `mailers`, and `models` directories are meant to hold tests for view helpers, mailers, and models, respectively. The `controllers` directory is meant to hold tests for controllers, routes, and views. The integration directory is meant to hold tests for interactions between controllers.
 
@@ -35,7 +35,9 @@ By default every Amber application generates with three environments: `developme
 
 Each environment's configuration can be modified similarly. In this case, we can modify our test environment by changing the options found in `config/environments/test.yml`.
 
-> Your tests are run under AMBER\_ENV=test.
+{% hint style="warning" %}
+Your tests are run under AMBER\_ENV=test.
+{% endhint %}
 
 ### System Specs
 

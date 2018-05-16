@@ -8,7 +8,7 @@ It is accessed in much the same way as the session, as a hash.
 
 Let's use the act of logging out as an example. The controller can send a message which will be displayed to the user on the next request:
 
-```text
+```ruby
 class LoginsController < ApplicationController
   def destroy
     session[:current_user_id] = nil
@@ -21,7 +21,7 @@ end
 
 ## Rendering the flash message
 
-```text
+```html
 <html>
   <!-- <head/> -->
   <body>
@@ -38,7 +38,7 @@ end
 
 You can pass anything that the session can store; you're not limited to notices and alerts:
 
-```text
+```html
 <% if flash[:just_signed_up] %>
   <p class="welcome">Welcome to our site!</p>
 <% end %>
@@ -48,7 +48,7 @@ You can pass anything that the session can store; you're not limited to notices 
 
 If you want a flash value to be carried over to another request, use the keep method:
 
-```text
+```ruby
 class MainController < ApplicationController
 
   # Let's say this action corresponds to root URL, but you want
@@ -72,7 +72,7 @@ end
 
 By default, adding values to the flash will make them available to the next request, but sometimes you may want to access those values in the same request. For example, if the create action fails to save a resource and you render the new template directly, that's not going to result in a new request, but you may still want to display a message using the flash. To do this, you can use flash.now in the same way you use the normal flash.
 
-```text
+```ruby
 class ClientsController < ApplicationController
   def create
     @client = Client.new(params[:client])

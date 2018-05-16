@@ -33,7 +33,7 @@ end
 
 `Amber::WebSockets::ClientSocket` provides a public class method `broadcast` for publishing messages to all subscribers of a topic from within controllers or anywhere else in your application.
 
-```text
+```ruby
 class HomeController < ApplicationController
   def index
     ChatSocket.broadcast("message", "chat_room:123", "message_new", {"message" => "A new visitor!"})

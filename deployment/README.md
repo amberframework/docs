@@ -15,6 +15,3 @@ Guides for other platforms like Amazon Web Services \(AWS\), Google Compute Engi
 {% page-ref page="digital-ocean.md" %}
 
 {% page-ref page="heroku.md" %}
-
-
-

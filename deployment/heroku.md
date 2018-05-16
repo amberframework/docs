@@ -1,10 +1,12 @@
-# Deploying Amber to Heroku
+# Deploying to Heroku
 
 If you haven't done so please read the guides to install the [Amber CLI](/getting-started/installation/heroku.md)
 
 ## The Amber Heroku Buildpack
 
-> Based on [Crystal Heroku Buildpack](https://github.com/crystal-lang/heroku-buildpack-crystal)
+{% hint style="info" %}
+Based on [Crystal Heroku Buildpack](https://github.com/crystal-lang/heroku-buildpack-crystal)
+{% endhint %}
 
 You can create an app in Heroku with Amber buildpack by running the following command:
 
@@ -20,10 +22,11 @@ application root directory with the version that should be used (e.g. `0.23.1`).
 
 In order for the buildpack to work properly you should have a `shard.yml` file,as it is how it will detect that your app is a Crystal app. Your application has to listen on a port defined by Heroku.
 
+{% hint style="warning" %}
+In Amber versions less than or equal to 0.3.7 add the following code to your `config/application.cr` file
+{% endhint %}
 
-_NOTE: In Amber versions less than or equal to 0.3.7 add the following code to your `config/application.cr` file:_**
-
-```crystal
+```ruby
 Amber::Server.configure do |settings|
   settings.host = "0.0.0.0"
   settings.port = ENV["PORT"].to_i if ENV["PORT"]?
@@ -32,7 +35,9 @@ end
 
 To be able to decrypt and use production environment you'll need to set `ENV["AMBER_ENCRYPTION_KEY"]` to the value of your local projects `.encryption_key` file.
 
-> IMPORTANT: Never add `.encryption_key` to github. Amber adds it by default to your `.gitignore` file.
+{% hint style="danger" %}
+Never add `.encryption_key` to github. Amber adds it by default to your `.gitignore` file.
+{% endhint %}
 
 All that's left is to create a git repository, add the Heroku remote and push it there.
 
@@ -54,13 +59,15 @@ To run an amber command just on heroku do the following:
 heroku run bin/amber [command]
 ```
 
-> Read more about `heroku run` command https://devcenter.heroku.com/articles/one-off-dynos
+{% hint style="info" %}
+Read more about `heroku run` command https://devcenter.heroku.com/articles/one-off-dynos
+{% endhint %}
 
 ### The Heroku Procfile
 
 To deploy your app to heroku you're going to need a `Procfile`. Create a Procfile at the root of your Amber application and add the following:
 
-```
+```yaml
 release: bin/amber db migrate
 web: bin/{your-app-name}
 ```
@@ -88,9 +95,9 @@ And should output something similar to:
 
 ```
 [OKAY] Loaded ENV .env File as KEY=VALUE Format
-18:50:27 web.1   |  I, [2017-12-20 18:50:27 -0500 #93113]  INFO -- : [Amber 0.3.7] serving application "heroku-app" at http://0.0.0.0:3000
-18:50:27 web.1   |  I, [2017-12-20 18:50:27 -0500 #93113]  INFO -- : Server started in development.
-18:50:27 web.1   |  I, [2017-12-20 18:50:27 -0500 #93113]  INFO -- : Startup Time 00:00:00.0003510
+02:58:31 web.1   | 02:58:31 Server     | (INFO) Amber 0.7.2 serving application "heroku-app" at http://0.0.0.0:3000
+02:58:31 web.1   | 02:58:31 Server     | (INFO) Server started in production.
+02:58:31 web.1   | 02:58:31 Server     | (INFO) Startup Time 00:00:00.000182000
 ```
 
 You're are now all set and ready to deploy with Heroku.

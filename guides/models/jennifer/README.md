@@ -73,7 +73,9 @@ Jennifer::Config.configure do |conf|
 end
 ```
 
-> Note that we pass the AMBER\_ENV to Jennifer::Config.read this will allow Jennifer to use the correct database settings for the environment.
+{% hint style="info" %}
+Note that we pass the AMBER\_ENV to `Jennifer::Config.read` this will allow Jennifer to use the correct database settings for the environment.
+{% endhint %}
 
 #### Create a sam.cr in {project/src}
 

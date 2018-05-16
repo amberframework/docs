@@ -1,8 +1,8 @@
-# Minimal Configuration
+# Minimal Configuration Example
 
 Amber can be run from a single file for minimal configuration setups if the user prefers this for smaller applications.
 
-```text
+```ruby
 require "amber"
 
 class HelloController < Amber::Controller::Base

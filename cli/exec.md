@@ -1,12 +1,12 @@
 # Exec
 
-The `exec` command allows you to run short pieces of code within the amber application scope. Code can be specified in the following three ways: 1. _inline mode_: inline code specified in the command line as a string argument
+The `exec` command allows you to run short pieces of code within the amber application scope. Code can be specified in the following three ways:
 
-* `amber exec User.first`
-  1. _editor mode_: a terminal-based code editor is opened and the resulting code is executed once you save and exit
-* `amber exec`... edit code in Vim... code runs.
-  1. _file mode_: code within an existing .cr file is copied to a tmp file for editing and run once editor is closed.
-* `amber exec scripts/stuff.cr`
+1. _Inline mode:_ inline code specified in the command line as a string argument. `amber exec User.first`
+2. _Editor mode:_ a terminal-based code editor is opened and the resulting code is executed once you save and exit. `amber exec`
+3. _File mode:_ Code within an existing .cr file is copied to a tmp file for editing and run once editor is closed. `amber exec scripts/stuff.cr`
+
+## Usage
 
 Here is a list of the commands available:
 

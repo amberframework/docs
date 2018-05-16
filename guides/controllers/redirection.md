@@ -4,19 +4,19 @@ Often, we need to redirect to a new url in the middle of a request. A successful
 
 Calling **redirect\_to** will halt the request lifecycle.
 
-**Redirect to URL**
+## Redirect to URL
 
 ```ruby
 redirect_to(location: "", status: 302, params: { "key" => "value" }, flash: { "user_id" => "1" })
 ```
 
-**Redirect to Action**
+## Redirect to Action
 
 ```ruby
 redirect_to(action: :index, status: 302, params: { "key" => "value" }, flash: { "user_id" => "1" })
 ```
 
-**Redirect to Controller Action**
+## Redirect to Controller Action
 
 ```ruby
 redirect_to(
@@ -27,7 +27,7 @@ redirect_to(
   flash: { "user_id" => "1" })
 ```
 
-**Redirect Back**
+## Redirect Back
 
 ```ruby
 redirect_back(status: 302, params: { "key" => "value" }, flash: { "user_id" => "1" })

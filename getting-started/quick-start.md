@@ -117,9 +117,11 @@ Open any browser and goto [http://localhost:3000](http://localhost:3000) You sho
 
 ## 7. Deploy your web application
 
-{% page-ref page="deployments/" %}
+{% page-ref page="../deployment/" %}
 
-## List of Commands
+
+{% hint style="tip" %}
+List of Commands:
 
 ```text
 amber new pet-tracker
@@ -129,4 +131,4 @@ amber generate scaffold Pet name:string breed:string age:integer weight:integer
 amber db create migrate
 amber watch
 ```
-
+{% endhint %}

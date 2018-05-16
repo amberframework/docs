@@ -14,11 +14,11 @@ The aim of this introductory guide is to present a brief, high-level overview of
 
 If you’re stuck, there are a number of places you can get help.
 
-* [**GITTER**](https://gitter.im/amberframework/amber) for quick questions.
-* [**STACK OVERFLOW**](https://stackoverflow.com/questions/tagged/amber-framework) for questions about the Crystal Language and Amber Framework.
-* [**GITHUB**](https://github.com/amberframework/amber) for getting acquainted with source code, current issues and progress.
-* [**ONLINE GUIDES**](https://amberframework.gitbook.io/amber) for getting down and dirty working with Amber.
-* [**TWITTER**](https://twitter.com/amberframework) to see latest news and announcements about Amber Framework.
+* [**Gitter**](https://gitter.im/amberframework/amber) for quick questions.
+* [**Stack Overflow**](https://stackoverflow.com/questions/tagged/amber-framework) for questions about the Crystal Language and Amber Framework.
+* [**Github**](https://github.com/amberframework/amber) for getting acquainted with source code, current issues and progress.
+* [**Online Guides**](https://amberframework.gitbook.io/amber) for getting down and dirty working with Amber.
+* [**Twitter**](https://twitter.com/amberframework) to see latest news and announcements about Amber Framework.
 
 ## Contributing
 
@@ -28,5 +28,8 @@ Amber is a community effort and we want You to be part of ours [Join Amber Commu
 
 ## First Steps
 
-Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. If you are new, you should start off with the getting started guide.
+Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. 
 
+If you are new, you should start off with the [guides](guides/README.md).
+
+If you want a step by step tutorial try the [quick start](getting-started/README.md).

@@ -28,5 +28,5 @@ Options:
 
 ## Example Usage
 
-{% page-ref page="../deployments/" %}
+{% page-ref page="../deployment/" %}
 

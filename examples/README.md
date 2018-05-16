@@ -4,5 +4,7 @@
 
 {% page-ref page="crystal-debug-example.md" %}
 
+{% page-ref page="minimal-configuration-example.md" %}
+
 
 

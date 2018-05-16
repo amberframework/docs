@@ -1,6 +1,6 @@
 # Models
 
-Amber is independent of your choice of model architectures. We \(Core members\) have built two ORM models: Granite and Crecto. We also think Jennifer built by Roman Kalnytskyi \([@imdrasil](https://github.com/imdrasil)\) is a good option.
+Amber is independent of your choice of model architectures. We \(Core members\) have built two ORM models: **Granite** and **Crecto**. We also think **Jennifer** built by [Roman Kalnytskyi](https://github.com/imdrasil) is a good option.
 
 When you generate a new amber project, you can specify which model you prefer.
 
@@ -18,9 +18,9 @@ Granite provides a light weight ORM that is focused on taking the results of you
 
 ## Crecto
 
-{% page-ref page="crecto.md" %}
-
 Crecto is based on Phoenix's ecto and follows the repository pattern. Your data objects are data structures to hold the data and then you use a Repo to `Repo.insert`, `Repo.update`, or `Repo.delete` your object in the db. You can use `Repo.all` to query the db, or `Repo.get` to grab a single row.
+
+{% page-ref page="crecto.md" %}
 
 ## Jennifer
 
@@ -28,5 +28,7 @@ Jennifer provides an more full featured ORM with a full featured DSL for queries
 
 {% page-ref page="jennifer/" %}
 
+{% hint style="info" %}
 Of course you are not limited to only these options. You may have a need for a high throughput, large dataset, dynamic structured db like **MongoDB** or you need to connect to a microservice or a legacy mainframe. By not being tied to a specific model, we don't limit the possible integrations you may need.
+{% endhint %}
 

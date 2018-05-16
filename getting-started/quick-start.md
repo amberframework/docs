@@ -10,7 +10,7 @@ It will take us just 7 steps. Let’s get started!
 If you already have `crystal`, `amber`, and a database installed, you can skip this step.
 {% endhint %}
 
-### Install `crystal` and `amber`
+### 1.1 Install `crystal` and `amber`
 
 Instructions for OS X using homebrew and Debian/Ubuntu are below. See full installation instructions [here](https://crystal-lang.org/docs/installation/) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
 
@@ -34,7 +34,7 @@ sudo apt-get install build-essential crystal
 Then install amber \(from source\)
 
 ```text
-sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
+sudo apt-get install libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
 curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
 cd amber-stable/
 shards install
@@ -45,7 +45,7 @@ make install
 Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](../guides/installation.md) for other Linux Distributions
 {% endhint %}
 
-### Install a database
+### 1.2 Install a database
 
 Amber works with `postgresql` \(default\), `mysql`, or `sqlite`.
 
@@ -121,6 +121,8 @@ Open any browser and goto [http://localhost:3000](http://localhost:3000) You sho
 
 ## List of Commands
 
+Yep, just that, now, you can use these commands to create new awesome applications :-\)
+
 ```text
 amber new pet-tracker
 cd pet-tracker
@@ -129,4 +131,10 @@ amber generate scaffold Pet name:string breed:string age:integer
 amber db create migrate
 amber watch
 ```
+
+## Demo
+
+Hi!, here is a demo and the source code is available on [Github](https://github.com/faustinoaq/pet-tracker).
+
+![Quick Start Demo](../.gitbook/assets/quick-start-demo.gif)
 

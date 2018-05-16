@@ -2,11 +2,13 @@
 
 If we need to render a template to html `render("template.slang")` works nicely. A lot of times we want to respond with json, xml, text or something else. In those cases we use `respond_with`.
 
-![Respond\_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
+![respond\_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
 
 [See video on Youtube](https://www.youtube.com/watch?v=6KNjWDRUo_c)
 
-## Responding with JSON
+## Examples Usages
+
+### Responding with JSON
 
 ```ruby
 class PetController < ApplicationController
@@ -17,7 +19,7 @@ class PetController < ApplicationController
 end
 ```
 
-## Responding with XML
+### Responding with XML
 
 ```ruby
 class PetController < ApplicationController
@@ -30,7 +32,7 @@ class PetController < ApplicationController
 end
 ```
 
-**Responding with Text**
+### **Responding with Text**
 
 ```ruby
 class PetController < ApplicationController
@@ -41,6 +43,8 @@ class PetController < ApplicationController
   end
 end
 ```
+
+### Responding to All
 
 {% hint style="info" %}
 Put it all together and you can respond to whatever is asked for.

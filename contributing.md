@@ -6,25 +6,25 @@ Amber is an open source project and we love to receive contributions from our co
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests. These are just guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-### Table of contents
+## Table of contents
 
-[What should I know before I get started?](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#what-should-i-know-before-i-get-started)
+[What should I know before I get started?](contributing.md#what-should-i-know-before-i-get-started)
 
-* [Code of Conduct](https://github.com/amberframework/amber/blob/master/.github/CODE_OF_CONDUCT.md)
-* [Ground Rules](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#ground-rules)
+* [Code of Conduct](code-of-conduct.md)
+* [Ground Rules](contributing.md#ground-rules)
 
-[How Can I Contribute?](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#how-can-i-contribute)
+[How Can I Contribute?](contributing.md#how-can-i-contribute)
 
-* [Reporting Bugs](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#reporting-bugs)
-* [Suggesting Enhancements](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#suggesting-enhancements)
-* [Your First Contribution](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#your-first-contribution)
-* [Pull Requests](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#pull-requests)
+* [Reporting Bugs](contributing.md#how-to-report-a-bug)
+* [Suggesting Enhancements](contributing.md#how-to-suggest-a-feature-or-enhancement)
+* [Your First Contribution](contributing.md#your-first-contribution)
+* [Pull Requests](contributing.md#pull-requests)
 
-[Style Guides](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#style-guides)
+[Style Guides](contributing.md#styles-guides)
 
-* [Coding Style Guides](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#coding-style-guidelines)
-* [Documenting code](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#documenting-code)
-* [Spec Style Guides](https://github.com/amberframework/amber/blob/master/.github/CONTRIBUTING.md#spec-style-guides)
+* [Coding Style Guides](contributing.md#coding-style-guides)
+* [Documenting code](contributing.md#documenting-code)
+* [Spec Style Guides](contributing.md#spec-guides)
 
 ## What should I know before I get started?
 
@@ -32,7 +32,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 Be a law abiding contributor!
 
-This project adheres to the Contributor Covenant[CODE OF CONDUCT](https://github.com/amberframework/amber/blob/master/.github/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to[code of conduct gitter channel](https://gitter.im/amberframework/code_of_conduct)
+This project adheres to the Contributor Covenant [CODE OF CONDUCT](code-of-conduct.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to our [chat group](https://gitter.im/amberframework/amber).
 
 ## How Can I Contribute
 
@@ -46,7 +46,7 @@ Before creating bug reports, please check this list as you might find out that y
 
 **How Do I Submit A \(Good\) Bug Report?**
 
-Bugs are tracked as[GitHub issues](https://github.com/amberframework/amber/issues). After you've determined the cause of the bug, create an issue and provide the following information by filling in the template.
+Bugs are tracked as [GitHub issues](https://github.com/amberframework/amber/issues). After you've determined the cause of the bug, create an issue and provide the following information by filling in the template.
 
 **A good bug report**
 
@@ -101,43 +101,25 @@ Beginner issues - issues which should only require a few lines of code, and a te
 ### Pull Requests
 
 * Fill in the required template
-* Document new code based on the
-
-  [Documenting Code](https://crystal-lang.org/docs/conventions/documenting_code.html)
-
+* Document new code based on the [Documenting Code](https://crystal-lang.org/docs/conventions/documenting_code.html) docs
 * Include thoughtfully-worded, well-structured
-* End files with a newline.
-* Format your code with
-
-  `crystal tool format`
-
+* End files with a newline
+* Format your code with`crystal tool format`
 * Specs Styleguide
 
-## Coding Style Guides
+## Styles Guides
+
+### Coding Style Guides
 
 * [Style Guide](https://crystal-lang.org/docs/conventions/coding_style.html)
 
-## Documenting code
+### Documenting code
 
 * [Documenting Code](https://crystal-lang.org/docs/conventions/documenting_code.html)
 
-## Spec Guides
+### Spec Guides
 
-* Include thoughtfully-worded, well-structured Crystal specs in the
-
-  `./spec`
-
-  folder.
-
-* Treat
-
-  `describe`
-
-  as a noun or situation.
-
-* Teat
-
-  `it`
-
-  as a statement about state or how an operation changes state.
+* Include thoughtfully-worded, well-structured Crystal specs in the`./spec`folder.
+* Treat`describe`as a noun or situation.
+* Teat`it`as a statement about state or how an operation changes state.
 

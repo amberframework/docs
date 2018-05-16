@@ -2,6 +2,8 @@
 
 Amber is a web development framework written in the Crystal language which implements the server-side MVC pattern using the object-oriented paradigm. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Phoenix, Ruby on Rails or Python's Django.
 
+![Amber Framework](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/amber-animated-logo.gif)
+
 Amber aims to deliver developer happiness, productivity, and bare metal performance. The Crystal language is heavily inspired on Ruby delivering familiarity and productivity making it easy to read and write code with a lower learning curve for experienced Ruby developers.
 
 Crystal also has some modern features like macros, concurrency model, union types, c bindings, built in dependency manager. Amber takes advantage of all these features providing you a familiar structure to develop a web application.
@@ -10,26 +12,15 @@ Amber offers a familiar set of tools for fast prototyping and developing enterpr
 
 The aim of this introductory guide is to present a brief, high-level overview of Amber Framework, the parts that make it up, and the layers underneath that support it.
 
-If you would prefer to read these guides as an
-
-* [EPUB](https://www.gitbook.com/download/epub/book/amberframework/amberframework) 
-* [MOBI](https://www.gitbook.com/download/mobi/book/amberframework/amberframework) 
-* [PDF](https://www.gitbook.com/download/pdf/book/amberframework/amberframework)
-
 ## Getting Help
 
 If you’re stuck, there are a number of places you can get help.
 
-**GITTER** You can head over to our Gitter channel to chat with member of the community for quick questions  
-![Gitter](https://badges.gitter.im/amberframework/amber.svg)
-
-**STACK OVERFLOW** for questions about the Crystal Language and Amber Framework
-
-**GITHUB** for getting acquainted with source code, current issues, progress, and roadmap.
-
-**ONLINE GUIDES** for getting down and dirty working with Amber
-
-**TWITTER** Follow the Amber Framework on twitter
+* [**Gitter**](https://gitter.im/amberframework/amber) for quick questions.
+* [**Stack Overflow**](https://stackoverflow.com/questions/tagged/amber-framework) for questions about the Crystal Language and Amber Framework.
+* [**Github**](https://github.com/amberframework/amber) for getting acquainted with source code, current issues and progress.
+* [**Online Guides**](https://amberframework.gitbook.io/amber) for getting down and dirty working with Amber.
+* [**Twitter**](https://twitter.com/amberframework) to see latest news and announcements about Amber Framework.
 
 ## Contributing
 
@@ -39,9 +30,9 @@ Amber is a community effort and we want You to be part of ours [Join Amber Commu
 
 ## First Steps
 
-Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. If you are new, you should start off with the [getting started guide](getting-started/).
+Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed.
 
-### Quick Start Guide
+If you are new, you should start off with the [guides](guides/).
 
-Everything you need to know to install as it will give you a quick tour of what Amber has to offer, from installing Amber to creating your first application.
+If you want a step by step tutorial try the [quick start](getting-started/).
 

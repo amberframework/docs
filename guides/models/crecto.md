@@ -444,11 +444,5 @@ Crecto::DbLogger.set_handler(f)
 
 ## **Benchmarks**
 
-* [VS raw crystal-pg](https://github.com/Crecto/crecto/wiki/Benchmarks)
-
-Create a new file `spec/repo.cr` and create a module name `Repo` to use for testing. There are example repos for each database type in the spec folder: `travis_pg_repo.cr`, `travis_mysql_repo.cr`, and `travis_sqlite_repo.cr`
-
-When submitting a pull request, please test against all 3 databases.
-
-### 
+* [Crecto vs raw crystal-pg](https://github.com/Crecto/crecto/wiki/Benchmarks)
 

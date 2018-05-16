@@ -46,7 +46,7 @@ This is the same as:
 post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 ```
 
-## Clearing
+### Clearing
 
 To clear all the rows in the database:
 

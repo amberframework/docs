@@ -16,7 +16,9 @@ If you require to add more data validation to your model, you can do so by using
 
 `validate` method can be used to validate the whole object or an attribute of the object. These validations are not automatically checked when you save, to do so you need to run the `.valid?` method.
 
-PS: Failing the validation does not prevent the object from being persisted\(saved\).
+{% hint style="info" %}
+Failing the validation does not prevent the object from being persisted \(saved\).
+{% endhint %}
 
 ### To validate whole object
 

@@ -33,7 +33,7 @@ $ amber generate [TYPE] MultiWordName [FIELD1 FIELD2 ...]
 $ amber generate [TYPE] multi_word_name [FIELD1 FIELD2 ...]
 ```
 
-See [Scaffolding](generate.md###scaffolding) below for full example.
+See [Scaffolding](generate.md#scaffolding) below for full example.
 
 Examples of Usage
 

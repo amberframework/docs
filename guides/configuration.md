@@ -63,7 +63,13 @@ With Amber you can encrypt your environment setting `amber encrypt {envrionment}
 
 A `{project_name}/.encryption_key` file is provided. It contains a secret\_key\_base that is used to decrypt your encrypted environment settings. This file is added to `.gitignore` so it will not be committed to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
 
-{% hint style="warning" %}
-**Never commit the encryption key!** Use environment variables or setup your production machine.
+{% hint style="danger" %}
+**Never commit the encryption key!**
+
+Setup your production machine and use the variable `AMBER_ENCRYPTION_KEY`
+
+See more on [encrypt section](../cli/encrypt.md)
 {% endhint %}
+
+
 

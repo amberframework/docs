@@ -21,7 +21,7 @@ end
 
 ## Rendering the flash message
 
-```html
+```markup
 <html>
   <!-- <head/> -->
   <body>
@@ -38,7 +38,7 @@ end
 
 You can pass anything that the session can store; you're not limited to notices and alerts:
 
-```html
+```markup
 <% if flash[:just_signed_up] %>
   <p class="welcome">Welcome to our site!</p>
 <% end %>

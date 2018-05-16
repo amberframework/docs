@@ -109,7 +109,7 @@ end
 
 Rendering the flash message
 
-```html
+```markup
 <html>
   <!-- <head/> -->
   <body>

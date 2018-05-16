@@ -42,7 +42,7 @@ make install
 ```
 
 {% hint style="info" %}
-Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](getting-started/installation.md) for other Linux Distributions
+Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](../guides/installation.md) for other Linux Distributions
 {% endhint %}
 
 ### Install a database
@@ -119,8 +119,7 @@ Open any browser and goto [http://localhost:3000](http://localhost:3000) You sho
 
 {% page-ref page="../deployment/" %}
 
-
-{% hint style="tip" %}
+{% hint style="info" %}
 List of Commands:
 
 ```text
@@ -132,3 +131,4 @@ amber db create migrate
 amber watch
 ```
 {% endhint %}
+

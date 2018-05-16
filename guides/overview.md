@@ -19,7 +19,7 @@ Model–view–controller \(MVC\) is a software architectural pattern for implem
 * Low coupling – The very nature of the MVC framework is such that there is low coupling among models, views or controllers
 * Ease of modification – Because of the separation of responsibilities, future development or modification is easier
 
-{% hint style="tip" %}
+{% hint style="info" %}
 Multiple views for a model – Models can have multiple views
 {% endhint %}
 

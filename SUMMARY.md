@@ -1,7 +1,6 @@
 # Table of contents
 
-<!-- Based on https://github.com/amberframework/docs/issues/63 by @elorest -->
-
+* [Introduction](README.md)
 * [Getting Started](getting-started/README.md)
   * [Quick Start](getting-started/quick-start.md)
 * [Guides](guides/README.md)
@@ -59,9 +58,9 @@
   * [Encrypt](cli/encrypt.md)
   * [Deploy](cli/deploy.md)
 * [Examples](examples/README.md)
-  * [Amber Auth](examples/amber-auth-example.md)
-  * [Crystal Debug](examples/crystal-debug-example.md)
-  * [Minimal Configuration](examples/minimal-configuration-example.md)
+  * [Amber Auth](examples/amber-auth.md)
+  * [Crystal Debug](examples/crystal-debug.md)
+  * [Minimal Configuration](examples/minimal-configuration.md)
 * [Contributing](contributing.md)
 * [Code of Conduct](code-of-conduct.md)
 

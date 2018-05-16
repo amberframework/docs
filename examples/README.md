@@ -1,10 +1,8 @@
 # Examples
 
-{% page-ref page="amber-auth-example.md" %}
+{% page-ref page="amber-auth.md" %}
 
-{% page-ref page="crystal-debug-example.md" %}
+{% page-ref page="crystal-debug.md" %}
 
-{% page-ref page="minimal-configuration-example.md" %}
-
-
+{% page-ref page="minimal-configuration.md" %}
 

@@ -2,7 +2,7 @@
 description: Worked fine in development. Oops! problem now...
 ---
 
-# Deployments
+# Deployment
 
 {% hint style="info" %}
 This section contain guides for deploying amber projects to Digital Ocean and Heroku
@@ -15,3 +15,4 @@ Guides for other platforms like Amazon Web Services \(AWS\), Google Compute Engi
 {% page-ref page="digital-ocean.md" %}
 
 {% page-ref page="heroku.md" %}
+

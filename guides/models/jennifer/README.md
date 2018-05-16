@@ -10,13 +10,13 @@
 
 ## Installing Jennifer for Amber
 
-#### Generate a normal amber app
+### Generate a normal amber app
 
 ```text
 amber new {project}
 ```
 
-#### Update your project shard.yml
+### Update your project shard.yml
 
 Add this to your application's
 
@@ -37,7 +37,7 @@ Then in the console
 shards update
 ```
 
-#### Setup your database information
+### Setup your database information
 
 ```yaml
 defaults : &defaults
@@ -56,7 +56,7 @@ test:
   <<: *defaults
 ```
 
-#### Create a **jennifer.c**r under the **/config** directory
+### Create a **jennifer.c**r under the **/config** directory
 
 ```ruby
 require "colorize"
@@ -77,7 +77,7 @@ end
 Note that we pass the AMBER\_ENV to `Jennifer::Config.read` this will allow Jennifer to use the correct database settings for the environment.
 {% endhint %}
 
-#### Create a sam.cr in {project/src}
+### Create a sam.cr in {project/src}
 
 Jennifer uses Sam for running tasks pertinent to ORM operations. Sam is a Make-like utility which allows to specify tasks like Ruby's Rake do using plain Crystal. For how to use [Sam](https://github.com/imdrasil/sam.cr) visit the Github repository [https://github.com/imdrasil/sam.cr](https://github.com/imdrasil/sam.cr)
 
@@ -94,7 +94,7 @@ load_dependencies "jennifer"
 Sam.help
 ```
 
-#### Edit your src/{project}.cr file
+### Edit your src/{project}.cr file
 
 This should be done before you load your application configurations \(or at least models\). With Amber this is very easy. Also the order is very important the adapter should come before Jennifer.
 

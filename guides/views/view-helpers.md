@@ -12,7 +12,7 @@ A `link_to` helper is available:
 
 Produces the following HTML
 
-```html
+```markup
 <a href="/">Home</a>
 ```
 
@@ -26,7 +26,7 @@ A `button_to` helper is available:
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/logout" class="button" method="post">
   <button type="submit">Logout</button>
 </form>
@@ -65,7 +65,7 @@ Use `amber generate scaffold [Resource] [field:type] ...` to get the most up-to-
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <input type="text" name="title" id="title" value="" placeholder="Title">
   <input type="submit" value="Create Post" id="create_post">
@@ -89,7 +89,7 @@ Produces the following HTML
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <label for="title" id="title_label">Title</label>
   <input type="text" name="title" id="title" value="" placeholder="Title">
@@ -107,7 +107,7 @@ Produces the following HTML
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <textarea name="body" id="body" placeholder="Body" cols="30" rows="10"></textarea>
   <input type="submit" value="Create Post" id="create_post">
@@ -124,7 +124,7 @@ Produces the following HTML
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <input type="hidden" name="secret" id="secret" content="Super Secret">
   <input type="submit" value="Create Post" id="create_post">
@@ -152,7 +152,7 @@ Produces the following HTML
 
 All the previous code samples produce the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <label for="ranking" id="ranking_label">Ranking</label>
   <select name="ranking">
@@ -172,7 +172,7 @@ All the previous code samples produce the following HTML
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <label for="published" id="published_label">Published</label>
   <input type="hidden" name="published" id="published" value="0">
@@ -199,7 +199,7 @@ Produces the following HTML
 
 Produces the following HTML
 
-```html
+```markup
 <form action="/posts" method="post">
   <input type="hidden" name="secret" id="secret" content="Super Secret">
   <label for="title" id="title_label">Title</label>

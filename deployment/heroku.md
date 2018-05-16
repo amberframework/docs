@@ -1,6 +1,6 @@
-# Deploying to Heroku
+# Heroku
 
-If you haven't done so please read the guides to install the [Amber CLI](/getting-started/installation/heroku.md)
+If you haven't done so please read the guides to install the [Amber CLI](https://github.com/amberframework/docs/tree/5444592f267091cce244d8f7436cb56454605510/getting-started/installation/heroku.md)
 
 ## The Amber Heroku Buildpack
 
@@ -14,9 +14,7 @@ You can create an app in Heroku with Amber buildpack by running the following co
 $ heroku create myapp --buildpack https://github.com/amberframework/heroku-buildpack-amber.git
 ```
 
-The default behaviour is to use the [latest crystal release](https://github.com/crystal-lang/crystal/releases/latest).
-If you need to use a specific version create a `.crystal-version` file in your
-application root directory with the version that should be used (e.g. `0.23.1`).
+The default behaviour is to use the [latest crystal release](https://github.com/crystal-lang/crystal/releases/latest). If you need to use a specific version create a `.crystal-version` file in your application root directory with the version that should be used \(e.g. `0.23.1`\).
 
 ## Requirements
 
@@ -41,7 +39,7 @@ Never add `.encryption_key` to github. Amber adds it by default to your `.gitign
 
 All that's left is to create a git repository, add the Heroku remote and push it there.
 
-```
+```text
 $ git init
 $ heroku git:remote -a [app-name]
 $ git add -A
@@ -55,12 +53,12 @@ When you deploy your project to heroku the amber build-pack will make available 
 
 To run an amber command just on heroku do the following:
 
-```
+```text
 heroku run bin/amber [command]
 ```
 
 {% hint style="info" %}
-Read more about `heroku run` command https://devcenter.heroku.com/articles/one-off-dynos
+Read more about `heroku run` command [https://devcenter.heroku.com/articles/one-off-dynos](https://devcenter.heroku.com/articles/one-off-dynos)
 {% endhint %}
 
 ### The Heroku Procfile
@@ -76,7 +74,7 @@ The Amber buildpack takes care of compiling the project for you but if you wish 
 
 Create an `.env` at the root of your Amber project and add the following 2 lines to the `.env`
 
-```
+```text
 AMBER_ENV=development
 PORT=3000
 ```
@@ -87,13 +85,13 @@ Then you must compile your project locally with the following command:
 
 When the compilation process is complete a `bin/{your-app-name}` directory is added, with this binary of your application with this binary file ready you can proceed to run your application locally with heroku.
 
-```
+```text
 heroku local
 ```
 
 And should output something similar to:
 
-```
+```text
 [OKAY] Loaded ENV .env File as KEY=VALUE Format
 02:58:31 web.1   | 02:58:31 Server     | (INFO) Amber 0.7.2 serving application "heroku-app" at http://0.0.0.0:3000
 02:58:31 web.1   | 02:58:31 Server     | (INFO) Server started in production.
@@ -101,3 +99,4 @@ And should output something similar to:
 ```
 
 You're are now all set and ready to deploy with Heroku.
+

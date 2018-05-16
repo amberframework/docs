@@ -1,4 +1,4 @@
-# Minimal Configuration Example
+# Minimal Configuration
 
 Amber can be run from a single file for minimal configuration setups if the user prefers this for smaller applications.
 

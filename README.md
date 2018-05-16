@@ -28,8 +28,9 @@ Amber is a community effort and we want You to be part of ours [Join Amber Commu
 
 ## First Steps
 
-Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed. 
+Learning a new framework can be intimidating and exciting at the same time. To help you along, we have created a cookbook packed with examples and recipes to get the common tasks completed.
 
-If you are new, you should start off with the [guides](guides/README.md).
+If you are new, you should start off with the [guides](guides/).
 
-If you want a step by step tutorial try the [quick start](getting-started/README.md).
+If you want a step by step tutorial try the [quick start](getting-started/).
+

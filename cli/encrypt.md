@@ -32,7 +32,7 @@ Editor will be opened if file is already encrypted.
 
 `amber encrypt development --noedit` will encrypt file if unencrypted but do nothing if it's already encrypted. Editor will not be opened.
 
-{% hint style="tip" %}
+{% hint style="info" %}
 Production is encrypted by default.
 {% endhint %}
 

@@ -42,7 +42,7 @@ class PetController < ApplicationController
 end
 ```
 
-{% hint style="tip" %}
+{% hint style="info" %}
 Put it all together and you can respond to whatever is asked for.
 {% endhint %}
 

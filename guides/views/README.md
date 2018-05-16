@@ -167,7 +167,7 @@ That code will pull in the partial from `app/views/shared/_menu.html.ecr`.
 
 One way to use partials is to treat them as the equivalent of subroutines: as a way to move details out of a view so that you can grasp what's going on more easily. For example, you might have a view that looked like this:
 
-```html
+```markup
 <%= render "shared/ad_banner" %>
 <h1>Products</h1>
 <p>Here are a few of our fine products:</p>

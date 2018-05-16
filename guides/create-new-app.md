@@ -56,10 +56,16 @@ Using selenium (0.3.0)
 
 Amber makes it easy to interact with your database. Amber supports Postgres, MySql, and Sqlite.
 
-Edit the database setting for your current environment by editing `{project_name}/config/environments/{current_environment}.yml` file. Amber looks at the `database_url` key for the default database connection string.
+Edit the database setting for your current environment by editing the file:
+
+```text
+{project_name}/config/environments/{current_environment}.yml
+```
+
+Amber looks at the `database_url` key for the default database connection string.
 
 {% hint style="info" %}
-Amber assumes that your PostgreSQL database will have a `postgres` user account with the correct permissions and no password set for this user. If that isn’t the case, update the `database_url` key `config/environment/{current_environment}.yml` with the correct database credentials for your environment.
+Amber assumes that your PostgreSQL database will have a `postgres` user account with the correct permissions and no password set for this user. If that isn’t the case, update the `database_url` key with the correct database credentials for your environment.
 {% endhint %}
 
 With your database credentials ready, run the following command in your terminal window:

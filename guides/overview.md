@@ -18,10 +18,7 @@ Model–view–controller \(MVC\) is a software architectural pattern for implem
 * High cohesion – MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together.
 * Low coupling – The very nature of the MVC framework is such that there is low coupling among models, views or controllers
 * Ease of modification – Because of the separation of responsibilities, future development or modification is easier
-
-{% hint style="info" %}
-Multiple views for a model – Models can have multiple views
-{% endhint %}
+* Multiple views for a model – Models can have multiple views
 
 ### Controller Layer
 

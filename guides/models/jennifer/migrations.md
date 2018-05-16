@@ -89,7 +89,11 @@ execute("ALTER TABLE addresses CHANGE street st VARCHAR(20)")
 
 All changes are executed one by one so you also could add data changes here \(in`up`method\) but if execution of`up`method fails -`down`method will be called and all process will stop - be ready for such behavior.
 
-To be sure that your db is up to date before run tests of your application, add`Jennifer::Migration::Runner.migrate`.
+To be sure that your db is up to date before run tests of your application, add:
+
+```text
+Jennifer::Migration::Runner.migrate
+```
 
 ## Enum
 

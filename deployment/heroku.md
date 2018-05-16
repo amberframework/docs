@@ -47,7 +47,7 @@ $ git commit -m "My first Amber app"
 $ git push heroku master
 ```
 
-### Using the Amber CLI on Heroku
+## Using the Amber CLI on Heroku
 
 When you deploy your project to heroku the amber build-pack will make available the `amber cli` to you via the `bin/amber` path.
 
@@ -58,10 +58,10 @@ heroku run bin/amber [command]
 ```
 
 {% hint style="info" %}
-Read more about `heroku run` command [https://devcenter.heroku.com/articles/one-off-dynos](https://devcenter.heroku.com/articles/one-off-dynos)
+Read more about `heroku run` command on [Heroku Dev Center](https://devcenter.heroku.com/articles/one-off-dynos)
 {% endhint %}
 
-### The Heroku Procfile
+## The Heroku Procfile
 
 To deploy your app to heroku you're going to need a `Procfile`. Create a Procfile at the root of your Amber application and add the following:
 

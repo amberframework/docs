@@ -6,7 +6,11 @@ Granite doesn't have migrations built in. Instead, we leveraged the excellent wo
 
 Migration scripts are created in the `db/migrations` directory. It's recommended that the files use a timestamp as a way to keep the order of execution.
 
-A micrate script has two sections, Up and Down. Here is an example `db/migrations/20171003212124_create_post.sql` file:
+A micrate script has two sections, Up and Down. Here is an example file:
+
+```text
+db/migrations/20171003212124_create_post.sql
+```
 
 ```sql
 -- +micrate Up
@@ -32,7 +36,11 @@ Amber CLI provides the ability to generate migration scripts:
 amber generate migration create_posts
 ```
 
-This will generate an empty micrate script with the timestamp set in the filename `db/migrations/20171003212124_create_post.sql`.
+This will generate an empty micrate script with the timestamp set in the filename:
+
+```text
+db/migrations/20171003212124_create_post.sql
+```
 
 If you generate a model or scaffold, it will create a migration script that will create and drop the database table.
 

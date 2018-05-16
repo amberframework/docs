@@ -22,7 +22,7 @@ The command`amber encrypt production` will use the secret key in .`encryption_ke
 
 When you save and exit it will encrypt again.
 
-![Amber Encrypt Demo](https://github.com/amberframework/online-docs/blob/master/assets/amber_encrypt.gif?raw=true)
+![Amber Encrypt Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/amber_encrypt.gif)
 
 ## Encrypt unencrypted environment settings
 

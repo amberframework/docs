@@ -2,7 +2,7 @@
 
 Amber is a web development framework written in the Crystal language which implements the server-side MVC pattern using the object-oriented paradigm. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Phoenix, Ruby on Rails or Python's Django.
 
-![Amber Framework](.gitbook/assets/latest-uno.gif)
+![Amber Framework](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/amber-animated-logo.gif)
 
 Amber aims to deliver developer happiness, productivity, and bare metal performance. The Crystal language is heavily inspired on Ruby delivering familiarity and productivity making it easy to read and write code with a lower learning curve for experienced Ruby developers.
 

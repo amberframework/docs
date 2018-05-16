@@ -73,7 +73,7 @@ Then go to the root of your project, and run `amber routes`
 
 It outputs the standard matrix of HTTP verbs, controller, action, pipeline, scope, and URI pattern.
 
-![Amber Routes Matrix Example](../../.gitbook/assets/screenshot_20180515_150328.png)
+![Amber Routes Matrix Example](https://raw.githubusercontent.com/amberframework/site-assets/master/images/amber_routes.png)
 
 ## Scoped Routes
 

@@ -2,7 +2,7 @@
 
 If we need to render a template to html `render("template.slang")` works nicely. A lot of times we want to respond with json, xml, text or something else. In those cases we use `respond_with`.
 
-![respond\_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif?raw=true)
+![respond\_with Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/responding-to-multiple-response-types.gif)
 
 [See video on Youtube](https://www.youtube.com/watch?v=6KNjWDRUo_c)
 

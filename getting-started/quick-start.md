@@ -121,7 +121,7 @@ Open any browser and goto [http://localhost:3000](http://localhost:3000) You sho
 
 ## List of Commands
 
-Yep, just that, now, you can use these commands to create new awesome applications :-\)
+You can use these commands to create new awesome applications :-\)
 
 ```text
 amber new pet-tracker

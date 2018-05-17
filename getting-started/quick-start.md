@@ -42,7 +42,7 @@ make install
 ```
 
 {% hint style="info" %}
-Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](../guides/installation.md) for other Linux Distributions
+Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](../guides/installation.md) for other Linux Distributions.
 {% endhint %}
 
 ### 1.2 Install a database

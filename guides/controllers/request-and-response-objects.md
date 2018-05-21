@@ -38,7 +38,11 @@ The response object is not usually used directly, but is built up during the exe
 ## Multi params
 
 If you need get array of params from query:
-`?brand[]=brand1&brand[]=brand2&brand[]=brand3`
+```
+?brand[]=brand1&brand[]=brand2&brand[]=brand3
+```
 
 try to fetch them:
-`params.fetch_all("brand[]")` => `{ "brand[]" => ["brand1", "brand2", "brand3"] }` 
+```
+params.fetch_all("brand[]")` => `{ "brand[]" => ["brand1", "brand2", "brand3"] }
+```

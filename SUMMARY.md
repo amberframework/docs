@@ -29,6 +29,7 @@
       * [Callbacks](guides/models/granite/callbacks.md)
       * [Associations](guides/models/granite/associations.md)
       * [Querying](guides/models/granite/querying.md)
+      * [Bulk Insertions](guides/models/granite/bulk-insertions.md)
     * [Crecto](guides/models/crecto.md)
     * [Jennifer](guides/models/jennifer/README.md)
       * [Migrations](guides/models/jennifer/migrations.md)

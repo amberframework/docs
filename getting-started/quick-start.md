@@ -4,6 +4,8 @@ This quick start guide will help you get a full stack web application running in
 
 It will take us just 7 steps. Let’s get started!
 
+![Let&#x2019;s get started!](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/amber-quick-start.gif)
+
 ## 1. Install dependencies
 
 {% hint style="info" %}

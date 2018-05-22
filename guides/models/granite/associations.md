@@ -1,5 +1,9 @@
 # Associations
 
+{% hint style="info" %}
+This section is based on [Granite's README](https://amberframework.gitbook.io/granite)
+{% endhint %}
+
 ## One to Many
 
 `belongs_to` and `has_many` macros provide a rails like mapping between Objects.

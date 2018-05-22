@@ -5,7 +5,7 @@
 **Jennifer** is an ActiveRecord pattern for Crystal with great query DSL and migration mechanism.
 
 {% hint style="info" %}
-[Example Reference App](https://github.com/eliasjpr/amber-jennnifer-app-example)
+This section is based on [Jennifer's Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md). Also see [Amber Jennifer Example App](https://github.com/eliasjpr/amber-jennnifer-app-example).
 {% endhint %}
 
 ## Installing Jennifer for Amber
@@ -74,7 +74,7 @@ end
 ```
 
 {% hint style="info" %}
-Note that we pass the AMBER\_ENV to `Jennifer::Config.read` this will allow Jennifer to use the correct database settings for the environment.
+Note that we pass the `AMBER_ENV` to `Jennifer::Config.read` this will allow Jennifer to use the correct database settings for the environment.
 {% endhint %}
 
 ### Create a sam.cr in {project/src}

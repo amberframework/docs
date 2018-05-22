@@ -20,7 +20,7 @@ Granite provides a light weight ORM that is focused on taking the results of you
 
 Crecto is based on Phoenix's ecto and follows the repository pattern. Your data objects are data structures to hold the data and then you use a Repo to `Repo.insert`, `Repo.update`, or `Repo.delete` your object in the db. You can use `Repo.all` to query the db, or `Repo.get` to grab a single row.
 
-{% page-ref page="crecto.md" %}
+{% page-ref page="crecto/" %}
 
 ## Jennifer
 

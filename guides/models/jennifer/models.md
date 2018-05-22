@@ -1,5 +1,9 @@
 # Models
 
+{% hint style="info" %}
+This section is based on [Jennifer's Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md).
+{% endhint %}
+
 ## Several model examples
 
 ```ruby

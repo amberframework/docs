@@ -1,5 +1,9 @@
 # Validations
 
+{% hint style="info" %}
+This section is based on [Granite's README](https://amberframework.gitbook.io/granite)
+{% endhint %}
+
 ## Errors
 
 All database errors are added to the `errors` array used by Granite::ORM::Validators with the symbol ':base'

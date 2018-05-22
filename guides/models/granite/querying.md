@@ -1,5 +1,9 @@
 # Querying
 
+{% hint style="info" %}
+This section is based on [Granite's README](https://amberframework.gitbook.io/granite)
+{% endhint %}
+
 ## Queries
 
 The where clause will give you full control over your query.

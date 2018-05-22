@@ -1,5 +1,9 @@
 # Granite
 
+{% hint style="info" %}
+This section is based on [Granite Documentation](https://amberframework.gitbook.io/granite)
+{% endhint %}
+
 ## Installation
 
 Add this library to your projects dependencies along with the driver in your `shard.yml`. This can be used with any framework but was originally designed to work with the amber framework in mind. This library will work with kemal or any other framework as well.

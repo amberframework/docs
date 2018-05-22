@@ -1,5 +1,9 @@
 # Migrations
 
+{% hint style="info" %}
+This section is based on [Jennifer's Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md).
+{% endhint %}
+
 To generate a migration run `crystal sam.cr generate:migration your_migration_name`
 
 ## Migration DSL

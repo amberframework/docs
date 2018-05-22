@@ -1,5 +1,9 @@
 # Bulk Insertions
 
+{% hint style="info" %}
+This section is based on [Granite's README](https://amberframework.gitbook.io/granite)
+{% endhint %}
+
 ## **Import**
 
 {% hint style="warning" %}

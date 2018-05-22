@@ -1,5 +1,9 @@
 # Crecto
 
+{% hint style="info" %}
+This section is based on [Crecto's README](https://github.com/Crecto/crecto#crecto)
+{% endhint %}
+
 Database wrapper for Crystal. Inspired by [Ecto](https://github.com/elixir-ecto/ecto) for Elixir language.
 
 ## Installation

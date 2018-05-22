@@ -65,6 +65,7 @@
   * [Amber Auth](examples/amber-auth.md)
   * [Crystal Debug](examples/crystal-debug.md)
   * [Minimal Configuration](examples/minimal-configuration.md)
+* [Troubleshooting](troubleshooting.md)
 * [Contributing](contributing.md)
 * [Code of Conduct](code-of-conduct.md)
 

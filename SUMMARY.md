@@ -32,7 +32,7 @@
       * [Querying](guides/models/granite/querying.md)
       * [Bulk Insertions](guides/models/granite/bulk-insertions.md)
     * [Crecto](guides/models/crecto/README.md)
-      * [Crecto's README](https://github.com/Crecto/crecto#crecto)
+      * [Crecto Docs](https://www.crecto.com/)
     * [Jennifer](guides/models/jennifer/README.md)
       * [Jennifer Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md)
       * [Migrations](guides/models/jennifer/migrations.md)

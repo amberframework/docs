@@ -5,7 +5,7 @@
 **Jennifer** is an ActiveRecord pattern for Crystal with great query DSL and migration mechanism.
 
 {% hint style="info" %}
-This section is based on [Jennifer's Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md). Also see [Amber Jennifer Example App](https://github.com/eliasjpr/amber-jennnifer-app-example).
+This section is based on [Jennifer Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md). Also see [Amber Jennifer Example App](https://github.com/eliasjpr/amber-jennnifer-app-example).
 {% endhint %}
 
 ## Installing Jennifer for Amber

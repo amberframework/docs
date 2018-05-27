@@ -24,7 +24,7 @@ Crecto is based on Phoenix's ecto and follows the repository pattern. Your data 
 
 ## Jennifer
 
-Jennifer provides an more full featured ORM with a full featured DSL for queries and follows the ActiveRecord pattern found in Rails. If you are looking looking for a full featured ORM, Jennifer may be your choice of ORM.
+Jennifer provides an more full featured ORM with a full featured DSL for queries and follows the ActiveRecord pattern found in Rails. If you are looking for a full featured ORM, Jennifer may be your choice of ORM.
 
 {% page-ref page="jennifer/" %}
 

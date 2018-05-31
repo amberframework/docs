@@ -13,10 +13,13 @@ Arguments:
   NAME  name/path of project
 
 Options:
-  -d      Select the database database engine, can be one of: pg | mysql | sqlite (default: pg)
-  --deps  Installs project dependencies, this is the equivalent of running (shards update)
-  -t      Selects the template engine language, can be one of: slang | ecr (default: slang)
-  -r      Use a named recipe.  See documentation at https://amberframework.org.
+  -d          Select the database database engine, can be one of: pg | mysql | sqlite (default: pg)
+  --deps      Installs project dependencies, this is the equivalent of running (shards update)
+  -m          Select the model type, can be one of: granite | crecto (default: granite)
+  --no-color  Disable colored output
+  -t          Selects the template engine language, can be one of: slang | ecr (default: slang)
+  -h, --help  Show this help
+  -r          Use a named recipe.  See documentation at https://amberframework.org.
 ```
 
 See the **Recipes** option of the **Command Line Tool** for information about using recipes to generate applications.

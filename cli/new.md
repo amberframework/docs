@@ -19,7 +19,7 @@ Options:
   --no-color  Disable colored output
   -t          Selects the template engine language, can be one of: slang | ecr (default: slang)
   -h, --help  Show this help
-  -r          Use a named recipe.  See documentation at https://amberframework.org.
+  -r          Use a named recipe.  See documentation at https://amberframework.gitbook.io/amber/cli/recipes.
 ```
 
 See the **Recipes** option of the **Command Line Tool** for information about using recipes to generate applications.

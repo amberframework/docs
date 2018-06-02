@@ -25,7 +25,7 @@ Options:
   -d      Select the database database engine, can be one of: pg | mysql | sqlite (default: pg)
   --deps  Installs project dependencies, this is the equivalent of running (shards update)
   -t      Selects the template engine language, can be one of: slang | ecr (default: slang)
-  -r      Use a named recipe.  See documentation at https://amberframework.org.
+  -r      Use a named recipe.  See documentation at https://amberframework.gitbook.io/amber/cli/recipes.
 ```
 
 ### Example Usage

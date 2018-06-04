@@ -7,8 +7,8 @@ When you want a request to cease and return a particular message rather then ren
 ```ruby
 class UserController < ApplicationController
   def index
-    halt(404, "Forbiden") if params[:user_id].nil?
-    reder "index.slang"
+    halt!(404, "Forbidden") if params[:user_id].nil?
+    render "index.slang"
   end
 end
 ```

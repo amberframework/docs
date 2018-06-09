@@ -39,7 +39,6 @@ Optionally you can setup a system service to monitor your app very easy, and con
 #!/bin/bash
 set -e
 
-export PORT=80
 export AMBER_ENV=production
 
 if [ "$GIT_DIR" = "." ]; then

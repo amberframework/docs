@@ -1,4 +1,4 @@
-# Amber Users
+# Amber Framework Users
 
 Amber is still changing and growing rapidly. Here we list the brave folks who have started to use it in production nonetheless, building and strengthening our community. Are you using Amber in production at your company or project? Please add yourself in alphabetical order to the list under the corresponding industry!
 

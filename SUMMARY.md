@@ -68,7 +68,7 @@
   * [Crystal Debug](examples/crystal-debug.md)
   * [Minimal Configuration](examples/minimal-configuration.md)
 * [Troubleshooting](troubleshooting.md)
-* [Amber Framework Users](amber-framework-users.md)
+* [Amber Users](amber-framework-users.md)
 * [Contributing](contributing.md)
 * [Code of Conduct](code-of-conduct.md)
 

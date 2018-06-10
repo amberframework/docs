@@ -69,7 +69,6 @@
   * [Minimal Configuration](examples/minimal-configuration.md)
 * [Troubleshooting](troubleshooting.md)
 * [In Production](in-production.md)
-* [Amber Users](amber-users.md)
 * [Contributing](contributing.md)
 * [Code of Conduct](code-of-conduct.md)
 

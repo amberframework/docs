@@ -26,3 +26,4 @@ Also you can use [Wappalyzer](https://www.wappalyzer.com/technologies/amber) to 
 * [Crystal \[ANN\]](https://crystal-ann.com/) - Web site to announce new Crystal projects \([source code](https://github.com/crystal-community/crystal-ann)\)
 * [Sam's Page ](https://sam-website.herokuapp.com/)- Quick blog made on the Amberframework for a friend \([source code](https://github.com/jhonnold/sam-website)\)
 * [Bird app](https://crystal-bird-app.herokuapp.com/) - Where birds are neat \([source code](https://github.com/bradford-hamilton/crystal-bird-app)\)
+

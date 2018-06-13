@@ -7,19 +7,24 @@ This is the first command that you will run when generating a new Amber applicat
 An `.amber.yml` configuration file is generated a long with the default application directory structure. This stores some metadata for the Amber CLI to make use of for generating migrations, scaffolding templates, and more.
 
 ```text
-amber new OPTIONS NAME
+amber new [OPTIONS] NAME
+
+Generates a new Amber project
 
 Arguments:
   NAME  name/path of project
 
 Options:
-  -d          Select the database database engine, can be one of: pg | mysql | sqlite (default: pg)
+  -d          Select the database database engine, can be one of: pg | mysql | sqlite
+              (default: pg)
   --deps      Installs project dependencies, this is the equivalent of running (shards update)
-  -m          Select the model type, can be one of: granite | crecto (default: granite)
+  -m          Select the model type, can be one of: granite | crecto
+              (default: granite)
   --no-color  Disable colored output
-  -t          Selects the template engine language, can be one of: slang | ecr (default: slang)
-  -h, --help  Show this help
-  -r          Use a named recipe.  See documentation at https://amberframework.org.
+  -r          Use a named recipe.  See documentation at  https://docs.amberframework.org/amber/cli/recipes.
+  -t          Selects the template engine language, can be one of: slang | ecr
+              (default: slang)
+  -h, --help  show this help
 ```
 
 See the **Recipes** option of the **Command Line Tool** for information about using recipes to generate applications.

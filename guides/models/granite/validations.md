@@ -1,7 +1,7 @@
 # Validations
 
 {% hint style="info" %}
-This section is based on [Granite's README](https://amberframework.gitbook.io/granite)
+This section is based on [Granite's README](https://docs.amberframework.org/granite)
 {% endhint %}
 
 ## Errors

@@ -24,7 +24,7 @@
     * [View Helpers](guides/views/view-helpers.md)
   * [Models](guides/models/README.md)
     * [Granite](guides/models/granite/README.md)
-      * [Granite's README](https://amberframework.gitbook.io/granite/)
+      * [Granite's README](https://docs.amberframework.org/granite/)
       * [Migrations](guides/models/granite/migrations.md)
       * [Validations](guides/models/granite/validations.md)
       * [Callbacks](guides/models/granite/callbacks.md)

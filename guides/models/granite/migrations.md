@@ -1,7 +1,7 @@
 # Migrations
 
 {% hint style="info" %}
-This section is based on [Granite's README](https://amberframework.gitbook.io/granite)
+This section is based on [Granite's README](https://docs.amberframework.org/granite)
 {% endhint %}
 
 Granite doesn't have migrations built in. Instead, we leveraged the excellent work done by Juan Edi called [micrate](https://github.com/juanedi/micrate). We have integrated Micrate into the Amber CLI.

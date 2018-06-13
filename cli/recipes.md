@@ -16,16 +16,24 @@ The recipe name that you use to generate the application is saved so that when y
 #### `amber new`
 
 ```text
-amber new NAME OPTIONS
+amber new [OPTIONS] NAME
+
+Generates a new Amber project
 
 Arguments:
   NAME  name/path of project
 
 Options:
-  -d      Select the database database engine, can be one of: pg | mysql | sqlite (default: pg)
-  --deps  Installs project dependencies, this is the equivalent of running (shards update)
-  -t      Selects the template engine language, can be one of: slang | ecr (default: slang)
-  -r      Use a named recipe.  See documentation at https://amberframework.gitbook.io/amber/cli/recipes.
+  -d          Select the database database engine, can be one of: pg | mysql | sqlite
+              (default: pg)
+  --deps      Installs project dependencies, this is the equivalent of running (shards update)
+  -m          Select the model type, can be one of: granite | crecto
+              (default: granite)
+  --no-color  Disable colored output
+  -r          Use a named recipe.  See documentation at  https://docs.amberframework.org/amber/cli/recipes.
+  -t          Selects the template engine language, can be one of: slang | ecr
+              (default: slang)
+  -h, --help  show this help
 ```
 
 ### Example Usage

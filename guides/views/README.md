@@ -99,7 +99,7 @@ div
 
 And the layout `views/layouts/application.slang`:
 
-```text
+```slim
 doctype html
 html
   head
@@ -108,13 +108,13 @@ html
     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
 
   body
-    div.masthead
-      div.container
+    .masthead
+      .container
         nav.nav
           == render(partial: "layouts/_nav.slang")
-    div.container
-      div.row
-        div.col-sm-12.main
+    .container
+      .row
+        .col-sm-12.main
           == content
 
     script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"

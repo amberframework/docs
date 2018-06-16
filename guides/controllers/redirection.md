@@ -6,19 +6,29 @@ Calling **redirect\_to** will halt the request lifecycle.
 
 ## Redirect to URL
 
-```ruby
-redirect_to(location: "", status: 302, params: { "key" => "value" }, flash: { "user_id" => "1" })
+```crystal
+redirect_to(
+  location: "", 
+  status: 302, 
+  params: { "key" => "value" }, 
+  flash: { "user_id" => "1" }
+)
 ```
 
 ## Redirect to Action
 
-```ruby
-redirect_to(action: :index, status: 302, params: { "key" => "value" }, flash: { "user_id" => "1" })
+```crystal
+redirect_to(
+  action: :index, 
+  status: 302, 
+  params: { "key" => "value" }, 
+  flash: { "user_id" => "1" }
+)
 ```
 
 ## Redirect to Controller Action
 
-```ruby
+```crystal
 redirect_to(
   controller: :symbol, 
   action: :index, 
@@ -29,7 +39,11 @@ redirect_to(
 
 ## Redirect Back
 
-```ruby
-redirect_back(status: 302, params: { "key" => "value" }, flash: { "user_id" => "1" })
+```crystal
+redirect_back(
+  status: 302, 
+  params: { "key" => "value" }, 
+  flash: { "user_id" => "1" }
+)
 ```
 

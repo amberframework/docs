@@ -99,7 +99,7 @@ div
 
 And the layout `views/layouts/application.slang`:
 
-```slim
+```text
 doctype html
 html
   head

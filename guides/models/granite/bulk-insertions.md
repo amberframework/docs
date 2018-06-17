@@ -93,7 +93,6 @@ Model.import(models, batch_size: 2)
 
 ## **Running Callbacks**
 
-  
 Since the `import` method runs on the class level, callbacks are not triggered automatically, they have to be triggered manually. For example, using the Item class with a UUID primary key:
 
 ```ruby
@@ -111,7 +110,7 @@ class Item < Granite::Base
   def generate_uuid
     @item_id = UUID.random.to_s
   end
-end  
+end
 ```
 
 {% hint style="warning" %}

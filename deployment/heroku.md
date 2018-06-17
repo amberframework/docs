@@ -1,5 +1,11 @@
 # Heroku
 
+{% hint style="danger" %}
+Amber `0.7.2` isn't compatible with Crystal `0.25.0`
+
+Please use a `.crystal-version` file with `0.24.2` instead
+{% endhint %}
+
 If you haven't done so please read the guides to install the [Amber CLI](https://github.com/amberframework/docs/tree/5444592f267091cce244d8f7436cb56454605510/getting-started/installation/heroku.md)
 
 ## The Amber Heroku Buildpack

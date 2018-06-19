@@ -6,7 +6,7 @@ This recipe will help you to setup a `Hello World!` response in your `/hello` pa
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
 
-In your `src/controllers/hello_controller.cr` file use this:
+First create a `src/controllers/hello_controller.cr` file and add this:
 
 {% code-tabs %}
 {% code-tabs-item title="src/controllers/hello\_controller.cr" %}

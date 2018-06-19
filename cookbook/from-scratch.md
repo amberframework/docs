@@ -19,7 +19,7 @@ Initialized empty Git repository in /home/main/myapp/.git/
 
 ## Add Amber dependency
 
-First you require Amber shards dependency in your `shard.yml` file:
+First you require to add the `amber` shard dependency in your `shard.yml` file:
 
 ```yaml
 name: myapp
@@ -129,7 +129,7 @@ end
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Then a basic setup \(without views nor models\) require an `application_controller.cr` file inside `src/controllers` directory.
+Then a basic setup \(without views nor models\) requires an `application_controller.cr` file inside `src/controllers` directory.
 
 {% code-tabs %}
 {% code-tabs-item title="src/controllers/application\_controller.cr" %}

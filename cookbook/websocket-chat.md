@@ -59,6 +59,10 @@ end
 
 Finally you will require an [Amber JavaScript Client](../guides/websockets/javascript-client.md) to connect with your server:
 
+{% hint style="info" %}
+You can get `amber.min.js` from `lib/amber/assets/amber.min.js`
+{% endhint %}
+
 {% code-tabs %}
 {% code-tabs-item title="public/index.html" %}
 ```markup

@@ -168,3 +168,13 @@ $ bin/myapp
 
 That's it!, now you're ready to create any basic project from scratch without Amber CLI.
 
+## Local CLI
+
+As additional step you can compile an amber CLI inside your project using:
+
+```text
+crystal build lib/amber/src/amber/cli.cr -o bin/amber -s
+```
+
+Then use `bin/amber` to do scaffolding, run migrations and [more](../cli/).
+

@@ -1,10 +1,10 @@
 # Hello World
 
+This recipe will help you to setup a `Hello World!` response in your `/hello` path.
+
 {% hint style="warning" %}
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
-
-This recipe will help you to setup a `Hello World!` response in your `/hello` path.
 
 In your `src/controllers/hello_controller.cr` file use this:
 

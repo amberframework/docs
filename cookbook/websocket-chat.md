@@ -1,12 +1,10 @@
 # WebSocket Chat
 
-
+This recipe will help you to setup a basic WebSocket chat in your application.
 
 {% hint style="warning" %}
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
-
-This recipe will help you to setup a basic WebSocket chat in your application.
 
 {% code-tabs %}
 {% code-tabs-item title="src/channel/chat\_room\_channel.cr" %}

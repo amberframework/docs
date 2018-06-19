@@ -1,12 +1,10 @@
 # JSON Mapping
 
-
+This recipe will help you to setup a basic JSON Mapping in your application.
 
 {% hint style="warning" %}
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
-
-This recipe will help you to setup a basic JSON Mapping in your application.
 
 You can use `JSON.mapping` to directly create an object from JSON:
 

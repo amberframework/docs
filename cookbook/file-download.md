@@ -1,10 +1,10 @@
 # File Download
 
+This recipe will help you to setup a static file handler in your application.
+
 {% hint style="warning" %}
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
-
-This recipe will help you to setup a static file handler in your application.
 
 {% code-tabs %}
 {% code-tabs-item title="config/application.cr" %}

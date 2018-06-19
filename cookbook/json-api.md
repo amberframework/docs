@@ -1,10 +1,10 @@
 # JSON API
 
+This recipe will help you to setup a basic JSON API response in your application.
+
 {% hint style="warning" %}
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
-
-This recipe will help you to setup a basic JSON API response in your application.
 
 ```ruby
 class SomeController < ApplicationController

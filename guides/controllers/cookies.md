@@ -49,11 +49,11 @@ Please note that if you specify a :domain when setting a cookie, you must also s
 
 ```ruby
 cookies[:name] = {
-  value:   'a yummy cookie',
+  value:   "a yummy cookie",
   expires: 1.year.from_now,
-  domain:  'domain.com'
+  domain:  "domain.com"
 }
-cookies.delete(:name, domain: 'domain.com')
+cookies.delete(:name, domain: "domain.com")
 ```
 
 The option symbols for setting cookies are:

@@ -1,6 +1,8 @@
 # From Scratch
 
-Also you can create an Amber project from scratch using `crystal init app`.
+You can create an Amber project from scratch using `crystal init app`.
+
+Also see [creating a project or library](https://crystal-lang.org/docs/using_the_compiler/#creating-a-project-or-library).
 
 ```text
 $ crystal init app myapp

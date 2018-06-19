@@ -99,7 +99,7 @@ All Amber's projects have a [directory structure](../guides/directory-structure.
     └── myapp.cr
 ```
 
-First you need an `config/`folder with an `application.cr` file, also see [configuration](../guides/configuration.md).
+First you need a `config/`folder with an `application.cr` file, also see [configuration](../guides/configuration.md).
 
 {% code-tabs %}
 {% code-tabs-item title="config/application.cr" %}

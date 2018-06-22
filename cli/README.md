@@ -4,7 +4,6 @@ Amber has a built in CLI tool, to make your life easier while developing applica
 
 Here is a list of the available commands:
 
-* **d, deploy**     - Provisions server and deploys project.
 * **db, database**  - Performs database maintenance tasks
 * **e, encrypt**    - Encrypts environment YAML file. \[env \| -e --editor \| --noedit\]
 * **x, exec**       - Executes Crystal code within the application scope
@@ -46,7 +45,6 @@ Amber - Command Line Interface
   amber new [app_name] -d [pg | mysql | sqlite] -t [slang | ecr] -m [granite, crecto] --deps
 
 Subcommands:
-  d, deploy     # Provisions server and deploys project.
   db, database  # Performs database maintenance tasks
   e, encrypt    # Encrypts environment YAML file. [env | -e --editor | --noedit]
   x, exec       # Executes Crystal code within the application scope

@@ -24,7 +24,7 @@ Instructions for OS X using homebrew and Debian/Ubuntu are below. See full insta
 
 #### OS X with homebrew
 
-Installing amber with homebrew also installs crystal.
+Installing Amber with Homebrew also installs crystal.
 
 ```text
 brew install amber
@@ -39,7 +39,7 @@ curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 sudo apt-get install build-essential crystal
 ```
 
-Then install amber \(from source\)
+Then install Amber \(from source\)
 
 ```text
 sudo apt-get install libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
@@ -49,7 +49,7 @@ shards install
 make install
 ```
 
-You can also install amber with [Linuxbrew](http://linuxbrew.sh/)
+You can also install Amber with [Linuxbrew](http://linuxbrew.sh/)
 
 ```bash
 brew install amber

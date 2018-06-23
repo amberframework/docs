@@ -24,7 +24,7 @@ Instructions for OS X using homebrew and Debian/Ubuntu are below. See full insta
 
 #### OS X with homebrew
 
-Installing amber with homebrew also installs crystal
+Installing amber with homebrew also installs crystal.
 
 ```text
 brew install amber
@@ -47,6 +47,12 @@ curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
 cd amber-stable/
 shards install
 make install
+```
+
+You can also install amber with [Linuxbrew](http://linuxbrew.sh/)
+
+```bash
+brew install amber
 ```
 
 {% hint style="info" %}
@@ -101,9 +107,9 @@ amber g scaffold Pet name:string breed:string age:integer
 
 ## 4. Create and migrate the database
 
-Generating the application and the scaffolded resource provides the configuration and migration files needed to setup our database.
+Generating the application and the scaffolded resource provides the configuration and migration files needed to set up the database.
 
-`amber db` will help us do this.
+`amber db` will help us do this, as you will see you can chain the `db` commands together.
 
 ```text
 amber db create migrate
@@ -119,9 +125,11 @@ We can use `amber watch` to both build the binary application and start the serv
 amber watch
 ```
 
+The `watch` commands will keep observing for file changes within the project and recompiling the application.
+
 ## 6. Use your brand new web application!
 
-Open any browser and goto [http://localhost:3000](http://localhost:3000) You should see a home page load and “Pets” in the nav bar. If you click on the “Pets” link, you should be able to perform all 7 RESTful actions for the “pets” resource.
+Open any browser and goto [http://localhost:3000](http://localhost:3000) You should see a home page load and “Pets” in the nav bar. If you click on the “Pets” link, you should be able to perform all seven RESTful actions for the “pets” resource.
 
 ## 7. Deploy your web application
 
@@ -142,7 +150,7 @@ amber watch
 
 ## Demo
 
-Here is a demo and the source code is available on [Github](https://github.com/faustinoaq/pet-tracker).
+Here is the Quick Start demo app and the source code is available on [Github](https://github.com/faustinoaq/pet-tracker).
 
 ![Quick Start Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/quick-start-demo.gif)
 

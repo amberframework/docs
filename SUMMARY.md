@@ -62,7 +62,6 @@
   * [Routes](cli/routes.md)
   * [Exec](cli/exec.md)
   * [Encrypt](cli/encrypt.md)
-  * [Deploy](cli/deploy.md)
 * [Examples](examples/README.md)
   * [Amber Auth](examples/amber-auth.md)
   * [Crystal Debug](examples/crystal-debug.md)

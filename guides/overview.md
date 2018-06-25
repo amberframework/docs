@@ -10,7 +10,7 @@ Amber provides a basic organizational structure that covers class names, filenam
 
 ## Model-View-Controller
 
-Model–view–controller (MVC) is a software architectural pattern for implementing user interfaces on computers. It divides a given application into three interconnected parts. The division is done to separate internal representations of information from the way information is presented to, and accepted from, the user. The MVC design pattern decouples these significant components allowing for efficient code reuse and parallel development.
+Model–view–controller \(MVC\) is a software architectural pattern for implementing user interfaces on computers. It divides a given application into three interconnected parts. The division is done to separate internal representations of information from the way information is presented to, and accepted from, the user. The MVC design pattern decouples these significant components allowing for efficient code reuse and parallel development.
 
 ### Advantages
 
@@ -34,6 +34,7 @@ end
 ```
 
 ### View Layer
+
 Views are the component involved with the application's User Interface. These Views are generally bound from the model data and have extensions such as HTML, SLANG, ECR.
 
 ```ruby

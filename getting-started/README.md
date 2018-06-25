@@ -10,5 +10,3 @@ Amber `0.8.0` is now compatible with Crystal `0.25.0` [Read Release Notes](https
 
 {% page-ref page="../guides/" %}
 
-
-

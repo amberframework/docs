@@ -4,16 +4,16 @@ description: That feeling you get when that right tool did all the work
 
 # Installation
 
-Amber CLI offers you a set of command line tools to **create, generate, scaffold and run** your projects efficiently and fast.
+Amber CLI offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** your projects easily and fast.
 
 ## Linux
 
 Ensure you have the necessary dependencies:
 
-* **Git:** Use your platform-specific package manager to install `git`.
+* **Git:** Use your platform specific package manager to install `git`
 * **Crystal:** Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
 * **NodeJS and Webpack:** `node` is an optional dependency and is used to compile JavaScript and other assets.
-* **PostgreSQL:** A relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the flag `--database mysql` when creating a new application.
+* **PostgreSQL:** `postgres` is a relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the flag `--database mysql` when creating a new application.
 
 Once you have these dependencies, You can build the `amber` tool from source:
 
@@ -28,8 +28,7 @@ make
 sudo make install
 ```
 
-If you run into an issue compiling and receive the following error: 
-`Unhandled exception in spawn: fork: "Cannot allocate memory"` It may be that the system does not have enough memory resource. To resolve add a swap file:
+If you run into an issue on compiling regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
 
 ```bash
 sudo dd if=/dev/zero of=/swapfile bs=2k count=1024k
@@ -42,8 +41,6 @@ sudo swapon /swapfile
 
 * These are necessary to compile the CLI:
 * `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev`
-
-> You can also install amber using [Linuxbrew](http://linuxbrew.sh/) `brew install amber`
 
 ### For RedHat & CentOS
 

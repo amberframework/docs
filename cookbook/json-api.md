@@ -38,18 +38,18 @@ end
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Alternatively you can use [`response_with`](../guides/controllers/respond-with.md) helper. Here you don't need to setup `content_type`, however the requested path requires a `.json` extension, by example `/json_api.json`
+Alternatively you can use [`respond_with`](../guides/controllers/respond-with.md) helper. Here you don't need to setup `content_type`, however the requested path requires a `.json` extension, by example `/json_api.json`
 
 ```ruby
 class SomeController < ApplicationController
   def json_api
     data = {name: "Amber", age: 1}
-    response_with do
+    respond_with do
       json data.to_json
     end
   end
 end
 ```
 
-Also see [Response With](../guides/controllers/respond-with.md) and [Response & Request](../guides/controllers/request-and-response-objects.md).
+Also see [Respond With](../guides/controllers/respond-with.md) and [Response & Request](../guides/controllers/request-and-response-objects.md).
 

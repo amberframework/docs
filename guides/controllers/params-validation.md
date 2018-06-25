@@ -1,11 +1,45 @@
-# Request Params Validation
+# Params
 
 ## Introduction
 
-You will probably want to access data sent in by the user or other parameters in your controller actions. There are two types of request parameters possible in a web application:
+When a web is build normally you will want to pass data to the application from a web form. Amber makes the data receive from an HTTP Request available to the constroller via the params object. 
 
-* The first type of parameters sent as part of the URL, called query string parameters. The query string is everything after "?" in the URL.
-* The second type of parameter is usually referred to as POST data. This information often comes from an HTML form which has been submitted by a user and, called POST data because it can sent as part of an HTTP POST request.
+The params object parses the data from the request, this includes:
+
+1. Query String parameters: the query string is everything after "?" in the URL. 
+2. Form input parameters: these are send as HTML form posts
+3. Route URL parameters: route url parameters are define within the resource url.
+
+## Array Parameters
+
+The params object is not limited to one-dimensional keys and values. It can contain nested arrays and hashes. To send an array of values, append an empty pair of square brackets "[]" to the key name
+
+If you need get array of params from query:
+
+```text
+?brand[]=brand1&brand[]=brand2&brand[]=brand3
+```
+
+To retrieve all possible values for a key:
+
+```ruby
+params.fetch_all("brand[]") # => { "brand[]" => ["brand1", "brand2", "brand3"] }
+```
+> The value of params["brand[]"] will now be ["brand1", "brand2", "brand3"]. Note that parameter values are always strings; Amber makes no attempt to guess or cast the type.
+
+## JSON Parameters
+
+When writing a Web Service application that accepts JSON data, the application most likely will need to parse the incomming JSON payload. When the "Content-Type" header of your request is set to "application/json", Amber will automatically load your parameters into the params object, which you can access as you would normally.
+
+## Routing Parameters
+
+Any other parameters defined by the routing, such as :id, will also be available in the `params` object. As an example, consider a listing of clients where the list can show either active or inactive clients. We can add a route which captures the `:status` parameter in a "pretty" URL:
+
+```crystal
+get '/clients/:status' => ClientsController, :index
+```
+
+In this case, when a user opens the URL `/clients/activ`e, `params[:status]` will be set to "active"
 
 ## Validating request parameters
 
@@ -15,17 +49,16 @@ With Params Validation erroring early in the request lifecycle is excellent, all
 
 Amber attempts to aliviate the issues that comes with invalid parameters, and  provides a `params` object to all controllers in which contains a validation method.
 
-## Benefits
+### Benefits
 
 - Expression and explicitnes about the parameters the model exptects.
 - Security by whitelisting only the parameters allowed per action.
 - Data correctnes to prevent invalid inputs to propagate in the system.
 
-## Example Usage
+### Example Usage
 
 ```ruby
 class UsersController < ApplicationController
-  
   def create
     user = User.new(user_params.validate!)
     
@@ -46,7 +79,7 @@ class UsersController < ApplicationController
 end
 ```
 
-## Validation API
+### Validation API
 
 `#validation` Setups validation rules to be performed.
 
@@ -81,7 +114,7 @@ end
 params.errors
 ```
 
-# Field Validation Rules
+### Field Validation Rules
 
 Amber has extrended the Crystal String and Number classes with additional methods to assit with better validation.
 
@@ -109,7 +142,7 @@ Amber has extrended the Crystal String and Number classes with additional method
 | excludes?(value)            |                 |
 | time_string?                |                 |
 
-## Organizing validations
+### Organizing validations
 
 With Amber parameter validation, it's easy to keep your code organized:
 

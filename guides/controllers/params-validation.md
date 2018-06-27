@@ -120,27 +120,27 @@ Amber has extrended the Crystal String and Number classes with additional method
 
 | String                      | Number          |
 |-----------------------------|-----------------|
-| str?                        | positive?       |
-| email?                      | negative?       |
-| domain?                     | zero?           |
-| url?                        | div?(n)         |
-| ipv4?                       | above?(n)       |
-| ipv6?                       | below?(n)       |
-| mac_address?                | lt?(num)        |
-| hex_color?                  | self?(num)      |
-| hex?                        | lteq?(num)      |
-| alpha?(locale = "en-US")    | between?(range) |
-| numeric?                    | gteq?(num)      |
-| alphanum?(locale = "en-US") |                 |
-| md5?                        |                 |
-| base64?                     |                 |
-| slug?                       |                 |
-| lower?                      |                 |
-| upper?                      |                 |
-| credit_card?                |                 |
-| phone?(locale = "en-US")    |                 |
-| excludes?(value)            |                 |
-| time_string?                |                 |
+| `str?`                        | `positive?`       |
+| `email?`                      | `negative?`       |
+| `domain?`                     | `zero?`           |
+| `url?`                        | `div?(n)`         |
+| `ipv4?`                       | `above?(n)`       |
+| `ipv6?`                       | `below?(n)`       |
+| `mac_address?`                | `lt?(num)`        |
+| `hex_color?`                  | `self?(num)`      |
+| `hex?`                        | `lteq?(num)`      |
+| `alpha?(locale = "en-US")`    | `between?(range)` |
+| `numeric?`                    | `gteq?(num)`      |
+| `alphanum?(locale = "en-US")` |                 |
+| `md5?`                        |                 |
+| `base64?`                    |                 |
+| `slug?`                       |                 |
+| `lower?`                      |                 |
+| `upper?`                      |                 |
+| `credit_card?`                |                 |
+| `phone?(locale = "en-US")`    |                 |
+| `excludes?(value)`            |                 |
+| `time_string?`                |                 |`
 
 ### Organizing validations
 

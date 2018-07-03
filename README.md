@@ -19,7 +19,7 @@ If you’re stuck, there are a number of places you can get help.
 * [**Gitter**](https://gitter.im/amberframework/amber) for quick questions.
 * [**Stack Overflow**](https://stackoverflow.com/questions/tagged/amber-framework) for questions about the Crystal Language and Amber Framework.
 * [**Github**](https://github.com/amberframework/amber) for getting acquainted with source code, current issues and progress.
-* [**Online Guides**](https://docs.amerframework.org/amber) for getting down and dirty working with Amber.
+* [**Online Guides**](https://docs.amberframework.org/amber) for getting down and dirty working with Amber.
 * [**Twitter**](https://twitter.com/amberframework) to see latest news and announcements about Amber Framework.
 
 ## Contributing

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When building a web application at some point you will want to access data sent from a client. Amber makes the data receive from an HTTP Request available to the constroller via the params object. 
+When building a web application at some point you will want to access data sent from a client. Amber makes the data received from an HTTP Request available to the controller via the params object. 
 
 The params object parses the data from the request, this includes:
 

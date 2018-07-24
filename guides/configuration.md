@@ -52,7 +52,7 @@ end
 You can include new settings in any of the environment YAML files by specifying them in the secrets section.
 
 ```yaml
-database_url: postgress:://postgres:@localhost:5432/test_development
+database_url: postgres://postgres:@localhost:5432/test_development
 secrets: 
   custom: secret value here
 ```

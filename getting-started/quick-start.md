@@ -22,13 +22,23 @@ If you already have `crystal`, `amber`, and a database installed, you can [skip 
 
 Instructions for OS X using homebrew and Debian/Ubuntu are below. See full installation instructions [here](https://crystal-lang.org/docs/installation/) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
 
-#### OS X with homebrew
+#### macOS
 
-Installing Amber with Homebrew also installs crystal.
+- Homebrew
 
-```text
-brew install amber
-```
+  Installing Amber with Homebrew also installs Crystal.
+
+  ```text
+  brew install amber
+  ```
+  
+- MacPorts
+
+  Installing Amber with Macports also installs Crystal.
+  
+  ```
+  sudo port install amber
+  ```
 
 #### Ubuntu or Debian
 

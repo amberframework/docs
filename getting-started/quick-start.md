@@ -20,16 +20,24 @@ If you already have `crystal`, `amber`, and a database installed, you can [skip 
 
 ### 1.1 Install `crystal` and `amber`
 
-Instructions for OS X using homebrew and Debian/Ubuntu are below. See full installation instructions [here](https://crystal-lang.org/docs/installation/) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
+Instructions for OS X using Homebrew or MacPorts and Debian/Ubuntu are below. See full installation instructions [here](https://crystal-lang.org/docs/installation/) for RedHat & CentOS, ArchLinux & Derivatives, and more complete instructions.
 
-#### OS X with homebrew
+#### macOS
 
-Installing Amber with Homebrew also installs crystal.
+Installing Amber with these package managers also installs Crystal.
 
-```text
-brew install amber
-```
+- Homebrew
 
+  ```text
+  brew install amber
+  ```
+
+- MacPorts
+
+  ```text
+  sudo port install amber
+  ```
+ 
 #### Ubuntu or Debian
 
 First install crystal

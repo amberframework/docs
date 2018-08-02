@@ -54,16 +54,28 @@ sudo swapon /swapfile
 
 You should now be able to run `amber` in the command line.
 
-## Homebrew MacOS
+#### macOS
 
-```text
-brew install amber
-```
+Installing Amber with these package managers also installs Crystal.
 
-If you have previously installed amber with `brew`, you may need to uninstall and untap it:
+- Homebrew
 
-```text
-brew uninstall amberframework/amber/amber
-brew untap amberframework/amber
-```
+  ```text
+  brew install amber
+  ```
+
+  If you have previously installed amber with `brew`, you may need to uninstall and untap it:
+
+  ```text
+  brew uninstall amberframework/amber/amber
+  brew untap amberframework/amber
+  ```
+
+- MacPorts
+
+  ```text
+  sudo port install amber
+  ```
+
+
 

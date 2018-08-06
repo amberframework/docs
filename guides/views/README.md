@@ -11,7 +11,7 @@ The Amber Generators support `slang` and `ecr` templates using the `-t` option w
 
 ## Rendering Content
 
-In most cases, the `Controller::Base#render` method does the heavy lifting of rendering your application's content for use by a browser. There are a variety of ways to customize the behavior of render. You can render the default view for a Amber template, or a specific template, or a file, or inline code, or nothing at all.
+In most cases, the `Controller::Base#render` method does the heavy lifting of rendering your application's content for use by a browser. There are a variety of ways to customize the behavior of render. You can render the default view for an Amber template, or a specific template, or a file, or inline code, or nothing at all.
 
 ### Rendering an Action's View
 

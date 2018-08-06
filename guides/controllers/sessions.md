@@ -50,7 +50,7 @@ Accessing the session
 class ApplicationController < Amber::Controller::Base
   # Finds the User with the ID stored in the session with the key
   # :current_user_id This is a common way to handle user login in
-  # a Amber application; logging in sets the session value and
+  # an Amber application; logging in sets the session value and
   # logging out removes it.
   private def current_user
     @_current_user ||= session[:current_user_id] &&

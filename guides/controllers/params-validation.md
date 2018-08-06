@@ -39,19 +39,19 @@ Any other parameters defined by the routing, such as :id, will also be available
 get '/clients/:status' => ClientsController, :index
 ```
 
-In this case, when a user opens the URL `/clients/activ`e, `params[:status]` will be set to "active"
+In this case, when a user opens the URL `/clients/active`, `params[:status]` will be set to "active"
 
 ## Validating request parameters
 
-Performing validations at the params level can save your application to perform operations deemed to be invalid due to input params. Having params validations in place prevents your application for errors due to wrong input and increases the security of your app in general.
+Performing validations at the params level can save your application from performing operations deemed to be invalid due to input params. Having parameter validations in place prevents errors due to invalid input and increases the security of your application in general.
 
-With Params Validation erroring early in the request lifecycle is excellent, allows to free resources for the next request, adds a layer of security and prevents invalid data from reaching the backend processes.
+Validating params and erroring early in the request lifecycle frees resources for the next request sooner, adds a layer of security and prevents invalid data from reaching the backend processes.
 
-Amber attempts to aliviate the issues that comes with invalid parameters, and  provides a `params` object to all controllers in which contains a validation method.
+Amber attempts to aliviate the issues that come with invalid parameters and provides a `params` object to all controllers which contains a built-in `validation` method.
 
 ### Benefits
 
-- Expression and explicitnes about the parameters the model exptects.
+- Expression and explicitness about the parameters the model exptects.
 - Security by whitelisting only the parameters allowed per action.
 - Data correctnes to prevent invalid inputs to propagate in the system.
 
@@ -81,10 +81,10 @@ end
 
 ### Validation API
 
-`#validation` Setups validation rules to be performed.
+`#validation` Setup validation rules to be performed.
 
-- Use `#required(field)` method to define require fields.
-- Use `#optional(field)` method to define optional fields.
+- Use `#required(field)` to define required fields.
+- Use `#optional(field)` to define optional fields.
 
 ```ruby
 params.validation do
@@ -93,13 +93,13 @@ params.validation do
 end
 ```
 
-`#validate!` Input must be valid otherwise raises error, if valid returns a hash of validated params Otherwise raises a Validator::ValidationFailed error messages contain errors.
+`#validate!` Input must be valid otherwise raises an error. If valid, returns a hash of validated params otherwise raises `Validator::ValidationFailed` which conatins the failed validaton error messages.
 
 ```ruby
 user = User.new params.validate!
 ```
 
-`#valid?` Returns True or false whether the validation passed
+`#valid?` Returns true if all params are valid or false otherwise. 
 
 ```ruby
 unless params.valid?
@@ -144,7 +144,7 @@ Amber has extrended the Crystal String and Number classes with additional method
 
 ### Organizing validations
 
-With Amber parameter validation, it's easy to keep your code organized:
+With Amber parameter validation it's easy to keep your code organized:
 
 ```ruby
 class UsersController < ApplicationController

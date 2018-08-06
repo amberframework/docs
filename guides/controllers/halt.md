@@ -15,7 +15,7 @@ end
 
 A status code of `404` was returned, and the content in `render` will not be delivered to the client.
 
-The next time you’re building a Amber application, consider using halt to simplify error handling.
+The next time you’re building an Amber application, consider using halt to simplify error handling.
 
 ## Halt! and redirect\_to
 

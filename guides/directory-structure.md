@@ -9,12 +9,12 @@ When you use the `amber new` command to create your application, it creates the 
 | config/ | Contains configuration code for initializers, environments, routing, and deployment |
 | db/ | Contains database seeds and migrations. |
 | lib/ | Contains local installation of all dependent shards |
-| public/ | Location for html, css, and javscripts. This will be the default directory for static assets. |
+| public/ | Location for html, css, and javascripts. This will be the default directory for static assets. |
 | spec/ | Location for application specification and tests |
 | src/ | Source code that composes your application |
 | .encryption\_key | This file is used to encrypt application secrets so they are not stored in source control |
-| .amber.yml | This file is generate for Amber CLI and contains settings for the command line tools |
-| package.json | Amber utilizes Webpack and NPM to compile static assets |
+| .amber.yml | This file is generated for Amber CLI and contains settings for the command line tools |
+| package.json | Amber uses Webpack and NPM to compile static assets |
 | .gitignore | This file tells git which files and patterns it should ignore. |
 | docker-compose.yml | A file which defines services, networking, and drives for docker deployment. |
 | Dockerfile | A file which contains all the commands needed to build a docker image. |

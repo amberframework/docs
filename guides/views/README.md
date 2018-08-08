@@ -61,13 +61,13 @@ render template: "edit.html.slang"
 
 With most of the options to render, the rendered content is displayed as part of the current layout. You'll learn more about layouts and how to use them later in this guide.
 
-You can use the :layout option to tell Rails to use a specific file as the layout for the current action:
+You can use the :layout option to tell Amber to use a specific file as the layout for the current action:
 
 ```ruby
 render("show.slang", layout: "new_layout.slang")
 ```
 
-You can also tell Rails to render with no layout at all:
+You can also tell Amber to render with no layout at all:
 
 ```ruby
 render("show.slang", layout: false)

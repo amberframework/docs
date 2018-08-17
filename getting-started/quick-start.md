@@ -1,11 +1,5 @@
 # Quick Start
 
-{% hint style="warning" %}
-Amber `0.7.2` requires Crystal`0.24.X`see [reported issue](https://github.com/amberframework/amber/issues/867)
-
-Amber `0.8.0` will be compatible with Crystal `0.25.0` [We're working on that!](https://github.com/amberframework/amber/pull/826)
-{% endhint %}
-
 This quick start guide will help you get a full stack web application running in just a few minutes by leveraging amber’s code generators.
 
 It will take us just 7 steps. Let’s get started!
@@ -29,6 +23,7 @@ Installing Amber with these package managers also installs Crystal.
 - Homebrew
 
   ```text
+  brew tap amberframework/amber
   brew install amber
   ```
 
@@ -60,6 +55,7 @@ make install
 You can also install Amber with [Linuxbrew](http://linuxbrew.sh/)
 
 ```bash
+brew tap amberframework/amber
 brew install amber
 ```
 

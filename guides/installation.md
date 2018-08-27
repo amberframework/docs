@@ -61,14 +61,8 @@ Installing Amber with these package managers also installs Crystal.
 - Homebrew
 
   ```text
+  brew tap amberframework/amber
   brew install amber
-  ```
-
-  If you have previously installed amber with `brew`, you may need to uninstall and untap it:
-
-  ```text
-  brew uninstall amberframework/amber/amber
-  brew untap amberframework/amber
   ```
 
 - MacPorts
@@ -76,6 +70,3 @@ Installing Amber with these package managers also installs Crystal.
   ```text
   sudo port install amber
   ```
-
-
-

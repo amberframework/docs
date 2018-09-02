@@ -59,7 +59,7 @@ secrets:
 
 ## Encrypted Environment Settings
 
-With Amber you can encrypt your environment setting `amber encrypt {envrionment}`, this command will open your editor to allow make changes if needed and then encrypt the file `{envrionment}.enc`.
+With Amber you can encrypt your environment setting `amber encrypt {environment}`, this command will open your editor to allow make changes if needed and then encrypt the file `{environment}.enc`.
 
 A `.encryption_key` file is provided. It contains a secret\_key\_base that is used to decrypt your encrypted environment settings. This file is added to `.gitignore` so it will not be committed to your repository. Without the encryption key, you won't be able to decrypt your environment settings.
 

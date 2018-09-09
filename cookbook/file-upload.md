@@ -7,7 +7,7 @@ First you need an amber project generated with [Amber CLI](../guides/create-new-
 {% endhint %}
 
 {% code-tabs %}
-{% code-tabs-item title="src/controllers/come\_controller.cr" %}
+{% code-tabs-item title="src/controllers/some\_controller.cr" %}
 ```ruby
 class SomeController < ApplicationController
   def file_upload

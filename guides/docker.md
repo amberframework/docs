@@ -4,7 +4,7 @@ When you generate a new Amber project, we include `Docker` and `docker-compose.y
 
 ## Dockerfile
 
-The Docker file will have everything you need to build and run your amber project. This includes all needed the libraries, Nodejs, Crystal and Amber command line tools. It starts from the official `crystallang/crystal:{version}` docker image.
+The Docker file will have everything you need to build and run your amber project. This includes all the needed libraries, Nodejs, Crystal and Amber command line tools. It starts from the official `crystallang/crystal:{version}` docker image.
 
 It will also add the project to the `/app` folder on the image so you can use this in production as well.
 

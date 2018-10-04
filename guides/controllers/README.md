@@ -16,7 +16,7 @@ When defining your routes you specify the controller that the route will match t
 get "/", ApiController, :index
 ```
 
-In the snipped above the **ApiController** is the name of the controller `./src/controller/api_controller.cr`
+In the snippet above, **ApiController** is the name of the controller `./src/controller/api_controller.cr`
 
 ## Methods and Actions
 

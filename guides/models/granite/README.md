@@ -11,7 +11,7 @@ Add this library to your projects dependencies along with the driver in your `sh
 ```yaml
 dependencies:
   granite_orm:
-    github: amberframework/granite-orm
+    github: amberframework/granite
 
   # Pick your database
   mysql:

@@ -30,6 +30,7 @@ Installing Amber with these package managers also installs Crystal.
 - MacPorts
 
   ```text
+  sudo port selfupdate
   sudo port install amber
   ```
  

@@ -26,13 +26,7 @@ end
 
 System tests allows test user interactions with your application, running tests in either a real chrome browser. System tests use the Selenium Standalone Server.
 
-For creating Amber system tests, you use the spec/system directory in your application. Amber provides a generator to create a system test skeleton for you.
-
-```text
-amber g system_test users
-```
-
-Here's what a freshly-generated system test looks like:
+For creating Amber system tests, you use the spec/system directory in your application. Here's how a system test looks like:
 
 ```ruby
 class SomeFeature < GarnetSpec::System::Test

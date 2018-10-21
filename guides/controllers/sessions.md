@@ -75,14 +75,15 @@ class LoginsController < ApplicationController
 end
 ```
 
-To remove something from the session, assign that key to be nil or use`session.delete(key)`
+To remove something from the session, use`session.delete(key)`
 
 ```ruby
 class LoginsController < ApplicationController
   # "Delete" a login, aka "log the user out"
   def destroy
     # Remove the user id from the session
-    @_current_user = session[:current_user_id] = nil
+    @_current_user = nil
+    session.delete(:current_user_id)
     redirect_to root_url
   end
 end

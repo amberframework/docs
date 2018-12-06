@@ -21,7 +21,7 @@ Confirm that the above prerequisites are installed before setting up the debugge
 By convention the project directory name is the same as your application name, if you have changed it, please update `${workspaceFolderBasename}` with the name configured inside `shards.yml`
 {% endhint %}
 
-### 1. `task.json` configuration to compile a crystal project
+### 1. `tasks.json` configuration to compile a crystal project
 
 ```javascript
 {

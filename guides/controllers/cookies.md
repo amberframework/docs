@@ -48,20 +48,15 @@ cookies.encrypted[:discount]  # => 45
 Please note that if you specify a :domain when setting a cookie, you must also specify the domain when deleting the cookie:
 
 ```ruby
-cookies[:name] = {
-  value:   "a yummy cookie",
-  expires: 1.year.from_now,
-  domain:  "domain.com"
-}
-cookies.delete(:name, domain: "domain.com")
+cookies.set "name", "a yummy cookie", expires: 1.year.from_now, domain:  "domain.com"
+cookies.delete "name", domain: "domain.com"
 ```
 
-The option symbols for setting cookies are:
+The optional parameters for setting cookies are:
 
 ```ruby
-:value  # The cookies value.
-:path   # The path for which this cookie applies. Defaults to the root of the application.
-:domain # The domain for which this cookie applies so you can restrict to the domain level. 
+path   # The path for which this cookie applies. Defaults to the root of the application.
+domain # The domain for which this cookie applies so you can restrict to the domain level. 
         # If you use a schema like www.example.com and want to share session with user.example.com 
         # set :domain to :all. Make sure to specify the :domain option with :all or Array again 
         #  when deleting cookies.
@@ -70,12 +65,12 @@ domain: nil                           # Does not set cookie domain. (default)
 domain: :all                          # Allow the cookie for the top most level domain and subdomains.
 domain: %w(.example.com .example.org) # Allow the cookie for concrete domain names.
 
-:tld_length # When using :domain => :all, this option can be used to explicitly set the TLD length 
+tld_length # When using :domain => :all, this option can be used to explicitly set the TLD length 
             # when using a short (<= 3 character) domain that is being interpreted as part of a TLD. 
             # For example, to share cookies between user1.lvh.me and user2.lvh.me, set :tld_length to 1.
 
-:expires    # The time at which this cookie expires, as a Time object.
-:secure     # Whether this cookie is only transmitted to HTTPS servers. Default is false.
-:httponly   # Whether this cookie is accessible via scripting or only HTTP. Defaults to false.
+expires    # The time at which this cookie expires, as a Time object.
+secure     # Whether this cookie is only transmitted to HTTPS servers. Default is false.
+httponly   # Whether this cookie is accessible via scripting or only HTTP. Defaults to false.
 ```
 

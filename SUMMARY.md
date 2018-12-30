@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Getting Started](getting-started/README.md)
-  * [Quick Start](getting-started/quick-start.md)
 * [Guides](guides/README.md)
   * [Overview](guides/overview.md)
   * [Installation](guides/installation.md)

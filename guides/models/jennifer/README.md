@@ -61,7 +61,7 @@ test:
 ```ruby
 require "colorize"
 
-Jennifer::Config.read("config/database.yml", AMBER_ENV)
+Jennifer::Config.read("config/database.yml", Amber.env.to_s)
 
 Jennifer::Config.configure do |conf|
   conf.logger = Logger.new(STDOUT)
@@ -83,8 +83,8 @@ Jennifer uses Sam for running tasks pertinent to ORM operations. Sam is a Make-l
 
 ```ruby
 # src/sam.cr
-require "jennifer/adapter/postgres"
 require "jennifer"
+require "jennifer/adapter/postgres"
 
 require "../config/jennifer"
 require "../db/migrations/*"
@@ -96,11 +96,11 @@ Sam.help
 
 ### Edit your src/{project}.cr file
 
-This should be done before you load your application configurations \(or at least models\). With Amber this is very easy. Also the order is very important the adapter should come before Jennifer.
+This should be done before you load your application configurations \(or at least models\). With Amber this is very easy.
 
 ```ruby
-require "jennifer/adapter/postgres" # for postgres
 require "jennifer"
+require "jennifer/adapter/postgres"
 
 require "amber"
 require "./controllers/**"
@@ -113,4 +113,3 @@ Amber::Server.instance.run
 ```
 
 You're all set with the configuration. Next using Jennifer Migrations and Models.
-

@@ -45,9 +45,8 @@
     * [Sockets](guides/websockets/sockets.md)
     * [JavaScript Client](guides/websockets/javascript-client.md)
   * [Mailers](guides/mailers/README.md)
-    * [Deliver a new Email](guides/mailers/deliver-a-new-email.md)
-* [Testing](testing/README.md)
-  * [System Tests](testing/system-tests.md)
+  * [Testing](guides/testing/README.md)
+    * [System Tests](guides/testing/system-tests.md)
 * [Deployment](deployment/README.md)
   * [Manual Deploy](deployment/manual-deploy.md)
   * [Digital Ocean](deployment/digital-ocean.md)
@@ -87,4 +86,3 @@
 * [Ask on StackOverflow](https://stackoverflow.com/questions/tagged/amber-framework)
 * [Follow on Twitter](https://twitter.com/amberframework)
 * [Submit an issue](https://github.com/amberframework/amber/issues)
-

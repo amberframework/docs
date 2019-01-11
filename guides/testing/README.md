@@ -1,7 +1,5 @@
 # Testing
 
-{% page-ref page="system-tests.md" %}
-
 This guide covers built-in mechanisms in Amber for testing your application.
 
 With this guide you will learn:
@@ -44,4 +42,3 @@ Your tests are run under AMBER\_ENV=test.
 {% hint style="warning" %}
 Guides for other tests like Controller tests, Integration tests and Model testing are work in progress...
 {% endhint %}
-

@@ -19,6 +19,7 @@
     * [Filters](guides/controllers/filters.md)
     * [Flash](guides/controllers/flash.md)
     * [Redirection](guides/controllers/redirection.md)
+    * [CSRF](guides/controllers/csrf.md)
   * [Views](guides/views/README.md)
     * [View Helpers](guides/views/view-helpers.md)
   * [Models](guides/models/README.md)

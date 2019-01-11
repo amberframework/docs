@@ -19,6 +19,7 @@
     * [Filters](guides/controllers/filters.md)
     * [Flash](guides/controllers/flash.md)
     * [Redirection](guides/controllers/redirection.md)
+    * [CSRF](guides/controllers/csrf.md)
   * [Views](guides/views/README.md)
     * [View Helpers](guides/views/view-helpers.md)
   * [Models](guides/models/README.md)
@@ -45,7 +46,6 @@
     * [Sockets](guides/websockets/sockets.md)
     * [JavaScript Client](guides/websockets/javascript-client.md)
   * [Mailers](guides/mailers/README.md)
-    * [Deliver a new Email](guides/mailers/deliver-a-new-email.md)
 * [Testing](testing/README.md)
   * [System Tests](testing/system-tests.md)
 * [Deployment](deployment/README.md)
@@ -87,4 +87,3 @@
 * [Ask on StackOverflow](https://stackoverflow.com/questions/tagged/amber-framework)
 * [Follow on Twitter](https://twitter.com/amberframework)
 * [Submit an issue](https://github.com/amberframework/amber/issues)
-

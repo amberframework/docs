@@ -14,7 +14,7 @@
     * [Request & Response Objects](guides/controllers/request-and-response-objects.md)
     * [Halt!](guides/controllers/halt.md)
     * [Respond With](guides/controllers/respond-with.md)
-    * [Params Validation](guides/controllers/params-validation.md)
+    * [Params](guides/controllers/params.md)
     * [Cookies](guides/controllers/cookies.md)
     * [Filters](guides/controllers/filters.md)
     * [Flash](guides/controllers/flash.md)

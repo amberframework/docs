@@ -10,6 +10,40 @@ The params object parses the data from the request, this includes:
 2. Form input parameters: these are send as HTML form posts
 3. Route URL parameters: route url parameters are define within the resource url.
 
+## Basic Usage
+
+Regular String parameters can be accessed using the following methods. Please note
+
+```ruby
+params[:key] # requires that the param exists already
+params[:key]? # does not require that the param exists
+```
+
+To set a param use the following syntax
+
+```ruby
+params[:key] = "My String"
+```
+
+Please note that while the params accepts a Symbol key to be passed, it will be converted to a String automatically. For example the following two statements are equivalent.
+
+```ruby
+params[:key] # => "My String"
+params["key"] # => "My String"
+```
+
+To access the validated params hash. It will only contain entries that have been sucesssfully validated using the Validation API. If you do not use the Validation API this will return an empty Hash.
+
+```ruby
+params.to_h
+```
+
+To access the entire raw / non-validated params hash:
+
+```ruby
+params.to_unsafe_h
+```
+
 ## Array Parameters
 
 The params object is not limited to one-dimensional keys and values. It can contain nested arrays and hashes. To send an array of values, append an empty pair of square brackets "[]" to the key name
@@ -177,4 +211,3 @@ class UsersController < ApplicationController
   end
 end
 ```
-

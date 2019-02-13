@@ -15,7 +15,7 @@ At this time the known available recipes are;
 - [damianham/amber_granite](https://github.com/damianham/amber_granite) - basic default recipe using Granite ORM
 - [damianham/amber_crecto](https://github.com/damianham/amber_crecto) - basic default recipe using Crecto ORM
 - [damianham/amber_modular](https://github.com/damianham/amber_modular) - modular structure for your application using Granite ORM
-- [damianham/amber_react-sidebar](https://github.com/damianham/amber_react-sidebar) - modular application recipe for a React SPA with Granite ORM
+- [damianham/amber_react_sidebar](https://github.com/damianham/amber_react-sidebar) - modular application recipe for a React SPA with Granite ORM
 
 Visit the recipe repository for more information about each recipe.
 

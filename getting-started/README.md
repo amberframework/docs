@@ -74,6 +74,39 @@ brew install amber
 Above are the steps for building from source, the dependencies are specific to Ubuntu/Debian. See [full installation instructions](../guides/installation.md) for other Linux Distributions.
 {% endhint %}
 
+
+#### Archlinux and Arch-based distros
+
+You can install crystal and shards by running the following command
+
+```text
+sudo pacman -S crystal shards
+```
+
+You can install amber from the AUR using your favourite package manager. (Here we use "yay")
+
+```text
+yay amber
+```
+
+As amber uses databases you may want to download them from the community repository.
+
+To download sqlite3
+
+```text
+pacman -S sqlite
+```
+
+and/or Postgresql. 
+
+Notice that you have to enable the Postgresql service after the installation before using it.
+
+```text
+pacman -S postgresql
+systemctl enable postgresql
+systemctl start postgresql
+```
+
 ### 1.2 Install a database
 
 Amber works with `postgresql` \(default\), `mysql`, or `sqlite`.

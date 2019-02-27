@@ -13,7 +13,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   crecto:
-    github: fridgerator/crecto
+    github: Crecto/crecto
 ```
 
 Include a database adapter:

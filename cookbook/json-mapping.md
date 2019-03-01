@@ -20,10 +20,10 @@ end
 
 class SomeController < ApplicationController
   def json_mapping
-    return "empty body" if response.body.to_s.blank?
+    return "empty body" if request.body.to_s.blank?
     context.response.content_type = "application/json"
     user = User.from_json request.body.to_s
-    user.name += "mapped!"
+    user.username += "mapped!"
     user.to_json
   end
 end
@@ -55,9 +55,9 @@ Alternatively you can use [`response_with`](../guides/controllers/respond-with.m
 ```ruby
 class SomeController < ApplicationController
   def json_mapping
-    return "empty body" if response.body.to_s.blank?
-    user = User.from_json response.body.to_s
-    user.name += "mapped!"
+    return "empty body" if request.body.to_s.blank?
+    user = User.from_json request.body.to_s
+    user.username += "mapped!"
     response_with do
       json user.to_json
     end

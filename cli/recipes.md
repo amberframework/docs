@@ -7,17 +7,12 @@ Amber generators can use a recipe to generate your application, and scaffold you
 ### Recipe contributors
 
 Recipes are provided by independent contributors in their own github accounts.  To use a recipe you specify the github account name and recipe name in the format _githubaccount/recipe_name_.  
+Recipe creators should add the **amber-recipe** topic to the github repository for the recipe.
 
 ### Available recipes
 
-At this time the known available recipes are;
-
-- [damianham/amber_granite](https://github.com/damianham/amber_granite) - basic default recipe using Granite ORM
-- [damianham/amber_crecto](https://github.com/damianham/amber_crecto) - basic default recipe using Crecto ORM
-- [damianham/amber_modular](https://github.com/damianham/amber_modular) - modular structure for your application using Granite ORM
-- [damianham/amber_react_sidebar](https://github.com/damianham/amber_react_sidebar) - modular application recipe for a React SPA with Granite ORM
-
-Visit the recipe repository for more information about each recipe.
+See the [Amber Recipes](https://github.com/topics/amber-recipe) that are available on github for a list
+of recipes that have been created by recipe contributors. Visit the recipe repository for more information about each recipe.
 
 ### Amber New Command with a recipe
 

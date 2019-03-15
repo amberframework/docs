@@ -32,10 +32,10 @@ creation of chatrooms that will allow different clients to connect to it.
 ### Send events / messages
 
 When you need to send a message after a user submits the form that includes their message, you'll want to push it 
-out to the server for it to be rebroadcasted to all connected clients.
+out to the server for it to be rebroadcast to all connected clients.
 
 ```javascript
-channel.push('message_new', { message: 'amber websockets is the bomb diggity!' })
+channel.push('message_new', { message: 'amber websockets are the bomb diggity!' })
 ```
 
 ### Subscribe to events / messages

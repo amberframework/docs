@@ -44,9 +44,9 @@ way to send out a `#{name} has joined the chat!` message to all those currently 
 
 ## How are messages broadcasted?
 
-Whenever a user sends a message that is broadcasted through the JavaScript `channel.push` function, the `handle_message` methed is invoked. 
+Whenever a user sends a message that is broadcasted through the JavaScript `channel.push` function, the `handle_message` method is invoked. 
 Here the message is then rebroadcasted to all those who are connected to the channel. The message is then transmitted through the 
-`channel.on('message_new')` listener in the JavaScript. Before the message gets broadcasted, here is where you would want to insert records into your 
+`channel.on('message_new')` listener in the JavaScript. Before the message gets broadcast, here is where you would want to insert records into your 
 database, if you wanted to keep a history of messages sent or received.
 
 ## What happens when a user leaves?

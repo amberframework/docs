@@ -31,7 +31,8 @@ end
 
 ## Add a new Route
 
-We need to add a new route so that a handshake can be established with the server.
+A new route needs to be added so that a handshake can be established with the server. Notice how after `\chat`, the struct `ChatSocket` that was created 
+above is mapped to that route.
 
 ```ruby
 Amber::Server.configure do |app|
@@ -58,4 +59,3 @@ class HomeController < ApplicationController
   end
 end
 ```
-

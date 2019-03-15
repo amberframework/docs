@@ -54,3 +54,4 @@ database, if you wanted to keep a history of messages sent or received.
 When a user leaves the web page that currently has an established socket connection, the connection breaks and triggers a message to be sent 
 on the servers side. The `handle_leave` method handles this in the channels class. Here is where a message such as `#{name} has left the chat!` could 
 be sent out to all connected clients.
+

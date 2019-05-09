@@ -18,7 +18,7 @@ Options:
   -d          Select the database database engine, can be one of: pg | mysql | sqlite
               (default: pg)
   --deps      Installs project dependencies, this is the equivalent of running (shards update)
-  -m          Select the model type, can be one of: granite | crecto
+  -m          Select the model type, can be one of: granite
               (default: granite)
   --no-color  Disable colored output
   -r          Use a named recipe.  See documentation at  https://docs.amberframework.org/amber/cli/recipes.

@@ -55,7 +55,7 @@ Subcommands:
 
 Options:
   -d, --database  # Preconfigure for selected database. Options: pg | mysql | sqlite (default: pg)
-  -m, --model     # Preconfigure for selected model. Options: granite | crecto (default: granite)
+  -m, --model     # Preconfigure for selected model. Options: granite (default: granite)
   -t, --template  # Preconfigure for selected template engine. Options: slang | ecr (default: slang)
   -h, --help      # Describe available commands and usages
   -v, --version   # Prints Amber version

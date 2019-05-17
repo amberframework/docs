@@ -4,7 +4,7 @@ This tutorial has tips and tricks on how to debug Crystal projects. It shows how
 
 ## Prerequisites
 
-* Crystal - See instalation guide [here](https://crystal-lang.org/docs/installation/)
+* Crystal - See installation guide [here](https://crystal-lang.org/docs/installation/)
 * Crystal project - See installation guide [here](https://crystal-lang.org/docs/using_the_compiler/#creating-a-project-or-library) or [here \(Amber\)](../guides/installation.md)
 * VSCode with [Crystal Lang](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang) and [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) extensions
 * GNU debugger \(GDB\) or LLVM debugger \(LLDB\) - See installation guide below

@@ -57,6 +57,14 @@ secrets:
   custom: secret value here
 ```
 
+## How do I access my custom settings?
+
+In your application, you can access settings from your environment YAML files using the `Amber.settings.secrets` Hash
+
+```ruby
+Amber.settings.secrets["custom"] # =>  "secret value here"
+```
+
 ## Encrypted Environment Settings
 
 With Amber you can encrypt your environment setting `amber encrypt {environment}`, this command will open your editor to allow make changes if needed and then encrypt the file `{environment}.enc`.

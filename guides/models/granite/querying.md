@@ -90,7 +90,7 @@ end
 ### Find By
 
 ```ruby
-post = Post.find_by :slug, "example_slug"
+post = Post.find_by slug: "example_slug"
 if post
   puts post.name
 end

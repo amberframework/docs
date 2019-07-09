@@ -29,6 +29,24 @@ struct ChatSocket < Amber::WebSockets::ClientSocket
 end
 ```
 
+## Add a new Route
+
+A new route needs to be added so that a handshake can be established with the server. Notice how after `\chat`, the struct `ChatSocket` that was created 
+above is mapped to that route.
+
+```ruby
+Amber::Server.configure do |app|
+  pipeline :web do
+    # pipelines...
+  end
+
+  routes :web do
+    # other routes,,,
+    websocket "/chat", ChatSocket
+  end
+end
+```
+
 ## Send messages from controllers \(or anywhere else\)
 
 `Amber::WebSockets::ClientSocket` provides a public class method `broadcast` for publishing messages to all subscribers of a topic from within controllers or anywhere else in your application.

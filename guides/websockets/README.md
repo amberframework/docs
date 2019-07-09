@@ -4,5 +4,3 @@
 
 {% page-ref page="javascript-client.md" %}
 
-
-

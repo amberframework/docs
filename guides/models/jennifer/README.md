@@ -59,6 +59,7 @@ test:
 ### Create a **jennifer.c**r under the **/config** directory
 
 ```ruby
+require "amber"
 require "colorize"
 
 Jennifer::Config.read("config/database.yml", Amber.env.to_s)

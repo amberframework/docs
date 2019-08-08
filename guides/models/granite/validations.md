@@ -8,7 +8,7 @@ This section is based on [Granite's README](https://docs.amberframework.org/gran
 
 All database errors are added to the `errors` array used by Granite::ORM::Validators with the symbol ':base'
 
-```ruby
+```crystal
 post = Post.new
 post.save
 post.errors[0].to_s.should eq "ERROR: name cannot be null"
@@ -26,21 +26,22 @@ Failing the validation does not prevent the object from being persisted \(saved\
 
 ### To validate whole object
 
-```ruby
+```crystal
 validate(message : String, block)
 ```
 
 Example:
 
-```ruby
+```crystal
 require "granite_orm/adapter/sqlite"
 
 class Comment < Granite::Base
-  adapter sqlite
-
-  table_name comments
-  field name : String
-  field body : String
+  connection sqlite
+  table comments
+  
+  column id : Int64, primary: true
+  column name : String
+  column body : String
 
   validate("Invalid Comment.", ->(comment : self) {
     (comment.name != nil && comment.name != "") || (comment.body != nil && comment.body != "")
@@ -50,21 +51,22 @@ end
 
 ### To validate a field in an object
 
-```ruby
+```crystal
 validate(name : Symbol, message : String, block)
 ```
 
 Example:
 
-```ruby
+```crystal
 require "granite_orm/adapter/sqlite"
 
 class Comment < Granite::Base
-  adapter sqlite
+  connection sqlite
+  table comments
 
-  table_name comments
-  field name : String
-  field body : String
+  column id : Int64, primary: true
+  column name : String
+  column body : String
 
   validate(:name, "Name required.", ->(comment : self) {
     (comment.name != nil && comment.name != "")

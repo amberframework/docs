@@ -82,7 +82,7 @@ Sometimes you need to pre-populate your tables with data. This is common if you 
 
 You can do this by creating a `db/seeds.cr` file
 
-```ruby
+```crystal
 require "../config/application.cr"
 
 user = User.new

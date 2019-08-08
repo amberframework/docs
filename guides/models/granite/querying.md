@@ -16,7 +16,7 @@ Always pass in parameters to avoid SQL Injection. Use a `?` in your query as pla
 
 Here are some examples:
 
-```ruby
+```crystal
 posts = Post.all("WHERE name LIKE ?", [%{Joe%}])
 if posts
   posts.each do |post|
@@ -40,13 +40,13 @@ It is common to only want the first result and append a `LIMIT 1` to the query. 
 
 For example:
 
-```ruby
+```crystal
 post = Post.first("ORDER BY posts.name DESC")
 ```
 
 This is the same as:
 
-```ruby
+```crystal
 post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 ```
 
@@ -54,13 +54,13 @@ post = Post.all("ORDER BY posts.name DESC LIMIT 1").first
 
 To clear all the rows in the database:
 
-```ruby
+```crystal
 Post.clear #truncate the table
 ```
 
 ### Find All
 
-```ruby
+```crystal
 posts = Post.all
 if posts
   posts.each do |post|
@@ -71,7 +71,7 @@ end
 
 ### Find First
 
-```ruby
+```crystal
 post = Post.first
 if post
   puts post.name
@@ -80,7 +80,7 @@ end
 
 ### Find
 
-```ruby
+```crystal
 post = Post.find 1
 if post
   puts post.name
@@ -89,7 +89,7 @@ end
 
 ### Find By
 
-```ruby
+```crystal
 post = Post.find_by slug: "example_slug"
 if post
   puts post.name
@@ -102,7 +102,7 @@ end
 find_in_batches(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
 ```
 
-```ruby
+```crystal
 posts = Post.find_in_batches("name == ?", ["test"])
 ```
 
@@ -112,7 +112,7 @@ posts = Post.find_in_batches("name == ?", ["test"])
 find_each(clause = "", params = [] of DB::Any, batch_size limit = 100, offset = 0)
 ```
 
-```ruby
+```crystal
 posts = Post.find_each("name like ?", ["%test%"]) do |post|
   puts post
 end
@@ -120,7 +120,7 @@ end
 
 ### Insert
 
-```ruby
+```crystal
 post = Post.new
 post.name = "Granite ORM Rocks!"
 post.body = "Check this out."
@@ -129,7 +129,7 @@ post.save
 
 ### Update
 
-```ruby
+```crystal
 post = Post.find 1
 post.name = "Granite Really Rocks!"
 post.save
@@ -137,7 +137,7 @@ post.save
 
 ### Delete
 
-```ruby
+```crystal
 post = Post.find 1
 post.destroy
 puts "deleted" unless post

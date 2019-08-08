@@ -36,48 +36,34 @@ database_url: "postgres://username:password@host:5432/database_environment"
 database_url: "sqlite3:./config/database_environment.db"
 ```
 
-Or you can set the `DATABASE_URL` environment variable. This will override the environments setting.
-
 ## Usage
 
 Here is an example using Granite ORM Model
 
-```ruby
+```crystal
 require "granite_orm/adapter/mysql"
 
 class Post < Granite::Base
-  adapter mysql
-  field name : String
-  field body : String
+  connection mysql
+  table posts
+
+  column id : Int64, primary: true
+  column name : String?
+  column body : String?
   timestamps
-end
-```
-
-You can disable the timestamps for SqlLite since TIMESTAMP is not supported for this database:
-
-```ruby
-require "granite_orm/adapter/sqlite"
-
-class Comment < Granite::Base
-  adapter sqlite
-  table_name post_comments
-  field name : String
-  field body : String
 end
 ```
 
 ### id, created\_at, updated\_at
 
-The primary key is automatically created for you and if you use `timestamps` they will be automatically updated for you.
+If you use `timestamps` they will be automatically updated for you.
 
-Here are the MySQL field definitions for id, created\_at, updated\_at
+Here are the MySQL field definitions for created\_at, updated\_at
 
 ```sql
-id BIGINT NOT NULL AUTO_INCREMENT
 # Your fields go here
 created_at TIMESTAMP
 updated_at TIMESTAMP
-PRIMARY KEY (id)
 ```
 
 ### Custom Primary Key
@@ -86,11 +72,12 @@ For legacy database mappings, you may already have a table and the primary key i
 
 We have a macro called `primary` to help you out:
 
-```ruby
+```crystal
 class Site < Granite::Base
-  adapter mysql
-  primary custom_id : Int32
-  field name : String
+  connection mysql
+
+  column custom_id : Int32, primary: rue
+  column name : String
 end
 ```
 
@@ -100,11 +87,12 @@ This will override the default primary key of `id : Int64`.
 
 For natural keys, you can set `auto: false` option to disable auto increment insert.
 
-```ruby
+```crystal
 class Site < Granite::Base
-  adapter mysql
-  primary code : String, auto: false
-  field name : String
+  connection mysql
+
+  column code : String, primary: true, auto: false
+  column name : String
 end
 ```
 
@@ -112,12 +100,13 @@ end
 
 For databases that utilize UUIDs as the primary key, the `primary` macro can be used again with the `auto: false` option. A `before_create` callback can be added to the model to randomly generate and set a secure UUID on the record before it is saved to the database.
 
-```ruby
+```crystal
 class Book < Granite::Base
   require "uuid"
-  adapter mysql
-  primary ISBN : String, auto: false
-  field name : String
+  connection mysql
+
+  column ISBN : String, primary: true, auto: false
+  column name : String
 
   before_create :assign_isbn
 

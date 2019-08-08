@@ -8,16 +8,17 @@ There is support for callbacks on certain events.
 
 Here is an example:
 
-```ruby
+```crystal
 require "granite_orm/adapter/pg"
 
 class Post < Granite::ORM
-  adapter pg
+  connection pg
 
   before_save :upcase_title
 
-  field title : String
-  field content : String
+  column id : Int64, primary: true
+  column title : String
+  column content : String
   timestamps
 
   def upcase_title

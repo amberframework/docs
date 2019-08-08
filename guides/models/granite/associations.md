@@ -14,7 +14,8 @@ For one-to-one relationships, You can use the `has_one` and `belongs_to` in your
 class Team < Granite::Base
   has_one :coach
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 ```
 
@@ -22,11 +23,12 @@ This will add a `coach` and `coach=` instance methods to the team which returns 
 
 ```crystal
 class Coach < Granite::Base
-  table_name :coaches
+  table :coaches
 
   belongs_to :team
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 ```
 
@@ -75,7 +77,8 @@ Foreign key is inferred from the class name of the Model which uses `has_one`. I
 class Team < Granite::Base
   has_one :coach, foreign_key: :custom_id
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 
 class Coach < Granite::Base
@@ -91,7 +94,8 @@ class Team < Granite::Base
   # or you can provide the class name as a parameter
   has_one :coach, class_name: Coach, foreign_key: :custom_id
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 
 class Coach < Granite::Base
@@ -121,8 +125,9 @@ class User < Granite::Base
   # you can provide a custom foreign key
   has_many :posts, class_name: Post, foreign_key: :custom_id
 
-  field email : String
-  field name : String
+  column id : Int64, primary: true
+  column email : String
+  column name : String
   timestamps
 end
 ```
@@ -132,7 +137,7 @@ This will add a `posts` instance method to the user which returns an array of po
 ```crystal
 class Post < Granite::Base
   adapter mysql
-  table_name :posts
+  table :posts
 
   belongs_to :user
 
@@ -142,7 +147,8 @@ class Post < Granite::Base
   # or custom foreign key
   belongs_to user : User, foreign_key: uuid : String
 
-  field title : String
+  column id : Int64, primary: true
+  column title : String
   timestamps
 end
 ```
@@ -188,22 +194,24 @@ Then you can use the `belongs_to` and `has_many` relationships going both ways.
 class User < Granite::Base
   has_many :participants, class_name: Participant
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 
 class Participant < Granite::Base
-  table_name :participants
+  table :participants
 
   belongs_to :user
   belongs_to :room
 end
 
 class Room < Granite::Base
-  table_name :rooms
+  table :rooms
 
   has_many :participants, class_name: Participant
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 ```
 
@@ -233,7 +241,8 @@ class User < Granite::Base
   has_many :participants, class_name: Participant
   has_many :rooms, class_name: Room, through: :participants
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 
 class Participant < Granite::Base
@@ -245,7 +254,8 @@ class Room < Granite::Base
   has_many :participants, class_name: Participant
   has_many :users, class_name: User, through: :participants
 
-  field name : String
+  column id : Int64, primary: true
+  column name : String
 end
 ```
 

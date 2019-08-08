@@ -45,7 +45,7 @@ Here is an example using Granite ORM Model
 ```ruby
 require "granite_orm/adapter/mysql"
 
-class Post < Granite::ORM::Base
+class Post < Granite::Base
   adapter mysql
   field name : String
   field body : String
@@ -58,7 +58,7 @@ You can disable the timestamps for SqlLite since TIMESTAMP is not supported for 
 ```ruby
 require "granite_orm/adapter/sqlite"
 
-class Comment < Granite::ORM::Base
+class Comment < Granite::Base
   adapter sqlite
   table_name post_comments
   field name : String
@@ -87,7 +87,7 @@ For legacy database mappings, you may already have a table and the primary key i
 We have a macro called `primary` to help you out:
 
 ```ruby
-class Site < Granite::ORM::Base
+class Site < Granite::Base
   adapter mysql
   primary custom_id : Int32
   field name : String

@@ -7,16 +7,12 @@ Amber generators can use a recipe to generate your application, and scaffold you
 ### Recipe contributors
 
 Recipes are provided by independent contributors in their own github accounts.  To use a recipe you specify the github account name and recipe name in the format _githubaccount/recipe_name_.  
+Recipe creators should add the **amber-recipe** topic to the github repository for the recipe.
 
 ### Available recipes
 
-At this time the known available recipes are;
-
-- [damianham/amber_granite](https://github.com/damianham/amber_granite) - basic default recipe using Granite ORM
-- [damianham/amber_crecto](https://github.com/damianham/amber_crecto) - basic default recipe using Crecto ORM
-- [damianham/amber_modular](https://github.com/damianham/amber_modular) - modular structure for your application using Granite ORM
-
-Visit the recipe repository for more information about each recipe.
+See the [Amber Recipes](https://github.com/topics/amber-recipe) that are available on github for a list
+of recipes that have been created by recipe contributors. Visit the recipe repository for more information about each recipe.
 
 ### Amber New Command with a recipe
 
@@ -122,7 +118,7 @@ It is important to give the absolute path to the recipe folder as the recipe com
 The best way to do this is to fork an existing recipe and then modify it.  Visit the github repository of a recipe you want to use as a starting point, e.g. one of the recipes listed above in the **Available recipes** section, and create your own fork.  After you have modified the recipe and pushed your changes you can create apps with your recipe with:
 
 ```
-amber new myapp -r myour_github_name/your_recipe_name
+amber new myapp -r your_github_name/your_recipe_name
 ```
 
 You can easily contribute your recipe to the Amber community. Create a fork of [amber-docs](https://github.com/amberframework/docs), edit this page to add your recipe to the **Available recipes** section and submit a Pull Request.

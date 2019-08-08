@@ -35,7 +35,7 @@ Example:
 ```ruby
 require "granite_orm/adapter/sqlite"
 
-class Comment < Granite::ORM::Base
+class Comment < Granite::Base
   adapter sqlite
 
   table_name comments
@@ -59,7 +59,7 @@ Example:
 ```ruby
 require "granite_orm/adapter/sqlite"
 
-class Comment < Granite::ORM::Base
+class Comment < Granite::Base
   adapter sqlite
 
   table_name comments

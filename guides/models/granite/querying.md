@@ -28,9 +28,9 @@ end
 posts = Post.all("ORDER BY created_at DESC")
 
 # JOIN Example
-posts = Post.all("JOIN comments c ON c.post_id = post.id
+posts = Post.all("JOIN comments c ON c.post_id = posts.id
                   WHERE c.name = ?
-                  ORDER BY post.created_at DESC",
+                  ORDER BY posts.created_at DESC",
                   ["Joe"])
 ```
 
@@ -90,7 +90,7 @@ end
 ### Find By
 
 ```ruby
-post = Post.find_by :slug, "example_slug"
+post = Post.find_by slug: "example_slug"
 if post
   puts post.name
 end

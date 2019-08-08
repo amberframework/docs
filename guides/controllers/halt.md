@@ -7,13 +7,13 @@ When you want a request to cease and return a particular message rather then ren
 ```ruby
 class UserController < ApplicationController
   def index
-    halt!(404, "Forbidden") if params[:user_id].nil?
+    halt!(403, "Forbidden") if params[:user_id].nil?
     render "index.slang"
   end
 end
 ```
 
-A status code of `404` was returned, and the content in `render` will not be delivered to the client.
+A status code of `403` was returned, and the content in `render` will not be delivered to the client.
 
 The next time you’re building an Amber application, consider using halt to simplify error handling.
 

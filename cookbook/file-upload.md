@@ -11,7 +11,7 @@ First you need an amber project generated with [Amber CLI](../guides/create-new-
 ```ruby
 class SomeController < ApplicationController
   def file_upload
-    image = env.params.files["image1"]
+    image = params.files["image1"]
     filename = image.filename
     # Be sure to check if image.filename is not empty
     # otherwise it'll raise a compile time error
@@ -47,6 +47,19 @@ end
 {% endcode-tabs %}
 
 You still require a form to upload your file, see [views](../guides/views/). Also see [request and response](../guides/controllers/request-and-response-objects.md).
+
+Example slang file:
+
+{% code-tabs %}
+{% code-tabs-item title="src/controllers/some\_controller.cr" %}
+```slang
+form action="/some/file_upload" method="post" enctype="multipart/form-data"
+  == csrf_tag 
+  input type="file" name="file"
+  button type="Submit" Save
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Special thanks to [Kemal Cookbook](http://kemalcr.com/cookbook/file_upload/) and [Nocturne Project](https://github.com/TheNocturneProject/Nocturne/blob/0d764e2ff15a1e200ee4ebe80614f4e560e78628/src/controllers/model_controllers/resource_controller.cr#L23-L28).
 

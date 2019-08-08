@@ -1,17 +1,6 @@
 # Mailers
 
-Mailers are implemented using the [Quartz-Mailer](https://github.com/amberframework/quartz-mailer) library. This library is not required by default so you must require it in a config file.
-
-```ruby
-# config/mailer.cr
-
-require "quartz_mailer"
-
-### If you use a base mailer class you must require it before the others
-#require "../src/mailers/base_mailer" 
-
-require "../src/mailers/**"
-```
+Mailers are implemented using the [Quartz-Mailer](https://github.com/amberframework/quartz-mailer) library. This library is required by default within `config/mailer.cr`.
 
 ## Define a Mailer
 

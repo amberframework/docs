@@ -6,7 +6,7 @@ Amber is independent of your choice of model architectures. We \(Core members\) 
 
 Granite provides a light weight ORM that is focused on taking the results of your query and mapping them to your model. It does not try to shield you from the SQL that lies underneath the mapping. It provides a couple conveniences like `save` and `destroy` for simple INSERT, UPDATE and DELETE statements. It provides `find`, `find_by` and `all` to query the database. It also has basic one-to-many relationships with `belong_to` and `has_many`.
 
-{% page-ref page="granite/" %}
+[Granite Documentation](https://docs.amberframework.org/granite)
 
 ## Jennifer
 

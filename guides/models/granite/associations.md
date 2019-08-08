@@ -220,8 +220,8 @@ CREATE TABLE participants (
   updated_at TIMESTAMP
 );
 
-CREATE INDEX 'user_id_idx' ON TABLE participants (user_id);
-CREATE INDEX 'room_id_idx' ON TABLE participants (room_id);
+CREATE INDEX user_id_idx ON participants (user_id);
+CREATE INDEX room_id_idx ON participants (room_id);
 ```
 
 ## has_many through:

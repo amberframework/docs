@@ -48,7 +48,7 @@ sudo apt-get install build-essential crystal
 Then install Amber \(from source\)
 
 ```text
-sudo apt-get install libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
+sudo apt-get install libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev libpcre3-dev libevent-dev
 curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
 cd amber-stable/
 shards install

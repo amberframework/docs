@@ -18,6 +18,7 @@ You can create an app in Heroku with Amber buildpack by running the following co
 
 ```bash
 $ heroku create myapp --buildpack https://github.com/amberframework/heroku-buildpack-amber.git
+$ heroku buildpacks:add --index 2 heroku/nodejs # To build default assets
 ```
 
 The default behaviour is to use the [latest crystal release](https://github.com/crystal-lang/crystal/releases/latest). If you need to use a specific version create a `.crystal-version` file in your application root directory with the version that should be used \(e.g. `0.23.1`\).

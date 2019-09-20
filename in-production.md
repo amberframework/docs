@@ -16,6 +16,10 @@ This page has been inspired by [Crystal in production](https://github.com/crysta
 
 * [Saturn Network](https://saturn.network/) - Decentralized Cryptocurrency Exchange
 
+## Hosting
+
+* [Universal Layer](https://ulayer.net/) - Privacy and security concious hosting provider
+
 ## Open Source Projects using Amber
 
 Many developers around the world are trying Amber everyday, you can find a lot of projects on open source repositories like Github. [Almost 100 projects are using Amber right now!](http://shards.info/repos/amberframework/amber/dependents).

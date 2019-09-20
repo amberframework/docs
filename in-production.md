@@ -18,7 +18,7 @@ This page has been inspired by [Crystal in production](https://github.com/crysta
 
 ## Hosting
 
-* [Universal Layer](https://ulayer.net/) - Privacy and security concious hosting provider
+* [Universal Layer](https://ulayer.net/) - Privacy and security conscious hosting provider
 
 ## Open Source Projects using Amber
 

@@ -4,13 +4,14 @@ Amber is still changing and growing rapidly. Here we list the brave folks who ha
 
 This page has been inspired by [Crystal in production](https://github.com/crystal-lang/crystal/wiki/Used-in-production) and [Kemal Users](https://github.com/kemalcr/kemal/wiki/Kemal-Users).
 
+## Embedded Programming 
+
+* [Nikola Motor Company](https://nikolamotor.com) - Electric Semi Trucks and UTV's
+* [Interface of Truck](https://www.youtube.com/watch?v=u4mnYkH8ntc) Interface in Video is written in Crystal
+
 ## SaaS products
 
 * [Tovi](https://tovi.io/) - Data Analysis Software
-
-## Software Development
-
-* [Nikola NZT](https://nikolamotor.com/nzt) - electric UTV
 
 ## Blockchain
 

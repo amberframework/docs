@@ -1,4 +1,4 @@
-# View Helpers
+# Basic View Helpers
 
 The [Jasper::Helpers](https://github.com/amberframework/jasper-helpers) library provides a common set of helper methods that can simplify the development of the views.
 
@@ -36,8 +36,11 @@ For more complex forms, see section below.
 
 ## Forms
 
-A `form` helper is available, along with helpers for the following form elements:
+The form helpers listed below are very basic helpers that are included by default. For a more complete form building experience we strongly recommend using [FormBuilder.cr](form-builder.md)
 
+The following methods provide simple HTML form elements:
+
+* `form`
 * `text_field`
 * `label`
 * `hidden_field`
@@ -48,18 +51,16 @@ A `form` helper is available, along with helpers for the following form elements
 
 Use `amber generate scaffold [Resource] [field:type] ...` to get the most up-to-date examples of using helpers for resources.
 
-### text\_field
+### form
 
 ```text
-/ create action
 == form(action: "/posts", method: :post) do
-  == text_field name: "title", value: "", placeholder: "Title"
+  == csrf_tag
   == submit("Create Post")
 
-/ update action
-/ This takes care of the hidden '_method' field
+/ When using `method: :patch`, it add the hidden '_method' field for you
 == form(action: "/posts", method: :patch) do
-  == text_field name: "title", value: "", placeholder: "Title"
+  == csrf_tag
   == submit("Update Post")
 ```
 
@@ -67,130 +68,116 @@ Produces the following HTML
 
 ```markup
 <form action="/posts" method="post">
-  <input type="text" name="title" id="title" value="" placeholder="Title">
+  <input type="hidden" name="<csrf-name-here>" value="<csrf-token-here>" />
   <input type="submit" value="Create Post" id="create_post">
 </form>
 
 <form action="/posts" method="post">
   <input type="hidden" name="_method" id="_method" value="patch">
-  <input type="text" name="title" id="title" value="" placeholder="Title">
+  <input type="hidden" name="<csrf-name-here>" value="<csrf-token-here>" />
   <input type="submit" value="Update Post" id="update_post">
 </form>
+```
+
+### text\_field
+
+```text
+== text_field name: "title", value: "", placeholder: "Title"
+```
+
+Produces the following HTML
+
+```markup
+<input type="text" name="title" id="title" value="" placeholder="Title">
 ```
 
 ### label
 
 ```text
-== form(action: "/posts", method: :post) do
-  == label :title
-  == text_field name: "title", value: "", placeholder: "Title"
-  == submit("Create Post")
+== label :title
 ```
 
 Produces the following HTML
 
 ```markup
-<form action="/posts" method="post">
-  <label for="title" id="title_label">Title</label>
-  <input type="text" name="title" id="title" value="" placeholder="Title">
-  <input type="submit" value="Create Post" id="create_post">
-</form>
+<label for="title" id="title_label">Title</label>
 ```
 
 ### text\_area
 
 ```text
-== form(action: "/posts", method: :post) do
-  == text_area name: "body", content: "", placeholder: "Body", size: "30x10"
-  == submit("Create Post")
+== text_area name: "body", content: "", placeholder: "Body", size: "30x10"
 ```
 
 Produces the following HTML
 
 ```markup
-<form action="/posts" method="post">
-  <textarea name="body" id="body" placeholder="Body" cols="30" rows="10"></textarea>
-  <input type="submit" value="Create Post" id="create_post">
-</form>
+<textarea name="body" id="body" placeholder="Body" cols="30" rows="10"></textarea>
 ```
 
 ### hidden\_field
 
 ```text
-== form(action: "/posts", method: :post) do
-  == hidden_field name: "secret", content: "Super Secret"
-  == submit("Create Post")
+== hidden_field name: "secret", content: "Super Secret"
 ```
 
 Produces the following HTML
 
 ```markup
-<form action="/posts" method="post">
-  <input type="hidden" name="secret" id="secret" content="Super Secret">
-  <input type="submit" value="Create Post" id="create_post">
-</form>
+<input type="hidden" name="secret" id="secret" content="Super Secret">
 ```
 
 ### select\_field
 
 ```text
 / Array of Arrays
-== form(action: "/posts", method: :post) do
-  == label :ranking
-  == select_field name: "ranking", collection: [[1, "First"], [2, "Second"]], selected: 1
+== select_field name: "ranking", collection: [[1, "First"], [2, "Second"]], selected: 1
 
 / Array of Hashes
-== form(action: "/posts", method: :post) do
-  == label :ranking
-  == select_field name: "ranking", collection: [{ 1 => "First" }, { 2 => "Second" }], selected: 1
+== select_field name: "ranking", collection: [{ 1 => "First" }, { 2 => "Second" }], selected: 1
 
 / Hash
-== form(action: "/posts", method: :post) do
-  == label :ranking
-  == select_field name: "ranking", collection: { 1 => "First", 2 => "Second" }, selected: 1
+== select_field name: "ranking", collection: { 1 => "First", 2 => "Second" }, selected: 1
 ```
 
 All the previous code samples produce the following HTML
 
 ```markup
-<form action="/posts" method="post">
-  <label for="ranking" id="ranking_label">Ranking</label>
-  <select name="ranking">
-    <option value="1" selected="selected">First</option>
-    <option value="2">Second</option>
-  </select>
-</form>
+<select name="ranking">
+  <option value="1" selected="selected">First</option>
+  <option value="2">Second</option>
+</select>
 ```
 
 ### check\_box
 
 ```text
-== form(action: "/posts", method: :post) do
-  == label(:published)
-  == check_box(:published, checked: false)
+== check_box(:published, checked: false)
 ```
 
 Produces the following HTML
 
 ```markup
-<form action="/posts" method="post">
-  <label for="published" id="published_label">Published</label>
-  <input type="hidden" name="published" id="published" value="0">
-  <input type="checkbox" name="published" id="published" value="1" checked="false">
-</form>
+<input type="checkbox" name="published" id="published" value="1" checked="false">
 ```
 
 ### All together
 
 ```text
 == form(action: "/posts", method: :post) do
+  == csrf_tag
+
   == hidden_field name: "secret", content: "Super Secret"
+
   == label :title
   == text_field name: "title", value: "", placeholder: "Title"
+
   == label :body
   == text_area name: "body", content: "", placeholder: "Body", size: "30x10"
+
   == label :ranking
   == select_field name: "ranking", collection: [[1, "First"], [2, "Second"]], selected: 1
+
   == label(:published)
   == check_box(:published, checked: false)
 
@@ -201,19 +188,24 @@ Produces the following HTML
 
 ```markup
 <form action="/posts" method="post">
+  <input type="hidden" name="<csrf-name-here>" value="<csrf-token-here>" />
+
   <input type="hidden" name="secret" id="secret" content="Super Secret">
+
   <label for="title" id="title_label">Title</label>
   <input type="text" name="title" id="title" value="" placeholder="Title">
+
   <label for="body" id="body_label">Body</label>
   <textarea name="body" id="body" placeholder="Body" cols="30" rows="10"></textarea>
+
   <label for="ranking" id="ranking_label">Ranking</label>
   <select name="ranking">
     <option value="1" selected="selected">First</option>
     <option value="2">Second</option>
   </select>
+
   <label for="published" id="published_label">Published</label>
   <input type="hidden" name="published" id="published" value="0"><input type="checkbox" name="published" id="published" value="1" checked="false">
   <input type="submit" value="Create Post" id="create_post">
 </form>
 ```
-

@@ -25,6 +25,13 @@ The default behaviour is to use the [latest crystal release](https://github.com/
 
 ## Requirements
 
+First of all you need to add Heroku addons: `Heroku Redis` and `Heroku Postgres` for created app. Then uncomment in `config/settings.cr`:
+```
+settings.redis_url = ENV["REDIS_URL"] if ENV["REDIS_URL"]?
+
+settings.database_url = ENV["DATABASE_URL"] if ENV["DATABASE_URL"]?
+```
+
 In order for the buildpack to work properly you should have a `shard.yml` file,as it is how it will detect that your app is a Crystal app. Your application has to listen on a port defined by Heroku.
 
 {% hint style="warning" %}

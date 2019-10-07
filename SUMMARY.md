@@ -52,6 +52,7 @@
   * [Manual Deploy](deployment/manual-deploy.md)
   * [Digital Ocean](deployment/digital-ocean.md)
   * [Heroku](deployment/heroku.md)
+  * [Dokku](deployment/dokku.md)
 * [CLI](cli/README.md)
   * [New](cli/new.md)
   * [Recipes](cli/recipes.md)

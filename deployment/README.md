@@ -18,3 +18,5 @@ Guides for other platforms like Amazon Web Services \(AWS\), Google Compute Engi
 
 {% page-ref page="heroku.md" %}
 
+{% page-ref page="dokku.md" %}
+

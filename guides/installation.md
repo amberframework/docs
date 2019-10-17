@@ -54,7 +54,7 @@ sudo swapon /swapfile
 
 You should now be able to run `amber` in the command line.
 
-#### macOS
+## macOS
 
 Installing Amber with these package managers also installs Crystal.
 
@@ -70,4 +70,17 @@ Installing Amber with these package managers also installs Crystal.
   ```text
   sudo port selfupdate
   sudo port install amber
+  ```
+
+### From source
+
+Known problems while trying to build Amber from source on macOS:
+
+- If you see linker problems, such as `ld: library not found for -lssl (this usually means you need to install the development package for libssl)`, you
+  may need to set some (or all) of those environment variables:
+
+  ```text
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+  export LDFLAGS="-L/usr/local/opt/openssl/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl/include"
   ```

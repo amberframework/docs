@@ -6,12 +6,12 @@ Amber generators can use a recipe to generate your application, and scaffold you
 
 ### Recipe contributors
 
-Recipes are provided by independent contributors in their own github accounts.  To use a recipe you specify the github account name and recipe name in the format _githubaccount/recipe_name_.  
-Recipe creators should add the **amber-recipe** topic to the github repository for the recipe.
+Recipes are provided by independent contributors in their own GitHub accounts.  To use a recipe you specify the GitHub account name and recipe name in the format _githubaccount/recipe_name_.  
+Recipe creators should add the **amber-recipe** topic to the GitHub repository for the recipe.
 
 ### Available recipes
 
-See the [Amber Recipes](https://github.com/topics/amber-recipe) that are available on github for a list
+See the [Amber Recipes](https://github.com/topics/amber-recipe) that are available on GitHub for a list
 of recipes that have been created by recipe contributors. Visit the recipe repository for more information about each recipe.
 
 ### Amber New Command with a recipe
@@ -44,7 +44,7 @@ Options:
 
 ### Example Usage
 
-Using `amber new microsecond-blog -r damianham/amber_modular` will generate a skeleton Amber application in `./microsecond-blog` using the _amber_modular_ recipe that was provided by the github user _damianham_.
+Using `amber new microsecond-blog -r damianham/amber_modular` will generate a skeleton Amber application in `./microsecond-blog` using the _amber_modular_ recipe that was provided by the GitHub user _damianham_.
 
 You can have a running web application in a matter of minutes:
 
@@ -98,7 +98,7 @@ Once an application is generated with a recipe, it will be used by future genera
 ### Custom Recipe
 
 When a recipe doesn't quite suite your requirements, it's easy to modify. Recipes are application stubs written in [Liquid](https://github.com/TechMagister/liquid.cr).  
-Modified recipes can be stored and sourced locally or made available to other Amber users from your own github account.
+Modified recipes can be stored and sourced locally or made available to other Amber users from your own GitHub account.
 
 Download a recipe that you want to modify, extract it, and use the extracted recipe on the command line. For example:
 
@@ -115,10 +115,10 @@ It is important to give the absolute path to the recipe folder as the recipe com
 
 ### Contributing your recipe
 
-The best way to do this is to fork an existing recipe and then modify it.  Visit the github repository of a recipe you want to use as a starting point, e.g. one of the recipes listed above in the **Available recipes** section, and create your own fork.  After you have modified the recipe and pushed your changes you can create apps with your recipe with:
+The best way to do this is to fork an existing recipe and then modify it.  Visit the GitHub repository of a recipe you want to use as a starting point, e.g. one of the recipes listed above in the **Available recipes** section, and create your own fork.  After you have modified the recipe and pushed your changes you can create apps with your recipe with:
 
 ```
 amber new myapp -r your_github_name/your_recipe_name
 ```
 
-You can easily contribute your recipe to the Amber community. Create a fork of [amber-docs](https://github.com/amberframework/docs), edit this page to add your recipe to the **Available recipes** section and submit a Pull Request.
+You can easily contribute your recipe to the Amber community.  By adding the **amber-recipe** topic to your recipe repository on GitHub, it will be added to the list of [Amber Recipes](https://github.com/topics/amber-recipe).

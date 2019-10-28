@@ -7,7 +7,7 @@ If you want to configure a full crud JSON API, you will need to first generate a
 amber generate model Post title body
 ```
 
-This will generate a migration and a `Post` model in `models/post.cr` to contain the following:
+This will generate a database migration and a `Post` model file in `models/post.cr`.
 
 {% code-tabs %}
 {% code-tabs-item title="src/models/post.cr" %}

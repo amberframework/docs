@@ -119,7 +119,7 @@ Amber::Server.configure do |app|
 
   routes :web do
     # other routes,,,
-    resources "/posts", SomeController, except: [:edit, :new]
+    resources "/posts", PostController, except: [:edit, :new]
   end
 end
 ```

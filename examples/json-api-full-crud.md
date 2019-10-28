@@ -28,7 +28,7 @@ end
 Then in your controller:
 
 {% code-tabs %}
-{% code-tabs-item title="src/controllers/postcontroller.cr" %}
+{% code-tabs-item title="src/controllers/post_controller.cr" %}
 ```ruby
 class PostController < ApplicationController
   getter post = Post.new

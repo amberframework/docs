@@ -25,11 +25,11 @@ Then in your routes file:
 {% code-tabs-item title="config/routes.cr" %}
 ```ruby
 Amber::Server.configure do |app|
-  pipeline :web do
+  pipeline :api do
     # pipelines...
   end
 
-  routes :web do
+  routes :api do
     # other routes,,,
     get "/json_api", SomeController, :json_api
   end
@@ -51,5 +51,6 @@ class SomeController < ApplicationController
 end
 ```
 
-Also see [Respond With](../guides/controllers/respond-with.md) and [Response & Request](../guides/controllers/request-and-response-objects.md).
+For a full CRUD example, see [JSON API full CRUD](../examples/json-api-full-crud.md).
 
+Also see [Respond With](../guides/controllers/respond-with.md) and [Response & Request](../guides/controllers/request-and-response-objects.md).

@@ -112,11 +112,11 @@ And your routes file:
 {% code-tabs-item title="config/routes.cr" %}
 ```ruby
 Amber::Server.configure do |app|
-  pipeline :web do
+  pipeline :api do
     # pipelines...
   end
 
-  routes :web do
+  routes :api do
     # other routes,,,
     resources "/posts", PostController, except: [:edit, :new]
   end

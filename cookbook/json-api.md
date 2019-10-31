@@ -26,7 +26,7 @@ Format ./config/routes.cr
 04:09:54 Generate   | (INFO) new       src/controllers/post_controller.cr
 ```
 
-This will create a fully scaffolded JSON API.
+This is a fully scaffolded JSON API.
 
 ### Custom
 

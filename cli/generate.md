@@ -41,13 +41,17 @@ Examples of Usage
 * [Auth](generate.md#auth)
 * [Model](generate.md#model)
 * [Controller](generate.md#controller)
+* [JSON API](generate.md#api)
 
 ### Scaffolding
 
 Scaffolding will create the model \(and specs\), views, controller \(and specs\) and migrations for a resource. Additionally, it will add the new resource to the nav bar and
 
-```text
+```bash
 $ amber generate scaffold Post title body:text
+```
+
+```bash
 Rendering Scaffold post
 new       db/migrations/20171114103058417_create_post.sql
 new       spec/models/spec_helper.cr
@@ -70,6 +74,9 @@ If you scaffold a multi-word resource, the class names will be `CamelCase` and f
 $ amber generate scaffold PostComment post:reference body:text
 # OR
 $ amber generate scaffold post_comment post:reference body:text
+```
+
+```bash
 Rendering Scaffold post_comment
 new       db/migrations/20171114103306763_create_post_comment.sql
 skipped   spec/models/spec_helper.cr
@@ -88,8 +95,11 @@ new       src/views/post_comment/show.slang
 
 ### Auth
 
-```text
+```bash
 $ amber g auth User
+```
+
+```bash
 Rendering Auth user
 new       db/migrations/20171019214851_create_user.sql
 new       db/seeds.cr
@@ -109,6 +119,9 @@ new       src/views/session/new.slang
 
 ```bash
 $ amber g model Person name:string age:integer
+```
+
+```bash
 Rendering Model person
 new       db/migrations/20171019214940_create_person.sql
 skipped   spec/models/spec_helper.cr
@@ -120,13 +133,33 @@ new       src/models/person.cr
 
 ```bash
 $ amber g controller Person index:get show:get create:post update:patch
+```
+
+```bash
 Rendering Controller person
 skipped   spec/controllers/spec_helper.cr
 new       spec/controllers/person_controller_spec.cr
 new       src/controllers/person_controller.cr
 ```
 
+### API
+
+```bash
+$ amber g api Person name:string age:integer
+```
+
+```bash
+04:09:54 Generate   | (INFO) Generating Amber::CLI::Api
+04:09:54 Generate   | (INFO) new       spec/models/person_spec.cr
+04:09:54 Generate   | (INFO) identical spec/models/spec_helper.cr
+04:09:54 Generate   | (INFO) new       src/models/person.cr
+04:09:54 Generate   | (INFO) new       db/migrations/20191031160954280_create_person.sql
+Format ./config/routes.cr
+04:09:54 Generate   | (INFO) new       spec/controllers/person_controller_spec.cr
+04:09:54 Generate   | (INFO) identical spec/controllers/spec_helper.cr
+04:09:54 Generate   | (INFO) new  
+```
+
 ## Recipes
 
 Recipes are available to generate Scaffolding, Controller and Model artifacts in ways that vary from the standard built in generator. See the [Recipes](recipes.md) option of the Command Line Tool for more information about using recipes to generate applications.
-

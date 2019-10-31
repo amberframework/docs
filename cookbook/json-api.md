@@ -77,6 +77,6 @@ class SomeController < ApplicationController
 end
 ```
 
-For a full CRUD example file structure, see [JSON API full CRUD](../examples/json-api-full-crud.md).
+For a full CRUD example, see [JSON API full CRUD](../examples/json-api-full-crud.md).
 
 Also see [Respond With](../guides/controllers/respond-with.md) and [Response & Request](../guides/controllers/request-and-response-objects.md).

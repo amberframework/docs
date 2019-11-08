@@ -6,6 +6,32 @@ This recipe will help you to setup a basic JSON API response in your application
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
 
+To create a JSON API from the command line, you simply need to use the [API generator](../cli/generate.md#api). Or for quick reference, run:
+
+```bash
+amber g api Post title:string entry:integer
+```
+
+And it will generate the following files:
+
+```bash
+04:09:54 Generate   | (INFO) Generating Amber::CLI::Api
+04:09:54 Generate   | (INFO) new       spec/models/post_spec.cr
+04:09:54 Generate   | (INFO) identical spec/models/spec_helper.cr
+04:09:54 Generate   | (INFO) new       src/models/post.cr
+04:09:54 Generate   | (INFO) new       db/migrations/20191031160954280_create_post.sql
+Format ./config/routes.cr
+04:09:54 Generate   | (INFO) new       spec/controllers/post_controller_spec.cr
+04:09:54 Generate   | (INFO) identical spec/controllers/spec_helper.cr
+04:09:54 Generate   | (INFO) new       src/controllers/post_controller.cr
+```
+
+This is a fully scaffolded JSON API.
+
+### Custom
+
+If you don't need full CRUD, you can also create a custom JSON API.
+
 ```ruby
 class SomeController < ApplicationController
   def json_api

@@ -30,76 +30,81 @@ Then in your controller:
 {% code-tabs-item title="src/controllers/post_controller.cr" %}
 ```ruby
 class PostController < ApplicationController
-  getter post = Post.new
-
-  before_action do
-    only [:show, :update, :destroy] { set_post }
-  end
-
   def index
     posts = Post.all
-    respond_with do
-     json posts.to_json
+    respond_with 200 do
+      json posts.to_json
     end
   end
 
   def show
-    respond_with do
-     json posts.to_json
+    if post = Post.find params["id"]
+      respond_with 200 do
+        json post.to_json
+      end
+    else
+      results = {status: "not found"}
+      respond_with 404 do
+        json results.to_json
+      end
     end
   end
 
   def create
-    post = Post.new post_params.validate!
-    error_msg = { "error" => "failed to create" }
+    post = Post.new(post_params.validate!)
 
-    if post.save
-      respond_with do
+    if post.valid? && post.save
+      respond_with 201 do
         json post.to_json
       end
     else
-      respond_with do
-        json error_msg.to_json
+      results = {status: "invalid"}
+      respond_with 422 do
+        json results.to_json
       end
     end
   end
 
   def update
-    error_msg = { "error" => "failed to update" }
-
-    if post.update(post_params.validate!)
-      respond_with do
-        json post.to_json
+    if post = Post.find(params["id"])
+      post.set_attributes(post_params.validate!)
+      if post.valid? && post.save
+        respond_with 200 do
+          json post.to_json
+        end
+      else
+        results = {status: "invalid"}
+        respond_with 422 do
+          json results.to_json
+        end
       end
     else
-      respond_with do
-        json error_msg.to_json
+      results = {status: "not found"}
+      respond_with 404 do
+        json results.to_json
       end
     end
   end
 
   def destroy
-    error_msg = { "error" => "failed to delete" }
-    if post.destroy
-      respond_with do
-        json post.to_json
+    if post = Post.find params["id"]
+      post.destroy
+      respond_with 204 do
+        json ""
       end
     else
-      respond_with do
-        json error_msg.to_json
+      results = {status: "not found"}
+      respond_with 404 do
+        json results.to_json
       end
     end
   end
 
-  private def post_params
+  def post_params
     params.validation do
-      required :title { |f| !f.nil? }
-      required :body { |f| !f.nil? }
+      required(:title, msg: nil, allow_blank: true)
+      required(:body, msg: nil, allow_blank: true)
     end
-  end
-
-  private def set_post
-    @post = Post.find! params[:id]
   end
 end
 ```

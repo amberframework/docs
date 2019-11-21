@@ -32,7 +32,7 @@ params[:key] # => "My String"
 params["key"] # => "My String"
 ```
 
-To access the validated params hash. It will only contain entries that have been successfully validated using the Validation API. If you do not use the Validation API this will return an empty Hash.
+The params object will only contain entries that have been successfully validated using the Validation API. If you do not use the Validation API this will return an empty Hash.
 
 ```ruby
 params.to_h

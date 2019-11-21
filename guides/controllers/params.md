@@ -2,13 +2,13 @@
 
 ## Introduction
 
-When building a web application at some point you will want to access data sent from a client. Amber makes the data received from an HTTP Request available to the controller via the params object. 
+When building a web application, at some point you will want to access data sent from a client. Amber makes the data received from an HTTP Request available to the controller via the params object. 
 
 The params object parses the data from the request, this includes:
 
 1. Query String parameters: the query string is everything after "?" in the URL. 
-2. Form input parameters: these are send as HTML form posts
-3. Route URL parameters: route url parameters are define within the resource url.
+2. Form input parameters: these are sent as HTML form posts
+3. Route URL parameters: route url parameters are defined within the resource url.
 
 ## Basic Usage
 
@@ -25,14 +25,14 @@ To set a param use the following syntax
 params[:key] = "My String"
 ```
 
-Please note that while the params accepts a Symbol key to be passed, it will be converted to a String automatically. For example the following two statements are equivalent.
+Please note that while params accepts a Symbol key to be passed, it will be converted to a String automatically. For example the following two statements are equivalent.
 
 ```ruby
 params[:key] # => "My String"
 params["key"] # => "My String"
 ```
 
-To access the validated params hash. It will only contain entries that have been sucesssfully validated using the Validation API. If you do not use the Validation API this will return an empty Hash.
+The params object will only contain entries that have been successfully validated using the Validation API. If you do not use the Validation API this will return an empty Hash.
 
 ```ruby
 params.to_h
@@ -48,7 +48,7 @@ params.to_unsafe_h
 
 The params object is not limited to one-dimensional keys and values. It can contain nested arrays and hashes. To send an array of values, append an empty pair of square brackets "[]" to the key name
 
-If you need get array of params from query:
+If you need to get an array of params from the query:
 
 ```text
 ?brand[]=brand1&brand[]=brand2&brand[]=brand3
@@ -63,7 +63,7 @@ params.fetch_all("brand[]") # => { "brand[]" => ["brand1", "brand2", "brand3"] }
 
 ## JSON Parameters
 
-When writing a Web Service application that accepts JSON data, the application most likely will need to parse the incomming JSON payload. When the "Content-Type" header of your request is set to "application/json", Amber will automatically load your parameters into the params object, which you can access as you would normally.
+When writing a Web Service application that accepts JSON data, the application most likely will need to parse the incoming JSON payload. When the "Content-Type" header of your request is set to "application/json", Amber will automatically load your parameters into the params object, which you can access as you would normally.
 
 ## Routing Parameters
 
@@ -81,13 +81,13 @@ Performing validations at the params level can save your application from perfor
 
 Validating params and erroring early in the request lifecycle frees resources for the next request sooner, adds a layer of security and prevents invalid data from reaching the backend processes.
 
-Amber attempts to aliviate the issues that come with invalid parameters and provides a `params` object to all controllers which contains a built-in `validation` method.
+Amber attempts to alleviate the issues that come with invalid parameters and provides a `params` object to all controllers which contains a built-in `validation` method.
 
 ### Benefits
 
-- Expression and explicitness about the parameters the model exptects.
+- Expression and explicitness about the parameters the model expects.
 - Security by whitelisting only the parameters allowed per action.
-- Data correctnes to prevent invalid inputs to propagate in the system.
+- Data correctness to prevent invalid inputs to propagate in the system.
 
 ### Example Usage
 
@@ -127,7 +127,7 @@ params.validation do
 end
 ```
 
-`#validate!` Input must be valid otherwise raises an error. If valid, returns a hash of validated params otherwise raises `Validator::ValidationFailed` which conatins the failed validaton error messages.
+`#validate!` Input must be valid otherwise raises an error. If valid, returns a hash of validated params otherwise raises `Validator::ValidationFailed` which contains the failed validaton error messages.
 
 ```ruby
 user = User.new params.validate!
@@ -150,7 +150,7 @@ params.errors
 
 ### Field Validation Rules
 
-Amber has extrended the Crystal String and Number classes with additional methods to assit with better validation.
+Amber has extended the Crystal String and Number classes with additional methods to assist with better validation.
 
 | String                      | Number          |
 |-----------------------------|-----------------|
@@ -178,7 +178,7 @@ Amber has extrended the Crystal String and Number classes with additional method
 
 ### Organizing validations
 
-With Amber parameter validation it's easy to keep your code organized:
+With Amber parameter validation, it's easy to keep your code organized:
 
 ```ruby
 class UsersController < ApplicationController

@@ -23,7 +23,6 @@ Additionally, the following options may be passed to the above command:
 
 * `-d` This specifies the database driver to use. It defaults to pg, for PostgreSQL.
 * `-t` This specifies the template rendering engine. It defaults to slang, the Slim-inspired templating language.
-* `--deps` This will download and install project dependencies for you, to save the additional step of having to type `shards install`.
 
 Amber generates the [directory structure](https://github.com/amberframework/online-docs/tree/77946b0fbe0e43bff1a43e42ac904d10ff436067/guides/getting-started/Installation/directory-structure.md#directory-structure) along with files necessary for the application.
 
@@ -31,25 +30,6 @@ Change your current directory to `weblog`, if that was the path you chose:
 
 ```bash
 cd weblog
-```
-
-## Installing Dependencies
-
-Now install project dependencies with `shards install`:
-
-```bash
-$ shards install
-Using amber (0.7.2)
-Using amber_router (0.0.3)
-Using cli (0.7.0)
-Using optarg (0.5.8)
-Using callback (0.6.3)
-Using string_inflection (0.2.1)
-Using compiled_license (0.1.3)
-...
-Using jasper_helpers (0.2.0)
-Using garnet_spec (0.1.1)
-Using selenium (0.3.0)
 ```
 
 ## Creating the database

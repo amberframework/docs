@@ -14,17 +14,17 @@ To configure the session:
 
 ```ruby
 #  Cookie Store
-Amber::Server.instance.session = {
+Amber.settings.session = {
   :key     => "name.session",
-  :store   => :cookie,
+  :store   => "cookie",
   :expires => 120, # 0, will make the session last as long as the browser is open, upon closing, session will be terminated
   :secret  => "secret"
 }
 
 # Redis Store
-Amber::Server.instance.session = {
+Amber.settings.session = {
   :key       => "name.session",
-  :store     => :redis,
+  :store     => "redis",
   :expires   => 120,
   :secret    => "secret",
   :redis_url => "redis://localhost:6379",

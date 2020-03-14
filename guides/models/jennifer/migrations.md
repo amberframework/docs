@@ -4,7 +4,7 @@
 This section is based on [Jennifer Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md).
 {% endhint %}
 
-To generate a migration run `crystal sam.cr generate:migration your_migration_name`
+To generate a migration run `crystal sam.cr -- generate:migration YourMigrationName`
 
 ## Migration DSL
 

@@ -7,7 +7,7 @@ First you need an amber project generated with [Amber CLI](../guides/create-new-
 {% endhint %}
 
 {% code-tabs %}
-{% code-tabs-item title="src/channel/chat\_room\_channel.cr" %}
+{% code-tabs-item title="src/channels/chat\_room\_channel.cr" %}
 ```ruby
 class ChatRoomChannel < Amber::Websockets::Channel
   def handle_message(client_socket, msg)

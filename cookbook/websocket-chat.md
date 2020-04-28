@@ -7,7 +7,7 @@ First you need an amber project generated with [Amber CLI](../guides/create-new-
 {% endhint %}
 
 {% code-tabs %}
-{% code-tabs-item title="src/channel/chat\_room\_channel.cr" %}
+{% code-tabs-item title="src/channels/chat\_room\_channel.cr" %}
 ```ruby
 class ChatRoomChannel < Amber::Websockets::Channel
   def handle_message(client_socket, msg)
@@ -58,7 +58,7 @@ end
 Finally you will require an [Amber JavaScript Client](../guides/websockets/javascript-client.md) to connect with your server:
 
 {% hint style="info" %}
-You can get `amber.min.js` from `lib/amber/assets/amber.min.js`
+You can get `amber.min.js` from `lib/amber/assets/js/amber.min.js`
 {% endhint %}
 
 {% code-tabs %}

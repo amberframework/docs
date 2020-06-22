@@ -2,12 +2,14 @@
 
 ## Working with Views
 
-Views are rendered using the amber `render` macro, which uses [Kilt](http://github.com/jeromegn/kilt). Currently amber there are 4 different templating languages supported by Kilt: `slang` `ecr`, `mustache`, and `temel`. Behind the scenes [Kilt](http://github.com/jeromegn/kilt) selects the templating engine based on the extension of the file so `index.ecr` will render the file using the ECR engine. Amber currently supports `slang` and `ecr`. Kilt will work with `mustache` and `temel` as well, although they haven't been tested in amber.
+Views are rendered with the amber `render` macro, which uses [Kilt](http://github.com/jeromegn/kilt). Kilt itself supports 4 templating languages (`slang` `ecr`, `mustache`, and `temel`), of which currently Amber fully supports only `slang` and `ecr`. (Kilt will work with `mustache` and `temel` as well, but they haven't been tested in amber, so your experience may vary.)
 
-The Amber Generators support `slang` and `ecr` templates using the `-t` option when you create a new project.
+Kilt automatically selects the templating engine based on the extension of the file being read (e.g. `index.ecr` will be rendered with the ECR engine).
 
-* **Slang** To learn slang please refer to [https://github.com/jeromegn/slang](https://github.com/jeromegn/slang). If you need more examples, Ruby's [slim-lang](http://slim-lang.com) is almost identical to slang.
-* **ECR \(Embedded Crystal\)** For a primer on ECR please see [https://crystal-lang.org/api/latest/ECR.html](https://crystal-lang.org/api/latest/ECR.html)
+[Amber Generators](https://docs.amberframework.org/amber/cli/generate) support `slang` and `ecr` templates using the `-t` option when creating a new project.
+
+* **Slang** — To learn slang, please refer to Slang's [official documentation](https://github.com/jeromegn/slang#syntax). For more examples, Ruby's [slim-lang](http://slim-lang.com) is almost identical to slang.
+* **ECR \(Embedded Crystal\)** — To learn ECR, please see Crystal's [ECR module documentation](https://crystal-lang.org/api/latest/ECR.html).
 
 ## Rendering Content
 

@@ -12,7 +12,7 @@ This tutorial has tips and tricks on how to debug Crystal projects. It shows how
 Install `gdb` or `lldb` accordingly to your OS.
 
 {% hint style="info" %}
-Confirm that the above prerequisites are installed before setting up the debugger. These settings have been verified for a MacOS and Linux's environments.
+Confirm that the above prerequisites are installed before setting up the debugger. These settings have been verified for mac OS and Linux environments.
 {% endhint %}
 
 ## Debug on VSCode

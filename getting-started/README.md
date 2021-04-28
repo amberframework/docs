@@ -80,6 +80,10 @@ If you don’t already have one of these installed, please follow the guides pro
 On OS X any of the databases can be installed with `brew install [database]`
 {% endhint %}
 
+{% hint style="info" %}
+Docker users can opt to use a database container to develop with as well. By default, a new Amber application generates a `docker-compose.yml` that can be used for this purpose. 
+{% endhint %}
+
 ## 2. Generate a new Amber application
 
 With all dependencies successfully installed, we can generate a new application with `amber new`

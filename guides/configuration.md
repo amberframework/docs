@@ -15,7 +15,7 @@ Each Amber project ships with three default environments:
 
 The files for each environment are found under `{project_name}/config/environments`. Each Amber environment is configured in separate YAML files under this directory. 
 
-At runtime the framework will use the `AMBER_ENV` environment value to load the respective environment configuration into the application. For example `AMBER_ENV=staging` then this will expect a `config/environments/staging.yml` file to exist.
+At runtime the framework will use the `AMBER_ENV` environment value to load the respective environment configuration into the application. For example if `AMBER_ENV=staging` the framework will expect a `config/environments/staging.yml` file to exist and attempt to load its configurations into the application.
 
 ## Getting the current environment
 

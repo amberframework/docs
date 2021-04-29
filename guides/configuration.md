@@ -4,13 +4,7 @@ Every Amber project has a `{project_name}/config` directory. This directory cont
 
 ## Configuring Amber
 
-Within the `config` file for your Amber project, you will find:
-
-### Initializers
-
-You can use initializers to load configuration settings into various application components like mailers after all of the frameworks and shards are loaded. 
-
-To add a new initializer simply create a file and save it under `config/initializers` to load at runtime.
+Within the `config` directory of an Amber project, you will find several helpful configuration settings.
 
 ### Environments
 Each Amber project ships with three default environments:
@@ -44,11 +38,38 @@ For example to run Amber in the production environment, we can set the `AMBER_EN
 AMBER_ENV=production amber watch
 ```
 
+### Initializers
+
+You can use initializers to load configuration settings into various application components like mailers after all of the frameworks and shards are loaded. 
+
+To add a new initializer simply create a file and save it under `config/initializers` to load at runtime.
+
+For example, to initialize a `Quartz` mailer:
+
+```ruby
+# config/initializers/mailer.cr
+
+require "quartz_mailer"
+
+Quartz.config do |c|
+  c.smtp_enabled = Amber.settings.smtp.enabled
+
+  c.smtp_address = ENV["SMTP_ADDRESS"]? || Amber.settings.smtp.host
+  c.smtp_port = ENV["SMTP_PORT"]? || Amber.settings.smtp.port
+  c.username = ENV["SMTP_USERNAME"]? || Amber.settings.smtp.username
+  c.password = ENV["SMTP_PASSWORD"]? || Amber.settings.smtp.password
+
+  c.use_authentication = !c.password.blank?
+end
+```
+
 ### Application.cr
 
 The main entry point for an Amber application is `config/application.cr`. This application file allows you to overwrite settings based on dynamic values. It also allows you to use environment variables available to the application process to configure your application.
 
 ```ruby
+# config/application.cr 
+
 Amber::Server.configure do |app|
   app.name = ENV["APP_NAME"] if ENV["APP_NAME"]?
   app.host = ENV["HOSTNAME"] if ENV["HOSTNAME"]?
@@ -62,6 +83,8 @@ end
 Amber makes it easy to manage custom settings in each of the environment YAML files. You can include new settings in any of the environment YAML file by specifying them in the secrets section.
 
 ```yaml
+# config/environments/development.yml
+
 database_url: postgres://postgres:@localhost:5432/test_development
 secrets: 
   custom: secret value here

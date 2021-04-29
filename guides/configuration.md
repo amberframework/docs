@@ -65,7 +65,7 @@ end
 
 ### Application.cr
 
-The main entry point for an Amber application is `config/application.cr`. This application file allows you to overwrite settings based on dynamic values. It also allows you to use environment variables available to the application process to configure your application.
+The main entry point for an Amber application is `config/application.cr`. This application file allows you to overwrite settings using dynamic values. It also allows you to use environment variables available to the application process to configure your application.
 
 ```ruby
 # config/application.cr 

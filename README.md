@@ -1,12 +1,10 @@
 # Introduction
 
-Amber is an web development framework written in the Crystal programming language. The framework implements the server-side MVC pattern using the object-oriented paradigm. Many of Amber components and concepts will seem familiar to those of us with experience in other web frameworks like Phoenix, Ruby on Rails or Python's Django.
+Amber is a web development framework written in the Crystal programming language. The framework implements the server-side MVC pattern using the object-oriented paradigm. Many of Amber's components and concepts will be familiar for developers with experience with other web frameworks like Phoenix, Ruby on Rails or Python's Django.
 
 ![Amber Framework](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/amber-animated-logo.gif)
 
-Amber aims to deliver developer happiness, productivity, and bare metal performance. The Crystal language is heavily inspired on Ruby delivering familiarity and productivity making it easy to read and write code with a lower learning curve for experienced Ruby developers.
-
-Crystal also has some modern features like macros, concurrency model, union types, C bindings, and built in dependency manager. Amber takes advantage of all these features providing you a opinionated structure to develop a web application.
+Amber aims to deliver developer happiness, productivity, and bare metal performance. The Crystal language is heavily inspired on Ruby, delivering familiarity, productivity, and a low learning curve for experienced Ruby developers. Meanwhile, Crystal also has some modern features like macros, concurrency model, union types, C bindings, and built in dependency manager. Amber takes advantage of all these features providing you a opinionated structure to develop a web application.
 
 Amber offers a variety of familiar tools such as generators, database management, CLI, deployment tools, docker support, encrypted secrets, webSockets, and more for fast prototyping and developing enterprise-grade web applications. If you come from a Ruby on Rails background you will feel right at home, but, be aware Amber is not Rails! Amber is type-safe, compiled, and embraces the best features from many different frameworks for example pipes for routing which is more similar to the Phoenix framework.
 

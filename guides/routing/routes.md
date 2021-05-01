@@ -1,8 +1,7 @@
 # Routes
+Routing in Amber provides developers a manifest to map application URLs to controller actions. By defining routes, you can separate how your application directs requests and how URLs are structured. Each route creates a real-time web socket handler, and define a series of pipeline transformations for scoping middleware to sets of routes.
 
-Routing provides you tools that map URLs to controller actions. By defining routes, you can separate how your application is implemented from how its URL’s are structured. Routes wire up real-time web socket handlers, and define a series of pipeline transformations for scoping middleware to sets of routes.
-
-A route connects a HTTP request to an action inside a controller. When your Amber application receives an incoming request for: `GET /users/24` it asks the Amber router to match it to a controller action. If the router finds a match `get users/:id, UsersController, :index` the request is dispatched to the UsersController.index action with { id: 24 } in the params hash.
+A route connects a HTTP request to a function inside a controller. When your Amber application receives an incoming request for: `GET /users/24` it asks the Amber router to find the corresponding controller action to direct the request towards. If the router finds a match, for example `get users/:id, UsersController, :index`, the request will be dispatched to the matching method with the provided parameters, in this case the UsersController.index action with { id: 24 } in the params hash.
 
 ## Configuring Routes
 
@@ -20,46 +19,52 @@ end
 
 ## Defining Routes
 
-The **routes** macro accepts a **pipeline** name and a **scope**, in which all routes defined within this block will make use of the pipeline and the url will be scoped.
+The **routes** macro accepts a **pipeline** name and a **scope**. In addition to the pipeline and scope, the routes macro also takes an additional block parameter where you can define routes. All routes defined within a scope's block will make use of the provided pipeline and the URLs will be scoped accordingly.
 
-Lets say you are defining a static website and you want the URL to be displayed as `http://www.mycoolsite.com/page`. You will define your routes as:
+For example, let's say you are creating a static website and you want the URL to be displayed as `http://www.mycoolsite.com/page`. To do this, you would setup your routes as follows:
 
 ```ruby
 # routes(pipeline, scope)
 routes :web, "/page"
 ```
 
-The routes macro takes a last argument. And a block within the block is where you define your routes.
+If you wanted to created a namespace for nesting your URL routes, you can use the scope parameter to do so.
 
 ```ruby
-routes :web, '/static' do
+routes :web, '/v1' do
   get "/about", StaticController, :about
 end
 ```
 
 Mapping the above route
 
-| Http Method | Resource | Controller | Action |
+| Http Method | Path | Controller | Action |
 | :--- | :--- | :--- | :--- |
-| get | "/about" | StaticController | :about |
+| get | "/v1/about" | StaticController | :about |
 
-Your action will need to return a string or render a view or this will cause your routes to throw an error during compilation.
+Your controller action will need to return a string or render a view. If no string or view is rendered your routes configuration will raise an error during compilation.
 
 ```ruby
-def about
-  "About my cool page!"
-end
+class StaticController < ApplicationController
+	 def about
+		 "About my cool page!"
+	 end
 
-# or:
+	 # or:
 
-def about
-  render("about.ecr")
+	 def about
+		 render("about.ecr")
+	 end
 end
 ```
 
 ## Resources
 
-The router supports other macros besides those for HTTP verbs like _get_, _post_, and _put_. The most important among them is `resources`, which expands out to eight endpoints.
+The router supports other macros besides those for HTTP verbs like _get_, _post_, and _put_. The most important among them is `resources`. The `resources` macro is a quick way to setup up resourceful routing for all seven standard actions for a controller in a single line. 
+
+{% hint style="info" %}
+In order to use resourceful routing for a particular controller, your controller _must_ define and implement all seven standard actions: `index`, `edit`, `new`, `show`, `create`, `destroy`, and `update`. If your controller does not implement all seven actions, an error will be raised during compilation.
+{% endhint %}
 
 Let’s add a resource to the `config/routes.cr`
 
@@ -71,7 +76,7 @@ end
 
 Then go to the root of your project, and run `amber routes`
 
-It outputs the standard matrix of HTTP verbs, controller, action, pipeline, scope, and URI pattern.
+This will output the standard matrix of HTTP verbs, controller, action, pipeline, scope, and URI pattern.
 
 ![Amber Routes Matrix Example](https://raw.githubusercontent.com/amberframework/site-assets/master/images/amber_routes.png)
 

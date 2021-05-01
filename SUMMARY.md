@@ -57,6 +57,7 @@
 * [CLI](cli/README.md)
   * [New](cli/new.md)
   * [Recipes](cli/recipes.md)
+  * [Plugins](cli/plugins.md)
   * [Generate](cli/generate.md)
   * [Database](cli/database.md)
   * [Watch](cli/watch.md)

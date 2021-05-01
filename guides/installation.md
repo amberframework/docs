@@ -11,7 +11,7 @@ Amber CLI offers you a set of command line tools to **create**, **generate**, **
 Ensure you have the necessary dependencies:
 
 * **Git:** Use your platform specific package manager to install `git`
-* **Crystal:** Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/docs/installation/index.html)
+* **Crystal:** Follow the instructions to get `crystal` on this page: [Crystal Installation](https://crystal-lang.org/install/)
 * **NodeJS and Webpack:** `node` is an optional dependency and is used to compile JavaScript and other assets.
 * **PostgreSQL:** `postgres` is a relational database server. Amber configures applications to use this database adapter by default, but you can switch to MySQL by passing the flag `--database mysql` when creating a new application.
 

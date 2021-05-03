@@ -4,7 +4,7 @@ description: That feeling you get when that right tool did all the work
 
 # Installation
 
-Amber CLI offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** your projects easily and fast.
+The Amber CLI offers you a set of command line tools to **create**, **generate**, **scaffold** and **run** your projects quickly and simply.
 
 ## Linux
 
@@ -28,7 +28,7 @@ make
 sudo make install
 ```
 
-If you run into an issue on compiling regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
+If you run into an issue on compilation regarding `Unhandled exception in spawn: fork: Cannot allocate memory` it means you don't have enough memory. This can easily be solved by adding a swapfile.
 
 ```bash
 sudo dd if=/dev/zero of=/swapfile bs=2k count=1024k

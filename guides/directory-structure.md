@@ -1,8 +1,6 @@
 # Directory Structure
 
-A generated Amber app has a number of auto-generated files and folders that make up the structure of an Amber application.
-
-When you use the `amber new` command to create your application, it creates the entire directory structure for the application, because of this Amber knows where to find the files it needs within this structure, so you don't have to provide additional input.
+Every Amber app is generated with a variety of default files and folders that make up the structure of the application. When you run `amber new` to create your application, you will see that the Amber CLI creates the entire directory structure for the application for you to use. The table below details out the variety of files and folders created in the generation process as well as their purpose.
 
 | File Folder | Purpose |
 | :--- | :--- |

@@ -1,12 +1,12 @@
 # Overview
 
-Amber is designed to make everyday web-development tasks simple, and comfortable, maintaining developer engagement, productivity without performance penalties. By providing an all-in-one toolbox to get you started the various parts of Amber work well together or separately.
+Amber is designed to make everyday web-development simple and comfortable by maintaining developer engagement and productivity without performance penalties. By providing an all-in-one toolbox, Amber gives developers the leverage to begin developing complex web applications from day one.
 
-The goal of this overview is to introduce the general concepts in Amber and give you a quick overview of how those concepts are implemented in Amber.
+The goal of this overview is to introduce the general concepts in Amber and give you a quick overview of how those concepts are implemented.
 
 ## Conventions Over Configuration
 
-Amber provides a basic organizational structure that covers class names, filenames, database table names, and other conventions. While the conventions take some time to learn, by following the conventions Amber provides you can avoid needless configuration and make a uniform application structure that makes working with various projects simple.
+Amber provides a opinionated organizational structure that covers class names, file names, database table names, and other conventions. While these conventions can take some time to learn, by following Amber's convention over configuration philosophy you can avoid needless configuration decisions, and ensure a uniform application architecture that makes working across various projects and with multiple developers simple.
 
 ## Model-View-Controller
 
@@ -14,15 +14,15 @@ Model–view–controller \(MVC\) is a software architectural pattern for implem
 
 ### Advantages
 
-* Simultaneous development – Multiple developers can work simultaneously on the model, controller, and views..
-* High cohesion – MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped.
-* Low coupling – The very nature of the MVC framework is such that there is low coupling among models, views or controllers.
-* Ease of modification – Because of the separation of responsibilities, future development or change is easier.
-* Multiple representations for a model – Models can have various Views.
+* **Simultaneous development** – multiple developers can work simultaneously on the model, controller, and views.
+* **High cohesion** – MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped.
+* **Low coupling** – the MVC pattern ensures low coupling between models, views or controllers.
+* **Ease of modification** – because of the separation of responsibilities, future development or change is easier.
+* **Multiple representations for a model** – models can have various views.
 
 ### Controller Layer
 
-The Controller is responsible for controlling the application logic and acts as the coordinator between the View and the Model. The Controller receives an input from the users via the View, then processes the user's data with the help of Model and passes the results back to the View.
+The Controller is responsible for directing application logic. It does this by acting as the coordinator between the other two components. The Controller receives an input from the users via the View, then processes the user's data with the help of Model and passes the results back to the View.
 
 ```ruby
 class UsersController < ApplicationController
@@ -35,7 +35,7 @@ end
 
 ### View Layer
 
-Views are the component involved with the application's User Interface. These Views are generally bound from the model data and have extensions such as HTML, SLANG, ECR.
+Views are the component involved with the application's User Interface. Views are generally populated with model data and have extensions such as HTML, SLANG, ECR.
 
 ```ruby
 # Slang - /views/users/index.slang
@@ -57,9 +57,11 @@ html
 
 ### Model Layer
 
-The Model layer represents the part of your application that implements the business logic. It is responsible for retrieving data and converting it into the first meaningful concepts in your web application. Includes processing, validating, associating or other tasks related to handling data.
+The Model layer represents the central data component of your application and implements the business logic and rules which govern it. The model is responsible for providing a clear interface for your web application to read from and manipulate user data. Such manipulations include processing changes, validating, creating associations to other models and more.
 
-In the case of a social network, the Model layer would take care of tasks such as saving the user data, saving friends’ associations, storing and retrieving user photos, finding suggestions for new friends, etc. The model objects are the main components of your application, such as “Friend,” “User,” “Comment,” or “Photo.” If we wanted to load some data from our user's table we could do:
+In the case of a social network, the Model layer would take care of tasks such as saving user data, saving friends’ associations, storing and retrieving user photos, finding suggestions for new friends, and more. The model objects are the main entities of your application, such as “Friend,” “User,” “Comment,” or “Photo.” 
+
+For example:
 
 ```ruby
 class User
@@ -70,4 +72,3 @@ class User
   end
 end
 ```
-

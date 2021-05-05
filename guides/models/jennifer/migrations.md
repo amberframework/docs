@@ -4,11 +4,11 @@
 This section is based on [Jennifer Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md).
 {% endhint %}
 
-To generate a migration run `crystal sam.cr generate:migration your_migration_name`
+To generate a migration run `crystal src/sam.cr generate:migration your_migration_name`
 
 ## Migration DSL
-
-Generator will create template file for you with next name pattern **timestamp\_migration\_name.cr**. Empty file looks like this:
+The generator will create template file for you with a consistent name pattern **timestamp\_migration\_name.cr**. 
+The empty file looks like this:
 
 ```ruby
 class YourCamelcasedMigrationName20170119011451314 < Jennifer::Migration::Base
@@ -20,7 +20,7 @@ class YourCamelcasedMigrationName20170119011451314 < Jennifer::Migration::Base
 end
 ```
 
-`up`method is needed for placing your db changes there, `down`- for reverting your changes back.
+The `up` method is where your database changes go, whereas, `down` is used for reverting your changes back.
 
 Example for creating table:
 

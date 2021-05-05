@@ -2,7 +2,7 @@
 
 ## What is Jennifer?
 
-**Jennifer** is an ActiveRecord-like ORM for Crystal with a custom DSL for queries and migration.
+**Jennifer** is an ActiveRecord-like ORM for Crystal with a custom DSL for queries and migrations.
 
 {% hint style="info" %}
 This section is based on [Jennifer Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md). Also see [Amber Jennifer Example App](https://github.com/eliasjpr/amber-jennnifer-app-example).
@@ -10,7 +10,7 @@ This section is based on [Jennifer Docs](https://github.com/imdrasil/jennifer.cr
 
 ## Installing Jennifer for Amber
 By default, Amber applications ship with 
-[Granite Documentation](https://docs.amberframework.org/granite) a lightweight ORM for Crystal applications. To begin using Jennifer in your Amber application you will need to follow a few steps to get up and running.
+[Granite](https://docs.amberframework.org/granite) a lightweight ORM for Crystal applications. To begin using Jennifer in your Amber application you will need to follow a few steps to get up and running.
 
 ### Generate a normal amber app
 Begin by generating a new amber project (if you have not already).
@@ -23,7 +23,7 @@ cd project
 ### Update your project shard.yml
 Once your Amber project is created, you will need to update your `shard.yml` file to include Jennifer as a dependency.
 
-Add the following code snipper to your application's `shard.yml` file:
+Add the following code snippet to your application's `shard.yml` file:
 
 ```yaml
 # Jennifer is an ORM
@@ -36,22 +36,24 @@ sam:
 
 ```
 
-In addition to the Jennifer dependency, you may have noticed we included an additional shard `sam`. The `sam` shard is simple command line utility for running common database tasks such as creating migrations, adding, or dropping tables. While technically optional it is recommended. 
+In addition to the Jennifer dependency, you may have noticed we included an additional shard called `sam`. The `sam` shard is simple command line utility for running common database tasks such as creating migrations, adding, or dropping tables. While technically optional it is recommended. 
 
-Once you've installed the required dependencies, you will need to decide which database you would like to use. By default, Jennifer ships with SQLite support, however, should you want to use PostgreSQL or MySQL, you will need to add in the respective database adapter to your `shard.yml` file as well. 
+Once you've added the required dependencies, you will need to decide what database you would like to use with your Amber application. By default, Jennifer ships with SQLite support, however, should you want to use PostgreSQL or MySQL, you will need to add in a compatible database adapter to your `shard.yml` file. 
 
 ```yaml
-  # snipped shards 
+# snipped shards 
 
-	# Your choice of database adapter
-	
-	pg:
-	   github: will/crystal-pg
-	   version: "= 0.21.0"
-	 # or for mysql
-	 crystal-mysql:
-	   github: crystal-lang/crystal-mysql
-	   version: "= 0.11.0"
+# Your choice of database adapter
+
+# PostgreSQL
+pg:
+	github: will/crystal-pg
+	version: "= 0.21.0"
+
+# MySQL
+crystal-mysql:
+	github: crystal-lang/crystal-mysql
+	version: "= 0.11.0"
 ```
 
 You can read about the Crystal community adapters below:
@@ -65,7 +67,7 @@ Once you have updated your dependencies and chosen an appropriate adapter (if an
 shards update
 ```
 
-This command will begin installing Jennifer and it's associated dependencies into your Amber project.
+This command will begin installing Jennifer and its associated dependencies into your Amber project.
 
 ### Setup your database information
 Once Jennifer is up an running as a dependency in your project, you will need to create a new database configuration. Inside of your project's `config` directory create a new file called `config/database.yml` and fill in the code snippet below:

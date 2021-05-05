@@ -1,6 +1,6 @@
 # Models
 
-The default ORM for Amber is [**Granite**](https://github.com/amberframework/granite), a Crystal ORM with adapters for MySQL, PostgreSQL and SQLite. Although Granite is the default configuration, the, Amber framework supports alternate ORMs such as [**Jennifer**](https://github.com/imdrasil/jennifer.cr) built by [Roman Kalnytskyi](https://github.com/imdrasil) is a good option.
+The default ORM for Amber is [**Granite**](https://github.com/amberframework/granite), a lightweight Crystal ORM with adapters for MySQL, PostgreSQL and SQLite. Although Granite is the default configuration, the Amber framework supports alternate ORMs such as [**Jennifer**](https://github.com/imdrasil/jennifer.cr) built by [Roman Kalnytskyi](https://github.com/imdrasil) is a good option.
 
 ## Granite
 
@@ -11,7 +11,7 @@ Granite provides a light weight ORM that is focused on taking the results of you
 
 ## Jennifer
 
-Jennifer is a full featured ORM with a dedicate DSL for queries and follows the ActiveRecord pattern found in Rails closely. If you are looking for a more full featured ORM, Jennifer might be a better choice.
+Jennifer is a full featured ORM with a dedicate DSL that follows the ActiveRecord pattern found in Rails closely. If you are looking for a more full featured ORM Jennifer is a great choice.
 
 {% page-ref page="jennifer/" %}
 

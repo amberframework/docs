@@ -1,16 +1,17 @@
 # Models
 
-Amber is independent of your choice of model architectures. We \(Core members\) have built the ORM **Granite**. We also think **Jennifer** built by [Roman Kalnytskyi](https://github.com/imdrasil) is a good option.
+The default ORM for Amber is [**Granite**](https://github.com/amberframework/granite), a Crystal ORM with adapters for MySQL, PostgreSQL and SQLite. Although Granite is the default configuration, the, Amber framework supports alternate ORMs such as [**Jennifer**](https://github.com/imdrasil/jennifer.cr) built by [Roman Kalnytskyi](https://github.com/imdrasil) is a good option.
 
 ## Granite
 
-Granite provides a light weight ORM that is focused on taking the results of your query and mapping them to your model. It does not try to shield you from the SQL that lies underneath the mapping. It provides a couple conveniences like `save` and `destroy` for simple INSERT, UPDATE and DELETE statements. It provides `find`, `find_by` and `all` to query the database. It also has basic one-to-many relationships with `belong_to` and `has_many`.
+Granite provides a light weight ORM that is focused on taking the results of your query and mapping them to your model. It does not try to shield you from the SQL that lies underneath the mapping. Out of the box, Granite provides the several common search, read and write methods for your models such as `save`, `find_by`, `destroy`, _etc_, that map onto standard SQL INSERT, UPDATE and DELETE statements. Granite also supports basic one-to-many relationships with `belong_to` and `has_many` macros that will be familiar to developers experienced with ActiveRecord.
 
 [Granite Documentation](https://docs.amberframework.org/granite)
 
+
 ## Jennifer
 
-Jennifer provides an more full featured ORM with a full featured DSL for queries and follows the ActiveRecord pattern found in Rails. If you are looking for a full featured ORM, Jennifer may be your choice of ORM.
+Jennifer is a full featured ORM with a dedicate DSL for queries and follows the ActiveRecord pattern found in Rails closely. If you are looking for a more full featured ORM, Jennifer might be a better choice.
 
 {% page-ref page="jennifer/" %}
 

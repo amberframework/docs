@@ -35,6 +35,31 @@ end
 
 As an example, if a user goes to `api/index` in your application to add a new client, Amber will create an instance of **ApiController** and call it's **index** method
 
+### Passing data to views
+
+Any local variable declared in the controller method will be available in the rendered view.  For example:
+
+```ruby
+class OrdersController < ApplicationController
+  def index
+    unfilled_orders = Order.where(fulfilled: false).select
+    render("index.html.ecr")
+  end
+end
+```
+
+Then in your view you can do:
+
+```ruby
+unfilled_orders.each do |order|
+<tr>
+  <td> <%= order.order_number %> </td>
+  <td> <%= order.customer.email %> </td>
+  ...
+</tr>
+end
+```
+
 ## Actions Conventions
 
 While actions can be named anything we like, there are conventions for action names which you should adhere whenever possible. We went over these in the Routing Guide, but we’ll take another quick look here.

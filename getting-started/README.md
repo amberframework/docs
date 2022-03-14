@@ -38,11 +38,10 @@ Installing Amber with these package managers also installs Crystal.
 
 #### Ubuntu or Debian
 
-First install crystal
+First install crystal (from the [official install documentation](https://crystal-lang.org/install/on_ubuntu/)):
 
 ```text
-curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
-sudo apt-get install build-essential crystal
+curl -fsSL https://crystal-lang.org/install.sh | sudo bash
 ```
 
 Then install Amber \(from source\)

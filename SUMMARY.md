@@ -86,7 +86,7 @@
 
 ## HAVE A QUESTION?
 
-* [Ask on Gitter](https://gitter.im/amberframework/amber)
+* [Join the Discord](https://discord.gg/vwvP5zakSn)
 * [Ask on StackOverflow](https://stackoverflow.com/questions/tagged/amber-framework)
 * [Follow on Twitter](https://twitter.com/amberframework)
 * [Submit an issue](https://github.com/amberframework/amber/issues)

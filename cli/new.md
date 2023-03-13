@@ -34,7 +34,7 @@ See the **Recipes** option of the **Command Line Tool** for information about us
 Using `amber new microsecond-blog` will generate a skeleton Amber application in `./microsecond-blog`. You can have a running web application in a matter of minutes:
 
 ```text
-amber new microsecond-blog -s sqlite
+amber new microsecond-blog -d sqlite
 cd microsecond-blog
 amber watch
 open http://localhost:3000

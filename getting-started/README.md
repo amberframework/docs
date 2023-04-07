@@ -11,7 +11,7 @@ It will take us just 7 steps. Let’s get started!
 ## 1. Install dependencies
 
 {% hint style="info" %}
-If you already have `crystal`, `amber`, and a database installed, you can [skip this step](quick-start.md#2-generate-a-new-amber-application).
+If you already have `crystal`, `amber`, and a database installed, you can [skip this step](#2.-generate-a-new-amber-application).
 {% endhint %}
 
 ### 1.1 Install `crystal` and `amber`
@@ -80,7 +80,7 @@ On OS X any of the databases can be installed with `brew install [database]`
 {% endhint %}
 
 {% hint style="info" %}
-Docker users can opt to use a database container to develop with as well. By default, a new Amber application generates a `docker-compose.yml` that can be used for this purpose. 
+Docker users can opt to use a database container to develop with as well. By default, a new Amber application generates a `docker-compose.yml` that can be used for this purpose.
 {% endhint %}
 
 ## 2. Generate a new Amber application

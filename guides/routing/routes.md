@@ -1,4 +1,5 @@
 # Routes
+
 Routing in Amber provides developers a manifest to map application URLs to controller actions. By defining routes, you can separate how your application directs requests and how URLs are structured. Each route creates a real-time web socket handler, and define a series of pipeline transformations for scoping middleware to sets of routes.
 
 A route connects a HTTP request to a function inside a controller. When your Amber application receives an incoming request for: `GET /users/24` it asks the Amber router to find the corresponding controller action to direct the request towards. If the router finds a match, for example `get users/:id, UsersController, :index`, the request will be dispatched to the matching method with the provided parameters, in this case the UsersController.index action with { id: 24 } in the params hash.
@@ -38,9 +39,9 @@ end
 
 Mapping the above route
 
-| Http Method | Path | Controller | Action |
-| :--- | :--- | :--- | :--- |
-| get | "/v1/about" | StaticController | :about |
+| Http Method | Path        | Controller       | Action |
+| ----------- | ----------- | ---------------- | ------ |
+| get         | "/v1/about" | StaticController | :about |
 
 Your controller action will need to return a string or render a view. If no string or view is rendered your routes configuration will raise an error during compilation.
 
@@ -60,7 +61,7 @@ end
 
 ## Resources
 
-The router supports other macros besides those for HTTP verbs like _get_, _post_, and _put_. The most important among them is `resources`. The `resources` macro is a quick way to setup up resourceful routing for all seven standard actions for a controller in a single line. 
+The router supports other macros besides those for HTTP verbs like _get_, _post_, and _put_. The most important among them is `resources`. The `resources` macro is a quick way to setup up resourceful routing for all seven standard actions for a controller in a single line.
 
 {% hint style="info" %}
 In order to use resourceful routing for a particular controller, your controller _must_ define and implement all seven standard actions: `index`, `edit`, `new`, `show`, `create`, `destroy`, and `update`. If your controller does not implement all seven actions, an error will be raised during compilation.
@@ -78,7 +79,7 @@ Then go to the root of your project, and run `amber routes`
 
 This will output the standard matrix of HTTP verbs, controller, action, pipeline, scope, and URI pattern.
 
-![Amber Routes Matrix Example](https://raw.githubusercontent.com/amberframework/site-assets/master/images/amber_routes.png)
+![Amber Routes Matrix Example](https://raw.githubusercontent.com/amberframework/site-assets/master/images/amber\_routes.png)
 
 ## Scoped Routes
 
@@ -86,7 +87,7 @@ Scopes are a way to group routes under a common path prefix and scoped set of pi
 
 The paths to the user facing reviews would look like a standard resource.
 
-```text
+```
 /posts
 /posts/1234
 /posts/1234/edit
@@ -95,14 +96,14 @@ The paths to the user facing reviews would look like a standard resource.
 
 But for the admin console paths could be prefixed with /admin.
 
-```text
+```
 /admin/posts
 /admin/posts/1234
 /admin/posts/1234/edit
 ...
 ```
 
-We accomplish this with a scoped route that sets a path option to /admin like this one. For now, let’s not nest this scope inside of any other scopes \(like the scope "/", HelloWeb provides in a new app\).
+We accomplish this with a scoped route that sets a path option to /admin like this one. For now, let’s not nest this scope inside of any other scopes (like the scope "/", HelloWeb provides in a new app).
 
 ```ruby
 # Not Scoped
@@ -127,3 +128,31 @@ resources "/user", UserController, only: [:index, :show]
 resources "/user", UserController, except: [:index, :show]
 ```
 
+## Namespaces
+
+Namespaces are a way you can add end-points to your routes that aren't tied to resources but are still collected into deeper nested URI paths.
+
+```crystal
+# Produces the routes: 
+#    GET  /api/my_unique_namespace/my_query_end_point
+#    POST /api/my_unique_namespace/my_query_end_point
+routes :web, "/api" do
+  namespace "/my_unique_namespace" do
+    get "/my_query_end_point", SomeController, :the_get_action_name
+    post "/my_query_end_point", SomeController, :the_post_action_name
+  end
+end
+
+# Produces the normal resources routes & the additional nested routes
+#   GET  /api/users/my_query_end_point
+#   POST /api/users/my_query_end_point
+routes :web, "/api" do
+  resources "/users", UsersController
+  
+  namespace "/users" do
+    get "/my_query_end_point", UsersController, :the_get_action_name
+    post "/my_query_end_point", UsersController, :the_post_action_name
+  end
+end
+    
+```

@@ -1,67 +1,45 @@
 # File Upload
 
-This recipe will help you to setup a basic file upload action in your application.
+File uploading is very simple. Files are detected and turned into `Amber::Router::File` and put into a temporary file cache.
+
+You can access files from the `params` macro using the `files` method.
+
+```crystal
+params.files
+```
+
+This will return a hash-like object of `Amber::Router::File` that you can work with. The attributes you can access are:
+
+```crystal
+file : ::File
+filename : String?
+headers : HTTP::Headers
+creation_time : Time?
+modification_time : Time?
+read_time : Time?
+size : UInt64?
+```
+
+For example, let's say we have a controller with a `create` method that we want someone to `POST` a JSON body that includes a file to upload:
+
+```crystal
+# header: `accepts: audio/mp3`
+#
+# POST body
+# {
+#    "audio_file": // binary data for the audio file
+#    "file_name": "some_file_name.mp3"
+# }
+def create
+  uploaded_file = params.files["audio_file"]
+  uploaded_file_name = params["file_name"]
+  
+  # Do whatever you want with the files and your method 😄
+end
+```
 
 {% hint style="warning" %}
 First you need an amber project generated with [Amber CLI](../guides/create-new-app.md) or [from scratch](from-scratch.md).
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="src/controllers/some\_controller.cr" %}
-```ruby
-class SomeController < ApplicationController
-  def file_upload
-    image = params.files["image1"]
-    filename = image.filename
-    # Be sure to check if image.filename is not empty
-    # otherwise it'll raise a compile time error
-    if !filename.is_a?(String)
-      "No filename included in upload"
-    else
-      File.rename(image.file.path, "some/static/resources/#{filename}")
-      "Upload ok"
-    end
-  end
-end
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-Then in your routes file:
-
-{% code-tabs %}
-{% code-tabs-item title="config/routes.cr" %}
-```ruby
-Amber::Server.configure do |app|
-  pipeline :web do
-    # pipelines...
-  end
-
-  routes :web do
-    # other routes,,,
-    post "/file_upload", SomeController, :file_upload
-  end
-end
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
 You still require a form to upload your file, see [views](../guides/views/). Also see [request and response](../guides/controllers/request-and-response-objects.md).
-
-Example slang file:
-
-{% code-tabs %}
-{% code-tabs-item title="src/controllers/some\_controller.cr" %}
-```slang
-form action="/some/file_upload" method="post" enctype="multipart/form-data"
-  == csrf_tag 
-  input type="file" name="file"
-  button type="Submit" Save
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-Special thanks to [Kemal Cookbook](http://kemalcr.com/cookbook/file_upload/) and [Nocturne Project](https://github.com/TheNocturneProject/Nocturne/blob/0d764e2ff15a1e200ee4ebe80614f4e560e78628/src/controllers/model_controllers/resource_controller.cr#L23-L28).
-
-
-

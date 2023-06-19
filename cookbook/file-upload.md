@@ -8,10 +8,10 @@ You can access files from the `params` macro using the `files` method.
 params.files
 ```
 
-This will return a hash-like object of `Amber::Router::File` that you can work with. The attributes you can access are:
+This will return a `Hash(String, Amber::Router::File)` object that you can work with. The attributes you can access are:
 
 ```crystal
-file : ::File
+file : File
 filename : String?
 headers : HTTP::Headers
 creation_time : Time?
@@ -23,7 +23,7 @@ size : UInt64?
 For example, let's say we have a controller with a `create` method that we want someone to `POST` a JSON body that includes a file to upload:
 
 ```crystal
-# header: `accepts: audio/mp3`
+# header: `accept: audio/mp3`
 #
 # POST body
 # {

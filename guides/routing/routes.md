@@ -132,6 +132,8 @@ resources "/user", UserController, except: [:index, :show]
 
 Namespaces are a way you can add end-points to your routes that aren't tied to resources but are still collected into deeper nested URI paths.
 
+**Important:** the order you declare your `namespace` and `resource` routes _does_ matter! You must delcare the namespace routes first, then the resource.
+
 ```crystal
 # Produces the routes: 
 #    GET  /api/my_unique_namespace/my_query_end_point
@@ -147,12 +149,15 @@ end
 #   GET  /api/users/my_query_end_point
 #   POST /api/users/my_query_end_point
 routes :web, "/api" do
-  resources "/users", UsersController
   
+  # Routes sharing a namespace with `resources` must be declared first
   namespace "/users" do
     get "/my_query_end_point", UsersController, :the_get_action_name
     post "/my_query_end_point", UsersController, :the_post_action_name
   end
+  
+  # This must come after any namespace routes that are not part of the resource
+  resources "/users", UsersController
 end
     
 ```

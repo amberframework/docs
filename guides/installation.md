@@ -21,9 +21,14 @@ Once you have these dependencies, You can build the `amber` tool from source:
 
 Download and install `amber`
 
+**NOTE:** At the time of this writing, v1.4.1 is the current stable release, but you should use the most recent tag in place of that.
+
 ```bash
-curl -L https://github.com/amberframework/amber/archive/stable.tar.gz | tar xz
-cd amber-stable/
+sudo apt-get install libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev libpcre3-dev libevent-dev
+git clone https://github.com/amberframework/amber.git
+cd amber
+git checkout v1.4.1
+shards install
 make
 sudo make install
 ```
@@ -39,6 +44,7 @@ sudo swapon /swapfile
 
 ### For Debian & Ubuntu
 
+* Currently, the only method to install on Debian based distros is to compile from source.
 * These are necessary to compile the CLI:
 * `sudo apt-get install build-essential libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev`
 

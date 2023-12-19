@@ -172,7 +172,7 @@ Then, insert the `csrf_tag` helper in your forms.
 
 ### How to use CSRF with Ajax
 
-To use CSRF with Aljax, simply call the `csrf_tag` helper inside your controller and return it as part of a JSON object:
+To use CSRF with Ajax, simply call the `csrf_tag` helper inside your controller and return it as part of a JSON object:
 
 ```ruby
 def my_action

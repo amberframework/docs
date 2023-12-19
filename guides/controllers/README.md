@@ -27,7 +27,7 @@ Controllers are defined as such:
 ```ruby
 class ApiController < ApplicationController
   def index
-    @client = Client.new
+    client = Client.new
     render("index.slang")
   end
 end
@@ -40,7 +40,7 @@ As an example, if a user goes to `api/index` in your application to add a new cl
 While actions can be named anything we like, there are conventions for action names which you should adhere whenever possible. We went over these in the Routing Guide, but we’ll take another quick look here.
 
 | **Method** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- |
 | index | renders a list of all items of the given resource type |
 | show | renders an individual item by id |
 | new | renders a form for creating a new item |

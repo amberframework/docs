@@ -2,13 +2,11 @@
 
 ## The Session
 
-A session store that uses an Amber:Router::Session::Store to store the sessions. This store is most useful if you don't store critical data in your sessions and you don't need them to live for extended periods of time.
+Amber uses an Amber:Router::Session::Store to manage session storage. This store is most suitable when your sessions don't hold critical data and don't need to persist for long periods.
 
-This cookie-based session store is the Amber default. It is dramatically faster than the alternatives.
+The default session store in Amber relies on cookies, offering significantly faster performance compared to other options. It automatically configures the cookie store based on your application's settings.
 
-The cookie store used for storage is automatically configured to be the best possible option given your application's configuration.
-
-Sessions typically contain at most a user\_id and flash message; both fit within the 4K cookie size limit. A CookieOverflow exception is raised if you attempt to store more than 4K of data.
+Sessions typically carry minimal data, such as a user\_id and flash message, fitting within the 4K cookie size limit. If you attempt to store more than 4K of data, it triggers a CookieOverflow exception.
 
 To configure the session:
 
@@ -17,7 +15,10 @@ To configure the session:
 Amber.settings.session = {
   :key     => "name.session",
   :store   => "cookie",
-  :expires => 120, # 0, will make the session last as long as the browser is open, upon closing, session will be terminated
+  :expires => 120, 
+  # :expires => 0,
+  # would make the session last as long as the browser is open;
+  # upon closing the browser, the session would terminate.
   :secret  => "secret"
 }
 
@@ -31,7 +32,7 @@ Amber.settings.session = {
 }
 ```
 
-Configure the Pipeline
+Also, include the Session into the Pipeline:
 
 ```ruby
 # Keep in mind the order of the Pipes. Session hash needs to be populated before 
@@ -44,7 +45,7 @@ pipeline :web do
 end
 ```
 
-Accessing the session
+To access the session:
 
 ```ruby
 class ApplicationController < Amber::Controller::Base
@@ -75,7 +76,7 @@ class LoginsController < ApplicationController
 end
 ```
 
-To remove something from the session, use`session.delete(key)`
+To remove something from the session, use `session.delete(key)`:
 
 ```ruby
 class LoginsController < ApplicationController
@@ -91,11 +92,11 @@ end
 
 ### The Flash
 
-The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available on the next request, which is useful for passing error messages etc.
+The flash is a special part of the session that resets after each request. This means any stored values are only available for the next request. It's handy for passing error messages or similar information.
 
-It is accessed in much the same way as the session, as a hash.
+To access the flash, you treat it like a hash, much like accessing the session itself.
 
-Let's use the act of logging out as an example. The controller can send a message which will be displayed to the user on the next request:
+Let's take logging out as an example. The controller can send a message that will be shown to the user on their next request:
 
 ```ruby
 class LoginsController < ApplicationController
@@ -108,7 +109,7 @@ class LoginsController < ApplicationController
 end
 ```
 
-Rendering the flash message
+Rendering the flash message:
 
 ```markup
 <html>
@@ -150,8 +151,8 @@ By default, adding values to the flash will make them available to the next requ
 ```ruby
 class ClientsController < ApplicationController
   def create
-    @client = Client.new(params[:client])
-    if @client.save
+    client = Client.new(params[:client])
+    if client.save
       # ...
     else
       flash.now[:error] = "Could not save client"
@@ -171,7 +172,7 @@ Then, insert the `csrf_tag` helper in your forms.
 
 ### How to use CSRF with Ajax
 
-Simply call the `csrf_tag` helper inside your controller and return it as part of a JSON object:
+To use CSRF with Ajax, simply call the `csrf_tag` helper inside your controller and return it as part of a JSON object:
 
 ```ruby
 def my_action

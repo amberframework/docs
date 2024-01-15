@@ -32,8 +32,6 @@
       * [Associations](guides/models/granite/associations.md)
       * [Querying](guides/models/granite/querying.md)
       * [Bulk Insertions](guides/models/granite/bulk-insertions.md)
-    * [Crecto](guides/models/crecto/README.md)
-      * [Crecto Docs](https://www.crecto.com/)
     * [Jennifer](guides/models/jennifer/README.md)
       * [Jennifer Docs](https://imdrasil.github.io/jennifer.cr/docs/index)
       * [Jennifer API](https://imdrasil.github.io/jennifer.cr/latest/)

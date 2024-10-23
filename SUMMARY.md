@@ -32,11 +32,8 @@
       * [Associations](guides/models/granite/associations.md)
       * [Querying](guides/models/granite/querying.md)
       * [Bulk Insertions](guides/models/granite/bulk-insertions.md)
-    * [Crecto](guides/models/crecto/README.md)
-      * [Crecto Docs](https://www.crecto.com/)
     * [Jennifer](guides/models/jennifer/README.md)
-      * [Jennifer Docs](https://imdrasil.github.io/jennifer.cr/docs/index)
-      * [Jennifer API](https://imdrasil.github.io/jennifer.cr/latest/)
+      * [Jennifer Docs](https://github.com/imdrasil/jennifer.cr/blob/master/docs/index.md)
       * [Migrations](guides/models/jennifer/migrations.md)
       * [Models](guides/models/jennifer/models.md)
   * [Routing](guides/routing/README.md)
@@ -87,6 +84,5 @@
 ## HAVE A QUESTION?
 
 * [Join the Discord](https://discord.gg/vwvP5zakSn)
-* [Ask on StackOverflow](https://stackoverflow.com/questions/tagged/amber-framework)
 * [Follow on Twitter](https://twitter.com/amberframework)
 * [Submit an issue](https://github.com/amberframework/amber/issues)
